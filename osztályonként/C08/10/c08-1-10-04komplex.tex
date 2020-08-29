@@ -1,0 +1,243 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/10/1.}
+\rhead{Komplex számok}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Komplex számok}
+
+\subsection*{2011.12.14.}
+
+\underline{Definíció:} Az $x^2+1=0$ egyenletről megköveteljük, hogy legyen gyöke, ezek közül az egyiket így jelöljük: $i$, tehát $i^2=-1$. Az $a+ib$ alakú számokat, ahol $a$ és $b$ valós számok \underline{komplex számoknak} nevezzük.
+
+Az összeadás és szorzás definíciója:
+\begin{align*}
+(a+ib)+(c+id)&=(a+c)+i(b+d)\cr
+(a+ib)\cdot(c+id)&=(ac-bd)+i(ad+bc)
+\end{align*}
+
+\begin{enumerate}
+\item Végezzük el a következő műveleteket:
+\begin{abc4}
+\item $(1+i)(1-i)$;
+\item $(3-5i)(4-2i)$;
+\item $(1+i)^4$;
+\item $(3+2i)^3$.
+\end{abc4}
+\item Megállapodás: az $a+ib$ komplex számnak a képe a $P(a;b)$ pont vagy az $\overrightarrow{OP}$ vektor. Mi felel meg az összeadásnak? Mi a geometriai jelentése az $i$-vel való szorzásnak?
+\item Megállapodás: $|a+ib|=\sqrt{a^2+b^2}$. Mi a geometriai jelentése az $1+i$-vel való szorzásnak?
+\end{enumerate}
+
+\subsection*{2011.12.15.}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc4}
+\item $\dfrac{(1+3i)(-2+2i)}{1+2i}$;
+\item $\dfrac{1+2i}{3-4i}+\dfrac{2-i}{5i}$;
+\item $(1+i)^5$;
+\item $\dfrac{1-i^2+i^4-i^6+\ldots-i^{18}}{1+i+i^2+i^3+\ldots+i^9}$.
+\end{abc4}
+\item Hol vannak a komplex számsíkon azok a pontok, amelyekre teljesül:
+\begin{abc3}
+\item $\operatorname{Re}z>2$;
+\item $1<\operatorname{Im}z<2$;
+\item $|z|<3$.
+\end{abc3}
+\item Írjuk fel trigonometrikus alakban:
+\begin{abc3}
+\item $1-i$;
+\item $-2-2i$;
+\item $\sqrt{12}-2i$.
+\end{abc3}
+\item Végezzük el:
+\begin{abc3}
+\item $(1-i)^6$;
+\item $(2+i\sqrt{12})^5$;
+\item $\dfrac{(1+i)^{100}}{(1-i)^{36}-i(1+i)^{98}}$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2011.12.19.}
+\begin{enumerate}
+\item Oldjuk meg a komplex számok halmazán:
+\begin{abc3}
+\item $|z|+z=1+2i$;
+\item $\overline{z}=2-z$;
+\item $|(3-i)z|-2(1-2i)z=-5i$.
+\end{abc3}
+\item Számítsuk ki:
+\begin{abc3}
+\item $\sqrt{5+12i}$;
+\item $\sqrt{24+10i}$;
+\item $\sqrt{1+i\sqrt 3}+\sqrt{1-i\sqrt 3}$.
+\end{abc3}
+
+\item Oldjuk meg a komplex számok halmazán:
+\begin{abc2}
+\item $z^2+(6+i)z+5+5i=0$;
+\item $z^2-(5+5i)z+2+11i=0$.
+\end{abc2}
+
+\item Számítsuk ki:
+\begin{abc3}
+\item $(1+2i)^3$;
+\item $(2+i)^5$;
+\item $(1-i)^6+(1+i)^6$;
+\item $\left(\frac{4}{\sqrt 3 + i}\right)^{12}$;
+\item $\dfrac{(1+i)^{100}}{(1-i)^{96}+(1+i)^{96}}$.
+\end{abc3}
+
+\end{enumerate}
+
+\subsection*{2011.12.21.}
+\begin{enumerate}
+\item Számítsuk ki
+\begin{abc3}
+\item $(\cos \varphi-i\sin \varphi)^n$;
+\item $\dfrac{(1+i\ctg \varphi)^5}{(1-i\ctg \varphi)^5}$;
+\item $(1+\cos \varphi+i\sin \varphi)^n$.
+\end{abc3}
+\item Fejezzük ki $\sin x$ és $\cos x$ segítségével:
+\begin{abc2}
+\item $\sin 4x$-et és $\cos 4x$-et;
+\item $\sin 6x$-et és $\cos 6x$-et.
+\end{abc2}
+\item Fejezzük ki $\tg 4x$-et $\tg x$ segítségével.
+\item Igazoljuk komplex számok felhasználásával:
+\begin{abc3}
+\item $\cos \frac{\pi}{5}+\cos \frac{3\pi}{5}=\frac{1}{2}$;
+\item $\cos \frac{2\pi}{5}+\cos \frac{4\pi}{5}=-\frac{1}{2}$;
+\item $\cos \frac{\pi}{7}+\cos \frac{3\pi}{7}+\cos \frac{5\pi}{7}=\frac{1}{2}$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2012.01.05.}
+\begin{enumerate}
+\item Igazoljuk komplex számok felhasználásával és általánosítsuk:
+\begin{abc2}
+\item $\binom{9}{0}-\binom{9}{2}+\binom{9}{4}-\binom{9}{6}+\binom{9}{8}=16$;
+\item $\binom{9}{1}-\binom{9}{3}+\binom{9}{5}-\binom{9}{7}+\binom{9}{9}=16$.
+\end{abc2}
+\item Számítsuk ki komplex számok felhasználásával a következő összegeket:
+\begin{abc2}
+\item $\binom{2k}{0}-\binom{2k}{2}+\binom{2k}{4}-\ldots+(-1)^k\binom{2k}{2k}$;
+\item $\binom{2k}{1}-\binom{2k}{3}+\binom{2k}{5}-\ldots+(-1)^{k-1}\binom{2k}{2k-1}$.
+\end{abc2}
+
+\item A $z^n=1$ ($n>0$, egész) egyenlet komplex megoldásait \underline{$n$-edik egységgyököknek} nevezzük. Számítsuk ki a 3., 4., 6. egységgyököket.
+\item Oldjuk meg a komplex számok körében a következő egyenleteket:
+\begin{abc3}
+\item $z^6=1+i\sqrt 3$;
+\item $z^4=-1-i$;
+\item $z^6=\sqrt 3-i$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2012.01.09.}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc2}
+\item $(1-i)(2-i)(1+2i)$;
+\item $\dfrac{4+3i}{1+2i}$.
+\end{abc2}
+\item Végezzük el a kijelölt műveleteket:
+\begin{abc2}
+\item $(-1+i)^{12}$;
+\item $\dfrac{(1+i\sqrt 3)^4}{(1+i)^8}$.
+\end{abc2}
+
+\item Oldjuk meg a komplex számok halmazán: 
+\begin{abc2}
+\item $z^4=-4$;
+\item $z^2+(6+i)z+5+5i=0$.
+\end{abc2}
+
+\item Számítsuk ki a következő összegeket, ha $k>0$, egész:
+\begin{abc2}
+\item $\binom{4k}{0}-\binom{4k}{2}+\binom{4k}{4}-\ldots+\binom{4k}{4k}$;
+\item $\binom{4k}{1}-\binom{4k}{3}+\binom{4k}{5}-\binom{4k}{4k-1}$.
+\end{abc2}
+
+\end{enumerate}
+
+\subsection*{2012.01.11.}
+A CARDANO-képlet a harmadfokú egyenlet megoldására:
+$$x^3+px+q=0$$
+alakú harmadfokú egyenletet oldunk meg, ahol $p,q$ adott valós (komplex) számok.\\
+Keressük $x$-et $u+v$ alakban:
+$x=u+v\Rightarrow x^3=u^3+v^3+3uv(u+v)$,
+ebből:
+$x^3-3uvx-(u^3+v^3)=0$.
+
+\begin{tabular}{c}
+$u^3+v^3=-q$\cr
+\hline
+$3uv=-p$\cr
+$u^3v^3=-\dfrac{p^3}{27}$\cr
+\hline
+\end{tabular}
+
+\noindent
+Tehát $u^3$ és $v^3$ a következő másodfokú egyenlet gyökei:
+$$z^2+qz-\frac{p^3}{27}=0,$$
+innen
+$$z_{1,2}=-\frac{q}{2}\pm\sqrt{\left(\frac{q}{2}\right)^2+\left(\frac{p}{3}\right)^3},$$
+tehát
+$$x=\sqrt[3]{-\frac{q}{2}+\sqrt{\left(\frac{q}{2}\right)^2+\left(\frac{p}{3}\right)^3}}+
+\sqrt[3]{-\frac{q}{2}-\sqrt{\left(\frac{q}{2}\right)^2+\left(\frac{p}{3}\right)^3}}.$$
+
+\subsection*{2012.01.12.}
+\begin{enumerate}
+\item Oldjuk meg a Cardano-képlet felhasználásával a következő harmadfokú egyenletet:
+$$x^3-9x^2+20x-12=0.$$
+\item Oldjuk meg (tetszőleges módszerrel) a következő harmadfokú egyenleteket:
+\begin{abc3}
+\item $x^3+3x^2-x-3=0$;
+\item $x^3-6x^2+11x-6=0$;
+\item $x^3-9x^2+23x-15=0$.
+\end{abc3}
+\item ($*$) Oldjuk meg a komplex számok halmazán a következő \underline{negyedfokú} egyenletet:
+$$x^4-8x^3+18x^2-27=0.$$
+\end{enumerate}
+
+\end{document}

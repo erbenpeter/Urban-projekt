@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/09/6.}
+\rhead{Összegek}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Összegek}
+
+\subsection*{2011.05.18.}
+\begin{enumerate}
+\item Hány olyan tízes számrendbeli négyjegyű szám van, amelyben legfeljebb két számjegy szerepel?
+\item Hány olyan háromszög van, amelynek oldalhosszai $n$-nél nagyobb, de $2n$-nél nem nagyobb egész számok.
+\item Hány különböző szigorúan növő függvény van, amely az $\{ 1, 2, \ldots, k\}$ halmazból képez az $\{ 1, 2, \ldots, n\}$ halmazba $(1\le k\le n)$?
+\item Számítsuk ki a következő összeget! $1\cdot2\cdot3+2\cdot3\cdot4+3\cdot4\cdot5+\ldots +n(n+1)(n+2)$.
+\item Számítsuk ki:
+\begin{enumerate}
+\item $1^3+2^3+3^3+\ldots+n^3$;
+\item $1^4+2^4+3^4+\ldots+n^4$.
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{2011.05.19.}
+\begin{enumerate}
+\item Igazoljuk, hogy egy négyzet feldarabolható $n$ (nem feltétlenül egybevágó) négyzetre, ha $n>5$.
+\item Igazoljuk, hogy egy szabályos háromszög feldarabolható n (nem feltétlenül egybevágó) szabályos háromszögre, ha $n>5$.
+\item Minimálisan hány tetraéderre darabolható fel egy kocka?
+\item Számítsuk ki a következő összegeket:
+\begin{enumerate}
+\item $1+11+111+\ldots+11\ldots1$;
+\item $1^3+3^3+5^3+\ldots+(2n-1)^3$;
+\item $-1^3+3^3-5^3+7^3-\ldots-(4n-3)^3+(4n-1)^3$;
+\item $1^2+3^2+5^2+\ldots+(2n-1)^2$.
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{2011.05.24.}
+\begin{enumerate}
+\item Jelölje $f_n$ a Fibonacci sorozat $n$-edik tagját (az $n$-edik Fibonacci számot): $f_0=0$, $f_1=1$, $f_2=1$, $f_{n+2}=f_n+f_{n+1}$. Igazoljuk:
+\begin{enumerate}
+\item $n, k > 0$ egészekre $f_{n+k}=f_{n-1}f_k+f_nf_{k+1}$;
+\item az $f_n$ sorozat bármely két szomszédos tagja relatív prím.
+\end{enumerate}
+\item Igazoljuk: ha $n > 0$, egész, akkor
+\begin{enumerate}
+\item $f_{n+1}^2-f_n\cdot f_{n+2}=(-1)^2$;
+\item $f_1f_2+f_2f_3+f_3f_4+\ldots+f_{2n-1}f_{2n}=f_{2n}^2$;
+\item $f_1f_2+f_2f_3+f_3f_4+\ldots+f_{2n}\cdot f_{2n+1}=f_{2n+1}^2-1$;
+\item $f_3+f_6+\ldots+f_{3n}=\frac{f_{3n+2}-1}{2}$.
+\end{enumerate}
+\item Igazoljuk, hogy tetszőleges pozitív egész szám előállítható Fibonacci számok összegeként úgy, hogy az összegben minden Fibonacci szám legfeljebb egyszer fordul elő és nincs benne két szomszédos Fibonacci szám.
+\end{enumerate}
+
+\subsection*{2011.05.26.}
+\begin{enumerate}
+\item Igazoljuk a Fibonacci-számok következő tulajdonságait:
+\begin{enumerate}
+\item $f_{2n-1}={f_{n-1}}^2+{f_n}^2$;
+\item $f_1+f_2+\ldots+f_n=f_{n+2}-1$;
+\item ${f_1}^2+{f_2}^2+\ldots+{f_n}^2=f_nf_{n+1}$;
+\end{enumerate}
+\item Adjuk meg a következő, rekurzióval definiált sorozatok $n$-edik tagját $n$ függvényében.
+\begin{enumerate}
+\item $a_{n+2}=7a_{n+1}-12a_n$;
+\item $a_{n+2}=a_{n+1}+a_n$;
+\item $a_{n+2}=-3a_{n+1}+10a_n$;
+\item $a_{n+3}=9a_{n+2}-26a_{n+1}+24a_n$.
+\end{enumerate}
+\item Adjuk meg a következő sorozatok n-edik tagját,
+\begin{enumerate}
+\item $a_{n+2}=5a_{n+1}-6a_n$, $a_1=1$, $a_2=-7$;
+\item $a_{n+2}=4a_{n+1}-4a_n$, $a_1=2$, $a_2=4$.
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{2011.05.26.}
+\begin{enumerate}
+\item Hány olyan hosszúságú, csak 0-t és 1-et tartalmazó sorozat van, amelyben nincs szomszédos 1-es?
+\item Igazoljuk a következő azonosságot:
+$\binom {n+m}k=\binom n0\binom mk+\binom n1\binom m{k-1}+\ldots+\binom nk\binom m{k-k}+\ldots+\binom nn\binom m{k-n}$
+$n, m, k > 0$ egészek és $m\ge k\ge n$.
+\item Határozzuk meg az $a_n$ sorozatot, ha $a_{n+2}=2^n-2a_{n+1}+8a_n$.
+\item* $\sum\limits_{i_n=1}^m \sum\limits_{i_{n-1}=1}^{i_n} \ldots \sum\limits_{i_1=1}^{i_2} \sum\limits_{i_0=1}^{i_1}$
+\item Határozzuk meg az $a_n$ sorozatot, ha $a_1=1$, $a_2=-3$, $a_3=-29$ és $a_{n+3}=9a_{n+2}-26a_{n+1}+24a_n$.
+\end{enumerate}
+
+\subsection*{2011.06.01.}
+\begin{enumerate}
+\item Igazoljuk a Fibonacci sorozat következő tulajdonságait: $f_{3n}=f_{n+1}^3+f_n^3-f_{n-1}^3$.
+\item Adjuk meg az $a_n$ sorozat $n$-edik tagját n függvényként, ha $a_{n+2}-2a_{n+1}+a_n=0$ és $a_1=1$, $a_2=3$.
+\item Egy 500 forintos bankjegyet hányféleképpen lehet felváltani 10, 20 és 50 forintosokra?
+\item Adjuk meg a következő rekurzív összefüggés általános megoldását: $a_{n+3}+3a_{n+2}+3a_{n+1}+a_n=0$.
+\item Az 1 és 10 000 000 közti egészek között melyik fajta számból van több, amelyikben van 1 számjegy, vagy amelyikben nincs?
+\end{enumerate}
+
+\subsection*{2011.06.02.}
+\underline{Kombinatorika}
+\begin{enumerate}
+\item Hányféleképpen válthatunk fel egy 2000 Ft-ost 100, 200 és 500 Ft-osra?
+\item Igazoljuk, hogy $\binom n1+24\binom n2+36\binom n3+24\binom n4=n^4$.
+\item Igazoljuk a Fibonacci-számok következő tulajdonságát: ha $n>1$, egész, akkor
+\\$f_1-f_2+f_3-f_4+\ldots+f_{2n-1}=f_{2n-2}+1$
+\item Számítsuk ki:
+\begin{enumerate}
+\item $\binom n2+2\binom n3+3\binom n4+\ldots+(n-1)\binom nn$;
+\item $\binom n1-2\binom n3+3\binom n4-\ldots+(-1)^{n-1}n\binom nn$;
+\end{enumerate}
+ \item Adjuk meg a sorozat n-edik tagját n függvényében, ha $a_1=7$, $a_2=25$ és $a_{n+2}=7a_{n+1}-12a_n$.
+\item Igazoljuk teljes indukcióval:
+$\binom n1\frac{1}{1}-\binom n2\frac{1}{2}+\binom n3\frac{1}{3}-\ldots+(-1)^{n-1}\binom 1n\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\ldots+\frac{1}{n}$
+\end{enumerate}
+
+\end{document}

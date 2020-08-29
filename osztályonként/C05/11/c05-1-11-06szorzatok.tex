@@ -1,0 +1,180 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C05/11/1.}
+\rhead{Végtelen szorzatok}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Végtelen szorzatok}
+
+\subsection*{2010. 03. 22.}
+\begin{enumerate}
+\item \underline{Definíció:} Ha adott az $a_1, a_2, a_3,...,a_n,...$ sorozat, akkor a $\displaystyle\prod_{n=1}^{\infty} a_n$ \underline{végtelen szorzat} értékét a következőképpen értelmezzük. Ha a $p_n=\displaystyle\prod_{k=1}^{n} a_k$ sorozat konvergens, akkor ha $\displaystyle\lim_{n \to \infty}p_n=p\not=0$, akkor azt mondjuk, hogy a $\displaystyle\prod_{n=1}^{\infty} a_n$ végtelen szorzat konvergens és értéke $p$. Ellenkező esetben a végtelen szorzat divergens.
+\item Állapítsok meg a következő szorzatok nál, hogy melyik konevergens, melyik divergens:
+	\begin{abc}
+	\item $\displaystyle\prod_{n=1}^{\infty} \dfrac{1}{n}$;
+    \item $\displaystyle\prod_{n=2}^{\infty} \left(1-\dfrac{1}{n^2}\right)$;
+    \item $\displaystyle\prod_{n=1}^{\infty} \left(1+\dfrac{1}{n}\right)$;
+    \item $\displaystyle\prod_{n=3}^{\infty} \dfrac{a^2-4}{n^2-1}$.
+	\end{abc}
+\item Igazoljuk, hogy a $\displaystyle\prod_{n=1}^{\infty} a_n$ végtelen szorzat konvergenciájának szükséges feltétele, hogy $\displaystyle\lim_{n \to \infty}a_n=1$.
+
+\end{enumerate}
+
+\subsection*{2010. 03. 30.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $a_n>0$, akkor $\displaystyle\prod_{n=1}^{\infty} a_n$ akkor és csak akkor konvergens, ha $\displaystyle\prod_{n=1}^{\infty} \ln a_n$ konvergens.
+\item Döntsük el a következő végtelen szorzatokról, hogy konvergensek-e:
+	\begin{abc}
+	\item $\displaystyle\prod_{n=1}^{\infty} \dfrac{e^{\dfrac{1}{n}}}{1+\dfrac{1}{n}}$; 
+    \item $\displaystyle\prod_{n=1}^{\infty} \dfrac{e}{\left(1+\dfrac{1}{n}\right)}$;
+    \item $\displaystyle\prod_{n=1}^{\infty} \sqrt[n^2]{n}$.
+	\end{abc}
+\item (*) Legyen $a_n=1+u_n$, $\displaystyle\lim_{n \to \infty}u_n=0$ és $(u_n)$ tagjai azonos előjelűek. Igazoljuk:
+	\begin{abc}
+	\item $\displaystyle\prod_{n=1}^{\infty} u+u_n$ konvergens $\iff \displaystyle\sum_{n=1}^{\infty}u_n$ konvergens;
+    \item $\displaystyle\lim_{n \to \infty} \displaystyle\sum_{k=1}^{n} u_k=+\infty$ $\iff \displaystyle\lim_{n \to \infty} \displaystyle\prod_{k=1}^{n} (1+u_k)=+\infty$;
+    \item $\displaystyle\lim_{n \to \infty} \displaystyle\sum_{k=1}^{n} u_k=-\infty$ $\iff \displaystyle\lim_{n \to \infty} \displaystyle\prod_{k=1}^{n} (1+u_k)=0$.
+	\end{abc}
+\end{enumerate}
+
+\subsection*{2010. 03. 31.}
+\begin{enumerate}
+\item Igazoljuk, hogy a $\displaystyle\prod_{n=1}^{\infty} \dfrac{(n+1)^2}{m(n+2)}$ Végtelen szorzat konvergens, számítsok ki a határértékét.
+\item Döntsük el, hogy a következő végtelen szorzatok közül melyek konvergensek, melyek divergensek:
+	\begin{abc}
+	\item $\displaystyle\prod_{n=1}^{\infty} \dfrac{(n+1)^2}{n(n+2)}$;
+    \item $\displaystyle\prod_{n=1}^{\infty} \left(1+\dfrac{1}{n^p}\right)$, $p>0$ valósz szám;
+    \item $\displaystyle\prod_{n=1}^{\infty} \left(1+\dfrac{x^n}{2^n}\right)$, $x>0$;
+    \item $\displaystyle\prod_{n=1}^{\infty} 1+\sqrt{\dfrac{n+1}{n+2}}$.
+	\end{abc}
+\item Igazoljuk, hogy ha a $\displaystyle\sum_{n=1}^{\infty} a_n^2$ sor konvergens, akkor a $\displaystyle\prod_{n=1}^{\infty}\cos a_n$ végtelen szorzat is konvergens.
+\end{enumerate}
+
+\subsection*{2010. 04. 07.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $p_n$ az $n$-edik prímszám $(p_1=2, p_2=3, p_3=5 ...)$ és $\alpha>1$, akkor
+	\begin{abc}
+	\item $\displaystyle\prod_{n=1}^{\infty} \dfrac{p_n^{\alpha}}{p_n^{\alpha}-1}=\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{\alpha}}$;
+    \item $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{p_n}$ divergens.
+	\end{abc}
+\item Igazoljuk, hogy ha $|x|<1$, akkor $\displaystyle\prod_{n=1}^{\infty} (1+x^{2^n})$ konvergens.
+\item Igazoljuk, hogy ha $\alpha \not = 0$, akkor $\displaystyle\prod_{n=1}^{\infty}\cos\dfrac{\alpha}{2^n}=\dfrac{\sin \alpha}{\alpha}$.
+\item A Riemann-féle ZÉTA függvény $\zeta$ definíciója: \\
+$\zeta(x)=\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^x}$, ha $x>1$.\\
+Igazoljuk, hogy $\zeta^2(x)=\displaystyle\sum_{n=1}^{\infty}\dfrac{a(n)}{n^x}$.
+\end{enumerate}
+
+\subsection*{2010. 04. 12.}
+\begin{enumerate}
+\item Igazoljuk, hogy  $\dfrac{2}{\pi}=\sqrt{\dfrac{1}{2}}\cdot\sqrt{\dfrac{1}{2}+\dfrac{1}{2}\sqrt{\dfrac{1}{2}}}\cdot\sqrt{\dfrac{1}{2}+\dfrac{1}{2}\sqrt{\dfrac{1}{2}+\dfrac{1}{2}\sqrt{\dfrac{1}{2}}}}\cdot\ldots$ (Vieta formulája).
+\item Igazoljuk, hogy $\zeta(x)\cdot\zeta(x-1)=\displaystyle\sum_{n=1}^{\infty}\dfrac{\delta(n)}{n^x}$,\\ ahol $\delta(n)$ az $n$ pozitív osztóinak összege és $\zeta(x)=\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^x}$, $x>1$.
+\item \underline{Definíció:} $\tau(x)=\dfrac{1}{x}\displaystyle\sum_{n=1}^{\infty}\dfrac{\left(1+\dfrac{1}{n}\right)^x}{1+\dfrac{x}{n}}$, $x\not =0$, $-1$, $-2$, \ldots
+	\begin{abc}
+    \item Igazoljuk, hogy a végtelen szorzat $x\not =0$, $-1$, $-2$ \ldots esetén konvergens;
+	\item Igazoljuk, hogy $\tau(x)=\displaystyle\lim_{n \to \infty} \dfrac{n!n^x}{x(x+1)\ldots(x+n)}$;
+	\item Igazoljuk, hogy a $\tau$ értelmezési tartományában minden $x$-re $\tau(x+1)=x\tau(x)$, tehát ha $x=n>0$ egész, akkor $\tau(n+1)=n!$
+	\end{abc}
+
+\end{enumerate}
+
+\subsection*{2010. 04. 13.}
+\begin{enumerate}
+\item $\displaystyle\sum_{n=1}^{\infty} \dfrac{1}{n^2}=\dfrac{\pi^2}{6}$- bizonyítással;
+\item A szinusz függvény szorzatelőállítása:\\
+$\sin x=x\cdot\displaystyle\prod_{n=1}^{\infty} \left(1-\dfrac{x^2}{n^2\pi^2}\right)$;
+\item \underline{Wallis-formula:} $\dfrac{\pi}{2}=\displaystyle\prod_{n=1}^{\infty} \dfrac{2n}{2n-1}\cdot\dfrac{2n}{2n+1}$;
+\item \underline{Stirling-formula:} $n!\approx\sqrt{2\pi n}\cdot\left(\dfrac{n}{e}\right)^n$, a relatív hiba: $\dfrac{1}{12n}$.
+
+\end{enumerate}
+
+\subsection*{2010. 04. 14./1}
+\begin{enumerate}
+\item Igazoljuk a következő azonosságot:\\
+$\sin(2n+1)x=\binom{2n+1}{1}\sin x\cos^{2n} x-\binom{2n+1}{3}\sin^3 x\cos^{2x-2} x+\binom{2n+1}{5}\sin^5 x \cos^{2n-4} x-\ldots+(-1)^n\binom{2n+1}{2n+1}\sin^{2n+1}x$.
+\item Igazoljuk, hogy a $\binom{2n+1}{1}z^n-\binom{2n+1}{3}z^{n-1}+\binom{2n+1}{5}z^{n-2}-\ldots+(-1)^n$ polinom gyökei az \\
+$a_1=\cot^2\dfrac{\pi}{2n+1}$, $a_2=\cot^2\dfrac{2\pi}{2n+1}$,\ldots $a_n=\cot^2\dfrac{n\pi}{2n+1}$ számok.
+\item Számítsuk ki a következő összegeket:
+	\begin{abc}
+    \item $\cot^2\dfrac{\pi}{2n+1}+\cot^2\dfrac{\pi}{2n+1}+\ldots+\cot^2\dfrac{\pi}{2n+1}$;
+     \item $\dfrac{1}{\sin^2\dfrac{\pi}{2n+1}}+\dfrac{1}{\sin^2\dfrac{\pi}{2n+1}}+\ldots+\dfrac{1}{\sin^2\dfrac{\pi}{2n+1}}$.
+	\end{abc}
+\item Az $\dfrac{1}{sin^2 x}>\dfrac{1}{x^2}>\cot x$, ha $0<\dfrac{1}{n^2}$ egyenlőtlenség felhasználásával becsüljük alulról és felülről az\\
+$\dfrac{1}{1^2}+\dfrac{1}{3^2}+\ldots+\dfrac{1}{n^2}$ összeget.\\
+\item Hasonlóan igazolhatók:\\
+$\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^4}=\dfrac{\pi^4}{90}$,\\
+$\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^6}=\dfrac{\pi^6}{945}$.
+
+\end{enumerate}
+
+\subsection*{2010. 04. 14./2}
+\begin{enumerate}
+\item Igazoljuk, hogy a következő végtelen szorzat konvergens és számítsuk ki azértékét: $\displaystyle\prod_{n=1}^{\infty} \left(1+\Big( \dfrac{1}{2}\Big) ^{2^4}\right)$.
+\item Milyen $x\in\mathbb{R}$ értékre konverges a következő végtelen sorozat:
+	\begin{abc}
+	\item $\displaystyle\prod_{n=1}^{\infty} \left(1+\dfrac{x^n}{2^n}\right)$;
+    \item $\displaystyle\prod_{n=1}^{\infty}\left(1+\dfrac{\Big(1+\dfrac{1}{n}\Big)^{n^2}}{x^n}\right)$?
+	\end{abc}
+\item Döntsük el, hogy a következő végtelen sorozatok konvergensek, vagy divergensek:
+	\begin{abc}
+	\item $\displaystyle\prod_{n=1}^{\infty}\sqrt[n]{1+\dfrac{1}{n}}$;
+    \item $\displaystyle\prod_{n=1}^{\infty}\dfrac{n}{\sqrt{n^2+1}}$;
+	\item $\displaystyle\prod_{n=1}^{\infty}\left(1+\dfrac{1}{\sqrt{n}}\right)$.    
+	\end{abc}
+
+\end{enumerate}
+
+\subsection*{2010. 04. 19.}
+\begin{enumerate}
+\item Igazoltuk, hogy \\
+$\sin(2n+1)\alpha=\binom{2n+1}{1}\sin\alpha\cos^{2n}\alpha-\binom{2n+1}{3}\sin^3\alpha\cos^{2n-2}\alpha+\ldots+(-1)^n \sin^{2n+1}\alpha=\\=
+\sin\alpha\left(\binom{2n+1}{1}cos^{2n}\alpha-\binom{2n+1}{3}\sin\alpha\cos^{2n-2}\alpha+\ldots+(-1)^{2n}\alpha\right)=\\=
+\sin\alpha\cdot p (\sin^2\alpha)$, \\ahol $p$ egy $n$-edfokú polinom. Mutassuk meg ennek alapján, hogy\\ (**)
+$\sin x=(2n+1)\sin \dfrac{x}{2n+1}\left(1-\dfrac{\sin^2\dfrac{x}{2n+1}}{\sin^2\dfrac{\pi}{2n+1}}\right)\ldots\left(1-\dfrac{\sin^2\dfrac{x}{2n+1}}{\sin^2 n \dfrac{\pi}{2n+1}}\right)$.
+\item Rögzítsünk egy $1<k<n$ számot, az előző (**) egyenlet jobb oldalának első k+2 tényezője legyen $a_k^{(n)}$, számítsuk ki $\displaystyle\lim_{n \to \infty}a_k^{(n)}=a_k$-t,\\ 
+igazoljuk, hogy $\displaystyle\lim_{n \to \infty} b_k^{(n)}=b_k$ létezik ($b_k^{(n)}$ a =(**)többi tényezőjének szorzata),\\ igazoljuk, hogy $\sin x =a_k*b_k$.
+\item A $0<|\alpha|<\dfrac{\pi}{2}$ esetén érvényes $\dfrac{2}{\pi}|\alpha|<|\sin\alpha|<|\alpha|$ segítségével igazoljuk, hogy $\displaystyle\lim_{n \to \infty}b_k=1$ és ezzel igazoljuk a $\sin x$ szorzat előállítását:\\
+$\sin x =x\displaystyle\prod_{n=1}^{\infty}\left(1+\dfrac{x^2}{n^2\pi^2}\right)$.
+
+\end{enumerate}
+
+\end{document}

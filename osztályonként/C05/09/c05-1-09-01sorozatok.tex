@@ -1,0 +1,394 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C05/09/1.}
+\rhead{Trigonometria}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Sorozatok}
+
+\subsection*{2007. 09. 05. -- Sorozatok}
+\begin{enumerate}
+\item Legyen  $a_n=1+2+\ldots+n$, írjuk fel $a_{10}$, $a_{100}$ és $a_{200}$ értékét!
+\item Adott két sorozat: $a_n=n^2+3$, $b_n=n^2-2$.  Hány közös eleme van a két sorozatnak?
+\item Legyen $a_n$ a $2^n$ szám tízes számrendszerbeli alakjának utolsó két jegye. $a_{100}=\,?$
+\item Egy $a_n$ sorozat mindegyik eleme a másodiktól kezdve a szomszédos elemek számtani közepe;
+$a_1=1$, $a_5=9$. Írjuk fel a sorozat első 10 elemét!
+\item Igaz-e, hogy az $a_n=n^2+3n-2$ sorozat elemei között végtelen sok összetett szám van?
+\item Egy sorozat definíciója: $a_1=a$, $a_2=b$ és $\displaystyle{a_{n+1}=\frac{a_n+a_{n+2}}{2}}$ ha $n\ge 1$.
+Mutassuk meg, hogy a sorozat szomszédos tagjainak különbsége állandó!
+\end{enumerate}
+
+
+\subsection*{2007. 09. 09. --  Számtani sorozatok}
+\begin{enumerate}
+\item Írjuk fel a következő \textit{számtani sorozatok} tizedik tagját!
+\begin{abc}
+\item $2, 4, 6, 8, \ldots$
+\item $\frac{1}{3}, \frac{1}{12}, -\frac{1}{6},\ldots$
+\item $a-b, b, 3b-a, \ldots$
+\item $a^2, 1, 2-a^2,\ldots$
+\end{abc}
+
+\item Határozzuk meg az $a$ paraméter értékét, ha a következő három szám egy számtani sorozat első három eleme:
+\begin{abcn}{6}
+\item $1, 3, a$;
+\item $1, a, 3$;
+\item $a-1, 3, a+1$;
+\item $a, a^2, 0$;
+\item $a, a^2, a^3$;
+\item $a^2, a, a^3$.
+\end{abcn}
+
+\item Egy számtani sorozat első két tagjának összege 7, harmadik és negyedik tagjának összege 19. Írjuk fel a sorozat első négy tagját!
+
+\item ($*$) Bizonyítsuk be, hogy nincs olyan számtani sorozat, amelynek tagjai között a
+$\sqrt 2$, $\sqrt 3$ és $\sqrt 5$ is szerepel!
+
+\item Határozzuk meg a 101 és 501 közé eső olyan egészek összegét, amelyek
+\begin{abc}
+\item oszthatók 5-tel;
+\item oszthatók 3-mal;
+\item 12-vel osztva 7 maradékot adnak!
+\end{abc}
+\end{enumerate}
+
+
+\subsection*{2007. 09. 11.}
+\begin{enumerate}
+\item Egy csökkenő számtani sorozat első 17 tagjának összege 0. Hány pozitív tagja van a sorozatnak?
+\item Négy pozitív szám egy számtani sorozat négy szomszédos tagja, összegük 26, szorzatuk 880.
+Melyek ezek a számok? 
+\item Egy $(a_n)$ sorozatról tudjuk, hogy tetszőleges $k$ pozitív egész esetén $a_1+a_2+a_3+\ldots+a_k=k^2$. Bizonyítsuk be, hogy $(a_n)$ számtani sorozat! $a_{100}=\,?$
+\item Mi az első három eleme annak a számtani sorozatnak, amelyre az első $n$ tag összege minden $n$ esetén
+\begin{abc3}
+\item $n^2+n$;
+\item $n^2-n$;
+\item $5n^2-3n$?
+\end{abc3}
+\item Határozzuk meg annak a számtani sorozatnak az első tagját,
+amelyben az első három tag összege negyed\-része a következő három tag összegének. 
+\item Bizonyítsuk be, hogy ha $x$, $y$, $z$ számok egy számtani sorozat szomszédos elemei,
+akkor $x^2+xy+y^2$, $x^2+xz+z^2$ és  $y^2+yz+z^2$ is egy számtani sorozat szomszédos elemei.
+\end{enumerate}
+
+
+\subsection*{2007. 09. 12. -- Röpdolgozat}
+\begin{enumerate}
+\item 4 és 40 közé írjunk be három számot úgy, hogy a kapott öt szám egy számtani sorozat első öt eleme legyen.
+\item Egy növekvő számtani sorozat első három tagjának összege 27, ugyanezen tagok négyzetét összeadva 275-öt kapunk. Melyik ez a sorozat?
+\end{enumerate}
+
+\subsection*{2007. 09. 17. -- Röpdolgozat}
+\begin{enumerate}
+\item Bizonyítsuk be, hogy ha $a^2$, $b^2$ és $c^2$ egy számtani sorozat egymást követő elemei, 
+akkor $\displaystyle{\frac{1}{b+c}}$, 
+$\displaystyle{\frac{1}{c+a}}$ és
+$\displaystyle{\frac{1}{a+b}}$ is egy számtani sorozat egymást követő elemei.
+\item Egy számtani sorozat három egymást követő elemének összege 3, köbeik összege 15. Írjuk fel a sorozat ötödik elemét!
+\end{enumerate}
+
+\subsection*{2007. 09. 18.}
+\begin{enumerate}
+\item Határozzuk meg a mértani sorozat első három elemét, ha
+\begin{abc3}
+\item $a_8=2^8$ és $q=-2$;
+\item $a_8=0{,}1$ és $q=0{,}1$;
+\item $a_{10}=x^{20}$ és $q=\sqrt[3]{x}$.
+\end{abc3}
+\item Mi a mértani sorozat ötödik tagja, ha 
+\begin{abc3}
+\item $a_2=a_1^2$ és $\displaystyle{q=-\frac{8}{a_1^2}}$;
+\item $a_1a_2=a_1+a_2$ és $a_3=3q$;
+\item $a_3=2$ és $a_6=\displaystyle{\frac{1}{4}}$?
+\end{abc3}
+\item Határozzuk meg a mértani sorozat első tagját és hányadosát, ha tudjuk, hogy 
+\begin{abc2}
+\item $a_1+a_2=6$ és $a_4+a_3=24$;
+\item $a_1+a_2+a_3=42$ és $a_1a_3=64$.
+\end{abc2}
+\item Mennyi a mértani sorozat első öt tagjának összege, ha
+\begin{abc4}
+\item $a_1=2$ és $q=3$;
+\item $a_2=a$ és $\displaystyle{a_4=\frac 1a}$;
+\item $a_4=10$ és $q=3$;
+\item $a_{10}=1$ és $\displaystyle{a_{20}=\frac{1}{22}}$.
+\end{abc4}
+\end{enumerate}
+
+\subsection*{2007. 09. 19. -- Röpdolgozat}
+\begin{enumerate}
+\item Egy mértani sorozat első 10 tagjának összege 30, első 20 tagjának összege 60.
+Mi a sorozat első eleme és hányadosa?
+\item Egy számtani sorozat három szomszédos tagjának összege 21. Ha a három taghoz rendre
+3-at, 1-et és 3-at adunk, akkor egy mértani sorozat szomszédos tagjait kapjuk. Mennyi a mértani sorozat 
+hányadosa?
+\end{enumerate}
+
+\subsection*{2007. 09. 19.}
+\begin{enumerate}
+\item Egy mértani sorozatban $S_3=1$ és $S_4=3S_2$. Mi a mértani sorozat első három tagja?
+\item Egy derékszögű háromszög oldalainak mérőszámai egy mértani sorozat szomszédos elemei. Adjuk meg a sorozat hányadosát!
+\item Egy mértani sorozat első három tagjának összege 52. Ha az első taghoz 2-t, a másodikhoz 10-et, a harmadikhoz 2-t adunk, akkor egy számtani sorozat szomszédos elemeit kapjuk. Mi a mértani sorozat első eleme és hányadosa?
+\item Három szám egy mértani sorozat három egymás utáni tagja. Ha a másodikhoz 8-at adunk, akkor egy számtani sorozat egymás utáni elemeit kapjuk. Ha ennek a számtani sorozatnak a harmadik eleméhez 64-et adunk, akkor egy új mértani sorozat három egymást követő elemét kapjuk. Melyik ez a három szám?
+\end{enumerate}
+
+\subsection*{2007. 09. 24. -- Röpdolgozat}
+\begin{enumerate}
+\item Egy növekvő mértani sorozatban az első négy tag összege 30, a második négy tag összege 480. Mennyi a sorozat 
+első tagja és hányadosa?
+\item Négy szám közül az első három egy számtani sorozat három egymást követő eleme, az utolsó három pedig egy mértani sorozat
+három egymás utáni eleme. A két szélső összege 14, a két középső szám összege 12. Melyik ez a négy szám?
+\end{enumerate}
+
+\subsection*{2007. 09. 25. -- Röpdolgozat}
+\begin{enumerate}
+\item Négy szám egy mértani sorozat első négy eleme. Az első és a negyedik szám összege 112, a második és harmadik szám összege 48. Mi a mértani sorozat első tagja és hányadosa?
+\item Egy mértani sorozat első három tagjának összege 26. Ha a három taghoz sorra 1-et, 6-ot és 3-at adunk, akkor egy számtani
+sorozat három egymást követő tagját kapjuk. Melyik ez a három szám?
+\end{enumerate}
+
+\subsection*{2007. 10. 01.}
+\begin{enumerate}
+\item Számítsuk ki az alábbi összegeket:
+\begin{abc2}
+\item $\displaystyle{1+11+111+\ldots+\underbrace{111\ldots 1}_{n}}$;
+\item $\displaystyle{3+2\cdot 3^2+\ldots+n\cdot 3^n}$.
+\end{abc2}
+\item Számítsuk ki az alábbi összegeket:
+\begin{abc}
+\item $\displaystyle{\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\ldots+\frac{1}{(n-1)n} }$;
+\item $\displaystyle{\frac{1}{1\cdot 2\cdot 3}+\frac{1}{2\cdot 3\cdot 4}+\frac{1}{3\cdot 4\cdot 5}+\ldots+\frac{1}{(n-2)(n-1)n} }$;
+\item $\displaystyle{1\cdot 2+2\cdot 3+3\cdot 4+\ldots+n(n+1)}$;
+\item $\displaystyle{1\cdot 2\cdot 3+2\cdot 3\cdot 4+3\cdot 4\cdot 5+\ldots+n(n+1)(n+2)}$.
+\end{abc}
+\item Egy számtani sorozatról tudjuk, hogy a negyedik tagja 4.
+A sorozat $d$ különbségének mely értékeire igaz, hogy a sorozat első három tagjának páronként vett szorzatát összeadva a legkisebb értéket kapjuk?
+\end{enumerate}
+
+\subsection*{2007. 10. 02. -- Röpdolgozat}
+\begin{enumerate}
+\item  Számítsuk ki a következő összeget:
+$$\frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}+\frac{1}{5\cdot 7}+ \ldots+\frac{1}{(2n-1)(2n+1)}=\,?$$
+\item Adjuk meg zárt alakban a következő összeget:
+$$1+3x+5x^2+\ldots+(2n-1)x^{n-1}=\,?$$
+\end{enumerate}
+
+\subsection*{2007. 10. 03. -- Újabb röpdolgozat}
+\begin{enumerate}
+\item Egy mértani sorozat első három elemének összege 93. E három elem egyúttal egy számtani sorozat első, második illetve hetedik eleme. Adjuk meg ezeket a sorozatokat! 
+\item Adjuk meg zárt alakban a következő összeget:
+$$\left(x+\frac{1}{x}\right)^2+\left(x^2+\frac{1}{x^2}\right)^2+\ldots+\left(x^n+\frac{1}{x^n}\right)^2 .$$
+\end{enumerate}
+
+\subsection*{2007. 10. 03.}
+\begin{enumerate}
+\item Egy számtani sorozatról tudjuk, hogy a negyedik tagja 4.
+A sorozat $d$ különbségének mely értékeire igaz, hogy a sorozat első három tagjának páronként vett szorzatát összeadva a legkisebb értéket kapjuk?
+\item Három számjegy egy mértani sorozat első három tagja. A számok átlaga $\frac{14}{3}$, szorzata 64. Melyik ez a sorozat?
+\item Egy háromjegyű szám számjegyei egy mértani sorozat első három tagja, a 400-zal kisebb szám számjegyei egy számtani sorozat első három tagja. Melyik ez a szám?
+\item Az $5x-y$, $2x+3y$ és $x+2y$ egy számtani sorozat első három tagja,
+az $(y+1)^2$, $xy+1$ és $(x-1)^2$ számok pedig egy mértani sorozat első három tagja. $x=\,?$, $y=\,?$
+\end{enumerate}
+
+\subsection*{2007. 10. 08.}
+\begin{enumerate}
+\item Számítsuk ki (adjuk meg zárt alakban):
+\begin{abc}
+\item $\displaystyle{1+2+3+\ldots+n=\sum_{k=1}^n k = \frac{n(n+1)}{2}}$
+\item $\displaystyle{1^2+2^2+3^2+\ldots+n^2=\sum_{k=1}^n k^2 =}$
+\item $\displaystyle{1^3+2^3+3^3+\ldots+n^3=\sum_{k=1}^n k^3 =}$
+\item $\displaystyle{1^4+2^4+3^4+\ldots+n^4=\sum_{k=1}^n k^4 =}$
+\end{abc}
+\item Számítsuk ki:
+\begin{abc3}
+\item $\displaystyle{\sum_{k=1}^n k(k+1)}$;
+\item $\displaystyle{\sum_{k=1}^n k(k+1)(k+2)}$;
+\item $\displaystyle{\sum_{k=1}^n k(k+1)(k+2)(k+3)}$. 
+\end{abc3}
+\item Számítsuk ki: 
+\begin{abc3}
+\item $\displaystyle{\sum_{k=1}^n \frac{1}{k(k+1)}}$;
+\item $\displaystyle{\sum_{k=1}^n \frac{1}{k(k+1)(k+2)}}$;
+\item $\displaystyle{\sum_{k=1}^n \frac{1}{k(k+1)(k+2)(k+3)}}$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2007. 10. 10.}
+\begin{enumerate}
+\item Igazoljuk, hogy 
+$$1\cdot 2\cdot 3\cdot\ldots\cdot k+
+2\cdot 3\cdot\ldots\cdot k(k+1)+\ldots+
+n(n+1)\ldots(n+k-1)=\frac{n(n+1)\ldots(n+k)}{k+1}.$$ 
+\item Számítsuk ki:
+\begin{abc}
+\item $\displaystyle{1^3+3^3+5^3+\ldots+(2n-1)^3}$;
+\item $\displaystyle{1\cdot 1!+2\cdot 2!+3\cdot 3!+\ldots+n\cdot n!}$; 
+\item $\displaystyle{\left(1+\frac{1}{3}\right)
+\left(1+\frac{1}{9}\right)\left(1+\frac{1}{81}\right)\ldots\left(1+\frac{1}{3^{2n}}\right)
+}$.
+\end{abc}
+\item Számítsuk ki:
+$$\binom{n+1}{1}+\binom{n+2}{2}+\binom{n+3}{3}+\ldots+\binom{n+k}{k}.$$
+\item ($*$) Igazoljuk a következő egyenlőtlenségeket:
+\begin{abc}
+\item $\displaystyle{\left(1+\frac{1}{n}\right)^n < 
+\left(1+\frac{1}{n+1}\right)^{n+1}}$; 
+\item $\displaystyle{
+\left(1+\frac{1}{n}\right)^{n+1} > 
+\left(1+\frac{1}{n+1}\right)^{n+2}
+}$, ahol $n>0$ egész szám.
+\end{abc}
+\end{enumerate}
+
+\subsection*{2007. 10. 12. -- Ismétlő feladatok}
+\begin{enumerate}
+\item Vizsgáljuk meg a következő sorozatokat növekedés-fogyás szempontjából:
+\begin{abc}
+\item $\displaystyle{a_1=1,\qquad a_{n+1}=\frac{1}{1+a_n}}$;
+\item $\displaystyle{a_1=4,\qquad a_{n+1}=\frac{2+a_n^2}{2a_n}}$.
+\end{abc}
+\item Legyen $a_1=2$, $a_2=1$, $a_{n+2}=\frac{a_n+a_{n+1}}{2}$. Fejezzük ki $a_n$-et $n$-nel!
+\item Az $1, 4, 10, 19,\ldots$ sorozat szomszédos tagjainak különbségsorozata számtani sorozat. Adjuk meg a sorozat $n$-edik tagját és első $n$ tagjának összegét.
+\item Adott a következő táblázat:
+
+$1$
+
+$2, 3, 4$
+
+$3, 4, 5, 6, 7$
+
+$4, 5, 6, 7, 8, 9, 10$
+
+\noindent Igazoljuk, hogy a sorok összege mindig négyzetszám!
+\end{enumerate}
+
+\subsection*{2007. 10. 15. -- A Fibonacci-sorozat tulajdonságai}
+\begin{enumerate}
+\item $f_1=f_2=1$, $f_{n+2}=f_n+f_{n+1}$.
+\begin{abc}
+\item $\displaystyle{f_1+f_3+f_5+\ldots+f_{2n-1}}=\,?$
+\item $\displaystyle{f_2+f_4+f_6+\ldots+f_{2n}}=\,?$
+\item $\displaystyle{f_{n+1}f_{n-1}-f_n^2}=\,?$
+\item $\displaystyle{f_1^2+f_2^2+f_3^2+\ldots+f_n^2}=\,?$
+\end{abc}
+\item 
+\begin{abc}
+\item $\displaystyle{f_1^2+f_2^2+f_3^2+\ldots+f_n^2}=\,?$
+\item $\displaystyle{f_1+f_2+f_3+\ldots+f_n}=\,?$
+\item $\displaystyle{\binom{2n}{0}+\binom{2n-1}{1}+\binom{2n-2}{2}+\ldots+\binom{n}{n}}=\,?$
+\item $\displaystyle{\binom{2n-1}{0}+\binom{2n-2}{1}+\binom{2n-3}{2}+\ldots+\binom{n}{n-1}}=\,?$
+\end{abc}
+\item Igazoljuk, hogy bármely két szomszédos Fibonacci-szám legnagyobb közös osztója 1.
+\item Melyek azok a Fibonacci-számok, amelyek oszthatók \textit{a}) 3-mal; \textit{b}) 5-tel?
+\end{enumerate}
+
+\subsection*{2007. 10. 17.}
+\begin{enumerate}
+\item Igazoljuk a következő egyenlőtlenségeket:
+\begin{abc}
+\item $\displaystyle{\left(1+\frac{2}{n}\right)^n < 
+\left(1+\frac{2}{n+1}\right)^{n+1}}$, ha $n>0$ egész; 
+\item $\displaystyle{\left(1-\frac{1}{n}\right)^n < 
+\left(1-\frac{1}{n+1}\right)^{n+1}
+}$.
+\end{abc}
+\item Igazoljuk, hogy ha $n \ge 1$ egész, akkor
+$$0<\left(1+\frac{1}{n}\right)^{n+1}-
+\left(1+\frac{1}{n}\right)^n<\frac{4}{n}.$$
+\item ($*$) Igazoljuk, hogy ha $n \ge 1$ egész, akkor
+$$\frac{1\cdot 3\cdot \ldots \cdot (2n-1)}{2\cdot 4\cdot \ldots \cdot 2n} < \frac{1}{\sqrt{2n+1}}.$$
+\item  Bizonyítsuk be, hogy ha $n \ge 3$ egész, 
+akkor $n^{n+1} > (n+1)^n$. 
+\item Mutassuk meg, hogy ha $n \ge 2$ egész, akkor
+$$1+\frac{1}{\sqrt{2}}+\frac{1}{\sqrt{3}}+
+\ldots+\frac{1}{\sqrt{n}} > \sqrt{n}.$$
+\item Igazoljuk, 
+hogy $\left(2n\right)!
+<2^{2n}\cdot \left(n!\right)^2$, ha $n > 0$ egész.
+\end{enumerate}
+
+\subsection*{2007. 10. 27.}
+\begin{enumerate}
+\item Igazoljuk, hogy négyzetszám:
+\begin{abc3}
+\item $\displaystyle{\underbrace{44\ldots 4}_{n+1}
+\underbrace{88\ldots 8}_{n}9}$; \qquad
+\item $\displaystyle{\underbrace{11\ldots 1}_{n}
+\underbrace{22\ldots 2}_{n} - \underbrace{33\ldots 3}_{n}}$; \qquad
+\item $\displaystyle{\underbrace{44\ldots 4}_{n+1}
+\underbrace{88\ldots 8}_{n}9}$.
+\end{abc3}
+\item ($*$) Igazoljuk, hogy a következő számok között végtelen sok négyzetszám van:
+$$1, \quad 
+1+2, \quad
+1+2+3, \quad
+1+2+3+4, \quad
+\ldots, \quad
+1+2+3+\ldots+n, \quad
+\ldots $$
+\item Számítsuk ki az alábbi összeget:
+$$nx+(n-1)x^2+\ldots+2x^{n-1}+x^n.$$
+\item Igazoljuk, hogy a következő sorozatok növekednek, de felülről korlátosak:
+\begin{abc2}
+\item $a_1=\sqrt 2$, \quad $a_{n+1}=\sqrt{2+a_n}$; \qquad
+\item $a_1=\sqrt 5$, \quad $a_{n+1}=\sqrt{5+a_n}$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2007. 11. 07. -- Sorozatok (dolgozat)}
+\begin{enumerate}
+\item Egy számtani sorozatban $a_3=5$ és $a_5=3$. 
+Határozzuk meg $a_n$ és $S_n$ értékét!
+\item Számítsuk ki a következő összeget:
+$$2\cdot 1^2+3\cdot 2^2+4\cdot 3^2+\ldots+(n+1)n^2.$$
+\item Egy sorozatban $a_1=1$ és $a_{n+1}=2a_n+1$, ha $n \ge 1$.
+Számítsuk ki $a_1+a_2+a_3+\ldots+a_n$ értékét.
+\item Egy mértani sorozat első három elemének összege 93. Ez a három elem egyúttal egy számtani sorozat első, második és hetedik eleme. Adjuk meg a sorozatokat.
+\item Számítsuk ki a következő összeget:
+$$\frac{1^2}{1\cdot 3}+ 
+\frac{2^2}{3\cdot 5}+
+\frac{3^2}{5\cdot 7}+\ldots+
+\frac{n^2}{(2n-1)(2n+1)}.$$
+\end{enumerate}
+
+\end{document}

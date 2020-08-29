@@ -1,0 +1,300 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/08/1. csoport}
+\rhead{Függvények}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Függvények}
+
+\subsection*{2010.03.25.}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc2}
+\item $f(x)=x^2-5x+6, |x|\le 4$;
+\item $g(x)=\sqrt{x^2-4x+4}+\sqrt{x^2-6x+9}, |x|\le 4$;
+\item $h(x)=x^2-6|x|+5, -2\le x\le 3$;
+\item $k(x)=x\sqrt{x^2-2x+1}, -2\le x\le 4$.
+\end{abc2}
+\item Ábrázoljuk a következő függvényt:
+$$f:[1;+\infty[\to \mathbb{R},\qquad f(x)=\sqrt{x+2\sqrt{x-1}}+\sqrt{x-2\sqrt{x-1}}.$$
+\item ($*$) Hol veszi fel a következő függvény a legnagyobb értékét és mennyi ez az érték?
+$$g:[-1;1]\to\mathbb{R},\qquad g(x)=3x+4\sqrt{1-x^2}.$$
+\end{enumerate}
+
+\subsection*{2010.03.30.}
+\begin{enumerate}
+\item Oldjuk meg függvények segítségével:
+\begin{abc2}
+\item $\dfrac{1}{x}<\dfrac{1}{2}$;
+\item $(x-1)^2-5\le(x+4)^2$;
+\item $\dfrac{3x}{2x+1}>1$;
+\item $\dfrac{2x-7}{4-x}>1$;
+\item $\dfrac{5x-5}{3x-2}>1$.
+\end{abc2}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc3}
+\item $x\mapsto x^2-2x-3$;
+\item $x\mapsto x^2-4x+3$;
+\item $x\mapsto x^2+x-30$;
+\item $x\mapsto x^2+x-12$;
+\item $x\mapsto 5x^2+7x+2$.
+\end{abc3}
+\end{enumerate}
+\subsection*{2010.04.07.}
+\begin{enumerate}
+\item Oldjuk meg függvények segítségével:
+\begin{abc3}
+\item $\sqrt{x+5}=x^2-5$;
+\item ($*$) $\sqrt{1+x}-\sqrt{1-x}=1$;
+\item  $\sqrt{x-6}+\sqrt{7-x}=1$;
+\item $\dfrac{x-1}{\sqrt{x}+1}=\dfrac{\sqrt{x}-1}{2}+4$;
+\item $x+3=4 \sqrt{x}$.
+\end{abc3}
+\item Oldjuk meg függvényekkel:
+\begin{abc2}
+\item  $\sqrt{x}\le x-2$;
+\item $x^2>2\sqrt{x^2-4x+4}$;
+\item $\sqrt{x+2}>x$;
+\item ($*$) $\dfrac{\sqrt{3-x}+1}{x}<1$.
+\end{abc2}
+
+\end{enumerate}
+\subsection*{2010.04.08.}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényt:
+$$x\mapsto |\sqrt{x-1}-2|+|\sqrt{x-1}-3|;\qquad x\ge 1.$$
+\item Oldjuk meg a valós számok halmazán:
+$$\sqrt{x+3-4\sqrt{x-1}}+\sqrt{x+8-6\sqrt{x-1}}=1.$$
+\item Oldjuk meg a következő egyenletet:
+$$4-x^2=\sqrt{4+x}.$$
+\item Oldjuk meg a valós számok halmazán:
+$$7-x^2=\sqrt{7+x}.$$
+\item Oldjuk meg a valós számok halmazán a következő egyenlőtlenségeket:
+\begin{abc2}
+\item $x+\sqrt{2-x}>0$;
+\item $x^2+x+1<3\sqrt{x^2-4x+4}$;
+\item $\dfrac{3}{\sqrt{2-x}}-\sqrt{2-x}<2$;
+\item $x^2>2\sqrt{x^2-4x+4}$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2010.04.13.}
+\begin{enumerate}
+\item Oldjuk meg függvénygrafikonok felhasználásával:
+\begin{abc3}
+\item $x^2-2\ge 2x-4$;
+\item $4x-x^2\le 4x$;
+\item $2x-x^2\ge x$.
+\end{abc3}
+\item ($*$) Oldjuk meg a valós számok halmazán:
+$$\sqrt{10+x+6\sqrt{x+1}}+\sqrt{5-x+2\sqrt{4-x}}=7.$$
+\item ($*$) Oldjuk meg a \underline{valós számok} halmazán:
+$$x^4-2x^2=400x+9999.$$
+\item ($*$) Oldjuk meg a valós számok halmazán:
+$$\dfrac{\sqrt{x^2+8x}}{\sqrt{x+1}}+\sqrt{x+7}=\dfrac{7}{\sqrt{x+1}}.$$
+\item Oldjuk meg a valós számok halmazán:
+$$\dfrac{1-\sqrt{1-4x^2}}{x}<3.$$
+\end{enumerate}
+\subsection*{2010.04.14.}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc2}
+\item $x\mapsto \sqrt{1-x^2},\quad |x|\le 1$;
+\item $x\mapsto \dfrac{x-2}{x^2-5x+6},\quad x\ne 2, x\ne 3$;
+\item $x\mapsto \dfrac{x-5}{x^2-7x+10},\quad x\ne 2, x\ne 5$;
+\item ($*$) $y=\sqrt{4x-x^2},\quad 0\le x\le 4$.
+\end{abc2}
+\item Oldjuk meg a következő egyenleteket:
+\begin{abc3}
+\item $\sqrt{x}=\dfrac{2}{\sqrt{2+x}}-\sqrt{2+x}$;
+\item $\sqrt{2x-1}=5$;
+\item $\sqrt{7-\sqrt{7+x}}=x$.
+\end{abc3}
+\item Oldjuk meg a következő egyenlőtlenségeket:
+\begin{abc2}
+\item $\sqrt{x+1}-\sqrt{x}<\dfrac{1}{10}$;
+\item $\dfrac{x-1}{x+1}>\dfrac{x}{x-1}$.
+\end{abc2}
+\end{enumerate}
+\subsection*{2010.04.19.}
+\begin{enumerate}
+\item Oldjuk meg függvények segítségével a valós számok halmazán:
+\begin{abc2}
+\item $|x^2-6x+5|=x-3$;
+\item $(x^2-7x+6)\sqrt{x^2-10x+21}\ge 0$;
+\item $\dfrac{\sqrt{1+x}}{x-1}\ge \dfrac{5-x}{x-1}$;
+\item $\sqrt{x^2-x-2}>x-1$;
+\item $3|x-1|\le x+3$.
+\end{abc2}
+\item Határozzuk meg, hogy hol vesz fel pozitív értékeket a következő függvény:
+$$x\mapsto \dfrac{1}{x-1}-\dfrac{1}{x+1},\qquad x\ne 1, x\ne -1, x\in \mathbb{R}.$$
+\item Az $a\ge 0$ paraméter mely értékeire hány megoldása van az $|x^2-2x-3|=a$ egyenletnek?
+\end{enumerate}
+\subsection*{2010.04.21.}
+\begin{enumerate}
+\item Oldjuk meg függvénygrafikonokkal:
+\begin{abc3}
+\item $x^2+x-2=0$;
+\item $x^2+2x-3=0$;
+\item $2x^2-3x-2=0$;
+\item $x^2+|x|-2=0$;
+\item $2x^2-|x|-1=0$.
+\end{abc3}
+
+\item Vizsgáljuk meg grafikusan a következő paraméteres egyenleteket:
+\begin{abc3}
+\item $x^2-2x+a=0$;
+\item $x^2-6x+a=0$;
+\item $x^2+x+a=0$.
+\end{abc3}
+\item Oldjuk meg grafikonok segítségével a következő egyenletrendszert:
+\begin{abc2}
+\item $\left.
+\begin{aligned}
+x^2+y^2&=25\\
+x^2+y&=13
+\end{aligned}
+\right\}$;
+
+\item $\left.
+\begin{aligned}
+x+y&=3\\
+xy&=2
+\end{aligned}
+\right\}$.
+\end{abc2}
+\end{enumerate}
+\subsection*{2010.04.22.}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc3}
+\item $x\mapsto \dfrac{1-x}{1+\sqrt{x}},\quad x\ge 0$;
+\item $x\mapsto \sqrt[3]{x-1}$;
+\item $x\mapsto |x^2-2x|-\dfrac{1}{2}$.
+\end{abc3}
+\item Oldjuk meg függvénygrafikonokkal:
+\begin{abc2}
+\item $\sqrt{x-7}-\dfrac{6}{\sqrt{x-7}}=1$;
+\item $\sqrt{x}-\dfrac{2}{\sqrt{x}}=1$;
+\item $\sqrt{x}\cdot\sqrt{1-x}=x$;
+\item $\sqrt{2-x}>x$;
+\item $\sqrt{x+2}+\sqrt{2x+4}<7$.
+\end{abc2}
+\item Grafikonok segítségével oldjuk meg:
+\begin{abc2}
+\item $\left.
+\begin{aligned}
+x^2+y^2&=25\\
+y^2-x&=5
+\end{aligned}
+\right\}$;
+
+\item $\left.
+\begin{aligned}
+xy-x+y&=5\\
+2xy+x-y&=4
+\end{aligned}
+\right\}$.
+\end{abc2}
+\end{enumerate}
+\subsection*{2010.04.26.}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc2}
+\item $f(x)=x^2+5|x-1|+1$;
+\item $g(x)=|x^2-3x+2|+|5-x|$;
+\item $h(x)=1-\dfrac{1}{|x|},\quad x\ne 0$;
+\item $k(x)=(x+1)(|x|-2)$.
+\end{abc2}
+\item Ábrázoljuk a derékszögű koordináta-rendszerben azokat a pontokat,
+amelyeknek $(x;y)$ koordinátáira teljesül:
+\begin{abc2}
+\item $|x|+x=|y|+y$;
+\item $|x-2|+|y+1|\le 1$;
+\item $|2x+y|+|2x-y|\le 4$;
+\item $|y-1|=x^2-4x+3$.
+
+\end{abc2}
+\item ($*$) Határozzuk meg a következő függvények legnagyobb és legkisebb értékét:
+\begin{abc2}
+\item $x\mapsto \dfrac{x^2}{x^4+1},\quad x\in\mathbb{R}$;
+\item $x\mapsto \dfrac{2x}{x^2+1},\quad x\in\mathbb{R}$.
+\end{abc2}
+\end{enumerate}
+\subsection*{2010.04.27.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán: 
+$\sqrt{x+5-4\sqrt{x+1}}+\sqrt{x+2-2\sqrt{x+1}}=1$.
+\item Oldjuk meg függvénygrafikonokkal:
+\begin{abc3}
+\item $\sqrt{x+1}-\sqrt{x-1}=1$;
+\item $\sqrt{25-x}-\sqrt{9-x}=2$;
+\item $\sqrt{4x+2}+\sqrt{4x-2}=4$.
+\end{abc3}
+\item ($*$) Oldjuk meg a valós számok halmazán: $\sqrt{2x+1}+\sqrt{x+1}<1$.
+\item Oldjuk meg a következő egyenleteket, egyenlőtlenségeket: 
+\begin{abc3}
+\item $\sqrt{2+x-x^2+1}>x-4$;
+\item $\sqrt{x-5}-\sqrt{8-x}=2$;
+\item $\sqrt{4-\sqrt{1-x}}>\sqrt{2-x}$.
+\end{abc3}
+
+
+\end{enumerate}
+\subsection*{2010.04.28.}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc2}
+\item $x\mapsto x^2-2|x|-3$;
+\item $x\mapsto (|x+1|+1)(x-3)$.
+\end{abc2}
+\item Oldjuk meg függvénygrafikonok segítségével:
+\begin{abc2}
+\item $x^2-5x<6$;
+\item $x^3>3x-2$.
+\end{abc2}
+\item Oldjuk meg a valós számok halmazán: $\sqrt{2-\sqrt{3+x}}<\sqrt{4+x}$.
+\item Ábrázoljuk a derékszögű koordináta-rendszerben azoknak a $P(x;y)$ pontoknak a halmazát, amelyeknek koordinátáira teljesül:
+$$(x-|x|)^2+(y-|y|)^2=4.$$
+\end{enumerate}
+\end{document}

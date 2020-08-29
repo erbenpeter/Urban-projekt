@@ -1,0 +1,557 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+ 
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/10/6.}
+\rhead{Vegyes feladatok}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{pgf,tikz}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Vegyes feladatok}
+
+\subsection*{2012.02.20 -- Versenyfeladatok}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $a$, $b$, $c$ egész számok és $a+b+c$ osztható 6-tal, akkor $a^3+b^3+c^3$ is osztható 6-tal.
+\item Szerkesszük meg a háromszöget, ha adott az $a$ és $b$ oldala $(a<b)$ és a közbezárt szög $f$ felezője.
+\item Tegyük fel, hogy $x,y>0$. Legfeljebb mekkora lehet $x,y+\frac{1}{x}$ és $\frac{1}{y}$ legkisebbik?
+\item Oldjuk meg és diszkutáljuk az $$\frac{x+a}{x-a}+\frac{x+b}{x-b}=2$$ egyenletet, ahol $a,b$ valós paraméterek.
+\item Három prímszám szorzata az összegük ötszörösével egyenlő. Mik lehetnek ezek a prímek?
+
+\end{enumerate}
+
+\subsection*{2012.02.22}
+\begin{enumerate}
+\item Az $1,2,3,4,9,10,12,13,...$ sorozatot úgy képezzük,hogy a $3$ nemnegatív egész kitevős hatványait, illetve különböző ilyen hatványok összegét nagyság szerint rendezzük. Mi lesz a sorozat 100. tagja?
+\item Tudjuk,hogy $2^8+2^{12}+2^n$ ($n>0$, egész) teljes négyzet. Mi lehet n értéke?
+\item A $p_1,p_2,...,p_n$ prímeket ($p_i$ az $i$-edik prím) két csoportra osztjuk. Az egyik csoportbeli prímek szorzata $A$, a másik csoportbelieké $B$. Tegyük fel, hogy $A+B< p_{n^2+1}$ és $|A-B| < p_{n^2+1}$. Igazoljuk, hogy $A+B$ és $|A-B|$ is prímszám. 
+\item Határozzuk meg a $$(\sqrt{2}+\sqrt{3})^{2012}$$ számban a tizedesvessző előtt és utána álló számjegyet.
+\item Igazoljuk, hogy ha $x,y,z>0$, akkor $$\frac{x}{y+z}+\frac{y}{x+z}+\frac{z}{x+y}>\frac{3}{2}$$ Nesbitt-egyenlőtlenség
+\item Igazoljuk, hogy ha $a,b,c,d>0$ és $a+b+c+d=1$, akkor $$\sqrt{4a+1}+\sqrt{4b+1}+\sqrt{4c+1}+\sqrt{4d+1}<6.$$ 
+\end{enumerate}
+
+
+\subsection*{2012.02.27 -- Gráfelmélet }
+\underline{Definíciók}:
+
+\begin{description}
+\item[\underline{$G$ gráf},] ha $G$ pontok és ezekből álló párok véges halmaza, a pontpárok az élek.
+
+\item[\underline{Hurokél}:] a pár két eleme azonos;
+
+\item[\underline{Többszörös él}:]
+két pontot több él köt össze.
+
+\item[\underline{Egyszerű gráf}:] nincs benne hurokél és többszörös él.
+
+\item[\underline{Séta}:] $G$-ben élek egymáshoz csatlakozó sorozata; (véges)
+
+\item[\underline{Vonal}:] olyan séta, amelyben minden él különböző;
+
+\item[\underline{Út}:] olyan vonal, amely minden ponton legfeljebb egyszer halad át.
+
+\item[\underline{Kör}:] olyan egymáshoz csatlakozó élsorozat, amelyben minden él legfeljebb egyszer szerepel és a kezdő és végpont azonos, ezeken kívül minden pont is legfeljebb egyszer szerepel.
+
+\item[\underline{Pont foka}:] a pontból induló élek száma.
+
+\end{description}
+
+\subsection*{2012.02.27 -- Gráfelmélet }
+\begin{enumerate}
+
+\item Igazoljuk, hogy ha egy gráfban minden pont foka legalább 2, akkor van benne kör. 
+
+\item Hány éle van egy $n$ pontból álló útnak és egy $n$ pontból álló körnek?
+
+\item Egy $G$ gráf összefüggő,ha bármely pontjából bármely másik pontjába úton eljuthatunk.Igazoljuk, hogy ha egy összefüggő gráfban van kör, akkor a kör bármely élét elhagyva a gráf összefüggő marad.
+
+\item Igazoljuk,hogy minden egyszerű gráfban a páratlan fokú csúcsok száma páros.
+
+\item Igazoljuk, hogy ha $n$ csapat ($n\geq 4$) körmérkőzéses versenyén legalább $n+1$ mérkőzést lejátszottak, akkor van olyan csapat, amely legalább háromszor játszott.
+
+\item Hány olyan 5 csúcsú egyszerű gráf van, amelynek van két harmadfokú és két negyedfokú csúcsa?
+
+\item Egy 5 csúcsú egyszerű gráfnak 8 éle van. Mekkorák lehetnek a csúcsok fokszámai?
+
+\item Igazoljuk, hogy ha egy egyszerű gráf minden csúcsának foka legalább 2, akkor van benne kör.
+
+\item Igazoljuk, hogy ha egy $n$ csúcsú gráfnak legalább $n$ éle van, akkor van benne kör ($n\geq 3$).
+
+\item Milyen szerkezetűek azok a gráfok, amelyekben minden csúcs fokszáma legfeljebb 2?
+\end{enumerate}
+
+
+\subsection*{2012.02.29 -- Gráfelmélet }
+
+\underline{Definíciók}:
+
+\begin{description}
+\item[\underline{Összefüggő gráf}:] bármely pontjából bármely másik pontjába élek mentén el lehet jutni.
+
+\item[\underline{Fa}:] összefüggő, körmentes egyszerű gráf.
+
+\item[\underline{Teljes gráf}:] olyan egyszerű gráf, amelynek ha $n$ csúcsa van, akkor $\binom{n}{2}$\ éle van (az összes lehetséges él a gráfhoz tartozik).
+
+\end{description}
+
+
+\subsection*{2012.02.29 -- Gráfelmélet}
+\begin{enumerate}
+\item Adjunk meg olyan $6$ csúcsú, nem összefüggő gráfot, amelynek minden csúcsa másodfokú.
+
+\item Adjunk meg  7 csúcsú, nem összefüggő, 15 élű gráfot.
+
+\item Igazoljuk, hogy bármely egyszerű gráf vagy maga vagy komplementere összefüggő.
+
+\item Tegyük fel, hogy $n\geq 4$, egész szám. Igazoljuk, hogy van olyan $n$ csúcsú gráf, ami összefüggő és a komplementere is összefüggő.
+
+\item Igazoljuk,hogy bármely fagráfban van elsőfokú pont. Igaz-e, hogy van legalább $2$ elsőfokú pont?
+
+\item Igazoljuk, hogy minden összefüggő gráfnak van olyan részgráfja, amely fa és az eredeti gráf összes pontját tartalmazza (a gráf faváza).
+
+\item Tudjuk, hogy egy egyszerű gráfnak minden csúcsa legfeljebb másodfokú. Jellemezzük a gráfot.
+
+\item Hány különböző  ötcsúcsú fa van?
+
+\item Igazoljuk, hogy egy $n$ csúcsú fának $n-1$ éle van.
+
+\item Rajzoljuk meg a $6$, illetve $7$ csúcsú fákat.
+
+\item Hány olyan $8$ csúcsú egyszerű gráf van, amelynek minden csúcsa másodfokú?
+
+\end{enumerate}
+
+
+%\newpage
+\subsection*{2012.03.05 -- A trigonometrikus függvények inverzei}
+
+\begin{abc2}
+\item $f: x \mapsto \arcsin x$\quad
+$D_f=[-1;1]$\quad
+$R_f=[-\frac{\pi}{2};\frac{\pi}{2}]$
+
+
+\begin{tikzpicture}
+    \begin{axis}[
+        domain=-1:1,
+        xmin=-2.1, xmax=2.1,
+        ymin=-2, ymax=2,
+        samples=400,
+        axis lines=middle,
+        ytick={-1.57,1.57}, yticklabels={$-\pi$/2,$\pi$/2}
+    ]
+        \addplot+[mark=none] {asin(x)/180*pi};
+    \end{axis}
+\end{tikzpicture}
+
+
+\item $g: x \mapsto \arccos x$\quad
+$D_g=[-1;1]$\quad
+$R_g=[0;\pi]$
+
+\begin{tikzpicture}
+    \begin{axis}[
+        domain=-1:1,
+        xmin=-2.1, xmax=2.1,
+        ymin=-0.1, ymax=3.5,
+        samples=400,
+        axis lines=middle,
+        ytick={1.57,3.14}, yticklabels={$\pi$/2,$\pi$}
+    ]
+        \addplot+[mark=none] {acos(x)/180*pi};
+    \end{axis}
+\end{tikzpicture}
+
+\item $h: x \mapsto \arc\tg x$\quad
+$D_h=]-\infty ; \infty[ \quad R_h=]-\frac{\pi}{2};\frac{\pi}{2}[$
+
+\begin{tikzpicture}
+    \begin{axis}[
+        domain=-3:3,
+        xmin=-3.1, xmax=3.1,
+        ymin=-2, ymax=2,
+        samples=400,
+        axis lines=middle,
+        ytick={-1.57,1.57}, yticklabels={$-\pi$/2,$\pi$/2}
+    ]
+        \addplot+[mark=none] {atan(x)/180*pi};
+    \end{axis}
+\end{tikzpicture}
+
+\item $k: x \mapsto \arc\ctg x$\quad 
+$D_k=]-\infty;\infty[ \quad R_k:]0;\pi[$
+
+\begin{tikzpicture}
+    \begin{axis}[
+        domain=-3:3,
+        xmin=-3.1, xmax=3.1,
+        ymin=-0.1, ymax=3.5,
+        samples=400,
+        axis lines=middle,
+        ytick={1.57,3.14}, yticklabels={$\pi$/2,$\pi$}
+    ]
+        \addplot+[mark=none] {rad(90-atan(x))};
+    \end{axis}
+\end{tikzpicture}
+
+\end{abc2}
+
+\begin{enumerate}
+\item Oldjuk meg valós számok halmazán
+\begin{abc}
+\item $\sin^6x+\cos^6x=1$;
+\item $2\sin x+3\cos^2x\geq5$;
+\item $(\sin x+\sqrt{3}\cos x)\cdot \sin 4x =2$.
+\end{abc}
+\item Határozzuk meg a következő függvények legnagyobb és legkisebb értékét:
+\begin{abc}
+\item $f(x)=\sin^6x+\cos^6x;\qquad x\in \mathbb{R}$
+\item $h(x)=\frac{7}{2}\sqrt{(\sin x+\cos x)^2+2};\qquad x\in \mathbb{R}$
+
+\end{abc}
+\end{enumerate}
+
+%\newpage
+\subsection*{2012.03.07 -- Komplex számok}
+\underline{Definíciók}: $i^2=-1,\quad \mathbb{C}=\{a+ib~|~ a,b \in \mathbb{R}\}$,
+
+$(a+ib)+(c+id)=(a+c)+(b+d)$,
+
+$(a+ib)(c+id)=(ac-bd)+i(ad+bc)$;
+
+$|a+ib|=\sqrt{a^2+b^2}$;\quad $Re(a+ib)=e$,\quad $Im(a+ib)=b,$\quad$\overline{a+ib}=a-ib.$
+
+Trigonometrikus alak: $z=a+ib$, $r=\sqrt{a^2+b^2}$, $z=r(\cos\varphi+i\sin\varphi)$
+
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-1,0.) -- (7,0.);
+\foreach \x in {2.,4.,6.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+\draw[->,color=black] (0.,-1) -- (0.,4.1);
+\foreach \y in {2.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+%\clip(-3.924300151749257,-2.9589479655429174) rectangle (9.607446517450182,7.207888341866245);
+\draw [shift={(0.,0.)},color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (0,0) -- (0.:0.721052220383629) arc (0.:30.963756532073532:0.721052220383629) -- cycle;
+\draw [->] (0.,0.) -- (5.,3.);
+\draw (5.,3.)-- (5.,0.);
+\draw (4.992712306994956,3.2901712777818637) node[anchor=north west] {$a+ib$};
+\begin{scriptsize}
+\draw [fill=uuuuuu] (0.,0.) circle (1.5pt);
+\draw[color=uuuuuu] (0.9307847988338456,0.1896467301322608) node {$\varphi$};
+\draw[color=black] (2.5170996836778294,1.7759616149762436) node {$r$};
+\end{scriptsize}
+\end{tikzpicture}
+
+
+\begin{enumerate}
+\item Igazoljuk a Moivre-tételt: $z_1=r_1(\cos\varphi_1+ i \sin\varphi_1),\quad z_2=r_2(\cos\varphi_2+\sin\varphi_2),$ akkor,
+
+$z_1z_2=r_1r_2(\cos(\varphi_1+\varphi_2)+i \sin (\varphi_1+\varphi_2))$
+\item Számítsuk ki:
+\begin{abc}
+\item $\dfrac{(i+1)^{2n}}{(i-1)^{2n-2}}$, $n>0$ egész;
+\item $(1+i)^{52}$,
+\item $\left(\dfrac{1+i\sqrt{3}}{1-i}\right)^{20}$.
+\end{abc}
+\item Legyen $\omega=-\frac{1}{2}+i\frac{\sqrt{3}}{2}$, $a,b$ tetszőleges valós számok. Számítsuk ki:
+\begin{abc2}
+\item $(a+b)(a+b\omega)(a+b\omega^2)$;
+\item $(a\omega^2+b\omega)(b\omega^2+a\omega)$.
+\end{abc2}
+\end{enumerate}
+
+%\newpage
+\subsection*{2012.05.08 -- Valószínűségszámítás}
+\underline{Definíciók}:
+
+\underline{Esemény:} az elemi események halmazának részhalmaza, jelölése $A,B, ...\quad;$
+
+$A+B$ az az esemény, amiben vagy $A$ vagy $B$ bekövetkezik;
+
+$A\cdot B$ az az esemény, amiben $A$ is és $B$ is bekövetkezik;
+
+$\overline{A}$ az az esemény, amiben $A$ nem következik be.
+
+$I$ vagy $E$ a biztos esemény (mindig bekövetkezik)
+
+$O$ a lehetetlen esemény, soha nem következik be;
+
+\underline{$A$ valószínűsége:}
+\begin{itemize}
+\item $P(A)$ egy függvény, ami az eseményeken van értelmezve, 
+\item $0\leq P(A) \leq 1$, 
+\item ha $A\cdot B=0$, akkor $P(A+B)=P(A)+P(B)$, 
+\item $A$ és $B$ függetlenek, ha $P(A\cdot B)=P(A)\cdot P(B)$. 
+\end{itemize}
+\underline{Binomiális elosztás:} $0\leq p \leq 1$,$\quad$ $q=1-p$,\qquad Várható értéke: $M(X)=np$
+
+$$P(X=k)=\binom{n}{k}\cdot p^k \cdot q^{n-k}$$
+
+\noindent
+\underline{Hipergeometrikus eloszlás:} $N,M,n$  \qquad Várható értéke: $M(X)=n\frac{M}{N}$
+$$P(x=k)=\frac{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}}$$
+
+
+\noindent
+\underline{Geometrikus eloszlás:} $0\leq p\leq  1,\quad q=1-p$\qquad Várható értéke : $M(X)=\frac{1}{p}$
+$$P(x=k)=q^{k-1}p$$ 
+
+%\newpage
+\subsection*{2012.03.14 -- Kombinatorika}
+
+\underline{Definíciók}:
+
+\begin{description}
+\item[\underline{Permutációk}:] adott $n$ elemű összes lehetséges sorrendje egy-egy permutáció.
+
+Az $n$ elem permutációinak száma: $n!$ (teljes indukció).
+
+Ha az $n$ elem közül $k_1,k_2,...,k_r$ azonos $(k_1+k_2+...k_r=n)$ akkor az ilyen ismétléses permutációk száma: $$\frac{n!}{k_1!\cdot k_2!\cdots k_r}$$
+
+\item[\underline{Variációk}:] adott $n$ elem közül $k$-t hányféleképpen lehet sorbarakni $(k\leq n)$ : $V_n^k=n(n-1)...(n-k+1)$.
+
+Ismétléses variáció, ha ugyanaz az elem az elem akárhányszor szerepelhet, ezek száma: $n^k$,
+
+\item[\underline{Kombinációk}:] $n$ elemből hányféleképpen lehet $k$-t kiválasztani (a sorrend nem számít): $$\binom{n}{k}\qquad (0\geq k\geq n).$$
+
+Ismétléses kombinációk, ha ugyanazt az elemet többször is választhatjuk: $$\binom{n+k-1}{k-1}=\binom{n+k-1}{n}.$$
+
+Egy $n$ elemű halmaz összes $$\binom{n}{0}+\binom{n}{1}+\binom{n}{2}+...+\binom{n}{n}=2^n.$$
+
+\item[\underline{Logikai szita formula}:] $A,B,C$ véges halmazok $|A|$ az $A$ elemeinek száma, $$|A\cup B|=|A|+|B|-|A\cap B|;$$
+$$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|$$
+Általánosítható $n$ halmazra is.
+
+\item[\underline{A Pascal háromszög képzési szabálya}:]
+$$\binom{n}{k}+\binom{n}{k+1}=\binom{n+1}{k+1}\quad\binom{n}{0}=\binom{n}{n}=1.$$
+
+A Pascal háromszög $n$-edik sora váltakozó előjellel: $n>0,\quad n\in$ $N$
+$$\binom{n}{0}-\binom{n}{1}+\binom{n}{2}-\binom{n}{3}+...+(-1)^n\binom{n}{n}=0;$$
+További összegek :
+$${\binom{n}{0}}^2+{\binom{n}{1}}^2+{\binom{n}{2}}^2+...+{\binom{n}{n}}^2=\binom{2n}{n};$$
+$$\binom{2n}{0}-\binom{2n}{2}+\binom{2n}{4}-\binom{2n}{6}+...+(-1)^n\binom{2n}{2n}=2^n\cos n\frac{\pi}{2};$$
+$$\binom{2n}{1}-\binom{2n}{3}+\binom{2n}{5}-...+(-1)^{n-1}\binom{2n}{2n-1}=2^n\sin n\frac{\pi}{2}.$$
+
+\end{description}
+\subsection*{2012.03.22 -- Számelméleti függvények}
+
+\underline{Definíciók}:
+
+$d$(n) az $n>0$ egész szám pozitív osztóinak száma;
+
+$\delta (n)$ az $n>0$ egész szám pozitív osztóinak összege;
+
+$\varphi(n)$ az $n>0$ egész, akkor az $1,2,...,n$ számok között az $n$-hez relatív prímek száma .
+
+$n$ \underline{tökéletes szám}, ha $\delta (n)=2n$.
+
+\noindent\underline{Tételek}:
+
+ha $n=p_1^{\alpha_1}p_2^{\alpha_2}\ldots p_k^{\alpha_k}$ az $n>0$ prímhatványok szorzataként való előállítása, akkor
+$$d(n)=(\alpha_1 +1)(\alpha_2 +1)\ldots(\alpha_k +1);$$
+$$\delta(n)=\frac{p_1^{\alpha_1 +1}-1}{p_1 -1}\cdot\frac{p_2^{\alpha_2 +1}-1}{p_2 -1}\cdot\ldots\cdot\frac{p_k^
+{\alpha_2 +1}-1}{p_k -1};$$
+$$\varphi(n)=n\left(1-\frac{1}{p_1}\right)\left(1-\frac{1}{p_2}\right)\ldots\left(1-\frac{1}{p_k}\right);$$
+
+$n$ akkor és csak akkor páros tökéletes szám, ha $n=2^{p-1}(2^p-1)$ alakú, ahol $p$ prím és $2^{p-1}$ is prím.
+
+\begin{enumerate}
+\item Melyik az az $n>0$ egész, szám, amely osztható $12$-vel és $14$ pozitív osztója van?
+\item Igaz-e, hogy 
+\begin{abc}
+\item $7\mid \binom{1000}{500}$;
+\item $7\mid \binom{10000}{5000}$?
+\end{abc}
+\item Határozzuk meg azokat a négyjegyű számokat, amelyeknek $15$ különböző pozitív osztója van. 
+\end{enumerate}
+
+%\newpage
+\subsection*{2012.03.26 -- Sorozat határértéke, nevezetes sorozatok }
+\underline{Definíció}: az $(a_n)$ sorozat konvergens és határértéke $A$, ha $A$ bármely környezetén kívül $a_n$-nek csak véges sok tagja van; azaz bármely $\varepsilon>0$ számhoz van olyan $n_0$ index, hogy ha $n>n_0$, akkor $|a_n-A|<\varepsilon$.
+
+\noindent\underline{Jelölés}: $\lim\limits_{n\to\infty} a_n=A$, vagy rövidebben $a_n\to A$ ha $n\to\infty$.
+
+\noindent\underline{Tételek}: 
+Ha $a_n\to A$, $b_n\to B$, akkor $a_n\pm b_n\to A\pm B, a_n\cdot b_n\to A\cdot B$ és ha $B\not=0$, akkor $\frac{a_n}{b_n}\to\frac{A}{B}$.
+
+
+Ha $(a_n)$ monoton növő $(a_n\leq a_{n+1})$ és felülről korlátos $(a_n\leq K)$, akkor $(a_n)$ konvergens.
+
+Ha $a_n\leq c_n\geq b_n$ és $a_n\to A, b_n\to A$, akkor $c_n\to A$.
+
+Az $\left(\left(1+\frac{1}{n}\right)^n\right)$ sorozat monoton nő és felülről korlátos, tehát konvergens, határértéke $e=2{,}71...$
+
+Az $\left(\left(1+\frac{1}{n}\right)^{n+1}\right)$ sorozat monoton fogy, alulról korlátos, határértéke $e$.
+
+A $(q^n)$ sorozat ha $|q|<1$ konvergens és határértéke $0$, (ha $q=1$, határértéke $1$).
+
+Az $(1+q+...+q^{n-1})$ sorozat konvergens, ha $|q|<1$ és határértéke $\frac{1}{1-q}$.
+
+\noindent További példák:
+
+$\lim\limits_{n\to\infty} \left(\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+...+\frac{1}{(n-1)\cdot n}\right)=1$;
+
+$\lim\limits_{n\to\infty} \frac{a^n}{n!}=0$ ha $a>1$;
+
+$\lim\limits_{n\to\infty} \frac{n^k}{a^n}=0$ ha $a>1$, $k$ adott szám.
+
+\noindent\underline{Definíciók}:
+
+ha $a_{n+1}-a_n=d$ állandó, akkor $(a_n)$ számtani sorozat;
+
+ha $a_{n+1}=qa_n$, $q$ állandó, akkor $(a_n)$ mértani sorozat;
+
+a Fibonacci sorozat:
+$f_1=f_2=1,\quad f_{n+2}=f_n+f_{n+1}$.
+
+\noindent\underline{Tételek}:
+
+Ha $(a_n)$ számtani sorozat, akkor $a_n=a_1+(n-1)d$;
+
+ha $(a_n)$ mértani sorozat, akkor $a_n=a_1\cdot q^{n-1}$;
+
+Összegképletek:
+
+számtani sorozat: $a_1+a_2+...+a_n=\frac{a_1+a_n}{2}n$;
+
+mértani sorozat: $a_1+a_2+...+a_n=
+\left\{
+\begin{array}{lr} 
+a_1\frac{q^n-1}{q-1} &\text{~ha~} q\ne 1\cr 
+na_1 &\text{~ha~} q=1
+\end{array}
+\right.$. 
+
+A Fibonacci-sorozat tulajdonságai:
+
+$f_1+f_3+f_5+...+f_{2n-1}=f_{2n};$
+
+$f_2+f_4+f_6+...+f_{2n}=f_{2n+1}-1;$
+
+$f_1^2+f_2^2+...+f_n^2=f_n\cdot f_{n+1};$
+
+$f_1\cdot f_2+f_2\cdot +...+f_{2n-1}\cdot f_{2n}=f_{2n}^2.$
+
+%\newpage
+\subsection*{2012.03.29 -- Kongruenciák, számrendszerek}
+\underline{Definíció}: $a\equiv b \pmod{m},$ ha $m|a-b$.
+
+\noindent\underline{Tételek}:
+
+$a\equiv a\pmod{m}$ :reflexív
+
+$a\equiv b\pmod{m} \longrightarrow b\equiv a\pmod{m}$ :szimmetrikus
+
+$a\equiv b\pmod{m}$ és $b\equiv c\pmod{m}\longrightarrow a\equiv c\pmod{m};\qquad$ :tranzitív
+
+$a\equiv b\pmod{m}\longrightarrow a+c=b+c\pmod{m};$
+
+$a\equiv b$ és $c\equiv d\pmod{m} \longrightarrow a+c\equiv b+d\pmod{m};$
+
+$a\equiv b\longrightarrow ac\equiv bd\pmod{m};$
+
+$a\equiv b$ és $c\equiv d\pmod{m}\longrightarrow ac\equiv bd\pmod{m};$
+
+$a\equiv b\pmod{m}\longrightarrow a^n\equiv b^n\pmod{m};$
+
+\noindent{Kis-Fermat tétel}: ha $p$ prím, $(a,p)=1$, akkor 
+$a^{p-1}\equiv 1\pmod{p}$;
+
+\noindent{Euler tétel}: ha $(a,m)=1$, akkor 
+$a^{\varphi(m)}\equiv 1\pmod{m}$;
+
+\noindent{Wilson tétel}: ha $p$ prím, akkor 
+$(p-1)!\equiv -1\pmod{p}$.
+
+\noindent{A maradékos osztás tétele}: Tetszőleges $a$ és $b\not=0$ egész számokhoz egyértelműen léteznek olyan $q$ és $r$ pozitív egészek, hogy
+$$a=qb+r\quad ;\quad 0\leq r<|b|.$$
+
+\noindent\underline{Definíció}: Ha $a$ és $b$ adott egész számok, akkor a  $D$ egész szám az $a$ és $b$ legnagyobb közös osztója, ha $D\mid a$ és $D\mid b$, továbbá ha $d$ egészre $d\mid a$ és $d\mid b$ teljesül, akkor $d\mid D$.
+
+Jelölése: $(a,b)=D$.
+
+\noindent\underline{Euklédeszi algoritmus}: adott  $a,b$ egészek,
+
+\noindent{ha} $b=0$, akkor $(a,b)=a$, ha $b\not=0$
+
+$a=q_1b+r_1$ (ha $r_1=0$, akkor  $(a,b)=b),$
+
+\noindent{ha}  $r_1\not=0$ $b=q_2r_1+r_2,$ ha $r_2\not=0$
+
+$r_1=q_3r_2+r_3$, és így tovább
+
+\ldots
+
+\noindent{ha} az utolsó nem nulla maradék $r_n$, akkor
+
+$r_{n-1}=q_{n+1}r_n$ és $(a,b)=r_n$.
+
+\noindent{Az} $a>1$ alapú számrendszer: ha  tetszőleges egész szám,akkor 
+$$n=b_0a^k+b_1a^{k-1}+\ldots +b_{k-1}a+b_k,$$
+
+ahol $b_0,b_1,\ldots ,b_2$ egész számok és
+$$0\leq b_i\leq a-1\qquad i=0,1,2, \ldots,k$$
+
+az adott felírás egyértelmű.
+
+\noindent{Igazoljuk}, hogy egy $n$ szám akkor és csak akkor osztható $a-1$-gyel, ha $b_0+b_1+\ldots+b_k$ osztható $a-1$-gyel.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+

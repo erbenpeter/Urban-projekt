@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C05/11/4.}
+\rhead{Görbék}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Görbék}
+
+\subsection*{2009.12.14.}
+\begin{enumerate}
+\item Az $a>0$ valós paraméter, a Descartes-féle levél egyenlete: $x^3+y^3-3axy=0$.
+\\ Az $\frac{y}{x}=t$ paramétert bezetve írjuk fel a görbe paraméteres egyenletrendszerét és jellemezzük, ábrázoljuk a görbét.
+\item A lemniszkáta egyenlete derékszögű koordinátákkal: $(x^2+y^2)^2=a^2(x^2-y^2)$, ahol $a>0$ paraméter. Vezessük le az $x=r\cos\phi$, $y=r\sin\phi$ polár koordinátákat, írjuk át a görbe egyenletét és vázoljuk a görbe alakját.
+\end{enumerate}
+
+\subsection*{2010.01.04.}
+\begin{enumerate}
+\item Egy $a>0$ sugarú kör csúszás nélkül gördül egy egyenesen. Milyen pályát ír le a gördülő kör kerületének egy rögzített pontja?
+\item Ábrázoljuk és jellemezzük polárkoordináták segítségével a következő egyenlettel megadott görbét: $x^4-y^4+xy=0$.
+\item Vázoljuk a következő egyenletekkel megadott görbéket:
+\begin{enumerate}
+\item $y^2=(x-1)(x-2)(x-3)$;
+\item $y^2=x^4(x+1)$;
+\item $y^2=\displaystyle \frac{x-1}{x+1}$.
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{2010.01.05.}
+\begin{enumerate}
+\item Ábrázoljuk és jellemezzük a következő egyenletekkel adott görbéket:
+\begin{enumerate}
+\item $x^4+2y^3=4x^2y$, $(y=tx)$;
+\item $x^3+y^3=3x^2$, $(y=tx)$;
+\item $x^4-y^4+xy=0$, polárkoordinátákra érdemes áttérni;
+\item $x^{\frac{2}{3}}+y^{\frac{2}{3}}=a^{\frac{2}{3}}$, $(a>0)$; válasszunk alkalmas paraméterezést.
+\end{enumerate}
+\item Ábrázoljuk és jellemezzük a következő, polárkoordinátákkal adott görbéket:
+\begin{enumerate}
+\item $r=a\sin^3\phi$ $(a>0)$;
+\item $r^2=2a^2\cos^2\phi$ $(a>0)$.
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{2010.01.11.}
+Ábrázoljuk a következő egyenletekkel megadott görbéket:
+\begin{enumerate}
+\item $y^2=8x^2-x^4$;
+\item $x^3+y^3=3x^2$, $(y=tx)$.
+\end{enumerate}
+
+\end{document}

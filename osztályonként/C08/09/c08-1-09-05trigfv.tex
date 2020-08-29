@@ -1,0 +1,490 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/09/1.}
+\rhead{Trigonometrikus függvények}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}\nolimits}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Trigonometrikus függvények}
+
+\subsection*{2011. 02. 22.}
+\textbf{Definíció.} Ha az $\mathbf{e}$ egységvektor $\alpha$ szöget zár be az $x$-tengely pozitív felével (az $\mathbf{i}$ egységvektorral), akkor $\mathbf{e}$ koordinátái: $(\cos\alpha;\sin\alpha)$.\\
+Az $\alpha$ ívmértéket jelent ($\alpha\in\mathbb R$).
+
+\begin{enumerate}
+\item Számítsuk ki: $\cos\frac{\pi}{2}$, $\sin\frac{3\pi}{2}$, $\sin\pi$, $\cos\pi$, $\sin\frac{2\pi}{3}$, $\cos\frac{2\pi}{3}$, $\sin\frac{5\pi}{3}$, $\cos\frac{4\pi}{3}$.
+\item Igazoljuk a következő azonosságokat:
+\begin{abc}
+\item $\cos(-\pi)=\cos \pi$, $\sin\left(-\frac{\pi}{2}\right)=-\sin\frac{\pi}{2}$;
+\item $\cos(\alpha)=\cos\alpha$, $\sin(-\alpha)=-\sin\alpha$;
+\item $\cos(\alpha+\pi)=-\cos\alpha$, $\sin(\alpha+\pi)=-\sin\alpha$;
+\item $\cos\left(\alpha+\frac{\pi}{2}\right)=-\sin\alpha$, $\sin\left(\alpha+\frac{\pi}{2}\right)=\cos\alpha$;
+\item $\cos(\alpha+2\pi)=\cos\alpha$, $\sin(\alpha+2\pi)=\sin\alpha$;
+\item $\cos\left(\frac{\pi}{2}-\alpha\right)=\sin\alpha$, $\sin\left(\frac{\pi}{2}-\alpha\right)=\cos\alpha$.
+\end{abc}
+\item Ábrázoljuk és jellemezzük az $x\mapsto \sin x$, $x\in \mathbb R$ függvényt.
+\end{enumerate}
+
+\subsection*{2012. 02. 23.}
+\begin{enumerate}
+\item Ábrázoljuk:
+\begin{abc4}
+\item $x\mapsto |\sin x|$;
+\item $x\mapsto \sin|x|$;
+\item $x\mapsto \sin \pi x$;
+\item $x\mapsto [x]|\sin\pi x|$.
+\end{abc4}
+\item Hány megoldása van a valós számok halmazán:
+\[|\sin x|=\frac{2}{2011\pi}x?\]
+\item Ábrázoljuk a derékszögű koordináta-rendszerben azoknak az $(x;y)$ pontoknak a halmazát, amelyekre teljesül:
+\begin{abc2}
+\item $\sin x = \sin y$;
+\item $\sin^2 x+\cos^2 y=2$.
+\end{abc2}
+\item Oldjuk meg grafikus módszerrel:
+\begin{abc3}
+\item $\sin x = x$;
+\item $\cos x = x$;
+\item $2x-2=\sin x$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2011. 02. 24.}
+\begin{enumerate}
+\item ($*$) Igazoljuk a következő két azonosságot (\emph{addíciós tételek}):
+\[\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta;\quad \cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta.\]
+\item Igazoljuk a következő azonosságokat:
+\begin{abc2}
+\item $\sin(\alpha-\beta)=\sin\alpha\cos\beta-\cos\alpha\sin\beta$;
+\item $\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta$;
+\item $\sin 2\alpha=2\sin\alpha\cos\alpha$;
+\item $\cos 2\alpha=\cos^2\alpha-\sin^2\alpha$.
+\end{abc2}
+\item Oldjuk meg a következő egyenleteket:
+\begin{abc2}
+\item $\sin\alpha+\cos\alpha=1$;
+\item $\sin\alpha+\sqrt3\cos\alpha=2$;
+\item $\sin x\cos^3 x-\sin^3 x\cos x=\frac14$;
+\item ($*$) $\left(\sin x+\sqrt3\cos x\right)\sin 4x=2$.
+\end{abc2}
+\item ($*$) Igazoljuk, hogy ha $0\le\varphi\le\frac{\pi}{2}$, akkor $\cos\sin\varphi>\sin\cos\varphi$.
+\end{enumerate}
+
+\subsection*{2011. 03. 01.}
+\textbf{Definíció.} Ha $\alpha\in\mathbb R$, $\alpha\ne\frac{\pi}{2}+k\pi$, $k\in\mathbb Z$, akkor $\tg\alpha=\frac{\sin\alpha}{\cos\alpha}$; ha $\alpha\ne n\pi$, $n\in\mathbb{Z}$, akkor $\ctg\alpha=\frac{\cos\alpha}{\sin\alpha}$.
+\begin{enumerate}
+\item Igazoljuk a következő azonosságokat:
+\begin{abc}
+\item $\tg(\alpha+\pi)=\tg\alpha$, $\ctg(\alpha+\pi)=\ctg\alpha$;
+\item $\tg(-\alpha)=-\tg\alpha$, $\ctg(-\alpha)=-\ctg\alpha$;
+\item $\tg\left(\frac{\pi}{2}-\alpha\right)=\ctg\alpha$.
+\end{abc}
+\item Ábrázoljuk és jellemezzük az
+\begin{abc2}
+\item $x\mapsto\tg x$, $\alpha\ne\frac{\pi}{2}+k\pi$, $k\in\mathbb Z$ és
+\item $x\mapsto\ctg x$, $\alpha\ne n\pi$, $n\in\mathbb{Z}$
+\end{abc2}
+függvényeket.
+\item Igazoljuk a következő azonosságokat:
+\begin{abc3}
+\item $\tg(\alpha+\beta)=\dfrac{\tg\alpha+\tg\beta}{1-\tg\alpha\tg\beta}$;
+\item $\ctg(\alpha+\beta)=\dfrac{\ctg\alpha\ctg\beta-1}{\ctg\alpha+\ctg\beta}$;
+\item $\tg 2\alpha=\dfrac{2\tg\alpha}{1-\tg^2\alpha}$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2011. 03. 02.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc}
+\item $|\tg x+\ctg x|<\frac{4}{\sqrt3}$;
+\item $\sin^4 x+\cos^4 x=\sin^4 2x+\cos^4 2x$;
+\item $\sin x>\cos^2 x$.
+\end{abc}
+\item Igazoljuk:
+\begin{abc}
+\item $\tg 3x=\tg x\cdot\tg\left(\frac{\pi}{3}-x\right)\cdot\left(\frac{\pi}{3}+x\right)$;
+\item $\tg 20^\circ\cdot\tg40^\circ\cdot\tg80^\circ=\sqrt3$;
+\item $\sin^6 x+\cos^6 x=1-\frac{3}{4}\sin^2 2x$.
+\end{abc}
+\item Igazoljuk, hogy ha $0<\varphi<\frac{\pi}{2}$, akkor $\ctg\frac{\varphi}{2}>1+\ctg\varphi$.
+\item Határozzuk meg az $f(x)=\sin^6 x+\cos^6 x$, $x\in\mathbb R$ függvény legnagyobb és legkisebb értékét.
+\end{enumerate}
+
+\subsection*{2011. 03. 08.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc3}
+\item $4\cos x=\tg x$;
+\item $\sin 2x-\cos x=0$;
+\item $\sin 3x\cdot\sin x=\frac14$;
+\item $\dfrac{1}{\sin x}+\dfrac{1}{\cos x}=2\sqrt2$;
+\item $12\sin^2 x-2\cos^2 x=3\cos 2x$;
+\item $\tg x+\tg 2x+\tg 3x=0$.
+\end{abc3}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc2}
+\item $f(x)=[\sin x]$, $x\in \mathbb R$;
+\item $g(x)=\tg\frac{x}{2}$, $x\ne(2k+1)\pi$, $k\in\mathbb Z$;
+\item $h(x)=\sin x+\sin\left(\frac\pi3+x\right)$, $x\in\mathbb R$;
+\item $k(x)=\tg x+\ctg x$, $x\ne k\cdot\frac{\pi}{2}$, $k\in\mathbb Z$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2011. 03. 09.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc}
+\item $\tg\frac{x}{2}>\dfrac{\tg x-2}{\tg x+2}$;
+\item $\dfrac{\sin^2 x-\frac14}{\sqrt3-(\sin x+\cos x)}$;
+\item $\dfrac{\sin x-1}{\sin x-2}+\dfrac12>\dfrac{2-\sin x}{3-\sin x}$.
+\end{abc}
+\item Oldjuk mag a valós számpárok halmazán a következő egyenletrendszereket:
+\begin{abc3}
+\item $\left.\begin{aligned}
+\tg x+\tg y&=1\\
+\cos x\cdot\cos y&=\frac{1}{\sqrt2}
+\end{aligned}\right\}$;
+\item ($*$) $\left.\begin{aligned}
+\sin^3 x&=\frac12\sin y\\
+\cos^3 x&=\frac12\cos y
+\end{aligned}\right\}$;
+\item $\left.\begin{aligned}
+\sin x\cdot\sin y&=\frac{1}{4\sqrt2}\\
+\tg x\cdot\tg y&=\frac13
+\end{aligned}\right\}$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2011. 03. 16.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $0\le x_1<x_2\le\frac{\pi}{2}$, akkor \[\sin\frac{x_1+x_2}{2}>\frac{\sin x_1+\sin x_2}{2}.\]
+\item ($*$) Igazoljuk, hogy ja $0\le x_1\le x_2\le x_3\le \pi$, akkor \[\frac{\sin x_1+\sin x_2+\sin x_3}{3}\le\sin\frac{x_1+x_2+x_3}{3}.\]
+\item Igazoljuk, hogy ha $\alpha$, $\beta$, $\gamma$ egy háromszög szögei, akkor $\sin\alpha+\sin\beta+\sin\gamma\le\frac{3\sqrt3}{2}.$
+\item Ábrázoljuk:
+\begin{abc3}
+\item $f(x)=|\cos x|$;
+\item $g(x)=\cos x\cdot\sgn(\sin x)$;
+\item $h(x)=\cos(x-\pi)\cdot\sgn(\sin x)$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2011. 03. 22.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $0\le x_1<x_2<\frac{\pi}{2}$, akkor \[\tg\frac{x_1+x_2}{2}<\frac{\tg x_1+\tg x_2}{2}.\]
+\item Bizonyítsuk be, hogy ha $0\le x_1\le x_2\le x_3<\frac{\pi}{2}$, akkor \[\tg\frac{x_1+x_2+x_3}{3}\le\frac{\tg x_1+\tg x_2+\tg x_3}{3}.\]
+\item Igazoljuk, hogy ha $\alpha$, $\beta$, $\gamma$ egy \emph{hegyesszögű} háromszög szögei, akkor $3\sqrt3\le\tg\alpha+\tg\beta+\tg\gamma.$
+\item Igazoljuk, hogy ha $\alpha$, $\beta$, $\gamma$ egy háromszög szögei, akkor $\tg\frac{\alpha}{2}\tg\frac{\beta}{2}+\tg\frac{\beta}{2}\tg\frac{\gamma}{2}+\tg\frac{\gamma}{2}\tg\frac{\alpha}{2}=1.$
+\item Oldjuk meg a következő egyenleteket:
+\begin{abc3}
+\item $\ctg^2 x=\dfrac{1+\sin x}{1+\cos x}$;
+\item $\dfrac{1-\tg x}{1+\tg x}=1+\sin 2x$;
+\item $(\sin x+\cos x)\cdot\sqrt2=\tg x+\ctg x$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2011. 03. 23.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc2}
+\item $\dfrac{1}{\cos x}-\tg x=\dfrac12$;
+\item $\cos^2 x-\sin x-1=0$;
+\item $\sqrt3\sin x+\cos x=\sqrt2$;
+\item $\sin x+\sin 2x+\sin 3x=0$.
+\end{abc2}
+\item Oldjuk meg a valós számpárok halmazán:
+\begin{abc2}
+\item $\left.\begin{aligned}
+x+y&=\frac{\pi}{2}\\
+\cos^2 x-\cos^2 y&=\frac12
+\end{aligned}\right\}$;
+\item $\left.\begin{aligned}
+x-y&=\frac{\pi}{3}\\
+\tg x-\tg y&=3
+\end{aligned}\right\}$;
+\item $\left.\begin{aligned}
+\sin^2 x+\cos^2 y&=\frac32\\
+\cos^2 x-\sin^2 y&=\frac12
+\end{aligned}\right\}$;
+\item $\left.\begin{aligned}
+\sin x\cdot \sin y&=\frac14\\
+\cos x\cdot\cos y&=\frac34
+\end{aligned}\right\}$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{Azonosságok} % 2011. 03. 24.
+\begin{gather*}
+\sin\alpha+\sin\beta=2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}\\
+\sin\alpha-\sin\beta=2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}\\
+\cos\alpha+\cos\beta=2\cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}\\
+\cos\alpha-\cos\beta=2\sin\frac{\alpha+\beta}{2}\sin\frac{\beta-\alpha}{2}
+\end{gather*}
+\begin{gather*}
+\sin\alpha\sin\beta=\frac12(\cos(\alpha-\beta)-\cos(\alpha+\beta))\\
+\cos\alpha\cos\beta=\frac12(\cos(\alpha-\beta)+\cos(\alpha+\beta))\\
+\sin\alpha\cos\beta=\frac12(\sin(\alpha-\beta)+\sin(\alpha+\beta))
+\end{gather*}
+
+\subsection*{2011. 03. 24.}
+\begin{enumerate}
+\item Igazoljuk, hogy $\sin\alpha+\sin\beta+\sin\gamma-\sin(\alpha+\beta+\gamma)=4\sin\dfrac{\alpha+\beta}{2}\sin\dfrac{\beta+\gamma}{2}\sin\dfrac{\gamma+\alpha}{2}$.
+\item Igazoljuk, hogy ha $\alpha$, $\beta$, $\gamma$ egy háromszög szögei, akkor $\sin\alpha+\sin\beta+\sin\gamma=4\cos\dfrac{\alpha}{2}\cos\dfrac{\beta}{2}\cos\dfrac{\gamma}{2}$.
+\item Igazoljuk, hogy ha $\alpha$, $\beta$, $\gamma$ egy hegyesszögű háromszög szögei, akkor $\tg\alpha+\tg\beta+\tg\gamma=\tg\alpha\tg\beta\tg\gamma$.\\
+Igaz-e az állítás megfordítása?
+\item ($*$) Igazoljuk, hogy $\cos\dfrac{\pi}{5}-\cos\dfrac{2\pi}{5}=\dfrac{1}{2}$.
+\item ($*$) Igazoljuk, hogy $\cos\dfrac{2\pi}{7}+\cos\dfrac{4\pi}{7}+\cos\dfrac{6\pi}{7}=-\dfrac12$.
+\end{enumerate}
+
+\subsection*{2011. 04. 07. -- Trigonometria I. dolgozat}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc2}
+\item $f(x)=\sin(2x+\pi)$, $x\in\mathbb R$;
+\item $g(x)=\tg(\pi-x)$, $x\ne\dfrac{\pi}{2}+k\pi$.
+\end{abc2}
+\item Igazoljuk, hogy ha $\cos(\alpha+\beta)=0$, akkor $\sin(\alpha+2\beta)=\sin\alpha$.
+\item Oldjuk meg a következő egyenleteket a valós számok halmazán:
+\begin{abc2}
+\item $1+\sin x+\cos x+\sin 2x+\cos 2x=0$;
+\item $\sin^3 x+\cos^3 x=1-\dfrac12\sin 2x$.
+\end{abc2}
+\item Oldjuk meg a következő egyenletrendszert a valós számpárok halmazán:
+\[\left.\begin{aligned}
+\tg x+\tg y&=1\\
+\cos x\cdot\cos y&=\frac{1}{\sqrt2}
+\end{aligned}\right\}.\]
+\item Igazoljuk, hogy ha $\alpha$, $\beta$, $\gamma$ egy háromszög szögei, akkor $\sin\dfrac{\alpha}{2}\cdot\sin\dfrac{\beta}{2}\cdot\sin\dfrac{\gamma}{2}\le\dfrac{1}{8}$.
+\end{enumerate}
+
+\subsection*{2011. 04. 13.}
+\begin{enumerate}
+\item Igazoljuk, hogy \[\frac{\sin x+\tg x}{\cos x+\ctg x}>0\] minden olyan $x\in\mathbb R$ esetén, amire értelme van.
+\item Igazoljuk, hogy ha $x\in\mathbb R$, akkor \[\frac{\sin x-1}{\sin x-2}+\frac12\ge\frac{2-\sin x}{3-\sin x}.\]
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc3}
+\item $2\cos 2x+\sin 3x-2=0$;
+\item $3\tg^2 x+\ctg^2 x=4$;
+\item $x^2+2x\cos(xy)+1=0$.
+\end{abc3}
+\item Igazoljuk:
+\begin{abc2}
+\item $\sin\alpha=\dfrac{2\tg\frac{\alpha}{2}}{1+\tg^2\frac{\alpha}{2}}$;
+\item $\cos\alpha=\dfrac{1-\tg^2\frac{\alpha}{2}}{1+\tg^2\frac{\alpha}{2}}$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2011. 04. 14.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc}
+\item $2\cos 2x-\sin 2x=2(\sin x+\cos x)$;
+\item $\ctg^2 x=\dfrac{1+\sin x}{1+\cos x}$;
+\item $\sin^3 x\cos x-\sin x\cos^3 x=\dfrac14$.
+\end{abc}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc2}
+\item $\cos x-\sin x-\cos 2x>0$;
+\item ($*$) $\tg\dfrac{x}{2}>\dfrac{\tg x-2}{\tg x+2}$.
+\end{abc2}
+\item ($*$) Igazoljuk, hogy minden olyan valós $x$-re, amire értelme van, teljesül a következő egyenlőtlenség: $\left(1-\tg^2 x\right)\left(1-3\tg^2 x\right)\left(1+\tg 2x\cdot\tg 3x\right)>0$.
+\end{enumerate}
+
+\subsection*{2011. 04. 19. -- Trigonometria II. dolgozat}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc2}
+\item $f(x)=\ctg\left(\dfrac{\pi}{2}-2x\right)$, $x\ne\dfrac{\pi}{4}+k\cdot\dfrac{\pi}{2}$;
+\item $g(x)=\cos\left(\pi-\dfrac{x}{2}\right)$, $x\in\mathbb R$.
+\end{abc2}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc2}
+\item $\cos 2x+\sin 2x=-1$;
+\item $\ctg x-2\sin 2x=1$.
+\end{abc2}
+\item Oldjuk meg a valós számok halmazán: $\cos^2 x<\sin x$.
+\item Igazoljuk, hogy ha $0<x<\dfrac{\pi}{2}$, akkor $1+\ctg x<\ctg\dfrac{x}{2}$.
+\item Határozzuk meg az $f(x)=\sin^6 x+\cos^6 x$ ($x\in\mathbb R$) függvény legnagyobb és legkisebb értékét.
+\end{enumerate}
+
+\subsection*{2011. 04. 27.}
+\textbf{Definíció.} Ha $-1\le a\le 1$, akkor $\arcsin a$ (,,arkusz szinusz a'') jelöli azt a $\left[-\frac{\pi}{2};\frac{\pi}{2}\right]$ intervallumba eső valós számot, amelynek szinusza $a$.
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc3}
+\item $\arcsin\dfrac12$;
+\item $\arcsin \dfrac{\sqrt3}{2}$;
+\item $\arcsin 1$.
+\end{abc3}
+\item Ábrázoljuk a $[-1;1]\to\mathbb R$, $x\mapsto \arcsin x$ függvényt és jellemezzük is.
+\item Ábrázoljuk a következő függvények grafikonját:
+\begin{abc}
+\item $f: [-1;1]\to\mathbb R$, $f(x)=\sin(\arcsin x)$;
+\item $g: \mathbb R\to\mathbb R$, $g(x)=\arcsin(\sin x)$.
+\end{abc}
+\item Értelmezzük az arkusz koszinusz függvényt mint a $[0;\pi]$ intervallumra leszűkített koszinusz inverzét és ábrázoljuk is.
+\item Igazoljuk: $\arcsin x+\arccos x=\dfrac{\pi}{2}$, ha $-1\le x\le 1$.
+\end{enumerate}
+
+\subsection*{2011. 04. 28.}
+\begin{enumerate}
+\item \textbf{Definíció.} Ha $a\in\mathbb R$, akkor $\arctg a$ (,,arkusz tangens a'') az a $\left]-\frac{\pi}{2};\frac{\pi}{2}\right[$ intervallumba tartozó valós szám, amelynek tangense $a$.\\
+Ábrázoljuk az $x\mapsto\arctg x$, $x\in\mathbb R$ függvényt.
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc}
+\item $\mathbb R\to\mathbb R$, $x\mapsto\tg(\arctg x)$;
+\item $\left(\mathbb R\setminus\left\{\left.\dfrac{\pi}{2}+k\pi\right|k\in\mathbb Z\right\}\right)\to\mathbb R$, $x\mapsto\arctg(\tg x)$.
+\end{abc}
+\item Értelmezzük az arkusz kotangens függvényt mint a $]0;\pi[$-re leszűkített kotangensfüggvény inverzét és rajzoljuk meg a grafikonját.
+\item Igazoljuk a következő azonosságot: $\arctg x+\arctg\dfrac{1}{x}=\dfrac{\pi}{2}\cdot\sgn x$, ha $x\ne 0$.
+\item Igazoljuk: $\arctg\dfrac13+\arctg\dfrac15+\arctg\dfrac17+\arctg\dfrac18=\dfrac{\pi}{4}$.
+\end{enumerate}
+
+\subsection*{2011. 05. 05.}
+\begin{enumerate}
+\item Számítsuk ki zsebszámológép és táblázat használata nélkül:
+\begin{abc2}
+\item $\arctg 1+\arccos\left(-\dfrac12\right)+\arcsin\left(-\dfrac12\right)$;
+\item $\arctg\sqrt2+\arctg\dfrac{1}{\sqrt2}$;
+\item $\sin\left(2\arcsin\dfrac35\right)$;
+\item $\sin\left(\dfrac12\arccos\frac13\right)$.
+\end{abc2}
+\item Igazoljuk a következő azonosságokat:
+\begin{abc}
+\item $\cos(\arcsin x)=\sqrt{1-x^2}$, ha $|x|\le1$;
+\item $\cos(\arctg x)=\frac{1}{\sqrt{1+x^2}}$;
+\item $\arctg x+\arcctg x=\dfrac\pi2$.
+\end{abc}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc2}
+\item $6\arcsin\left(x^2-6x+8,5\right)=\pi$;
+\item ($*$) $4\arcsin x+\arccos x=\pi$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2011. 05. 10.}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc}
+\item $\sin\left(\arcsin\dfrac{15}{17}+\arccos\left(-\dfrac{12}{13}\right)\right)$;
+\item $\sin\left(2\arcsin\dfrac{40}{41}\right)$;
+\item $\cos\left(2\arccos\dfrac23\right)$.
+\end{abc}
+\item Igazoljuk:
+\begin{abc}
+\item $\sin(2\arcsin x)=2x\sqrt{1-x^2}$, $|x|\le1$;
+\item $\cos(2\arccos x)=2x^2-1$, $|x|\le1$;
+\item $\tg(2\arctg x)=\dfrac{2x}{1-x^2}$, $|x|\ne 1$.
+\end{abc}
+\item Mi a geometriai értelmezése a következő azonosságnak: $\sin(\arccos x)=\sqrt{1-x^2}$, $|x|\le1$?
+\item Igazoljuk: $\tg(\arccos x)=\frac{\sqrt{1-x^2}}{x}$, $x\ne0$, $|x|\le1$.
+\end{enumerate}
+
+\subsection*{2011. 05. 11.}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc2}
+\item $\arccos\left(\sin\dfrac{\pi}{7}\right)$;
+\item $\arcsin\left(\cos\dfrac{3\pi}{5}\right)$.
+\end{abc2}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc}
+\item $4\arctg x=\frac{\pi}{x}$;
+\item $\arccos 3x=\arccos\sqrt{6-15x}$;
+\item $\arcsin x<2\arccos x$.
+\end{abc}
+\item Igazoljuk:
+\begin{abc}
+\item $\cos(\arctg x)=\dfrac{1}{\sqrt{1+x^2}}$, $x\in\mathbb R$;
+\item $\arcsin\cos\arcsin x+\arccos\sin\arccos x=\frac{\pi}{2}$, ha $-1\le x\le1$.
+\end{abc}
+\end{enumerate}
+
+\subsection*{2011. 05. 11.}
+\begin{enumerate}
+\item Igazoljuk a következő azonosságokat:
+\begin{abc2}
+\item $\sin(\arctg x)=\dfrac{x}{\sqrt{1+x^2}}$, $x\in\mathbb R$;
+\item $\tg(\arcsin x)=\dfrac{x}{\sqrt{1-x^2}}$, $|x|<1$;
+\item $\arccos x=\arcctg \dfrac{x}{\sqrt{1-x^2}}$, $|x|<1$;
+\item $2\arctg x=\arctg\dfrac{2x}{1-x^2}$, $|x|<1$.
+\end{abc2}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc3}
+\item $f(x)=\arccos(-2x)$;
+\item $g(x)=\arcsin\left(1-\dfrac{x}{2}\right)$;
+\item $h(x)=-\arctg(2x-4)$.
+\end{abc3}
+\item Igazoljuk:
+\begin{abc2}
+\item $\arcsin\dfrac{2x}{1+x^2}=2\arctg x$, ha $-1\le x\le 1$;
+\item $\arcsin x=\arctg \dfrac{x}{\sqrt{1-x^2}}$, $|x|<1$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2011. 05. 17. -- Trigonometria III. dolgozat}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc3}
+\item $\cos\left(\arcsin\dfrac12\right)$;
+\item $\tg(\arcctg 1)$;
+\item $\arcsin\left(\cos\dfrac{\pi}{4}\right)$.
+\end{abc3}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc2}
+\item $f(x)=\tg(\arcctg x)$, $x\in\mathbb R$;
+\item $g(x)=\cos^2(\arcsin x)$, $|x|\le1$.
+\end{abc2}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc2}
+\item $\arccos x>2\arcsin x$;
+\item $\arctg(1-x)+\arctg\dfrac{x(2-x)}{5}=\dfrac{\pi}{4}$.
+\end{abc2}
+\item Igazoljuk:
+\[\arccos x=\begin{cases}
+\arcsin\sqrt{1-x^2},&\text{ha $0\le x\le1$}\\
+\pi-\arcsin\sqrt{1-x^2},&\text{ha $-1\le x\le0$}
+\end{cases}.\]
+\end{enumerate}
+
+\end{document}

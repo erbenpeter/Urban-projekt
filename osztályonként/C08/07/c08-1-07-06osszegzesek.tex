@@ -1,0 +1,238 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/07/1. csoport}
+\rhead{Összegzések}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Összegzések}
+
+\subsection*{2009. 04. 15.}
+\begin{enumerate}
+\item Végezzük el a következő szorzatokat:
+
+\begin{abc4} 
+\item $(x-2)\cdot(x+2)$;
+\item $(a+b)\cdot(a-b)$;
+\item $(2a+3b)\cdot(2a-b)$;
+\item $(2xy-1)\cdot(2xy+1)$.
+\end{abc4}
+
+\item Végezzük el a következő műveleteket:
+
+\begin{abc}
+\item $(x-2)\cdot(x+3)+(x+2)\cdot(x-3)$;
+\item $(a-3)\cdot(a+4)+(a+3)\cdot(a-4)$;
+\item $(x^2+x+1)\cdot(x^2-x+1)\cdot(x^2-1)$.
+\end{abc}
+
+
+\item A természetes számok sorozatában két egymást követő egész szám négyzetének különbsége 33. Melyik ez a két szám?
+
+\item A természetes számok sorozatában két egymást követő páros szám négyzetének különbsége 28. Melyik ez a két szám?
+
+\item Két szomszédos páratlan szám négyzetének különbsége 64. Melyik ez a két szám?
+\end{enumerate}
+\subsection*{2009. 04. 16.}
+\begin{enumerate}
+\item Oldjuk meg a pozitív egész számok körében: 
+\quad $\dfrac{1}{x} + \dfrac{1}{y} = \dfrac{1}{14}$.
+
+\item Számítsuk ki a következő összegeket:
+\begin{abc}
+\item $\dfrac{1}{1\cdot2} + \dfrac{1}{2\cdot3} + \dfrac{1}{3\cdot4} + \cdots + \dfrac{1}{99\cdot100}$;
+\item $1\cdot2+2\cdot3+3\cdot4+\cdots+10\cdot101$;
+\item $\dfrac{1}{1\cdot2\cdot3}+\dfrac{1}{2\cdot3\cdot4}+\dfrac{1}{3\cdot4\cdot5}+\cdots+\dfrac{1}{98\cdot99\cdot100}$.
+\end{abc}
+
+\item Alakítsuk szorzattá:
+
+\begin{abc3}
+\item $a^2-4$; 
+\item $25-x^2$;
+\item $a^2-9b^2$;
+
+\item $4x^2-\dfrac{1}{25}y^2$;
+\item $16a^4-9b^2$;
+\item $36ta^4-49b^6$.
+\end{abc3}
+
+\item Alakítsuk szorzattá:
+
+\begin{abc3}
+\item $4(a-b)^2-(a+b)^2$;
+\item $(x-2y)^2-4(x+y)^2$;
+\item $16(x-y)^2-25(x+y)^2$.
+\end{abc3}
+\end{enumerate}
+\subsection*{2009. 04. 20.}
+\begin{enumerate}
+\item Számítsuk ki minél egyszerűbben a következő összeget:
+$\dbinom{2}{2}+\dbinom{3}{2}+\dbinom{4}{2}+\dbinom{5}{2}\cdots+\dbinom{100}{2}=$ ?
+
+\item Az előző feladat eredményének felhasználásával számítsuk ki: 
+$1\cdot2+2\cdot3+3\cdot4+4\cdot5+\cdots+99\cdot100$. 
+
+\item Számítsuk ki: 
+$1\cdot2\cdot3+2\cdot3\cdot4+3\cdot4\cdot5+\cdots+98\cdot99\cdot100$.
+
+\item Egy gépkocsi A-ból B-be az utat óránkénti 60 km/ó sebességgel teszi meg. Visszafelé, B-ből A-ba lassabban megy, itt átlagsebessége 50 km/ó. Számítsuk ki a teljes, oda-vissza útra az átlagsebességét. 
+
+\item Egy motorversenyen három motorkerékpáros indul. A második óránként 15 km-rel kevesebbet tesz meg az elsőnél és 3 km-rel többet a harmadiknál. Így a második 12 perccel később ér célba, mint az első, de 3 perccel korábban, mint a harmadik. Számítsuk ki a versenypálya hosszát, az egyes versenyzők sebességét és idejét. 
+\end{enumerate}
+\subsection*{2009. 04. 21.}
+\begin{enumerate}
+\item Számítsuk ki a következő összegeket: 
+\begin{abc}
+\item $\dfrac{1}{1\cdot4}+\dfrac{1}{4\cdot7}+\dfrac{1}{7\cdot10}+\cdots+\dfrac{1}{97\cdot100}$;
+\item $1\cdot2\cdot3\cdot4+2\cdot3\cdot4\cdot5+3\cdot4\cdot5\cdot6+\cdots+100\cdot101\cdot102\cdot103$.
+\end{abc}
+\item Erre az összegre is egyszerű, gyors módszert keress: 
+\quad $1+3+5+7+9+\cdots+999$.
+
+\item ($*$) A következő összeget is lehet ötleteket felhasználva egyszerűen kiszámítani:
+$1^3+2^3+3^3+4^3+100^3$.
+
+\item ($*$) Itt is kell az egyszerű számoláshoz egy ötlet: 
+\begin{abc2}
+\item $1+2+2^2+2^3+2^4+\cdots+2^{20}$;
+\item $1+3+3^2+3^3+3^4+\cdots+3^{10}$.
+\end{abc2}
+\end{enumerate}
+\subsection*{2009. 04. 22.}
+\begin{enumerate}
+\item Számítsuk ki a következő összegeket:
+\begin{abc}
+\item $1\cdot1!+2\cdot2!+3\cdot3!+4\cdot4!+\cdots+20\cdot20!$;
+\item $\dfrac{1}{1\cdot3\cdot5}+\dfrac{1}{3\cdot5\cdot7}+\dfrac{1}{5\cdot7\cdot9}+\cdots+\dfrac{1}{101\cdot103\cdot105}$;
+\item $1+2\cdot3+3\cdot3^2+4\cdot3^3+5\cdot3^4+\cdots+100\cdot3^{99}$.
+\end{abc}
+
+\item Számítsuk ki: $1^3+3^3+5^3+7^3+\cdots+99^3$.
+
+\item Igazoljuk, hogy
+
+\begin{abc2}
+\item ($**$) $\dfrac{1}{2}<\dfrac{1}{51}+\dfrac{1}{52}+\cdots+\dfrac{1}{100}<\dfrac{3}{4}$;
+\item ($*$) $1+\dfrac{1}{4}+\dfrac{1}{9}+\dfrac{1}{16}+\dfrac{1}{25}+\cdots+\dfrac{1}{10000}<2$.
+\end{abc2}
+\end{enumerate}
+\subsection*{2009. 04. 27.}
+\begin{enumerate}
+\item Számítsuk ki: 
+\begin{abc}
+\item $1+\dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8}+\dfrac{1}{16}+\cdots+\dfrac{1}{2^{10}}$;
+\item $1+\dfrac{1}{3}+\dfrac{1}{9}+\dfrac{1}{27}+\cdots+\dfrac{1}{3^{20}}$;
+\item $1+\dfrac{2}{5}+\dfrac{4}{25}+\dfrac{8}{125}+\cdots+\dfrac{2^{15}}{5^{15}}$.
+\end{abc}
+\item ($*$) Igazoljuk:
+$\dfrac{1}{20}<\dfrac{1\cdot3\cdot5\cdot7\cdot\cdots\cdot99}{2\cdot4\cdot6\cdot\cdots\cdot100}<\dfrac{1}{10}$.
+\item Számítsuk ki:
+\begin{abc}
+\item $\left(1-\dfrac{1}{4}\right)\left(1-\dfrac{1}{9}\right)\left(1-\dfrac{1}{16}\right)\cdots\left(1-\dfrac{1}{169}\right)$;
+\item $\left(1-\dfrac{4}{9}\right)\left(1-\dfrac{4}{16}\right)\left(1-\dfrac{1}{25}\right)\cdots\left(1-\dfrac{4}{225}\right)$.
+\end{abc}
+
+\item ($*$) $1+\dfrac{1}{2}+\dfrac{1}{3}+\cdots+\dfrac{1}{2^{10}-1}>5$.
+\end{enumerate}
+\subsection*{2009. 05. 12.}
+\begin{enumerate}
+\item Számítsuk ki minél egyszerűbben:
+\begin{abc}
+\item $\dfrac{1}{2}+\dfrac{2}{2^2}+\dfrac{3}{2^3}+\dfrac{4}{3^4}+\dfrac{5}{3^5}+\dfrac{20}{2^{20}}$;
+\item $0,9+0,99+0,999+\cdots+0,9999999999$;
+\item $\dfrac{1}{225}+\dfrac{2}{225}+\dfrac{3}{225}+\dfrac{4}{225}+\dfrac{5}{225}\cdots+\dfrac{14}{225}$.
+\end{abc}
+
+\item Igazoljuk:
+\begin{abc}
+\item $\dfrac{1}{100}<\dfrac{1}{1000}+\dfrac{4}{1000}+\dfrac{9}{1000}+\cdots+\dfrac{81}{1000}<\left(\dfrac{9}{10}\right)^3$;
+\item $\left(1-\dfrac{1}{2^{10}}\right)^{10}<\left(1-\dfrac{1}{2}\right)\left(1-\dfrac{1}{4}\right)\left(1-\dfrac{1}{8}\right)\cdots\left(1-\dfrac{1}{2^{10}}\right)<1-\dfrac{1}{2^{10}}$.
+\end{abc}
+
+\item Számítsuk ki:
+\begin{abc2}
+\item $\dfrac{1+2+2^2+\cdots+2^{20}}{1+3+3^2+\cdots+3^{20}}$;
+\item $\dfrac{1}{2}+\dfrac{3}{2^2}+\dfrac{5}{2^3}+\cdots+\dfrac{39}{2^{20}}$.
+
+\end{abc2}
+\end{enumerate}
+\subsection*{2009. 05. 12.}
+\begin{enumerate}
+\item Számítsuk ki minél egyszerűbben:
+\begin{abc}
+\item $1+11+111+\cdots+1111111111=$;
+\item $\dfrac{1}{1\cdot4}+\dfrac{1}{4\cdot7}+\dfrac{1}{7\cdot10}+\cdots+\dfrac{1}{97\cdot100}$;
+\item $\dfrac{1}{2}+\dfrac{3}{2^2}+\dfrac{5}{2^3}+\cdots+\dfrac{39}{2^{20}}$.
+\end{abc}
+
+\item Igazoljuk:
+\begin{abc2}
+\item ($*$) $\dfrac{1}{19}+\dfrac{1}{20}+\dfrac{1}{21}+\cdots+\dfrac{1}{55}>1$;
+\item $\dfrac{1}{2^2}+\dfrac{1}{3^2}+\cdots+\dfrac{1}{10^2}<\dfrac{9}{10}$.
+\end{abc2}
+
+\item Igazoljuk, hogy $(10!)^2>10^{10}$.
+\end{enumerate}
+\subsection*{2009. 05. 13.}
+\begin{enumerate}
+
+\item Számítsuk ki minél egyszerűbben:
+\begin{abc}
+\item $1-\dfrac{1}{2}+\dfrac{1}{4}-\dfrac{1}{8}+\dfrac{1}{16}-\cdots+\dfrac{1}{2^{10}}$;
+\item $\dfrac{1}{1\cdot5}+\dfrac{1}{5\cdot9}+\dfrac{1}{9\cdot13}+\cdots+\dfrac{1}{97\cdot101}$;
+\item $\left(\dfrac{1}{2}+\dfrac{1}{3}\right)+\left(\dfrac{1}{2^2}+\dfrac{1}{3^2}\right)+\cdots+\left(\dfrac{1}{2^{20}}+\dfrac{1}{3^{20}}\right)$.
+\end{abc}
+\item Igazoljuk a következő egyenlőtlenségeket:
+\begin{abc}
+\item $ \dfrac{3}{2}<1+\dfrac{1}{2!}+\dfrac{1}{3!}+\dfrac{1}{4!}+\cdots+\dfrac{1}{10!}<3$;
+\item $1+\dfrac{1}{3^2}+\dfrac{1}{5^2}+\dfrac{1}{7^2}+\cdots+\dfrac{1}{19^2}<2$;
+\item $\dfrac{15}{2}<1+\dfrac{2}{3}+\dfrac{3}{5}+\dfrac{4}{7}+\cdots+\dfrac{15}{29}$.
+\end{abc}
+
+\item Igazoljuk, hogy $10^{11}>11^{10}$.
+\end{enumerate}
+\end{document}

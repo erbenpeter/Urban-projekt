@@ -1,0 +1,171 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C05/07/1. csoport}
+\rhead{Halmazok}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{pgf,tikz}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Halmazok}
+
+\subsection*{2006.05.23.}
+\begin{enumerate}
+\item Sorold fel a következő halmaz összes részhalmazát:
+(a) $\{1, 2, 3\}$;  (b) $\{1, 2, 3, 4\}$.
+\item Adjuk meg az $A\cap B$, $A\cup B$, $A\setminus B$, $B\setminus A$ halmazokat, ha
+\begin{abc}
+\item $A = \{-1, 0, 3, 4\}$, $B=\{0, 4, 6\}$;
+\item $A = \{0,1,2,3\}$, $B=\{-1,0,1,2,3\}$;
+\item $A = [0; 2]$, $B = [1;3]$.
+\end{abc}
+\item Igazoljuk, hogy tetszőleges $A, B, C$ halmazokra teljesülnek a következő azonosságok:
+\begin{abc2}
+\item $A\cup(A\cap B)=A$;
+\item $A\cap(A\cup B)=A$;
+\item $((A\setminus B)\setminus C)=(A\setminus C)\setminus B$;
+\item $A\setminus(A\setminus B) = A\cap B$;
+\item $A\setminus(B\cap C)=(A\setminus B)\cup(A\setminus C)$.
+\end{abc2}
+\end{enumerate}
+\subsection*{2006.05.25.}
+\begin{enumerate}
+\item $A=\{2,4,6,8,10\}$, $B=\{3,6,9,12,15\}$ és $C=\{5,10,15,20\}$.
+\begin{abcn}{5}
+\item $A\cup B\cup C=?$
+\item $A\cap B\cap C=?$
+\item $A\setminus B=?$
+\item $C\setminus A=?$
+\item $B\setminus C=?$
+\end{abcn}
+\item Melyek azok az $A$ és $B$ halmazok, amelyekre teljesül a következő három egyenlőség:
+\begin{abc}
+\item $A\cap B=\{3,5,7\}$, $A\setminus B=\{2,6\}$, $A\cup B=\{1,2,3,4,5,6,7\}$;
+\item $A\setminus B=\{1,2,5\}$, $B\setminus A=\{7,8,9\}$, $A\cap B=\{3,4,6\}$.
+\end{abc}
+\item Az $A$ halmaznak 8, a $B$-nek 9 eleme van, $A\cup B$-nek 15 eleme van. Hány eleme van $A\cap B$-nek?
+\item Írjuk fel a következő halmazokat elemeik felsorolásával:
+\begin{abc2}
+\item $A=\{x\in \mathbb{N} ~|~ \frac{24}{x}\in \mathbb{Z}\}$
+\item $B=\{x\in \mathbb{Z} ~|~ -5\le x \le 4\}$
+\item $C=\{x\in \mathbb{Z} ~|~ |x-3|=5\}$
+\item $D=\{x\in \mathbb{Q} ~|~ |x-3|+|x-1|=3\}$
+\end{abc2}
+\item Az $\mathbb{N}$ halmazt részhalmazokra bontottuk:
+$\{0\}, \{1,2\}, \{3,4,5\}, \{6,7,8,9\}, \ldots$
+Melyik számmal kezdődik a századik részhalmaz?
+\end{enumerate}
+
+\subsection*{2006.05.30.}
+\begin{enumerate}
+\item $A$: a páros kétjegyű számok halmaza; $B$: a 100-nál kisebb, 3-mal osztható számok halmaza; $C$: a 30-cal osztható egész számok halmaza.
+$
+A\cap B=?\qquad
+A\cap C=?\qquad
+B\cap C=?
+$
+\item Adjunk példát olyan $A$, $B$ és $C$ halmazra, hogy teljesüljenek:
+$|A\cap B \cap C|=1$, $|A|=|B|=|C|=2$ és $A\ne B$, $B\ne C$.
+\item $A=B=\{0,1,2\}$, $A\times B=?$
+\item Tudjuk, hogy $A\cup B=\{1,2,3,4,5,6\}$, $A\setminus B=\{2,4,6\}$, 
+$A\cap B=\{1,3\}$. $A=?$, $B=?$
+\item ($*$) Tudjuk, hogy $|A \times B|=100$. Mekkora lehet $|A\cup B|$ legalább és legfeljebb?
+\item $A=\{1,2,3\}$, $B=\{2,3,4\}$. Hány eleme van a következő halmazoknak?
+\begin{abc4}
+\item $(A\setminus B)\times(B\setminus A)$;
+\item $(A\cup B)\times(A\cap B)$;
+\item $(A\setminus B)\times(A\cap B)$;
+\item $(B\setminus A)\times(B\cup A)$.
+\end{abc4}
+\item Tudjuk, hogy $|A|=5$, $|B|=8$, $|A\setminus B|=3$. $|A\cap B|=?$, $|A\cup B|=?$
+\end{enumerate}
+
+\subsection*{2006.05.31.}
+\begin{enumerate}
+\item Legyen $A=\{\text{a 7-tel osztható kétjegyű számok}\}$,
+$B=\{\text{a 3-mal osztható kétjegyű számok}\}$. $|A\cup B|=?$, $|A\cap B|=?$
+\item Hány eleme van legalább annak a halmaznak, amelynek legalább 1000-rel több részhalmaza van, mint eleme?
+\item Egy 15 elemű halmaznak 9 elemű részhalmazából vagy a 6 elemű részhalmazából van több?
+\item Hány háromelemű részhalmaza van az $\{1,2,3,4,5\}$ halmaznak?
+\item Legyen $A$ az 1000-nél kisebb pozitív egész számok halmaza. Hány elemű $A$ összes részhalmazának egyesítése?
+\item $A=\{1,2\}$, $B=\{1,2,3,4\}$. $(A\times A)\cap(B\times B)=?$
+\item Hány olyan részhalmaza van az egyjegyű pozitív egész számok halmazának, amelynek
+\begin{abc3}
+\item a 4 és az 5 is eleme;
+\item a 4 eleme, de az 5 nem;
+\item sem az 5, sem a 4 nem eleme?
+\end{abc3}
+\item Hány olyan részhalmazát lehet megadni az $A$ halmaznak, hogy semelyik kettő közös része se legyen üres, ha
+(a) $A=\{1,2,3,4\}$;\quad (b) $A=\{1,2,3,4,5,6,7,8\}$?
+\end{enumerate}
+
+\subsection*{2006.06.01.}
+
+\begin{enumerate}
+\item $A\cup B=\{1,2,3,4,5\}$, $A\cap B=\{3,5\}$, $A\setminus B=\{1\}$,
+$B\setminus A=\{2,4\}$. $A=?$, $B=?$
+\item $A\cup B=\{1,2,3,4,5\}$, $A\setminus B=\{1,4\}$, $A\cap B\not\subset\{3,4,5\}$, $|A|=|B|$. $A=?$, $B=?$
+\item Hány páros számú elemet tartalmazó részhalmaza van az $A=\{1,2,3,4,5\}$ halmaznak? És hány páratlan számú elemet tartalmazó részhalmaza van?
+\item ($*$) Legyen $M=\{\frac{2}{1},\frac{4}{3},\frac{6}{5},\frac{8}{7},\ldots,\frac{1002}{1001}\}$. Hány olyan $x$ eleme van az $M$ halmaznak, amelyekre $|x-1|<0{,}1$?
+\item Legyenek $A$, $B$ és $C$ olyan halmazok, amelyekre $A\cap C = B\cap C$ és
+$A\setminus C=B\setminus C$. Igazoljuk, hogy ekkor $A=B$.
+\item ($*$) Mutass példát három olyan halmazra, hogy bármely kettőnek végtelen sok közös eleme van, de a három halmaz közös része üres.
+\item Legyen $A=\{x\in \mathbb{R}~|~x|\le 1\}$, $B=\{y\in \mathbb{R}~|~|y|\le 1\}$.
+Milyen ponthalmazt határoznak meg azok az $(x;y)$ koordinátapárok, amelyek az $A\times B$ halmaz elemeit alkotják?
+\end{enumerate}
+
+\subsection*{Témazáró -- 2006.06.06.}
+
+\begin{enumerate}
+\item Írjuk fel külön-külön sorba az $A=\{1,3,5,7\}$ halmaz 0; 1; 2; 3; 4; elemű részhalmazait!
+\item Adjunk meg három olyan kételemű halmazt, melyeknek páronként vett közös része nem üres halmaz, de mindhárom halmaznak nincs közös eleme.
+\item Az $A$, $B$, $C$ halmazok mindegyikének 5 eleme van, $|A\cap B \cap C|=1$.
+Mekkora lehet $A\cup B \cup C$ maximális és minimális elemszáma?
+\item Legyen $A=\{x\in\mathbb{N} ~|~ 2x\le 4x-6\}$ és $B=\{x\in\mathbb{N}~|~4x-11\le 2x+11\}$. Mik az elemei az $A\cap B$ halmaznak?
+\item Hány eleme van annak a $P(x;y)$ pontokból halmaznak, amelyre teljesül, hogy $|x|+|y|\le 5$ és $x,y$ egész számok? Ábrázold a halmazt!
+\item A $H$ halmaz a következő:
+$$H=\left\{\frac{2}{3},\frac{4}{5},\frac{6}{7},\ldots,\frac{400}{401}\right\}.$$
+Hány olyan $x$ eleme van $H$-nak, amelyre igaz, hogy $|x-1|<\frac{1}{100}$?
+\end{enumerate}
+
+\end{document}

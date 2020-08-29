@@ -1,0 +1,158 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/08/1.}
+\rhead{Trigonometria}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Gráfok}
+
+\subsection*{2009. 05. 19}
+\begin{enumerate}
+\item Rajzold meg az összes 4 csúcsú egyszerű gráfot.
+\item Van-e olyan egyszerű gráf, amelybn a csúcsőpk fokszáma sorra: \begin{abcn}{3}
+\item 1, 3, 3, 4, 4, 2;
+\item 1, 3. 4, 4, 2;
+\item 2, 3, 3, 4, 4 ?
+\end{abcn}
+\item Hány 6 csúcsú, legalább 12 élű egyszerű gráf van?
+\item Egy 5 csúcsú egyszerű gráfnak 8 éle van. Mekkorák lehetnek a csúcsok fokszámai?
+\item Igazoljuk, hogy bármely egyszerű gráfban a  páratlan fokú csúcsok száma páros.
+\item Igazoljuk, hogy bármely egyszerű gráfban, ha legalább 2 csúcs van, van 2 azonos fokszámú csúcs.
+\end{enumerate}
+
+
+\subsection*{2009. 05. 20.}
+\begin{enumerate}
+\item Egy körmérkőzéses sakkversenyen  6 versenyző vesz részt. Igazoljuk, hogy a verseny bármelyik időpontjában van 3 olyan versenyző, akik az egymás elleni mérkőzéseiketz mind lejátszották, vagy van 3 olyan versenyző, akik közül még semelyik 2 nem játszott egymással.
+\item Izomorf (azonos szerkezetű)-e a két gráf: KÉP1
+\item Igazoljuk, hogy egy 10 csúcsú egyszerű gráfnak legalább 9 éle van, ha a gráf összefüggő.
+\item Hány olyan 8, illetve 9 csúcsú nem összefüggő egyszerű gráf van, amelynek minden csúcsa legalább harmadfokú?
+\end{enumerate}
+
+\subsection*{2009. 05. 21.}
+\begin{enumerate}
+\item \underline{Euler-vonalnak} nevezzük egy $G$ gráfban éleknek olyan egymáshoz csatlakozó sorozatát, amely a gráf minden élét egyszer, és csak egyszer tartalmazza. \underline{Euler-kört} kapunk, ha az Euler-vonal kezdő és végpontja azonos. A következő gráfok közül melyikben van Euler-vonal: KÉP2
+\item \underline{Hamilton-vonalnak} nevezzük egy $G$ gráfban éleknek olyan egymáshoz csatlakozó sorozatát, amely a gráf minden csúcspontján pontosan egyszer halad át. 
+Ha a kezdő és végpontot egy él köti össze, akkor\\ \underline{Hamilton-kört kapunk}.
+A következő gráfok közül melyikben van Hamilton-vonal: KÉP3
+\end{enumerate}
+
+
+
+\subsection*{2009. 05. 25.}
+\begin{enumerate}
+\item Adjuk meg az összes 5 csúcsú egyszerű gráfot.
+\item Egy 6 csúcsú teljes egyszerű gráf élei kiszínezhetőek-e 5 színnel úgy, hogy minden csúcsból csupa különböző színű él indujon ki?
+\item Egy 5 csúcsú teljes gráf élei kiszínezhetőek-e 2 színnel úgy, hogy ne legyen benne egy színű háromszög?
+\item Egy 9 csúcsú teljes gráf éleit pirosra, vagy kékre színezzük. Igazoljuk, hogy ha nincs benne olyan négyszög, amelynek az oldalai és átlói is kékek, akkor van benne piros háromszög.
+\item 18 pontot a síkon páronként összekötünk piros, vagy kék vonallal. Igazoljuk, hogy mindig kapunk igy olyan négyszöget, amelynek oldalai és átlói is azonos színűek.
+
+\end{enumerate}
+
+
+\subsection*{2010. 06. 03.}
+\begin{enumerate}
+\item \underline{Fa}: összefüggő körmentes egyszerű gráf.
+
+Adjuk meg az összes 2, 3, 4, 5, csúcsú fát!
+\item Igazoljuk, hogy minden fa tartalmaz legalább 2 elsőfokú csúcsot.
+\item Egy 10 csúcsú fának hány éle lehet?
+\item Egy gráf \underline{síkbarajzolható}, ha megrajzolható úgy, hogy élei csak csúcsokban metszék egymást.
+
+Hány éle lehet egy 5 csúcsú síkba rajzolható egyszerű gráfnak?
+\item Rajzoljunk minél több élű 8 csúcsú síkba rajzolható gráfot.
+\item Euler tétele a síkba rajzolható gráfokra: $c+l=e+2$,
+ahol $c$ a csúcsok, $e$ az élek, és $l$ a “lapok” száma.
+\item Igazoljuk, hogy a teljes 5 csúcsú egyszerű gráf nem rajzolható síkba.
+\end{enumerate}
+
+
+\subsection*{2009. 05. 27.}
+\begin{enumerate}
+\item Síkbarajzolható-e a “három ház, három kút” gráfja?
+\item Síkbarajzolható-e a következő gráf: KÉP4
+\item Adott egy háromszög, a belsejében 20 pont. Ezeket egymással, és a háromszög csúcsaival összekötjük úgy, hogy nem metszik egymást. Hány háromszögre bonthatják az adott háromszöget ezek a vonalak?
+\item (*) Igazoljuk, hogy ha egy $n$ csúcsú gráf síkbarajzolható, akkor legfeljebb $3n-6$ éle van.
+\item Maximálisan hány éle lehet egy 7 csúcsú síkbarajzolható gráfnak?
+\item (*) Igazoljuk, hogy az olyan 7 csúcsú gráf, amelynek minden csúcsa negyedfokú, nem síkbarazolható.
+\end{enumerate}
+
+
+\subsection*{2009. 05. 28.}
+\begin{enumerate}
+\item A következő gráfok “lapjai” hány színnel színezhetők jól (azaz úgy, hogy két közös határú lap különböző színű legyen), ha minél kevesebb színt akarunk használni: KÉP5
+\item Igazoljuk, hogy olyan gráf, ami síkba rajzolható,(és) minden pont foka páros és 8 csúcsa van, kiszínezhető 2 színnel úgy, hogy a “szomszédos” lapok színe különböző.
+\item Mutassuk meg, hogy egy olyan gráf, amelynek 10 csúcsa van, minden “szomszédos” csúcsot összekötünk, és ezután még minden második csúcsot is összekötünk, síkba rajzolható.
+
+Igazoljuk, hogy e gráf \underline{lapjai} 2 színnel jól színezhetők.
+
+Igazoljuk, hogy e gráf \underline{élei} 4 színnel színezhetők úgy, hogy minden csúcsból csupa különböző színű él indul ki.
+\end{enumerate}
+
+
+\subsection*{2009. 06. 02.}
+\begin{enumerate}
+\item Tervezzük meg 8 csapat (A, B, C, D, E, F, G, H) körmérkőzéses versenyét 7 fordulóba. Mindenki mindenkivel egyszer játszik.
+\item Tervezzük meg 7 csapat körmérkőzéses versenyét 7 fordulóban, itt is mindenki mindenkivel egyszer játszik.
+\item Maximálisan hány éle lehet egy 10 csúcsú, 2 komponensű egyszerű gráfnak?
+\item Igazoljuk, hogy vagy egy 9 csúcsú egyszerű $C1$ gráfban van háromszög, vagy a  $C1$ komplementerében van teljes négyszög. 
+\item 12 cédulára 12 különböző számot írtak fel. Legalább hány páronkénti összehasonlítása van szükség ahhoz, hogy
+\begin{abcn}{2}
+\item megtaláljuk a legnagyobbat,
+\item megtaláljuk a második legnagyobbat?
+\end{abcn}
+\end{enumerate}
+
+
+\subsection*{2009. 06. 03.}
+\begin{enumerate}
+\item A következő gráfban adjunk meg olyan utat, amely A-ból indul, minden élen kétszer halad át (egyik és másik irányban egyszer-egyszer) és visszatér A-ba.
+\item A következő gráfban is az előző feladatban leírt utat adjuk meg.
+\item A szokásos dominókon 0-tól 8-ig vannak pontok az összes lehetséges párosításban. Hány dominóból áll egy teljes készlet?
+\item Egy 5 csúccsal rendelkező egyszerű gráfot hány féle képpen adhatunk meg?
+\item Igazoljuk, hogy egy fagráfban mindig van két egy fokszámú csúcs. (1=egy? hanem, akkor ez már volt)
+\item Van-e olyan egyszerű gráf, amelyben a csúcsok fokszáma sorra: 3, 3, 3, 3, 3, 3, 3, 5?
+
+
+\end{enumerate}
+\end{document}

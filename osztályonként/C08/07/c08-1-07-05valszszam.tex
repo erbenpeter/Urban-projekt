@@ -1,0 +1,221 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage[magyar]{babel}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/07/1.}
+\rhead{Valószínűségszámítás}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Valószínűségszámítás}
+
+\subsection*{2009. 03. 05.}
+\begin{enumerate}
+\item Egy kockával 5-ször dobunk. Mennyi a valószínűsége, hogy az 5 dobásból 0, 1, 2, 3, 4, 5, 6-ost dobunk? Készíts táblázatot!
+
+\item Egy pénzérmével 6-szor dobunk. Mennyi a valószínűsége, hogy 0, 1, 2, 3, 4, 5, 6 fejet dobunk? Készíts táblázatot!
+
+\item Dobjunk fel egy érmét. Ha az eredmény fej, még egyszer dobunk, ha írás, még kétszer. Mennyi a valószínűsége, hogy összesen egy fejet dobunk?
+
+\item 100 alma közül 10 kukacos. Véletlenszerűen kiveszünk az almák közül 5-öt. Mennyi a valószínűsége, hogy lesz a kiválasztott almák között kukacos?
+
+\item Tíz kockával dobunk, mennyi annak a valószínűsége, hogy a dobott számok összege legalább 58?
+
+\item Egy pénzdarabot 10-szer feldobunk és az eredményeket leírjuk, ha fej jön ki F-et, ha írás I-t írunk. Mennyi a valószínűsége, hogy az így kapott 10 elemű szorzat tartalmaz két azonos betűt egymás mellett?
+\end{enumerate}
+\subsection*{2009. 03. 10.}
+\begin{enumerate}
+\item Öt levelet megírt valaki 5 ismerősének, majd borítékokba rakta a leveleket. Ezután a lezárt borítékokat véletlenszerűen megcímzi. Mennyi a valószínűsége, hogy legalább 3 ismerőse a neki szánt levelet kapja meg? Mennyi a valószínűsége, hogy senki sem kapja meg a neki szánt levelet? 
+
+\item Az 1, 2, 3, 4, 5 számjegyeket véletlenszerűen egymás mellé írjuk. Mennyi a valószínűsége, hogy a kapott ötjegyű szám osztható 8-cal?
+
+\item Három kockával dobunk. Mennyi a valószínűsége, hogy a dobott számok négyzetösszege osztható 3-mal?
+
+\item Mennyi a valószínűsége, hogy a lottón kihúzott öt számban mind a 10 számjegy előfordul (az egyjegyű számokat tekintsük olyan kétjegyűnek, amelynek az első jegye 0)?
+
+\item Mennyi a valószínűsége, hogy véletlenül kiválasztott 12 ember születésnapja különböző hónapban legyen?
+
+\item Jelölje $A_k$ annak a valószínűségét, hogy kockát $k$-szor feldobva először a $k$-adik dobásra kapunk 6-ost. Számoljuk ki $A_1, A_2, A_3, A_4, A_5$ és $A_6$ értékét!
+\end{enumerate}
+\subsection*{2009. 03. 17.}
+\begin{enumerate}
+\item A kockadobás várható értékét így számítjuk ki: 
+
+$$
+\begin{array}{c}
+\text{ki: dobott szám}\cr
+X:\text{valószínűség}
+\end{array}
+\left(
+\begin{array}{cccccc}
+1&2&3&4&54&6\cr
+\frac{1}{6}&
+\frac{1}{6}&
+\frac{1}{6}&
+\frac{1}{6}&
+\frac{1}{6}&
+\frac{1}{6}
+\end{array}
+\right)
+$$
+
+$$
+E(X)=
+1\cdot\frac{1}{6}+
+2\cdot\frac{1}{6}+
+3\cdot\frac{1}{6}+
+4\cdot\frac{1}{6}+
+5\cdot\frac{1}{6}+
+6\cdot\frac{1}{6}=
+\frac{21}{6}=3{,}5
+$$
+
+
+
+
+
+
+
+
+\item Számítsuk ki a két kockával dobott pontok összegének várható értékét.
+
+\item Egy érmével dobunk. Ha az eredmény fej, még kétszer dobunk, ha írás, még egyszer. Mennyi az összes fej dobások várható értéke?
+
+\item Péter feldob egy kockát. Ha páratlan számot dob, veszít 10 Ft-ot, ha 6-ost dob, nyer 40 Ft-ot, ha 2-est vagy 4-est dob, újra dobhat. A második dobásnál 10 Ft-ot nyer, ha párosat dob és 20 Ft-ot veszít, ha páratlant dob. Döntsük el, hogy a játék Péter számára előnyös, hátrányos vagy igazságos.
+
+\item Egy érmével addig dobunk, amíg először fordul elő, hogy két egymás utáni dobás azonos. Mennyi a szükséges dobások várható száma?
+\end{enumerate}
+\subsection*{2009. 03. 18.}
+\begin{enumerate}
+\item Két kockával dobunk. Számítsuk ki a dobott számok 
+\begin{abc}
+\item maximumának
+\item minimumának
+\end{abc}
+\quad várható értékét!
+
+\item Mennyi a lottótalálatok számának várható értéke egy találomra kitöltött szelvény esetén? (ötös lottón)
+
+\item Egy urnában van 5 piros, 3 fehér és 2 kék golyó. Háromszor húzunk:
+\begin{abc2}
+\item visszatevés nélkül
+\item visszatevéssel.
+\end{abc2}
+Határozzuk meg mindkét esetben a kihúzott piros golyók várható számát!
+
+\item Egy urnában 100 cédula van 1-től 100-ig számozva. Kihúzunk ezek közül 15 darabot visszatevéssel. Mennyi a kihúzott számok összegének várható értéke?
+
+\item Mennyi az ötös lottón kihúzott számok összegének várható értéke?
+\end{enumerate}
+\subsection*{2009. 03. 19.}
+\begin{enumerate}
+\item Mennyi annak a valószínűsége, hogy egy tetszőlegesen választott pozitív egész szám négyzete 1-re végződik?
+
+\item Mennyi annak a valószínűsége, hogy egy tetszőlegesen választott pozitív egész szám köbe 11-re végződik? 
+
+\item Mennyi annak a valószínűsége, hogy $\binom{m}{3}$ osztható 3-mal, ha $n > 3$, egész szám?
+
+\item Mennyi annak a valószínűsége, hogy egy 12 tagú társaságban mindenkinek más hónapban legyen a születésnapja?
+
+\item Egy vonat 3 kocsijába 9 utas száll be. Minden utas véletlenszerűen választja meg, hogy melyik kocsiba száll. Mennyi annak a valószínűsége, hogy mindhárom kocsiba 3 ember száll? 
+\end{enumerate}
+\subsection*{2009. 03. 24.}
+\begin{enumerate}
+\item Az 52 lapos francia kártyából az egyik játékos 12 lapot kap. Mennyi a valószínűsége, hogy legfeljebb 3 ásza lesz?
+
+\item Mennyi annak a valószínűsége, hogy egy 4 tagú társaságban van két ember, akinek az év azonos napján van a születésnapja?
+
+\item Egy urnában van 5 piros és 10 fehér golyó.Visszatevés nélkül addig húzunk, amíg fehéret nem húzunk. Mennyi az eddig kihúzott piros golyók várható száma?
+
+\item Egy társasjátéknál egy korong kerületén 0-tól 25-ig sorban számozott 26 mező van. Minden játékos a 0-val számozott mezőre állítja a bábuját és minden alkalommal, amikor sorra kerül, annyi mezővel lép előre, amennyit egy kockával dob. Ha a bábu a 13 számú mezőre ér, vissza kell mennie a 0-ra. Mennyi a valószínűsége, hogy egy játékos 5 dobásból a 25 számú mezőre ér?
+\end{enumerate}
+\subsection*{2009. 03. 25.}
+\begin{enumerate}
+\item Ötször dobunk egy kockával. Mennyi a valószínűsége, hogy a dobott számok összege 25-nél nagyobb szám lesz?
+
+\item Egy urnában 4 piros és 6 fehér golyó van. Kihúzunk 3 golyót
+\begin{abc}
+\item visszatevéssel;
+\item visszatevés nélkül.
+\end{abc}
+Számítsuk ki mindkét esetben a kihúzott piros golyók várható számát!
+
+\item Egy urnában 4 piros, 4 fehér és 2 zöld golyó van. Az egyik játékos ebből addig húz ki visszatevés nélkül golyókat, amíg az első zöldet húzza. Ekkor a társától, a másik játékostól annyiszor 10 Ft-ot kap, ahány golyót kihúzott. Ezután a maradék golyók közül a másik játékos húzhat addig, amíg zöldet nem húz és ő is annyiszor 10 Ft-ot kap az elsőtől, ahány golyót kihúzott. Igazságos-e a játék?
+
+\item Egy szabályos érmével addig dobunk, amíg először fordul elő, hogy két egymást követő dobás azonos. Mennyi a szükséges dobások várható száma?
+\end{enumerate}
+\subsection*{2009. 03. 26.}
+\begin{enumerate}
+\item Péter feldob egy kockát. Ha páratlan számot dob, veszít 10 Ft-ot, ha 6-ost dob nyer 40 Ft-ot, ha 2-est vagy 4-est, újra dobhat. A második dobásnál 10 Ft-ot nyer, ha párost dob és 20 Ft-ot veszít, ha páratlant dob. Döntsük el, hogy a játék Péter számára előnyös, igazságos vagy hátrányos.
+
+\item Három különböző színű kockával dobunk. Mennyi a valószínűsége, hogy a dobott számok összege prímszám?
+
+\item Egy kockával addig dobunk, amíg valamelyik, már korábban dobott szám újra előfordul. Mennyi a szükséges dobások várható száma?
+
+\item Egy urnában van 4 piros és 6 fehér golyó. 5-ször kihúzunk egy golyót úgy, hogy feljegyezzük a számát, visszatesszük, összekeverjük és úgy húzunk újra. Mennyi a kihúzott piros golyók várható száma?
+\end{enumerate}
+\subsection*{2009. 04. 01.}
+\begin{enumerate}
+\item ($*$) 15 golyót véletlenszerűen helyezünk el 4 dobozba. Mennyi a valószínűsége, hogy mindegyik dobozba legalább 3 golyó kerül? 
+
+\item Egy dobozban 8 piros és 10 fehér golyó van. Visszatevés nélkül  egymás után húzunk golyókat. Mennyi a valószínűsége, hogy először az 5. húzáskor kerül elő fehér golyó?
+
+\item Egy dobozban 6 piros, 4 kék, 2 zöld golyó van. Visszatevéssel húzunk. 10 Ft-ért fogadhatunk a golyó színekre. Többlet esetén a piros golyónál 20, a kék golyónál 30, zöld golyónál 60 Ft a nyeremény. Melyik golyóra érdemes fogadni? 
+
+\item Állítsuk növekvő sorrendbe a következő események valószínűségét:
+\begin{abc}
+\item Egy kockával 6-szor dobunk és és legalább 1 db 6-ost dobunk;
+\item Egy kockával 12-szer dobunk és legalább 2 db 6-ost dobunk;
+\item Egy kockával 18-szor dobunk és legalább 3 db 6-ost dobunk.
+\end{abc}
+\end{enumerate}
+\subsection*{2009. 04. 06.}
+\bf{Ismétlő feladatok} \rm
+\begin{enumerate}
+\item Egy urnában van 4 piros, 4 fehér és 4 zöld golyó. 4-szer húzunk visszatevéssel. Mennyi a kihúzott fehér golyók várható száma?
+
+\item Elemezzük a ,,CRAPS'' játékot. Ebben két kockával dobunk, a dobott pontok összege számít. 
+Ha az első dobás eredménye 7 vagy 11, a játékos nyer, ha 2, 3 vagy 12, akkor veszít. Minden más esetben az első dobás eredménye a ,,POINT'' és újra dobhat. 
+A második dobástól kezdve a játékos nyer,  ha a ,,POINT''-ot dobja, veszít, ha 7-est dob minden más esetben újra dobhat. Mennyi a játékban a játékos nyerési esélye?
+\end{enumerate}
+\end{document}
+
+

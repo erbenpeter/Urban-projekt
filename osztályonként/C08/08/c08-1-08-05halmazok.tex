@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage[magyar]{babel}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/08/1.}
+\rhead{Halmazok}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Halmazok}
+
+
+
+
+\subsection*{2010.03.08.}
+\begin{enumerate}
+\item Jelölje $H$ az első 10 pozitív egész számból álló halmazt. Hány eleme van $H$-nak?
+\item Hány olyan legfeljebb kétjegyű pozitív egész száma van, amely nem osztható sem 2-vel, sem 3-mal, sem 5-tel?
+\item Hány legfeljebb kétjegyű pozitív egész prímszám van?
+\item ($*$) Igazoljuk, hogy a prímszámok száma végtelen!
+\item Igazoljuk, hogy ha $A\cap B=B$, akkor $B\subseteq A$.
+\item Legyenek $A, B, C$ a koordinátasík következő részhalmazai: 
+$A=\{(x;y)~|~|x+y|\le 1\}$,
+$B=\{(x;y)~|~|x-y|\le 1\}$,
+$C=\{(x;y)~|~|y|\le \frac{1}{2}\}$. Adjuk meg a síkon a következő halmazokat:
+$A\cap B$, $(A\cap B)\cap C$.
+\item Igazoljuk, hogy ha $A$ és $B$ véges halmazok, akkor $|A\cap B|\le \dfrac{|A|+|B|}{2}$.
+\end{enumerate}
+\subsection*{2010.03.09.}
+\begin{enumerate}
+\item Ábrázoljuk a derékszögű koordináta-rendszerben:
+\begin{abc2}
+\item $\{(x;y)~|~|x|+|y|\le 1; x\in\mathbb{R}, y\in\mathbb{R}\}$;
+\item $\{(x;y)~|~\left||x|-|y|\right|\le 1; x\in\mathbb{R}, y\in\mathbb{R}\}$.
+\end{abc2}
+\item Adjunk példát három olyan halmazra, hogy bármely kettőnek végtelen sok közös eleme van, de a három halmaz közös része üres.
+\item  Ábrázoljuk a derékszögű koordináta-rendszerben azt a ponthalmazt, amelyre igaz:
+$$\{(x;y)~|~|x|+|y|+|x+y|=2; x\in\mathbb{R}, y\in\mathbb{R}\}.$$
+\item Jelölje $A$ azoknak a 10-jegyű számoknak a halmazát, amelyekben csak az 1, 2, 3 számjegyek szerepelnek, de mindegyik legalább egyszer. Hány elemből áll az $A$ halmaz?
+\item Jelölje $H$ az első 10 pozitív egész számból álló halmazt. Adjuk meg $H$-nak 10 olyan részhalmazát, amelyekre igaz, hogy bármely két halmaz közös része pontosan egy elemet tartalmaz.
+\end{enumerate}
+\subsection*{2010.03.10.}
+\begin{enumerate}
+\item Legyenek $A$ elemei a 16 pozitív osztói, $B$ a 24 pozitív osztóinak halmaza és $C$ a 12 pozitív osztóinak halmaza. Adjuk meg az $A\cup B$, $B\cup C$ és $C\cup A$ halmazokat.
+\item Igazoljuk, hogy ha $A$ és $B$ véges halmazok, akkor $|A\cup B|\le |A|+|B|$.
+\item Igazoljuk, hogy ha $A$, $B$ véges halmazok és $|A\cup B|=|A|$, akkor 
+$B\subseteq A$. 
+\item Nézzük a koordinátatengelyekkel párhuzamos téglalapokat a síkon. Legfeljebb hány részre osztja a síkot $n$ téglalap, ha $n=1, 2, 3, 4$?
+\item Hány közös eleme van az $A\times B$ és $B\times A$ halmaznak, ha 
+$A=\{0,1,2,3\}$ és $B=\{0,1,2,4\}$?
+\item Az $A$ és $B$ olyan halmazok, amelyekre teljesül, hogy $|A\times B|=100$. Mennyi lehet $|A\cup B|$ és $|A\cap B|$ legnagyobb és legkisebb értéke? 
+\item Adjunk meg három olyan kételemű halmazt, amelyek páronkénti közös része nem üres, de a három halmaznak nincs közös eleme.
+\end{enumerate}
+\subsection*{2010.03.16.}
+\begin{enumerate}
+\item  Adjunk meg olyan sorozatot, amelyben az összes olyan racionális szám egyszer és csak egyszer szerepel, amelyre $0\le r \le 1$ igaz.
+\item Adjunk meg olyan sorozatot, amelyben az összes 1-nél nagyobb racionális szám egyszer és csak egyszer szerepel.
+\item Az $|A|=|B|=|C|=3$ és $|A\cap B\cap C|=1$. Legalább hány eleme van az $A\cup B\cup C$ halmaznak?
+\item Az $A,B,C$ halmazokra teljesül, hogy $|A|=|B|=|C|=2k+1$ és $|A\cap B\cap C|=1$. Mennyi $|A\cup B\cup C|$ legkisebb és legnagyobb értéke?
+\item Igazoljuk, hogy ha $|A|=|B|=|C|=k+n$ és $|A\cap B\cap C|=k$, akkor 
+$|A\cup B\cup C|\ge\dfrac{3n+2k}{2}$.
+\item Öt, páronként különböző négyelemű halmaz közös része üres, de bármely kettőnek van közös eleme. Mutassuk meg, hogy az öt halmaz uniójának legalább öt eleme van.
+\end{enumerate}
+\subsection*{2010.03.17.}
+\begin{enumerate}
+\item Az $A, B, C$ véges halmazok közül egyik sem tartalmazza valamelyik másikat, továbbá $|A\cap B\cap C|+1=\frac{1}{3}(|A|+|B|+|C|)$.
+\begin{abc}
+\item Hány elemű az $(A\setminus B)\cup(B\setminus C)\cup(C\setminus A)$ halmaz?
+\item Igazoljuk, hogy $|A|=|B|=|C|$.
+\item Ha $|A\cup B \cup C|=10$, akkor $|A\cap B\cap C|=?$
+
+\end{abc}
+\item Legalább hány eleme van hat olyan véges halmaz uniójának, amelyek közül bármely kettőnek egy közös eleme van, bármely három közös része üres?
+\item Igazoljuk, hogy ha $A_1, A_2, \ldots,A_k$ véges halmazok, bármely kettőnek egy közös eleme van, bármely három közös  része üres, akkor
+$|A_1\cup A_2\cup \ldots A_n|\ge \frac{k(k-1)}{2}$.
+\item A számegyenesen adottak az $I_n=\left[-\frac{1}{n};\frac{1}{n}\right]$ intervallumok ($n=1, 2,\ldots$). Határozzuk meg az $I_n$ intervallumok közös részét.
+\end{enumerate}
+\subsection*{2010.03.22.}
+\begin{enumerate}
+\item Igazoljuk a következő azonosságokat:
+\begin{abc2}
+\item $A\setminus(A\setminus B)=A\cap B$;
+\item $(A\setminus B)\cup (A\cap B)\cup(B\setminus A)=A\cup B$.
+\end{abc2}
+\item Adjunk meg olyan nem üres $A,B,C$ halmazokat, hogy igaz legyen: 
+$A\setminus(B\setminus C)=(A\setminus B)\setminus C=$.
+\item Adott a valós számok $\mathbb{R}$ halmaza és $A,B\subseteq \mathbb{R}$. Adjuk meg az $A\setminus B$, $B\setminus A$, $A\cup B$ halmazokat a metszetképzéssel és a komplementer művelettel.
+\item Igazoljuk \underline{csak a definíciók} alapján:
+$\overline{A\cup B}=\overline{A}\cap\overline{B}$ és
+$\overline{A\cap B}=\overline{A}\cup\overline{B}$.
+
+\end{enumerate}
+\subsection*{2010.03.24. -- Halmazok témazáró}
+\begin{enumerate}
+\item A $H$ halmazról tudjuk, hogy $H\subseteq \{1,2,3,4\}$ és $H\subseteq \{3,4,5,6\}$. Igazoljuk, hogy $H\subseteq \{3,4\}$.
+\item Az $A$ azoknak a tízjegyű pozitív egészeknek a halmaza, amelyekben csak az 1,2,3 számjegyek szerepelnek, de mindegyik legalább egyszer. Hány eleme van az $A$ halmaznak?
+\item Adjunk példát három olyan halmazra, hogy bármely kettőnek végtelen sok közös eleme van, de a három halmaz közös része üres.
+\item Az $A,B,C$ halmazokról tudjuk, hogy $|A|=7, |B|=8, |C|=9$, $|A\cap B \cap C|=3$. Határozzuk meg $|A\cup B \cup C|$ lehetséges értékeit.
+\item Adott $n$ darab $n-1$ elemű különböző halmaz úgy, hogy bármely $n-1$ darab halmaznak van közös eleme, de az $n$ halmaz közös része üres. Igazoljuk, hogy az $n$ halmaz uniójának $n$ eleme van és adjunk meg ilyen halmazokat.
+\end{enumerate}
+
+
+\end{document}

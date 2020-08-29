@@ -1,0 +1,302 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/09/1.}
+\rhead{Sorozatok}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Sorozatok}
+
+\subsection*{2010.09.02. -- Bemelegítő feladatok}
+\begin{enumerate}
+\item Oldjuk meg az egész számok halmazán: 
+$\sqrt{n+\sqrt{n+\ldots+\sqrt{n+\sqrt{n}}}}=k$.
+\item ($*$) Oldjuk meg a valós számok halmazán:
+$2x^3=(3x^2-x-1)\sqrt{1+x}$.
+\item ($*$) Határozzuk meg az
+$f(x)=\sqrt{x^2-6x+13}+\sqrt{x^2-14x+58}, x\in\mathbb{R}$ függvény legkisebb értékét.
+\item Igazoljuk, hogy
+\begin{abc2}
+\item $\sqrt{6+\sqrt{6+\sqrt{6+\sqrt{6+\sqrt{3}}}}}<3$;
+\item $\frac{2-\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{2}}}}}{2-\sqrt{2+\sqrt{2+\sqrt{2}}}}>\frac{1}{4}$.
+\end{abc2}
+\item ($*$) Tudjuk, hogy $x,y,z>0$ és $x+y+z=1$. Határozzuk meg 
+$\sqrt{1+x^2}+\sqrt{1+y^2}+\sqrt{1+z^2}$ legkisebb értékét.
+\end{enumerate}
+
+\subsection*{2010.09.07. -- Sorozatok és tulajdonságaik}
+\begin{enumerate}
+\item Számítsuk ki a kétjegyű páros számok összegét.
+\item Adott a következő sorozat: $a_n=2^n, (n=0,1,2,\ldots)$. Számítsuk ki a sorozat első $n$ tagjának összegét!
+\item Az $a_n=\left(\frac{1}{2}\right)^n$ sorozat ($n=0,1,2,\ldots$) első $n$ tagjának számítsuk ki az összegét!
+\item Egy sorozat első tagja 10, minden további tag 3-mal nagyobb az előző tagnál. Számítsuk ki a sorozat
+\begin{abc2}
+\item első 100;
+\item első $n$
+\end{abc2}
+tagjának összegét.
+\item Egy sorozat első tagja 3, minden további tag az előző tag kétszerese. Számítsuk ki a sorozat
+\begin{abc2}
+\item első 100;
+\item első $n$
+\end{abc2}
+tagjának összegét.
+\item Egy sorozat első tagja $a_1$, minden további tag $d$-vel nagyobb az előző tagnál. Számítsuk ki az első $n$ tag összegét és a sorozat $n$-edik tagját.
+\end{enumerate}
+
+\subsection*{2010.09.08.}
+\begin{enumerate}
+\item Egy sorozat első tagja $a_1$, minden további tag az előző tag $q$-szorosa. Számítsuk ki a sorozat $n$-edik tagját és első $n$ tagjának összegét (mértani sorozat).
+\item Az $a_n$ sorozat definíciója:
+$$a_1=1,\quad a_{n+1}=\frac{1}{1+a_n}.$$
+Vizsgáljuk meg, hogyan viselkedik a sorozat a növekedés és fogyás szempontjából.
+\item Keressünk olyan mértani sorozatot, amelyre teljesül, hogy $a_{n+2}=a_n+a_{n+1}$.
+\item Az $1,4,10,19,\ldots$ sorozat szomszédos tagjainak különbségéből álló sorozat egy számtani sorozat. Adjuk meg a sorozat $n$-edik tagját és első $n$ tagjának összegét.
+\item Számítsuk ki a következő összeget:
+$$\frac{1}{2}+\frac{3}{2^2}+\frac{5}{2^3}+\ldots
++\frac{2n-1}{2^n}.$$
+\item Számítsuk ki:
+$$1+2x+3x^2+\ldots+(n+1)x^n.$$
+\end{enumerate}
+
+
+\subsection*{2010.09.09.}
+\begin{enumerate}
+\item Az $(a_n)$ sorozat definíciója: $a_1=1, a_2=2$ és ha $n\ge 1$, akkor $a_{n+2}=3a_{n+1}-2a_n$. Fejezzük ki $a_n$-et $n$-nel.
+\item Igazoljuk, hogy az $a_1=2$, $a_{n+1}=\frac{1}{2}\left(a_n+\frac{1}{a_n}\right)$ sorozat monoton fogyó és alulról korlátos. Szemléltessük a sorozat elemeit az 
+$$f(x)=\frac{1}{2}\left(x+\frac{1}{x}\right)$$
+függvény grafikonjával.
+\item Egy számtani sorozatról a következőket tudjuk:
+\begin{align*}
+a_2+a_4+a_6&=36;\cr
+a_2a_3&=54.
+\end{align*}
+Számítsuk ki a sorozat első tagját és különbségét.
+\item Egy számtani sorozat három egymást követő elemének összege 3, a három egymást követő elem köbének összege 15. Számítsuk ki a számtani sorozat differenciáját.
+\item Számítsuk ki minél egyszerűbben a következő összeget:
+$$100^2-99^2+98^2-97^2+\ldots+2^2-1^2.$$
+\end{enumerate}
+
+
+\subsection*{2010.09.15.}
+\begin{enumerate}
+\item Egy mértani sorozatnál tudjuk, hogy 
+$$a_1+a_2=4\text{~és~}a_5a_2=6.$$
+Számítsuk ki a sorozat első elemét és hányadosát.
+\item Egy számtani sorozat első három elemének összege 9. Ha az első elemből 4-et elveszünk, a másodikhoz 1-et, a harmadikhoz 15-öt hozzáadunk, akkor egy mértani sorozat első három elemét kapjuk. Melyik a számtani sorozat első három eleme?
+\item Számítsuk ki azoknak a kétjegyű pozitív egész számoknak az összegét, amelyek 3-mal osztva 2-t adnak maradékul.
+\item Igazoljuk, az $x^2-yz$, $y^2-zx$, $z^2-xy$ számok egy számtani sorozat első három elemét adják, ha $x,y,z$ egy számtani sorozat első három eleme.
+\item Egy mértani sorozatban $a_1-a_2=8$, $a_2+a_3=12$. Számítsuk ki a sorozat első tagját és hányadosát.
+\item Egy mértani sorozatban $a_1=3$, $a_{10}=1536$. Számítsuk ki $q$-t és $s_{10}$-et.
+\item Igazoljuk, hogy ha $x,y,z$ egy mértani sorozat első három eleme, akkor 
+$x^3+2xy^2+y^2z$,
+$x^2y+y^3+xyz+yz^2$ és 
+$xy^2+2y^2z+z^3$ is egy mértani három egymást követő eleme.
+\end{enumerate}
+
+
+\subsection*{2010.09.16.}
+\begin{enumerate}
+\item Egy szabályos háromszög oldala 2 egység. A háromszögbe egyenlő sugarú köröket írunk úgy, hogy érintik egymást és a háromszög oldalait. Egy-egy háromszögoldalt $n$ kör érint. Számítsuk ki a körök sugarát és területének összegét.
+\item Számítsuk ki ki:
+\begin{abc}
+\item $\frac{1^2+3^2+5^2+\ldots+(2n-1)^2}{2^2+4^2+6^2+\ldots+(2n)^2}$;
+\item $\frac{1^3+^3+3^3+\ldots+n^3}{n^3}-\frac{n}{4}$;
+\item $(1+x)(1+x^2)(1+x^4)\ldots(1+x^{2^n})$.
+\end{abc}
+\item Vizsgáljuk a következő sorozatot:
+$a_1=\frac{x}{2}$, ahol $0<x<1$; $a_{n+1}=\frac{x}{2}+\frac{a_n^2}{2}$. Igazoljuk, hogy $a_n<1$ minden $n$-re és $a_{n+1}>a_n$ szintén minden $n$-re igaz.
+
+\item Igazoljuk, hogy az $a_1=\sqrt 2$, $a_{n+1}=\sqrt{2+a_n}$ sorozat növekvő, de felülről korlátos, azaz van olyan szám, aminél a sorozat minden eleme kisebb.
+\end{enumerate}
+
+
+\subsection*{2010.09.21.}
+\begin{enumerate}
+\item Az $1,4,10,19,\ldots$ sorozat szomszédos tagjainak különbsége számtani sorozatot alkot. Számítsuk ki a sorozat 100. tagját és az első 100 tag összegét.
+\item Számítsuk ki az
+$$1,3,6,10,\ldots,\frac{n(n+1)}{2},\ldots$$
+sorozat első 200 tagjának összegét.
+\item Adott két számtani sorozat: az egyik
+$17,21,25,\ldots$, a másik $16,21,26,\ldots$. A két sorozatban vannak közös elemek is. Számítsuk ki a két sorozat első 100 közös elemének összegét.
+\item ($*$) Egy számtani sorozatról tudjuk, hogy a negyedik tagja 4. A sorozat $d$ különbségének mely értékére igaz, hogy a sorozat első három tagjának páronként vett szorzatát összeadva a legkisebb értéket kapjuk?
+\item Számítsuk ki a következő összeg értékét:
+$$\frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}
++\frac{1}{5\cdot 7}+\ldots+\frac{1}{999\cdot 1001}.$$
+\end{enumerate}
+
+
+\subsection*{2010.09.23.}
+\begin{enumerate}
+\item Valaki január 1-én 100~000~Ft-ot tesz egy bankba évi 6\%-os kamatra. Kamatos kamattal 6 év alatt hány forintra nő a betét?
+\item Évi 5\%-os kamat esetén 6 év alatt 80~000~Ft hány forintra növekszik?
+\item Igazoljuk a számtani sorozat következő tulajdonságát:
+$$a_n=\frac{a_{n-k}+a_{n+k}}{2},$$
+ha $n>k>0$ egészek.
+\item Igazoljuk a mértani sorozat következő tulajdonságát:
+$$\sqrt{a_{n-k}\cdot a_{n+k}}=a_n,$$
+ha $a_1>0$, $q>0$ és $n>k>0$ egészek.
+\item Igazoljuk a Fibonacci-sorozat következő tulajdonságait:
+\begin{abc}
+\item $f_1^2+f_2^2+\ldots+f_n^2=f_n\cdot f_{n+1}$;
+\item $f_n^2-f_{n-1}\cdot f_{n+1}=(-1)^{n-1}$;
+\item $f_{n-1}^2+f_n^2=f_{2n-1}$.
+\end{abc}
+\end{enumerate}
+
+
+\subsection*{2010.09.28.}
+\begin{enumerate}
+\item Egy vállalatnál azt tervezik, hogy 5 éven keresztül évente 10\%-kal növelik a termelést. Hány \%-kal kell évente növelni a termelést, ha már a 4. év végére el akarják érni a tervezett végeredményt?
+\item Négy szám egy számtani sorozat négy szomszédos eleme. Ha sorra 5-tel, 6-tal, 9-cel, 15-tel növeljük ezeket a számokat, akkor egy mértani sorozat négy szomszédos elemét kapjuk. Melyik ez a négy szám?
+\item Három szám egy mértani sorozat három szomszédos eleme. Ha a középső számot 10-zel növeljük, akkor egy számtani sorozat három szomszédos elemét kapjuk. Melyik ez a három szám?
+\item Négy szám egy mértani sorozat négy szomszédos eleme. A sorozat két szélső tagjának összege 14, a két középső tag összege 6. Melyik ez a négy szám?
+\item Egy mértani sorozatban $a_6+a_5=48$ és $a_7-a_5=48$. Az elejétől kezdve hány tagot kell összeadni, hogy 1023-at kapjunk?
+\item Egy mértani sorozat második eleme 20, első három elemének összege 70. Határozzuk meg a sorozat hatodik elemét!
+\end{enumerate}
+
+
+\subsection*{2010.09.29.}
+\begin{enumerate}
+\item Három szám egy mértani sorozat három szomszédos eleme, összegük 26. Ha az elsőhöz 1-et, a másodikhoz 6-ot, a harmadikhoz 3-mat adunk, akkor egy számtani sorozat három szomszédos tagját kapjuk. Mik lesznek a számtani sorozat tagjai?
+\item Három szám egy mértani sorozat három szomszédos eleme. Ha a harmadik számból 64-et kivonunk, akkor a kapott számok egy számtani sorozat szomszédos tagjai. Ha most a középső számból vonunk ki 8-cat, akkor ismét egy mértani sorozat három szomszédos tagját kapjuk. Melyik volt az eredeti három szám?
+\item Adjuk meg azt a számtani sorozatot, amelyben
+$s_n=3n^2$.
+\item Melyik az a mértani sorozat, amelyben az első és a negyedik tag összege 35, a második és harmadik tag összege 30?
+\item Egy mértani sorozatban
+\begin{align*}
+a_1+a_2+a_3+a_4+a_5&=31,\cr
+a_2+a_3+a_4+a_5+a_6&=62.
+\end{align*}
+Mennyi $a_1$ és $q$ értéke?
+\item Igazoljuk, hogy ha $a$, $x$ tetszőleges valós számok, akkor
+$(a+x)^2$, $a^2+x^2$, $(a-x)^2$ egy számtani sorozat első három eleme. Határozzuk meg ennek a sorozatnak az első $n$ tagjának összegét.
+\end{enumerate}
+
+
+\subsection*{2010.09.30.}
+\begin{enumerate}
+\item Oldjuk meg a következő egyenleteket:
+\begin{abc}
+\item $1+4+7+\ldots+x=117$;
+\item $(x+1)+(x+4)+(x+7)+\ldots+(x+28)=155$.
+\end{abc}
+A bal oldalon számtani sorozatok összege áll.
+\item Egy számtani sorozat első $n$ elemének összege
+\begin{abc2}
+\item $3n^2$;
+\item $5n^2+3n$.
+\end{abc2}
+Határozzuk meg a sorozat első három elemét.
+\item Igazoljuk, hogy ha $a,b,c$ egy számtani sorozat első három eleme, akkor
+$$3(a^2+b^2+c^2)=6(a-b)^2+(a+b+c)^2.$$
+\item Készítsünk olyan képletet, amelynek segítségével kiszámíthatjuk egy mértani sorozat első $n$ elemének szorzatát.
+\item Három szám egy mértani sorozat első három eleme. A három szám összege 26, négyzetük összege 364. Melyek ezek a számok?
+\end{enumerate}
+
+
+\subsection*{2010.10.05. -- Ismétlő feladatok}
+\begin{enumerate}
+\item Igazoljuk, hogy az $a_1=\sqrt{a}$, $a_{n+1}=\sqrt{a+a_n}\quad(a>0)$ sorozat növekszik és felülről korlátos.
+\item Három egész szám, amelyek összege 60, egy számtani sorozat három egymást követő tagja.
+Ha ezekhez a számokhoz sorra $2{,}2$-et, $4$-et és $7$-et adunk, akkor a kapott számok egy mértani sorozat szomszédos tagjai. Melyik ez a három szám?
+
+\item Számítsuk ki azoknak a háromjegyű pozitív egész számoknak az összegét, amelyeknek minden számjegye páros.
+\item Egy számtani sorozat első tagja $a$, különbsége $d$. A $d$ mely értékére igaz, hogy $a_1a_3+a_2a_4$ értéke a lehető legkisebb?
+\item Számítsuk ki a 30-cal osztható négyjegyű számok összegét.
+\end{enumerate}
+
+
+\subsection*{2010.10.06.}
+\begin{enumerate}
+\item Az $1,2,4,7,11,\ldots$ sorozat szomszédos tagjainak különbségei számtani sorozatot alkotnak. Számítsuk ki a sorozat $n$-edik tagját és első $n$ tagjának összegét.
+\item Egy mértani sorozat első két tagjának összege 3, az első két tag négyzetének összege 5. Számítsuk ki a sorozat első tagját és hányadosát.
+\item Az $a_n$ sorozat definíciója: $a_1=2$ és 
+$a_{n+1}=3a_n+1$. Számítsuk ki a sorozat első $n$ tagjának összegét.
+\item Számítsuk ki a következő összegeket:
+\begin{abc}
+\item $\frac{1}{1\cdot 5}+\frac{1}{5\cdot 9}
++\frac{1}{9\cdot 13}+\ldots+\frac{1}{(4n-3)\cdot(4n+1)}$;
+\item $1+2\cdot 2+3\cdot 2^2+4\cdot 2^3+\ldots+
+n\cdot 2^{n-1}$.
+\end{abc}
+\item Végezzük el a négyzetre emeléseket és adjuk össze:
+$$
+\left(x+\frac{1}{x}\right)^2+
+\left(x^2+\frac{1}{x^2}\right)^2+
+\ldots
++\left(x^n+\frac{1}{x^n}\right)^2.
+$$
+\end{enumerate}
+
+
+\subsection*{2010.10.12.}
+\begin{enumerate}
+\item Egy számtani sorozat minden tagja pozitív egész szám. A második tag 12 és az első kilenc tag összege 200-nál nagyobb, de 220-nál kisebb. Adjuk meg a sorozatot.
+\item Egy mértani sorozat első három tagjának összege 31, az első és a harmadik tag összege 26. Számítsuk ki a sorozat első tagját és hányadosát.
+\item Három szám egy mértani sorozat három egymást követő tagja, szorzatuk 64, számtani közepük $\frac{14}{3}$. Melyik ez a három szám?
+\item Adott 4 szám, az első három egy mértani, az utolsó három egy számtani sorozat első három eleme. Az első és a negyedik szám összege 21, a két középső összege 18. Melyik ez a négy szám?
+\item Egy mértani sorozat első három tagjának összege 13, az első három tag négyzetének összege 91. Határozzuk meg a sorozatot.
+\end{enumerate}
+
+
+\subsection*{2010.10.13.}
+\begin{enumerate}
+\item Adott az $a_1=\frac{1}{4}$, $a_{n+1}=a_n(1-a_n)$, $n\ge 1$ sorozat. Igazoljuk, hogy $a_n\ge a_{n+1}$ és $a_n>0$ minden $n$-re. Ábrázoljuk a sorozat tagjait az $f(x)=x(1-x)$ függvény segítségével.
+\item Egy mértani sorozat első három tagjának összege 6, az első, a harmadik és az ötödik tag összege $10{,}5$. Határozzuk meg a sorozat első tagját és hányadosát.
+\item Határozzuk meg azt a háromjegyű számot, amelynek számjegyei egy mértani sorozat szomszédos tagjai, a nála 400-zal kisebb szám számjegyei pedig egy számtani sorozat szomszédos tagjai.
+\item Az $a,b,12$ számok egy mértani sorozat, az $a,b,9$ számok pedig egy számtani sorozat szomszédos elemei. $a=?$, $b=?$
+\item Négy szám egy mértani sorozat első 4 tagja.
+A két középső összege 48, a két szélső szám összege 112. Melyik ez a négy szám?
+\end{enumerate}
+
+
+\subsection*{2010.10.14. -- Pótdolgozat}
+\begin{enumerate}
+\item egy mértani sorozat első három tagjának összege 21, az első és a harmadik tag összege 15. Számítsuk ki a sorozat első tagját és hányadosát.
+\item Melyik az a négy szám, amelyek közül az első három egy mértani sorozat, a második három pedig egy számtani sorozat első három tagja és az első és negyedik összege 14, a második és harmadik összege 12.
+\item Egy mértani sorozat harmadik tagjának és második tagjának összege 6, a negyedik tag 24-gyel nagyobb a második tagnál. Adjuk meg a sorozat első tagját és hányadosát.
+\item Az $5x-y$, $2x+3y$, $x+2y$ egy számtani sorozat, az $(y+1)^2$, $xy+1$, $(x-1)^2$ pedig egy mértani sorozat három szomszédos tagja. Számítsuk ki $x$ és $y$ értékét!
+\item Adott az $a_1=\frac{1}{4}$, $a_{n+1}=2a_n(1-a_n)\quad (n\ge 1)$ sorozat. Igazoljuk, hogy minden $n$-re $a_n\le a_{n+1}$ és $a_n<\frac{1}{2}$.
+\end{enumerate}
+
+\end{document}

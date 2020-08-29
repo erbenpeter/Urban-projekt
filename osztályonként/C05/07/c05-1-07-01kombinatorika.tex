@@ -1,0 +1,219 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C05/07/1.}
+\rhead{Kombinatorika}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{pgf,tikz}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Kombinatorika}
+
+\subsection*{2005.09.13.}
+\begin{enumerate}
+\item Állíts össze 15 dominóból egy $5\times 6$-os
+téglalapot úgy, hogy a téglalap bármelyik oldalával
+párhuzamos egyenes minden esetben legalább egy dominót kettévágjon!
+\item Az előző feladat eredménye alapján 20 dominóból állíts össze $5\times 8$-as téglalapot ugyanilyen módon!
+\item 24 dominóból állíts össze $6\times 8$-as téglalapot az előző két feladatban megismert tulajdonsággal!
+\item Összeállítható-e téglalap az ötféle \textit{tetraminóból} (mindegyikből csak egy példányunk van)?
+\item Állíts össze egy $6\times 10$-es téglalapot
+a 12 \textit{pentaminóból} (mindegyikből csak egy példányunk van)?
+\item A $8\times 8$-as sakktábla egyik sarokmezőjét kihagyjuk. Lefedhető-e a megmaradt rész 21 darab ilyen \textit{tri\-minóval}: 
+\tikz[x=0.2cm,y=0.2cm]{
+\draw (0.,4.)-- (3.,4.);
+\draw (3.,4.)-- (3.,3.);
+\draw (3.,3.)-- (0.,3.);
+\draw (0.,3.)-- (0.,4.);
+\draw (1.,4.)-- (1.,3.);
+\draw (2.,4.)-- (2.,3.);
+}
+?
+\end{enumerate}
+
+\subsection*{2005.09.15.}
+\begin{enumerate}
+\item Lefedhető-e a szokásos $8\times 8$-as sakktábla 15 T alakú és egy
+\tikz[x=0.2cm,y=0.2cm]{
+\draw (0.,0.)-- (2.,0.);
+\draw (2.,0.)-- (2.,2.);
+\draw (2.,2.)-- (0.,2.);
+\draw (0.,2.)-- (0.,0.);
+\draw (1.,0.)-- (1.,2.);
+\draw (0.,1.)-- (2.,1.);
+}
+alakú tetraminóval?
+\item Állíts össze a 12 pentaminóból $5\times 12$-es
+téglalapot!
+\item A sakktábla 4 sarokmezőjét kivágtuk.
+A megmaradt részt fedjétek le a 12 pentaminóval!
+\item A 12 pentaminóból állíts össze 3 darab $7\times 3$-as téglalapot úgy, hogy mindegyik téglalapból 1 mező üresen marad! 
+\item A $8\times 8$-as sakktáblán jelölj ki 16 mezőt úgy, hogy a kimaradt részre ne lehessen letenni a következő pentaminókat: U, Y, I, L.
+\end{enumerate}
+
+
+\subsection*{2005.09.20.}
+\begin{enumerate}
+\item  Legfeljebb hány bástya helyezhető el a sakktáblán úgy, hogy egyik se üsse a másikat?
+\item Legfeljebb hány futó helyezhető el a sakktáblán úgy, hogy egyik se üsse a másikat?
+\item Legfeljebb hány király helyezhető el a sakktáblán úgy, hogy egyik se üsse a másikat?
+\item Legfeljebb hány ló helyezhető el a sakktáblán úgy, hogy egyik se üsse a másikat?
+\item Legfeljebb hány királynő helyezhető el a sakktáblán úgy, hogy egyik se üsse a másikat?
+\item Legfeljebb hány
+\begin{abcn}{5}
+\item királyt;
+\item bástyát;
+\item futót;
+\item lovat;
+\item királynőt
+\end{abcn}
+kell elhelyezni a sakktáblán úgy, hogy minden
+szabad mezőt ütés alatt tartsanak?
+\end{enumerate}
+
+
+\subsection*{2005.09.21.}
+\begin{enumerate}
+\item Egy kocka lapjait pirosra és kékre festjük. Hányféleképpen lehetséges ez, ha az elmozgatással egymásba vihető színezéseket nem tekintjük különbözőeknek?
+
+\item Legfeljebb hány részre osztja a síkot 3 egyenes, 4 egyenes, 5 egyenes?
+
+\item Egy négyzetet fel lehet-e darabolni 4, 6, 7, 8 négyzetre?
+
+\item Egy $8 \times 8$-as sakktábla bal alsó sarkából el lehet-e jutni a jobb felső sarokba úgy, hogy közben minden sorba pontosan egyszer lépünk?
+
+\item Egy $8 \times 8$-as sakktábla egyik mezőjét letakarjuk. Mutassuk meg, hogy a maradék rész lefedhető 21 darab
+\tikz[x=0.2cm,y=0.2cm]{
+\draw (-3.,5.)-- (-3.,3.);
+\draw (-3.,3.)-- (-1.,3.);
+\draw (-1.,3.)-- (-1.,4.);
+\draw (-1.,4.)-- (-3.,4.);
+\draw (-2.,5.)-- (-2.,3.);
+\draw (-3.,5.)-- (-2.,5.);}
+alakzattal.
+
+\item Egy kockát fel lehet-e darabolni 27, 34, 90 kisebb kockára?
+
+\item Adott a síkon 8 egyenes. Legfeljebb hány metszéspontjuk lehet?
+
+\end{enumerate}
+
+
+\subsection*{2005.09.27.}
+\begin{enumerate}
+\item Hány olyan háromjegyű szám van, amelynek jegyei között csak az 1, 2, 3 szerepel?
+
+\item Hány olyan háromjegyű szám van, amelynek jegyei között csak a 0, 1, 2, 3, szerepel?
+
+\item Hány olyan ötjegyű páros szám van, amelynek jegyei között nincs 5-nél nagyobb számjegy?
+
+\item Hányféleképpen választhatunk ki az 1 és 10 közti egész számokból három számot?
+
+\item Hány olyan téglatest van, amelynek élei egész hosszúságúak és legfeljebb 10 egység a hosszuk?
+
+\item Egy piros és egy zöld kockával dobunk, leírjuk egymás mellé a kapott eredményt. Hányféle kétjegyű számot kaphatunk?
+
+\item Hányféleképpen választhatunk ki az első 30 pozitív egész számból hármat úgy, hogy az összegük osztható legyen 3-mal?
+\end{enumerate}
+
+
+\subsection*{2005.09.28.}
+\begin{enumerate}
+\item Hány olyan 0001 és 9999 közötti egész szám van, amelyben két jegy összege megegyezik a harmadik és a negyedik jegy összegével?
+
+\item Mennyi az 1, 2, 3, 4, 5, 6 számjegyekkel felírható hatjegyű számok összege?
+
+\item Legfeljebb hány metszéspontot határoznak meg a konvex 7-szög, konvex 8-szög átlói?
+
+\item Hány átlója van egy konvex 7, 8, 9-szögnek, 
+$n$-szögnek?
+
+\item Hány olyan téglatest van, amelynek az élei egész hosszúságúak és 1 és 20 közé esnek?
+
+\item Hány olyan 4 jegyű szám van, amelynek a számjegyei 1,2,3 közül kerülnek ki, és osztható 
+3-mal?
+\end{enumerate}
+
+
+\subsection*{2005.09.29.}
+\begin{enumerate}
+\item Mennyi az 1, 2, 3, 4 számjegyekkel felírható négyjegyű számok összege?
+
+\item Hány 4-gyel osztható, 4-jegyű szám készíthető az 1, 2, 3, 4, 5 számjegyekből, ha ezek mindegyike többször is felhasználható?
+
+\item Hány különböző forgalmi rendszám készíthető, ha egy rendszám 3 betűből és 3 számjegyből áll, és 26 betűből lehet választani, más megkötés nincs.
+
+\item Hányféleképpen lehet a 10-et pozitív egész számok összegére bontani, ha a sorrendben különböző felbontásokat különbözőnek tekintjük? És a 20-at?
+
+\item Hányféleképpen lehet a 10-et nemnegatív egész számok összegére bontani, ha a sorrendben különböző felbontásokat is különbözőnek tekintjük? És a 20-at?
+\end{enumerate}
+
+
+\subsection*{2005.10.05.}
+\begin{enumerate}
+\item Az 5-nél nem nagyobb számjegyekkel elkészítjük az összes 4 jegyű számot, amelyekben nincs ismétlődő számjegy. Mennyi ezek összege?
+
+\item Egy konvex tízszög átlói legfeljebb hány metszéspontot határoznak meg a sokszög belsejében?
+
+\item Egy piros és egy zöld dobókockával dobunk, a dobott számokat összeadjuk. Milyen számokat kaphatunk és melyiket hányféleképpen?
+
+\item Egy 10 lépcsőfokból álló lépcsőn úgy mehetünk fel, hogy egyszerre 1 vagy 2 lépcsőfokot lépük. Hányféleképpen mehetünk fel?
+
+\item Hány részre osztják a teret a kocka lapsíkjai?
+
+\item Hány olyan ötjegyű szám van, amelyekben az 5-nél nem nagyobb számjegyek szerepelnek és osztható 4-gyel?
+\end{enumerate}
+
+
+\subsection*{2005.10.06. -- Kombinatorika dolgozat}
+\begin{enumerate}
+\item Mennyi az 1, 2, 3, 4 számjegyekből készíthető
+négyjegyű számok összege? Minden számjegy csak egyszer szerepelhet a számban.
+\item Hány olyan 4-jegyű szám van, amelyben a számjegyek összege páros?
+\item Legfeljebb hány részre osztja a síkot 6 egyenes?
+\item Hányféleképpen lehet a 12-t három pozitív egész szám összegére bontani, ha a csak sorrendben különböző felbontásokat is különbözőnek tekintjük?
+\item Egy kocka lapjait három színnel, pirossal, kékkel és zölddel színezzük. A színezéshez mind a három színt felhasználjuk.
+Hányféle kockát kaphatunk, ha az elforgatással egymásba vihetőket nem tekintjük különbözőnek?
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,210 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tikz,pgf}
+\usetikzlibrary{arrows}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/08/1.}
+\rhead{Valószínűségszámítás}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\title{c08-1-08-03valszam}
+\begin{document}
+
+\section*{Valószínűségszámítás}
+
+\subsection*{2009.12.08.}
+\begin{enumerate}
+\item Két (különböző színű) kockával dobunk. Mennyi a valószínűsége, hogy a dobott számok összege prímszám?
+\item Egy kockával 5-ször dobunk. Mennyi a valószínűsége, hogy a dobott számok összege osztható 6-tal? 
+\item Egy dobozban van 6 piros és 4 fehér golyó. 4-szer húzunk ki egy-egy golyót visszatevés nélkül. Adjuk meg a kihúzott piros golyók számának eloszlását (annak valószínűségeit, hogy ekkor 0,1,2,3,4 piros golyót húzunk).
+\item Egy játékban választhatunk, hogy egy szabályos kockával dobunk és akkor nyerünk, ha 6-ost dobunk, vagy két kockával dobunk és akkor nyerünk, ha a dobott számok összege 6. Melyiket válasszuk?
+\item András és Botond egy-egy kockával dobnak. Az nyer, aki nagyobb számot dob. Ha egyformát dobnak, akkor döntetlen. Mennyi a valószínűsége, hogy Botond nyer?
+\end{enumerate}
+
+\subsection*{2009.12.09.}
+\begin{enumerate}
+\item Három különböző színű kockával dobunk. Számítsuk ki annak a valószínűségét, hogy legalább 15 a dobott pontok összege.
+\item Egy kockával háromszor dobunk. Mennyi a valószínűsége, hogy legalább egy 6-ost dobunk?
+\item Egy kockával addig dobunk ismételten, amíg 6-ost nem dobunk. Mennyi a várható dobásszám?
+\item Egy pénzérmével addig dobunk ismételten, amíg kétszer egymás után ugyanazt nem dobjuk. Mennyi a várható dobásszám?
+\item Két (különböző színű) kockával dobunk. Mennyi a dobott pontok összegének a várható értéke?
+\end{enumerate}
+
+\subsection*{2009.12.10.}
+\begin{enumerate}
+\item Két kockával (egy pirossal és egy kékkel) dobunk. Számítsuk ki a dobott pontok minimumának várható értékét.
+\item Egy szabályos kockát n-szer feldobunk. Adjuk meg a dobott 6-osok számának eloszlását.
+\item Három érmét $n$-szer feldobunk. A kísérlet kimenetele legyen az $a$ szám, ahányszor mind a három érme ugyanarra az oldalára esik. Adjuk meg a $P$(kimenetel=$k$) valószínűségeket.
+\item A ,,90-ből 5'' lottón mennyi a találatok számának várható értéke, ha egy lottószelvényt véletlenszerűen töltünk ki?
+\item Egy urnában 4 piros és 6 fehér golyó van. Kihúzunk 5 fehér golyót
+\begin{abc}
+\item visszatevéssel
+\item visszatevés nélkül.
+\end{abc}
+Számítsuk ki mindkét esetben a kihúzott piros golyók számának várható értékét.
+\end{enumerate}
+
+\newpage
+
+\subsection*{2009.12.10.}
+\begin{enumerate}
+\item A $[0;1]$ intervallumban véletlenszerűen kijelöltünk két pontot: $0<x<y<1$. Mennyi a valószínűsége, hogy az $x$, $y-x$ és $1-y$ hosszúságú szakaszokból háromszög szerkeszthető?
+\item Négy kocka kiterített hálója látható az ábrán a lapokra írt számokkal.
+Az a kocka nyer, amelyikben a nagyobb szám lesz felül. Mennyi eséllyel nyer $A$ a $B$ ellen, $B$ a $C$ ellen, $C$ a $D$ ellen és $D$ az $A$ ellen?
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-3.44,-0.78) rectangle (12.52,4.22);
+\draw (-3.,3.)-- (-3.,2.);
+\draw (-2.,2.)-- (-2.,0.);
+\draw (-3.,2.)-- (-2.,2.);
+\draw (-3.,3.)-- (-2.,3.);
+\draw (-2.,3.)-- (-2.,4.);
+\draw (-2.,4.)-- (-1.,4.);
+\draw (-1.,4.)-- (-1.,0.);
+\draw (-1.,0.)-- (-2.,0.);
+\draw (-3.,2.)-- (0.,2.);
+\draw (0.,2.)-- (0.,3.);
+\draw (0.,3.)-- (-3.,3.);
+\draw (-2.,3.)-- (-2.,2.);
+\draw (-2.,1.)-- (-1.,1.);
+\draw (1.,3.)-- (4.,3.);
+\draw (4.,2.)-- (1.,2.);
+\draw (1.,3.)-- (1.,2.);
+\draw (4.,3.)-- (4.,2.);
+\draw (2.,4.)-- (2.,0.);
+\draw (3.,4.)-- (3.,0.);
+\draw (3.,0.)-- (2.,0.);
+\draw (2.,4.)-- (3.,4.);
+\draw (3.,1.)-- (2.,1.);
+\draw (5.,3.)-- (8.,3.);
+\draw (8.,2.)-- (5.,2.);
+\draw (6.,4.)-- (6.,0.);
+\draw (7.,0.)-- (7.,4.);
+\draw (7.,4.)-- (6.,4.);
+\draw (5.,3.)-- (5.,2.);
+\draw (6.,0.)-- (7.,0.);
+\draw (8.,2.)-- (8.,3.);
+\draw (7.,1.)-- (6.,1.);
+\draw (9.,3.)-- (12.,3.);
+\draw (12.,2.)-- (9.,2.);
+\draw (10.,4.)-- (10.,0.);
+\draw (11.,0.)-- (11.,4.);
+\draw (11.,4.)-- (10.,4.);
+\draw (9.,3.)-- (9.,2.);
+\draw (12.,3.)-- (12.,2.);
+\draw (11.,0.)-- (10.,0.);
+\draw (11.,1.)-- (10.,1.);
+\draw (-1.7,0) node[anchor=north west] {$A$};
+\draw (2.3,0) node[anchor=north west] {$B$};
+\draw (6.3,0) node[anchor=north west] {$C$};
+\draw (10.3,0) node[anchor=north west] {$D$};
+\draw (-1.7,3.8) node[anchor=north west] {$0$};
+\draw (-1.7,2.8) node[anchor=north west] {$0$};
+\draw (-2.7,2.8) node[anchor=north west] {$4$};
+\draw (-0.7,2.8) node[anchor=north west] {$4$};
+\draw (-1.7,1.8) node[anchor=north west] {$4$};
+\draw (-1.7,0.8) node[anchor=north west] {$4$};
+\draw (2.3,3.8) node[anchor=north west] {$3$};
+\draw (1.3,2.8) node[anchor=north west] {$3$};
+\draw (2.3,2.8) node[anchor=north west] {$3$};
+\draw (3.3,2.8) node[anchor=north west] {$3$};
+\draw (2.3,1.8) node[anchor=north west] {$3$};
+\draw (2.3,0.8) node[anchor=north west] {$3$};
+\draw (6.3,3.8) node[anchor=north west] {$6$};
+\draw (6.3,2.8) node[anchor=north west] {$6$};
+\draw (5.3,2.8) node[anchor=north west] {$2$};
+\draw (7.3,2.8) node[anchor=north west] {$2$};
+\draw (6.3,1.8) node[anchor=north west] {$2$};
+\draw (6.3,0.8) node[anchor=north west] {$2$};
+\draw (10.3,3.8) node[anchor=north west] {$1$};
+\draw (9.3,2.8) node[anchor=north west] {$1$};
+\draw (11.3,2.8) node[anchor=north west] {$1$};
+\draw (10.3,2.8) node[anchor=north west] {$5$};
+\draw (10.3,1.8) node[anchor=north west] {$5$};
+\draw (10.3,0.8) node[anchor=north west] {$5$};
+\end{tikzpicture}
+\end{center}
+%\includegraphics[width=0.3\textwidth]{Image.PNG}
+\item Három szabályos kockát feldobunk. Mennyi a valószínűsége, hogy
+\begin{abc}
+\item mindegyik dobott szám különböző;
+\item mindegyik dobott szám azonos?
+\end{abc}
+\end{enumerate}
+
+\subsection*{2010.01.05.}
+\begin{enumerate}
+\item Ha 100 darab tízforintost feldobunk, mennyi a valószínűsége, hogy 50 esik fejre?
+\item A következő események közül melyik a legvalószínűbb:
+\begin{abc}
+\item 6 dobásból legalább egyszer 6-ost dobunk a dobókockával;
+\item 12 dobásból legalább kétszer 6-ost dobunk;
+\item 18 dobásból legalább háromszor 6-ost dobunk?
+\end{abc}
+\item Hány ember esetén igaz az, hogy már $\frac{1}{2}$-nél nagyobb valószínűséggel van köztük kettő olyan akik az év azonos napján ünneplik születésnapjukat?
+\item Két kockával (egy pirossal és egy kékkel) dobunk addig, amíg a dobott számok összege 12 szám lesz. Mennyi a várható dobásszám?
+\item Egyszerre dobunk 6 szabályos dobókockával. Mennyi a valószínűsége, hogy legalább két dobókockán azonos pontszám lesz felül?
+\end{enumerate}
+
+\subsection*{2010.01.06.}
+\begin{enumerate}
+\item Egy érmével dobunk. Ha az eredmény fej, akkor még kétszer dobunk, ha írás, még egyszer. Mennyi az összes fej dobások számának várható értéke?
+\item Számítsuk ki az ötös lottón kihúzott
+\begin{abc}
+\item legnagyobb;
+\item legkisebb szám várható értékét.
+\end{abc}
+\item Egy érmével dobunk addig, amíg először fordul elő, hogy két egymást követő dobás azonos. Mennyi a szükséges dobások számának várható értéke?
+\item Egy urnában van 4 fehér és 6 piros golyó. Ha egy golyót kihúzunk és az fehér, akkor visszatesszük, ha piros, akkor helyette fehér golyót teszünk vissza. Ezt a műveletet 3-szor megismételjük. Mennyi a valószínűsége, hogy ezután az urnából egy golyót kihúzva fehér lesz?
+\item Egy kockát addig dobunk, amíg 6-ost nem kapunk. Mennyi annak a valószínűsége, hogy páros számú dobás kellett ahhoz, hogy először 6-ost dobjunk?
+\end{enumerate}
+
+\subsection*{2010.01.13.}
+\begin{enumerate}
+\item Egy dobozban öt papírdarab van, ezeken 1-től 5-ig az egész számok vannak felírva. Először András húz egy papírt véletlenszerűen, ezt nem teszi vissza, majd Béla is húz egy papírt. Mennyi a valószínűsége, hogy a két papírra írt szám összege páros?
+\item Egy urnában 3 piros és 6 fehér golyó van. Addig húzunk visszatevés nélkül, amíg fehér golyót nem húzunk. Mennyi az addig kihúzott piros golyók várható száma?
+\item Négy piros, három fehér és két kék golyót találomra egymásmellé teszünk. Mennyi a valószínűsége, hogy fehér golyók nem kerülnek egymás mellé?
+\item Három házaspár színházba megy. A 6 jegy egy sorban egymás mellé szól. Ha véletlenszerűen osztják el egymás közt a jegyeket, mennyi a valószínűsége, hogy egyik házaspár sem ül egymás mellett?
+\item Egy szabályos pénzérmével addig dobunk, amíg kétszer egymás után fejet nem dobunk. Mennyi a várható dobásszám?
+\end{enumerate}
+
+\end{document}

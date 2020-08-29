@@ -1,0 +1,219 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage[magyar]{babel}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/10/1.}
+\rhead{Valószínűségszámítás}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Valószínűségszámítás}
+
+\subsection*{2012.01.16.}
+\begin{enumerate}
+\item
+Mennyi a valószínűsége, hogy az ötös lottón egy véletlenül kitöltött lottó esetén ötös, négyes, hármas, kettes, egyes és nulla találatunk lesz?
+\item
+Egy kockával (szabályossal) $n$-szer dobunk. Mennyi a valószínűsége, hogy $k$-szor dobunk hatost ($n\ge k$)? 
+\item
+Két kockával dobunk. Mennyi a dobások összegének várható értéke?
+\item
+Egy kockával addig dobunk, amíg hatost dobunk. Mennyi a valószínűsége, hogy $n$-szer dobunk? Mennyi a várható dobásszám?
+\item
+Egy kockával kétszer dobunk. Mennyi annak a valószínűsége, hogy az első dobás eredménye nagyobb, mint a második?
+\end{enumerate}
+
+\subsection*{2012.01.18.}
+\begin{enumerate}
+\item
+Három érmét $n$-szer feldobunk. Mennyi annak a valószínűsége annak, hogy mindhárom $k$-szor esik ugyanarra az oldalára?
+\item
+Három érmét addig dobunk fel, amíg mindhárom érme ugyanarra az oldalára nem esik. Mennyi annak a valószínűsége, hogy a szükséges dobások száma $n$?
+\item
+A binomiális eloszlás $k$-adik tagja: $B_{k}(n;p)=\binom{p}{k}p^k(1-p)^{n-k}$.
+\begin{abc}
+\item \underline{Adott $n$ és $p$} mellett melyik lesz a binomiális eloszlás maximális tagja?
+\item \underline{Adott $n$ és $k$} mellett mely $p$-re lesz $B_{k}(n;p)$ a maximális?
+\end{abc}
+\item A $p$ paraméterű geometriai eloszlás $k$-adik tagja $C_{k}(P)=p(1-p)^{k-1}$
+\begin{abc}
+\item Melyik a geometriai eloszlás maximális tagja?
+\item Rögzített $k$ mellett mely $p$-re lesz $C_{k}(p)$ értéke maximális?
+\end{abc}
+\end{enumerate}
+
+\subsection*{2012. 01. 19.}
+\begin{enumerate}
+\item
+$A$ és $B$ felváltva dobnak két kockát, $A$ kezd. Ha $A$ előbb dob 6-os összeget ő nyer, ha $B$ 7-es összeget, ő nyer. Igazságos-e a játék?
+\item 
+Egy ládában 100 alma van, köztük 10 kukacok. Véletlenszerűen kihúzunk 5 almát. Mi a valószínűsége, hogy nem lesz köztük kukacos?
+\item ($*$)
+Valaki feldob egy kockát, s ha az eredmény $k$, akkor $k$ piros és $7-k$ fehér golyót tesz egy urnába. A dobás eredményét titokban tartja. Ezután 10-szer húz visszatevéssel az urnából, s mindig megmondja a kihúzott golyó színét. Ennek ismeretében kell tippelni arra, hogy hányat dobott a kockával. Hogyan célszerű tippelni?
+\item
+Egy lottókerékbe 4 piros, 5 fehér és 6 zöld golyót teszünk. Alapos keverés után kihúztunk egy golyót, a színét megjegyezzük, visszatesszük és beleteszünk a kerékben még 7 ugyanilyen színű golyót. Újabb keverés után ismét kihúzunk egy golyót. Mennyi a valószínűsége, hogy másodszor is ugyanolyan színű golyót húzunk, mint először?
+\end{enumerate}
+
+\subsection*{2012. 01. 26.}
+\begin{enumerate}
+\item
+Legyen $e_{1}, e_{2},\ldots, e_{n}$ egy $p$ darab $+1$-ből és $q$ darab $-1$-ből álló sorozat, $p+q=n$. Legyen $s=e_{1}+e_{2}+{\ldots}+e_{n}\quad k=1, 2, \ldots, n$. $s_{0}=0$, nyilván $s_{n}=p-q$. \\
+Hány olyan út van, ami az origóból, a $(0;0)$ pontból az $(n;x)$ pontba vezet, ahol $n=p+q$, $x=p-q$ és csupa egész koordinátájú pontból áll?
+\item
+Igazoljuk, hogy ha $A(a;\alpha)$, $B(b;\beta)$ az I. síknegyed egész koordinátájú pontjai $b>a\ge0$ és $\alpha,\beta>0$, az $A'(a;-\alpha)$ pont az $A$ tükörképe a $t$ tengelyre, akkor az $A$-ból $B$-be vezető, a $t$ tengelyt metsző vagy érintő utak száma megegyezik az $A'$-ből $B$-be vezető utak számával. 
+\item
+Igazoljuk, hogy ha $n\ge x>0$ egészek, akkor az origóból az $(n;x)$ pontba vezető olyan ($s_{1}, s_{2}, {\ldots}, s_{n}=x$) utak száma, amelyekre $s_{1}>0$, {\ldots}, $s_{n}>0$ $\frac{x}{n} N_{n,x}$ ahol $N_{n,x}$ az origóból $(n;x)$-be vezető utak száma. (\textit{ballot-tétel})
+\end{enumerate}
+
+%\subsection*{Arany Dániel Matematikai Tanulóverseny}
+%\begin{enumerate}
+%\item
+%Oldjuk meg az egész számok halmazán a következő egyenletrendszert:\\
+%$x^2=y^2+z^2+1$ (1)\\
+%$x=y+z-3$ (2)
+%\item
+%Az $AB$ szakasz $A$ csúcshoz közelebbi harmadolópontja $H$. Az $AHC$ és $HBD$ szabályos háromszögek az $AB$ egyenes azonos oldalán helyezkednek el. $HD$ metszéspontja $Q$, $AD$ és $BC$ metszéspontja $M$. Határozzuk meg a $PG:AB$ arány értékét, és bizonyítsuk be, hogy az $M, P, H, Q$ pontok egy körön vannak.
+%\item
+%Legyen $x$ tetszőleges pozitív egész szám, és jelölje $f(x)$ az $x$ szám és $x$ számjegyei összegének különbségét, ahol $f(x)=0$, ha az $x$ szám egyjegyű. Oldjuk meg az $f(f(f(x)))=9$ egyenletet!
+%\item
+%Bizonyítsuk be, hogy a $(\sqrt{2}-1)^{2006}=\sqrt{m}-\sqrt{m-1}$ egyenlet megoldható a pozitív egész számok halmazán!
+%\item
+%Adott $2n+3$ pont a síkon úgy, hogy nincs $3$ egy egyenesen, és nincs $4$ egy körön. Bizonyítsa be, hogy mindig létezik egy $k$ kör, ami pontosan $3$ ponton megy keresztül, és $n$ pont van a kör belsejében és $n$ a körön kívül!
+%\end{enumerate}
+
+\subsection*{2012. 01. 30.}
+\begin{enumerate}
+\item
+Jelölje $P_{n,r}$ annak valószínűségét, hogy a bolyongó részecske az $n$-edik időpontban az $r$ szinten van (szimmetrikus bolyongás). Számítsuk ki $P_{n}$-et.
+\item
+Jelölje $U_{2r}$ annak valószínűségét, hogy az origóból induló részecske a $2r$-edik időpontban visszatér az origóba. $U_{2r}$=?
+\item
+Az origóba való $2n$-edik időpontban \underline{első} visszatérés valószínűségét jelölje $f_{2n}$. Igazoljuk: $U_{2r}=f_{2}U_{2n-2}+f_{4}U_{2n-4}+f_{6}U_{2n-6}+\ldots+f_{2n}U_{0}$ ($U_{0}=1$).
+\item ($*$)
+Igazoljuk, hogy annak valószínűsége, hogy a $2n$-edik  időpontig nem tér vissza a bolyongó részecske, megegyezik annak valószínűségével, hogy a $2n$-edik időpontban e részecske visszatér az origóba.
+\end{enumerate}
+
+\subsection*{2012. 02. 06.}
+\begin{enumerate}
+\item ($*$)
+Igazoljuk. hogy egy bolyongást a $2n$-edik időpontig vizsgálva annak valószínűsége, hogy a bolyongó részecske a $2k$-adik időpontban tér vissza utoljára az origóba;
+$\alpha_{2k,2n}=U_{2k}+U_{2n-2k}$ ($k=0,1,\ldots,n$).
+\item ($*$)
+Igazoljuk, hogy annak valószínűsége, hogy a bolyongó részecske a $[0;2n]$ vízszintes intervallumban $2k$ időegységet tölt a pozitív oldalon és $2n-2k$ időegységet a negatív oldalon: $\alpha_{2k,2n}$.\\
+\underline{Példa}: Tegyük fel, hogy igen sok pénzfeldobási játékot hajtanak végre egy árig, az egyes dobások 10 másodpercenként követik egymást. A táblázat azt mutatja, hogy $p$ valószínűséggel mely $tp$ időtartamnál kevesebb ideig van a kezdő játékos nyerésben.
+\end{enumerate}
+\begin{center}
+\begin{tabular}{ c c | c c}
+ $p$ & $tp$ & $p$ & $tp$ \\
+ 0,9 & 153,9 nap & 0,3 & 19,9 nap \\
+ 0,8 & 126,1 nap & 0,2 & 8,9 nap \\
+ 0,7 & 99,7 nap & 0,1 & 2,2 nap \\
+ 0,6 & 75,2 nap & 0,05 & 13,5 óra \\
+ 0,5 & 53,5 nap & 0,02 & 2,16 óra \\
+ 0,4 & 34,9 nap & 0,01 & 32,4 perc \\
+\end{tabular}
+\end{center}
+
+\subsection*{2012. 02. 06.}
+\begin{enumerate}
+\item
+Egy játékvezető feldob 3 szabályos kockát, az eredményeket a játékosok előtt titokban tartja. A játékosoknak találgatással kell kitalálni a \underline{legkisebb} dobott számot. Az a cél, hogy minél kevesebb találgatással kitalálja a legkisebb dobott számot. Milyen stratégiát kövessen?
+\item
+Tegyük fel, hogy az előző feladatban a 3 kocka színe piros, fehér zöld. Tegyük fel, hogy a piros kockán 2-est dobott a játékvezető. Most hogyan célszerű találgatnia
+\item \underline{Definíció}: Ha $A$ és $B$ két tetszőleges esemény, $P(B)>0$, akkor az $A$ esemény $B$-re vonatkozó feltételes valószínűsége, $P(A|B)=\frac{P(AB)}{P(B)}$.\\
+Számítsuk ki a következő feltételes valószínűségeket:
+\begin{abc}
+\item \underline{A} egy kockával 6-ost dobtunk, \underline{B} a kockával páros számot dobtunk;
+\item \underline{A} két kockának a dobott számok összege páros, \underline{B} a két kockával dobott számok összege legalább 7.
+\end{abc}
+\end{enumerate}
+
+\subsection*{2012. 02. 08.}
+\underline{Definíció}: Az $A_{1}$, $A_{2}$, \ldots, $A_{n}$ események  teljes eseményrendszert alkotnak, ha páronként kizárják egymást és összegük a biztos esemény. Nyilván igaz, hogy
+$$P(A_{1}+A_{2}+\ldots+A_{n})=P(A_{1})+P(A_{2})+\ldots+P(A_{n}) =1.$$
+\begin{enumerate}
+\item 
+Igazoljuk, hogy a \underline{teljes valószínűség tételét}: ha 
+$A_1, A_2, \ldots, A_n$ teljes eseményrendszer és $B$ tetszőleges esemény, akkor
+$$P(B)=P(B|A_{1})P(A_{1})+P(B|A_{2})P(A_{2})+\ldots+P(B|A_{n})P(A_{n}).$$
+\item Egy dobozban van 2 fehér és 1 piros golyó. Feldobunk 2 érmét és annyi további piros golyót teszünk a dobozba, ahány fejet dobtunk. Ezután a dobozból visszatevéssel kihúzunk két golyót. $B$ az az esemény, hogy mindkét kihúzott golyó piros. Számítsuk ki $B$ valószínűségét.
+\item ($*$)
+Két játékos, Bal és Jobb egy harangot mozgat a $[0;6]$ intervallum egész koordinátájú pontjai között. Egy $p$ valószínűséggel bekövetkező eseményt figyelnek meg ismételten. Ha ez bekövetkezik, akkor balra, ha nem, akkor, jobbra mozgatják 1-gyel a harangot. A játék akkor ér véget, ha a harang valamelyik végpontba (0-ba vagy 6-ba ér). A 0-ban Bal nyer, a 6-ban Jobb. A 4 pontból indul a  harang. Mennyi a valószínűsége, hogy Bal nyer? Milyen $p$ mellett igazságos a játék?
+\end{enumerate}
+
+\subsection*{2012. 02. 13.}
+\begin{enumerate}
+\item ($*$)
+Káin és Ábel fej-írást játszik. Káiné az FFII, Ábelé az FIFI fej-írás sorozat. Egy szabályos érmét addig dobnak fel egymás után, amíg négy egymás utáni dobás eredménye valamelyikük sorozatával azonos nem lesz. Ekkor vége a játéknak és az nyer, akinek a sorozata megjelent. Igazságos a játék?
+\item ($*$)
+Legyenek $A, B, C, D$ egy szabályos tetraéder csúcsai. Egy légy az $A$ csúcsból indulva bolyong a tetraéder élein, minden csúcsból egyforma valószínűséggel választ a lehetséges három irány közül. Mennyi a valószínűsége, hogy a hetedik lépés után ismét az $A$ csúcsban lesz?
+\item
+Dobjunk fel 16 szabályos érmét. Vonjunk le a dobott fejek számából 8-at és az eredményt osszuk el 4-gyel. A bank akkor nyer, ha az eredmény $-1$, $0$ vagy $1$. Minden más esetben a játékos nyer. Kinek kedvez a játék?
+\end{enumerate}
+
+\subsection*{2012. 02. 15.}
+\begin{enumerate}
+\item
+Mennyi annak a valószínűsége, hogy egy szabályos kockával dobunk 6-szor és minden dobás eredménye más?
+\item
+Mennyi a valószínűsége, hogy k véletlenül kiválasztott ember születésnapja csupa különböző napra esik. ($k\le 365$)?
+\item
+Adott $n$ golyó, ezeket véletlenszerűen $n$ dobozba tesszük. Mennyi a valószínűsége, hogy nem lesz üres doboz?
+\item Tegyük fel, hogy egy kísérletnek három lehetséges kimenetele van Az $A_{1}$, $A_{2}$, $A_{3}$ ezek valószínűsége sorra $p_{1}$, $p_{2}$, $p_{3}$ ($p_{1}+p_{2}+p_{3}=1$). Mennyi a valószínűsége, hogy a kísérletet $n$-szer elvégezve $k_{1}$-szer $A_{1}$, $k_{2}$-ször $A_{2}$, $k_{3}$-szor $A_{3}$ következik be?
+\item ($*$)
+Adott $N+1$ urna, mindegyikben $N$ golyó, a $k$-adikban $k$ piros és $N-k$ fehér ($k=0, 1, 2, \ldots, N$). Véletlenszerűen választunk egy urnát és abból visszatevéssel húzunk $n$ golyót. Jelölje $A$ azt az eseményt, hogy mindegyik kihúzott golyó piros. Mennyi annak a $B$ eseménynek a feltételes valószínűsége az $A$ feltétel mellett, hogy az $n+1$-edik húzásra is piros golyót húzunk?
+\end{enumerate}
+
+\subsection*{2012. 02. 16.}
+\begin{enumerate}
+\item
+Három kockával dobunk. Ha mindhárom kockán más esemény van, mennyi a valószínűsége, hogy egyik kockával egyest dobtunk?
+\item
+Egy kockával addig dobunk, amíg 6-ost nem kapunk. Mennyi a valószínűsége, hogy ehhez páros számú dobás szükséges?
+\item
+Tizenkét kockát dobunk fel egyszerre. Mennyi a valószínűsége, hogy a hat szám mindegyikét pontosan két kockán dobjuk?
+\item
+Ketten pénzfeldobást játszanak. Mindegyikük n-szer dob egy szabályos pénzdarabbal. Mennyi a valószínűsége, hogy mindketten azonos számú fejet dobnak?
+\item
+Mennyi annak a valószínűsége, hogy egy szabályos érmével 6-szor dobunk és legalább 3 egymás utáni fejet dobunk?
+\end{enumerate}
+
+\end{document}

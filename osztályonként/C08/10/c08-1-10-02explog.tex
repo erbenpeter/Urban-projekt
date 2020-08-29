@@ -1,0 +1,306 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={210mm,297mm},
+	left=20mm,
+	right=20mm,
+	top=20mm,
+	bottom=20mm,
+}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/10./1. csoport}
+\rhead{Exponenciális és logaritmus függvény}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\oszt}{\ |\ }
+
+
+\parskip 8pt
+\begin{document}
+
+\section*{Exponenciális és logaritmus függvény}
+	
+    
+\subsection*{2011.09.28}
+
+\begin{enumerate}
+		\item \begin{description}
+        \item[\underline{Definíció:}] Ha $a\ne0$, $n>0$ egész, akkor $a^{-n}=\dfrac{1}{a^{n}}$;\\
+Ha $a>0$, $n>0$ egész, akkor $a^{\frac{1}{n}}=\sqrt[n]{a}$;\\
+Ha $a>0$, $q>0$ és $p$ egész, akkor $a^{\frac{p}{q}}=\left(a^{\frac{1}{q}}\right)^{p}$.
+\end{description}
+		\item Számítsuk ki:
+		\begin{abc3}
+		\item $2^{-3}$;  
+        \item $9^{\frac{3}{2}}$;
+        \item $0,1^{-3}$;
+		\item $3\cdot27^{\frac{1}{2}}-2\cdot12^{\frac{1}{2}}$;
+        \item $\dfrac{1}{4}(5^{\frac{1}{2}}-1)(6+2\cdot5^{\frac{1}{2}})^{\frac{1}{2}}$;
+	\end{abc3}
+		\item Igazoljuk:
+		\begin{abc2}
+		\item $(5^{-\frac{1}{5}}+4^{\frac{1}{5}}\cdot5^{-\frac{1}{5}})^{\frac{1}{2}}=(1+2^{\frac{1}{5}}+8^{\frac{1}{5}})^{\frac{1}{5}}$;
+        \item $\left(\dfrac{3+2\cdot5^{\frac{1}{4}}}{3-2\cdot5^{\frac{1}{4}}}\right)^{\frac{1}{4}}=\dfrac{5^{\frac{1}{4}}+1}{5^{\frac{1}{4}}-1}$;
+	     \item $(5^{\frac{1}{3}}-4^{\frac{1}{3}})^{\frac{1}{2}}=\dfrac{1}{3}(2^{\frac{1}{3}}+20^{\frac{1}{3}}-25^{\frac{1}{3}})$.
+		\end{abc2}
+\end{enumerate}
+
+\subsection*{2011.09.29}
+
+\begin{enumerate}
+		\item Igazoljuk, hogy ha $a>1$, akkor $r<s$,  $r,s\in\mathbb{Q}$ esetén $a^{r}<a^{s}$, azaz a racionális számokra értelmezett $r\mapsto a^r$, exponenciális függvény $a>1$ esetén szigorúan nő.
+		\item (*) Igazoljuk, hogy ha $a>1$ és $r_n\rightarrow 0$, $r_{n}\in\mathbb{Q}$ akkor $a^{r_{n}}\rightarrow  1$.
+		\item \underline{Definíció:} Ha $a>1$ és $\alpha \in\mathbb{R}-\mathbb{Q}$ akkor $a^{\alpha}= \lim_{n\to \infty} a_n$ ha $s_{n}\in\mathbb{Q}$. \\ 
+        Gondoljuk meg, hogy a definíció független $s_n$ választásától.
+		\item Ábrázoljuk az $x\mapsto 2^{x}$, $x\in\mathbb{R}$ exponenciális függvényt.
+        \item ábrázoljuk a következő függvényeket.
+        \begin{abc3}
+        \item $x\mapsto 3^{x}$, $x\in\mathbb{R}$;
+		\item $x\mapsto \left(\dfrac{1}{2}\right)^{x}$; $x\in\mathbb{R}$,
+		\item $x\mapsto e^{x}$, $x\in\mathbb{R}$.
+	  \end{abc3}
+
+\end{enumerate}
+
+
+\subsection*{2011.10.05}
+
+\begin{enumerate}
+    	\item \underline{Definíció:} Ha $a \ne 1$, $a>0$, akkor $\log_{a}b$ jelöli azt a számot, amelyre teljesül: \underline{$a^{\log_{c}b}=b$.}
+    	\item Számítsuk ki:
+    	\begin{abc3}
+        \item $\log_{2}16$;
+        \item $\log_{3}\dfrac{1}{27}$;
+        \item $\log_{2}\dfrac{1}{\sqrt{8}}$;
+        \item $3^{\log_{3}5}$;
+        \item $9^{\log_{3}7}$;
+        \item (*) $ {\log_{6}9}+{\log_{6}4} $;
+      \end{abc3}
+        \item Ábrázoljuk a következő függvényeket:
+      \begin{abc}
+        \item $x\mapsto \log_{2}x$, $x>0$;
+        \item $x\mapsto \log_{3}x$, $x>0$;
+        \item $x\mapsto \ln{x}$, $x>0$ (Ez az $e$ alapú logaritmus jele.);
+        \item $x\mapsto \lg{x}$, $x>0$ (Ez a $10$ alapú logaritmus jele.);
+        \item $x\mapsto 2^{\log_{2}x}$, $x>0$.
+        \end{abc}
+\end{enumerate}
+
+\pagebreak
+
+\subsection*{2011.10.06}
+
+\begin{enumerate}
+		\item Számítsuk ki:
+		\begin{abc4}
+		\item $3^{\log_{3}7}$;
+        \item $4^{\log_{2}3}$;
+        \item $2^{\log_{4}5}$;
+        \item $81^{\log_{3}2}$.
+		\end{abc4}
+        \item Számítsuk ki:
+		\begin{abc4}
+		\item $\lg \sqrt{1000}$;
+        \item $\lg \sqrt{0,1}$;
+        \item $\log_{\sqrt{2}} 4$;
+        \item $\log_{\frac{1}{5}} 25$.
+        \item $\log_{\frac{1}{\sqrt3}} 27$.
+        \item $\log_{\frac{1}{3}} \dfrac{1}{9}$.
+        \end{abc4} 
+        \item Oldjuk meg valós számok halmazán:
+        \begin{abc4}
+        \item $\log_{a} 8=3$;
+        \item $\log_{8} 16=2$;
+        \item $\log_{a} 0,25=-2$;
+        \item $\log_{a} 8=-\dfrac{3}{4}$.
+        \end{abc4}
+        \item Számítsuk ki $x$ értékét:
+        \begin{abc3}
+		\item $\lg x=\lg 2,4+\lg 15$;
+        \item $\lg x=2\lg 12-\lg 18$;
+        \item $\lg x=\dfrac{1}{2}\lg 8-\dfrac{1}{2}\lg 2$;
+        \item $\lg x=3\lg 2-2\lg 5$.
+        \end{abc3} 
+\end{enumerate}
+
+
+\subsection*{2011.10.12}
+
+\begin{enumerate}
+		\item Oldjuk meg a valós számok halmazán:
+        \begin{abc2}
+		\item $\dfrac{\lg (\sqrt{x+1}+1)}{\lg \sqrt[3]{x-40}}=3$;        
+        \item $\log_{4}(9^{x-1}+7) = 2+\log_2(3^{x-1}+1)$;
+        \item $log_{3}(x^{2}-5x+6)<0$;
+        \item $\dfrac{1}{\log_{2}x}-\dfrac{1}{\log_{2}x-1}<1$;
+        \item $\log_{\frac{1}{3}}(\log_{4}(x^{2}-5))>0$.
+        \end{abc2}
+		\item Igazoljuk, hogy $5^{\lg 20}=20^{\lg5}$.
+        \item Igazoljuk, hogy ha $n>1$, egész, akkor $\log_{3}2\cdot \log_{4}3\cdot \log_{5}4\cdot ... \cdot \log_{n+1}n = \log_{n+1}2 $.
+        \item Igazoljuk, hogy ha $a,b>0$, és $a^{2}+b^{2}=7ab$, akkor $\lg \dfrac{a+b}{3} = \dfrac{1}{2}(\lg a+\lg b)$.
+\end{enumerate}
+
+
+\subsection*{2011.10.13}
+
+\begin{enumerate}
+\item Számítsuk ki a következő határértékeket:
+ 		\begin{abc2}
+		\item $\lim_{n\to \infty} \dfrac{\ln n}{n}$;
+        \item $\lim_{n\to \infty} n\ln \left(1+\dfrac{1}{n}\right)$.
+        \end{abc2}
+        \item Igazoljuk, hogy ha $n\ge1$, egész, akkor $\dfrac{1}{n+1} < \ln \left(1+\dfrac{1}{n}\right)<\dfrac{1}{n}$.
+        \item (*)  Az előző feladatban igazolt egyenlőtlenség felhasználásával mutassuk meg, hogy az 
+        \begin{center}$a_{n}=1+\dfrac{1}{2}+\dfrac{1}{3}+...+\dfrac{1}{n}-\ln n$ \end{center}
+        sorozat monoton fogyó és alulról korlátos, tehát konvergens.
+		\item (*) Számítsuk ki az $1-\dfrac{1}{2}+\dfrac{1}{3}-\dfrac{1}{4}+...+\dfrac{1}{2n-1}-\dfrac{1}{2n}$ sorozat határértékét.
+        \item (*) Igazoljuk, hogy az $y = \dfrac{1}{x}$ görbe az $x$ tengely és az $x=1$, $x=2$ egyenesek által határolt "görbe vonalú trapéz" területe $\ln 2$.
+\end{enumerate}
+
+
+\subsection*{2011.10.17}
+
+\begin{enumerate}
+		\item Hány gyöke van a $\sin x=\lg x$ egyenletnek?
+		\item Igazoljuk számológép használata nélkül, hogy $\dfrac{1}{\log_{2} \pi}+\dfrac{1}{\log_{3} \pi}>2$.
+		\item Oldjuk meg valós számok halmazán:
+        \begin{abc2}
+		\item $\log_{x}(x^2+3x) \ge 3$;
+        \item $\lg_{2}(2^{x}+3)\cdot \log_{2}(2^{x+2}+12)=8$;
+        \item $\lg_{2}x- 2\log_{8}x+ \log_{\sqrt{2}}2x=\dfrac{20}{3}$;
+        \item $\log_{\frac{1}{5}}\dfrac{4x+6}{x}\ge 0$;
+        \item $(x+1)^{\lg(x+1)}=100(x+1)$;
+        \item $x^{\lg x}=1000 x^{2}$.
+        \end{abc2}
+\end{enumerate}
+
+
+\subsection*{2011.10.18}
+Oldjuk meg Valós számok halmazán:
+\begin{enumerate}
+        \item $\log_{\sqrt{2}\sin x}(1+\cos x) = 2$;
+        \item $\dfrac{\lg \left(x-\dfrac{21}{x}\right)-\lg 4}{\lg \left(x+\dfrac{21}{x}\right)-1} = -1$;
+		\item $\log_{2}(x+1)^{2}+\log_{2}|x+1| =6$;
+        \item $|x|^{|y|}=4$, és $yx = 40$;
+        \item $2^{x}-3^{x} = \sqrt{6^{x}-9^{x}}$;
+        \item $\sqrt{1+\log_{x}\sqrt{27}}\cdot\log_{3}x+1 =0$;
+        \item (*) $\left(\dfrac{1-a^{2}}{2a}\right)^{x}+1 =\left(\dfrac{1+a^{2}}{2a}\right)^{x}; 0<a<1$.
+        \item Igazoljuk, hogy ha $n\ge1$, egész, akkor $\lg\dfrac{n+1}{2}>\dfrac{\lg1+\lg2+\cdots+\lg n}{n}$.
+\end{enumerate}
+
+
+\subsection*{2011.10.19}
+Oldjuk meg Valós számok halmazán:
+\begin{enumerate}
+		\item $4^{x}+2\textbf{x+1}=8$;
+        \item $10^{x}-10^{-x}=\dfrac{8}{3}$;
+        \item $6\cdot2^{2x}-13\cdot6^{x}+6\cdot3^{2x}=0$;
+        \item $\log_{2}\log_{3}\log_{4}x=0$;
+        \item $\dfrac{\log_{x}(35-x^{3})}{\log_{x}(5-x)}=3$;
+        \item $\lg(x-3)+\lg(x-2)=1-\lg5$;
+        \item $x^{\log_{2}x<32}$;
+        \item $|\log_{\frac{1}{2}}x|>2$;
+        \item $\log_{|x|}(x-1)<2$.
+\end{enumerate}
+
+
+\subsection*{2011.10.26}Dolgozat
+
+\begin{enumerate}
+		\item Oldjuk meg a valós számok halmazán:
+        \begin{abc2}
+		\item $\lg(x-3)+\lg(x-2)=1-\lg5$;
+        \item $\log_{3}x-6\log{x}3=5$;
+        \item $x^{1-\lg x} = 0,01$.         
+        \end{abc2}
+        \item Oldjuk meg a valós számok halmazán:
+        \begin{abc2}
+		\item $\log_{\frac{1}{3}}(6x^2-x-1)\ge0$;
+        \item $\log_{x^{2}-3}(4x+2)\ge1$.
+        \end{abc2}
+        \item Hány megoldása van a valós számok halmazán az $\log_{\frac{5\sqrt{2}}{2}}x=\cos x$ egyenletnek?
+        \item A $k$ mely valós értékére van egy megoldása az $\log_{x+1}kx=2$ egyenletnek?
+\end{enumerate}
+
+
+\subsection*{2011.10.27}Gyakorló, ismétlő feladatok
+
+\begin{enumerate}
+
+		\item Oldjuk meg valós számok halmazán:
+		\begin{abc2}
+		\item $\log_{2}(3-x)+\log_{2}(1-x)=3$;
+        \item $\log_{2}(3-2^{x})=10^{\lg(3-x)}$;
+        \item $1+\log_{2}(x-1)=\log_{x-1}4$;
+        \item $\log_{2x+3}x^{2}<1$;
+        \item $2^{2+x}-x^{2-x}=15$;
+        \item $4^{x}-2\cdot5^{2x}-10^{x}>0$;
+        \item $\log_{3}(3^{x}-8)=2-x$;
+        \item $x^{2\lg x}=10x^{2}$;
+        \item $3+2\log_{x+1}3=2\log_{3}(x+1)$;
+        \item $\log_{3}(4\cdot3^x-1)=2x+1$;
+        \item $1+2\log_{x+2}5=\log_{5}(x+2)$;
+        \item $\dfrac{\lg(\sqrt{x+1}+1)}{\lg\sqrt[3]{x-40}}=3$.
+        \item $\dfrac{\lg(35-x^{3})}{\lg(5-x)}=3$;
+        \item $\lg(3x^{2}+7)-\lg(3x-2)=1$;
+        \item $\log_{3x}\dfrac{3}{x}+\log_{3}^{2}x=1$;
+        \item $\log_{3}|3-4x|>2$;
+        \item $\log_{2}x\le\dfrac{2}{\log_{2}x-1}$;
+        \item $\dfrac{1}{1+\lg x}+\dfrac{1}{1-\lg x}>2$;
+        \item $\log_{3}\dfrac{1+2x}{1+x}<1$;
+        \item $2\log_{5}x-\log_{x}125<1$;
+        \item $\dfrac{1-\log_{4}x}{1+\log_{2}x}\le\dfrac{1}{2}$;
+        \item $\log_{2}\dfrac{3x-1}{2-x}<1$;
+        \item $\log_{\frac{1}{2}}\left(\log_{2}\dfrac{x}{x+1}\right)>0$;
+        \item $\left(\dfrac{x}{10}\right)^{\lg x-2}<100$.
+        \end{abc2}
+\end{enumerate}
+
+
+\subsection*{2011.11.07}Pótdolgozat
+
+\begin{enumerate}
+		\item Oldjuk meg valós számok halmazán:
+        \begin{abc2}
+		\item $\log_{2}x+\log_{8}x=8$;
+        \item $\lg(7x-9)^{2}+\lg(3x+4)^{2}=2$
+        \item $x^{\lg x}=100x$.
+        \end{abc2}
+\pagebreak
+        \item Oldjuk meg valós számok halmazán:
+        \begin{abc2}
+        \item $x^{\log_{2}x}<32$;
+        \item $\log_{3-x}x<-1$.
+        \end{abc2}
+        \item A $p$ valós paraméter mely értékére igaz, hogy az $x^{\log_{p}x+1}>p^{4}x$ egyenlőtlenség megoldható a valós számok halmazán, mik a megoldások?
+        \item A $p$ valós paraméter mely értékére van egy valós gyöke a $p\cdot2^{x}+2^{-x}=5$ egyenletnek?
+        
+\end{enumerate}
+\end{document}

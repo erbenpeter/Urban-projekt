@@ -1,0 +1,435 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C07/08/1.}
+\rhead{Számelmélet}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Számelmélet}
+
+\subsection*{2008.09.04. - Feladatok}
+\begin{enumerate}
+\item Alakítsuk át tizedes törtté a következő törteket:
+
+\begin{abcn}{6}
+\item $\dfrac{1}{2}$; 
+\item $\dfrac{2}{5}$;
+\item $\dfrac{1}{20}$;
+\item $\dfrac{4}{25}$;
+\item $\dfrac{3}{40}$;
+\item $\dfrac{7}{80}$.
+\end{abcn}
+
+\item Írjuk át közönséges törtté a következő tizedes törteket:
+
+\begin{abc3}
+\item $0,12$; 
+\item $0,23$; 
+\item $0,65$.
+\end{abc3}
+
+\item Írjuk át tizedes törtté a következő törteket:
+
+\begin{abcn}{6}
+\item $\dfrac{1}{9}$;
+\item $\dfrac{2}{3}$; 
+\item $\dfrac{1}{11}$;
+\item $\dfrac{1}{7}$;
+\item $\dfrac{3}{7}$;
+\item $\dfrac{5}{7}$.
+\end{abcn}
+
+\item ($*$) Igazoljuk ,,szemléletesen'', hogy $\dfrac{1}{9}=0,1111\ldots$
+\end{enumerate}
+
+\subsection*{2008.09.09. - Számfogalom}
+\begin{enumerate}
+
+\item Igazoljuk, hogy a $\sqrt{6}$ irracionális szám.
+\item Igazoljuk, hogy a $\sqrt{2}-1$ szám irracionális.
+\item Lehet-e két irracionális szám összege; szorzata racionális?
+\item Igazoljuk a következő összefüggéseket:
+
+\begin{abc2}
+\item $\sqrt{8}+\sqrt{18}=\sqrt{50}$;
+\item $\sqrt{10+4\sqrt{6}}-\sqrt{10-4\sqrt{6}}=\sqrt{4}$;
+\item $\sqrt{\dfrac{2+\sqrt{3}}{2-\sqrt{3}}}+\sqrt{\dfrac{2-\sqrt{3}}{2+\sqrt{3}}}=4$.
+\end{abc2} 
+ 
+\item Igazoljuk, hogy $\root3\of{2}$ irracionális.
+\item Számítsuk ki:
+
+\begin{abc2}
+\item $\sqrt{7+2\sqrt{6}}-\sqrt{7-2\sqrt{6}}$;
+\item $\sqrt{2+\sqrt{3}}+\sqrt{2-\sqrt{3}}$.
+\end{abc2}
+\end{enumerate}
+\subsection*{2008.09.10.}
+\begin{enumerate}
+\item Számítsuk ki a következő összeget:
+
+$\dfrac{1}{\sqrt{2}+1}+\dfrac{1}{\sqrt{3}+\sqrt{2}}+\dfrac{1}{\sqrt{4}+\sqrt{3}}+\dfrac{1}{\sqrt{5}+\sqrt{4}}+\ldots+\dfrac{1}{\sqrt{100}+\sqrt{99}}$.
+\item Számítsuk ki a következő összeget:
+
+$\dfrac{1}{2\sqrt{1}+1\sqrt{2}}+\dfrac{1}{3\sqrt{2}+2\sqrt{3}}+\ldots+\dfrac{1}{11\sqrt{10}+10\sqrt{11}}$.
+\item Számítsuk ki:
+
+\begin{abc3}
+\item $\sqrt{4+\sqrt{7}}-\sqrt{4-\sqrt{7}}$;
+\item $\sqrt{7+4\sqrt{3}}+\sqrt{7-4\sqrt{3}}$;
+\item $\sqrt{12}+\sqrt{75}-\sqrt{147}$.
+\end{abc3}
+
+\item ($*$) Igazoljuk, hogyha $n\geq1$ egész szám, akkor $[\sqrt{n}+\sqrt{n+1}]=[\sqrt{4n+2}].$
+\item Számítsuk ki:  $(\root3\of{24}+\root3\of{81}-\root3\of{192})\cdot(\root3\of{375}-\root3\of{192})$.
+\end{enumerate}
+
+\subsection*{2008.09.15.}
+\begin{enumerate}
+\item Számítsuk ki a következő kifejezések pontos értékét:
+
+\begin{abc}
+\item  $\left(\dfrac{8}{\sqrt{5}+3}-\dfrac{20}{\sqrt{5}-3}-\dfrac{4}{\sqrt{5}-2}\right)\cdot(29+\sqrt{5})$;
+
+\item   $\dfrac{6+4\sqrt{2}}{4}+\dfrac{3-6\sqrt{2}}{6}$;
+
+\item   $(3\sqrt{2}-2\sqrt{3})\cdot(3\sqrt{2}+2\sqrt{3})$;
+
+\item   $(3\sqrt{5}+2\sqrt{20})\cdot (\sqrt{45}+2\sqrt{5}-\sqrt{125})$;
+
+\item   $\sqrt{2+\sqrt{3}}\cdot \sqrt{2+\sqrt{2+\sqrt{3}}}\cdot \sqrt{2+\sqrt{2+\sqrt{2+\sqrt{3}}}}\cdot \sqrt{2-\sqrt{2+\sqrt{2+\sqrt{3}}}}$ ;
+
+\item   $\left(\dfrac{5}{\sqrt{3}-\sqrt{2}})-\dfrac{3}{\sqrt{3}+\sqrt{2}}\right)\cdot(\sqrt{2}+4\sqrt{2})$;
+
+\item   $\left(\dfrac{1}{\sqrt{7}-2}+\dfrac{3\sqrt{7}}{\sqrt{7}+2}\right)\cdot(23+5\sqrt{7})$.
+\end{abc}
+\end{enumerate}
+
+\subsection*{2008.09.16.}
+\begin{enumerate}
+\item Igazoljuk, hogy $\sqrt{2}+\sqrt{3}$ irracionális szám.
+\item Számítsuk ki:
+
+\begin{abc2}
+\item $\left(\sqrt{4+\sqrt{7}}+\sqrt{4-\sqrt{7}}\right)^2$; 
+\item $\left(\sqrt{2\sqrt{3}+2\sqrt{2}}-\sqrt{2\sqrt{3}-2\sqrt{2}}\right)^2$;
+\item $\left(\sqrt{15+\sqrt{100}}-\sqrt{15-10\sqrt{2}}\right)^2$;
+\item $\left(\sqrt{12}+\sqrt{3}+1\right)^2$.
+\end{abc2}
+\item Melyik az a legkisebb pozitív egész $n$ szám, amelyre teljesül, hogy $\sqrt{n+1}-\sqrt{n}<10^{-2}$?
+\item Számítsuk ki $[(\sqrt{2}+1)^n]$ értékét, ha $1\leq n\leq 10$.
+\item ($*$) Mutassuk meg, hogy $(7+\sqrt{50})^3$ tizedestört alakjában a tizedes vessző után három $0$ áll!
+\item Számítsuk ki:
+\begin{abc2}
+\item $(3-\sqrt{5})\cdot \root3\of{9+4\sqrt{5}}$;
+\item $\sqrt{4\sqrt{5}+3}\cdot \sqrt{4\sqrt{5}-3}$.  
+\end{abc2}
+
+\end{enumerate}
+
+\subsection*{2008.09.17.}
+\begin{enumerate}
+\item  Igazoljuk, hogy a következő számok racionálisak:
+
+\begin{abc3}
+\item $\left(\root6\of{27}-\sqrt{6\frac{3}{4}}\right)^2$;
+\item $\sqrt{3+2\sqrt{2}}+\sqrt{3-2\sqrt{2}}$;
+\item $\root3\of{5\sqrt{2}+7}-\root3\of{5\sqrt{2}-7}$.
+\end{abc3}
+\item Adjunk meg két szomszédos egész számot úgy, hogy a megadott számok ezek közé essenek:
+\begin{abc3}
+\item $\sqrt{15}-3$; 
+\item $14-2\sqrt{6}$; 
+\item $11-\sqrt{110}$.
+\end{abc3}
+\item ($*$) Az $A$ és $B$ egész számok, tudjuk még, hogy $A>B>0$. Igaz-e, hogy $\sqrt{A+B+\sqrt{4AB}}\cdot\sqrt{A+B-\sqrt{4AB}}$ is egész szám?
+\item Tudjuk, hogy $\sqrt{18-4\sqrt{15}+2\sqrt{5}-4\sqrt{3}}=a+b\sqrt{3}+c\sqrt{5}$, ahol $a,b,c$ egész számok. Adjuk meg $a,b,c$ értékét!
+
+\end{enumerate}
+
+\subsection*{2008.09.22.}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc2}
+\item $\sqrt{7-4\sqrt{3}}+\sqrt{7+4\sqrt{3}}$;
+\item $(\root3\of{24}+\root3\of{81}-\root9\of{192})\cdot \root3\of{3}$;
+\item $\root3\of{10+6\sqrt{3}}+\root3\of{10-6\sqrt{3}}$;
+\item $\sqrt{28+16\sqrt{3}}-\sqrt{28-16\sqrt{3}}$.
+\end{abc2}
+\item Számítsuk ki: $\sqrt{2+\sqrt{3}}\cdot \root3\of{\dfrac{\sqrt{2}(3\sqrt{3}-5)}{2}}$.
+\item Melyik nagyobb $\sqrt{3}$ vagy $\root3\of{5}$. (Zsebszámológép használata nélkül!)
+\item Állítsuk növekvő sorrendbe: $\sqrt{2},\root3\of{3},\root4\of{4},\root5\of{5}$.
+\item Igazoljuk $\left(\dfrac{1}{\sqrt{5}-2}\right)^3-\left(\dfrac{1}{\sqrt{5}+2}\right)^3=76$.
+\end{enumerate}
+
+\subsection*{2008.09.23.}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc2}
+\item $\left(2\sqrt{3}-\sqrt{5}+\sqrt{12}\right)\left(\sqrt{48+\sqrt{5}}\right)$; 
+\item $\sqrt{5\sqrt{3}+\sqrt{59}}\cdot \sqrt{5\sqrt{3}-\sqrt{59}}$;
+\item $\left(\dfrac{6}{4+\sqrt{10}}+\dfrac{24}{8-\sqrt{40}}\right)\cdot\left(12-\sqrt{10}\right)$;
+\item $\left(\dfrac{1}{\sqrt{7}-2}+\dfrac{3\sqrt{7}}{\sqrt{7}+2}\right)\cdot \left((23+5\sqrt{7}\right)$.
+\end{abc2}
+\item $\sqrt{7+2\sqrt{10}}=\sqrt{a}+\sqrt{b}$, ahol $a,b$ pozitív egészek; $a=?$, $b=?$
+\item Igaz-e hogy $\left(3-\sqrt{5}\right)\cdot \left(\root3\of{9+4\sqrt{5}}\right)$ egész szám?
+\item Milyen előjelű a következő szám: $\sqrt{3}-\sqrt{2-\sqrt{3}}-\sqrt{2+\sqrt{3}}$?
+\end{enumerate}
+
+\subsection*{2008.09.24. - Irracionális számok}
+\begin{enumerate}
+\item Igazoljuk, hogy $\sqrt{3}+\sqrt{5}$ irracionális szám.
+\item Számítsuk ki:
+\begin{abc3}
+\item $\dfrac{(\sqrt{5}+\sqrt{3})(4-\sqrt{15})}{\sqrt{5}-\sqrt{3}}$;
+\item $\sqrt{2\sqrt{2}+\sqrt{7}}+\sqrt{2\sqrt{2}-\sqrt{7}}$;
+\item $(\sqrt{5+\sqrt{24}}-\sqrt{5-\sqrt{24}})$.
+\end{abc3}
+\item Igazoljuk, hogy ha $x\geq y\geq 0$, akkor $\sqrt{\sqrt{x}+\sqrt{y}}=\sqrt{\dfrac{\sqrt{x}+\sqrt{x-y}}{2}}+\sqrt{\dfrac{\sqrt{x}-\sqrt{x-y}}{2}}$.
+\item ($*$) Igazoljuk, hogy bármely két racionális szám között van irracionális szám.
+\end{enumerate}
+
+\subsection*{2008.09.29.}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc2}
+\item $(\sqrt{5}-2)^2$;
+\item $(2\sqrt{3}+3\sqrt{2})^2$;
+\item $(2\sqrt{3}-\sqrt{5}+\sqrt{12})\cdot (\sqrt{48}+\sqrt{5})$;
+\item $\sqrt{5\sqrt{3}+\sqrt{59}}\cdot \sqrt{5\sqrt{3}-\sqrt{59}}$;
+\item $\left(\dfrac{6}{4+\sqrt{10}}+\dfrac{24}{8-\sqrt{40}}\right)\cdot (12-\sqrt{10})$.
+\end{abc2}
+\item Végezzük el:
+\begin{abc2}
+\item $(\sqrt{2}-\root4\of{3})\cdot (\sqrt{3}+\root4\of{2})$;
+\item $\sqrt{2+\sqrt{3}}\cdot \root3\of{\dfrac{\sqrt{2}(3\sqrt{3}-5)}{2}}$.
+\end{abc2}
+\item Igazoljuk: $\root3\of{1-12\cdot \root3\of{7}+6\cdot \root3\of{49}}+\root3\of{7}=2-\root3\of{7}$
+\end{enumerate}
+
+\subsection*{2008.09.30. - Pótdolgozat}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc}
+\item  $\dfrac{\sqrt{2+\sqrt{2}}-\sqrt{2-\sqrt{2}}}{\sqrt{2+\sqrt{2}}+\sqrt{2-\sqrt{2}}}$;
+\item $\left(\sqrt{8+2\sqrt{10+2\sqrt{5}}}+\sqrt{8-2\sqrt{10+2\sqrt{5}}}\right)^2$;
+\item $\sqrt{6+\sqrt{11}}\cdot \sqrt{3+\sqrt{3+\sqrt{11}}}\cdot \sqrt{3-\sqrt{3+\sqrt{11}}}$.
+ \end{abc}
+ \item Melyik nagyobb: $3\sqrt{2}-2\sqrt{3}$ vagy $\sqrt{30-12\sqrt{6}}$?
+ \item Igazoljuk: $\dfrac{2-\sqrt{3}}{\sqrt{2}-\sqrt{2-\sqrt{3}}}+\dfrac{2+\sqrt{3}}{\sqrt{2}+\sqrt{2+\sqrt{3}}}=\sqrt{2}$.
+ \item ($*$) Igazoljuk, hogy $\root3\of{1-27\cdot\root3\of{26}+9\cdot \root3\of{26^2}}+\root3\of{26}$ egész szám!
+\end{enumerate}
+
+\subsection*{2008.10.07. - Versenyfeladatok}
+\begin{enumerate}
+\item A $0$-tól különböző számjegyek $S$ halmazát fel lehet-e bontani két részhalmazra úgy, hogy egyikre se legyen igaz a következő tulajdonság: a részhalmaz két elemmel együtt tartalmazza azok különbségét is?
+\item Egy kockát mind a $6$ lapjára tükrözzük. Az eredeti kockával együtt így egy új testet kapunk. Hányszorosa a kapott test felszíne az eredeti kocka felszínének?
+\item $14$ különböző pozitív egész szám összege $110$. Melyek ezek a számok?
+\item A pozitív egész számokat felírtuk egy nagy papírra $1$-től $10000$-ig, ezután kihúztuk azokat, amelyekben szerepel a $0$ vagy a $9$ számjegy. Hány szám maradt?
+\item Egy szabályos hatszög minden oldalát öt egyenlő részre osztjuk. Hány olyan háromszög van, amelynek csúcsai az így kapott osztópontok közül kerülnek ki?
+\end{enumerate}
+
+\subsection*{2008.10.13.}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényeket:
+\begin{abc3}
+\item $x\mapsto\sqrt{x}$, $x\geq0$;
+\item $x\mapsto\sqrt{x-3}$, $x\geq3$;
+\item $x\mapsto\sqrt{x+2}$, $x\geq-2$; 
+\item $x\mapsto\sqrt{-x}$, $x\leq0$;
+\item $x\mapsto\sqrt{3-x}$, $x\leq3$;
+\item $x\mapsto\sqrt{|x|}$;
+\item $x\mapsto\sqrt{x-[x]}$;
+\item $x\mapsto[x]+\sqrt{x-[x]}$;
+\item $x\mapsto\sqrt{x^2-2x+1}$;
+\item $x\mapsto\sqrt{x^2-6x+9}$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2008.10.14.}
+\begin{enumerate}
+\item Ábrázoljuk és jellemezzük a következő függvényeket (növekedés, fogyás, szélsőérték): 
+\begin{abc3}
+\item $x\mapsto-\sqrt{x}$, $x\geq0 $;
+\item $x\mapsto\sqrt{2x+1}$, $x\geq-\dfrac{1}{2}$;
+\item $x\mapsto\sqrt{x^4+2x^2+1}$;
+\item $x\mapsto\sqrt{|x-3|}$;
+\item $x\mapsto\sqrt{4x-2}$, $x\geq\dfrac{1}{2}$.
+\end{abc3}
+\item Igazoljuk a következő állítást: ha $a,b\geq0$, akkor $\dfrac{a+b}{2}\geq\sqrt{ab}$, és itt az "$=$" csak akkor igaz, ha $a=b$.
+\item Igazoljuk, hog yha $a,b\geq0$, akkor $\dfrac{a+b}{2}\leq\sqrt{\dfrac{a^2+b^2}{2}}$, és egyenlőség csak $a=b$ esetén igaz.
+\end{enumerate}
+
+\subsection*{2008.10.14. - Versenyfeladatok}
+\begin{enumerate}
+\item Igazoljuk, hogy az $1+2+3+4+\ldots+n$ összeg értékének tízes számrendszerbeli alakjában az egyesek helyén álló számjegy periodikusan ismétlődik.
+\item Igazoljuk, hogy $11$ pozitív egész szám között mindig van kettő, amelyek különbsége osztható $10$-zel!
+\item Adott a síkon húsz pont. Ezek közül bizonyos pontpárokat összekötöttünk szakaszokkal. Igazoljuk, hogy mindig van van a $20$ pont között kettő olyan, amelyekből azonos számú szakasz indul ki.
+\item Egy ötemeletes házat hányféleképpen tudunk kifesteni, ha minden emeletet vagy fehérre, vagy zöldre festhetünk, de két fehér emelet nem kerülhet egymás fölé? Oldjuk meg a feladatot $6,7,8$ emeletes házra is!
+\item Egy paralelogramma egyik átlóján kiválasztunk egy pontot és ezen át párhuzamosokat húzunk az oldalakkal. Igazoljuk, hogy a bevonalazott két kis paralelogramma területe egyenlő! 
+\end{enumerate}
+\subsection*{2008.10.15.}
+\begin{enumerate}
+\item Igazoljuk az u.n. ,,rendezési tételt'' $3$ valós szám esetére: T.f.h. $a_1\geq a_2\geq a_3$ és $b_1\geq b_2\geq b_3$, ekkor $a_1b_1+a_2b_2+a_3b_3$ a maximális, és $a_1b_3+a_2b_2+a_3b_1$ a minimális az összes lehetséges hasonló szorzatok összege közül. 
+\item  Igazoljuk a következő egyenlőtlenségeket: 
+\begin{abc}
+\item Ha $a,b,c>0$ valós számok, akkor $a^2+b^2+c^2\geq ab+bc+ac$;
+
+\item  ha $a,b,c$ tetszőleges valós számok, akkor $a^4+b^4+c^4\geq a^2b^2+b^2c^2+a^2c^2$;
+
+\item ($*$) ha $a\geq b\geq c>0$, akkor $\dfrac{a}{b+c}+\dfrac{b}{a+c}+\dfrac{c}{a+b}\geq \dfrac{3}{2}$;
+
+\item ($*$) ha $a,b,c>0$ valós számok, akkor $\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\leq \dfrac{a^8+b^8+c^8}{a^3b^3c^3}$. 
+\end{abc}
+\end{enumerate}
+\subsection*{2008.10.16.}
+\begin{enumerate}
+\item Vázoljuk fel a következő függvények grafikonját:
+\begin{abc3}
+\item $x\mapsto x+\dfrac{1}{x}$, $x\neq0$;
+\item $x\mapsto 2x+\dfrac{1}{x}$, $x\neq 0$;
+\item $x\mapsto \dfrac{1}{x^2+1}$. 
+\end{abc3}
+\item Bizonyítsuk be, hogy az azonos kerületű téglalapok közül legnagyobb területű a négyzet.
+\item Igazoljuk, hogyha $a,b>0$ és $a+b=1$, akkor $\left(a+\dfrac{1}{a}\right)^2+\left(b+\dfrac{1}{b}\right)^2\geq\dfrac{25}{2}$.
+\item Határozzuk meg a következő függvény legkisebb értékét: $x\mapsto \dfrac{9+4x^2}{x^2}$, $x\neq0$.
+\item Igazoljuk, hogy ha $a,b,c>0$, akkor $\dfrac{ab}{c}+\dfrac{bc}{a}+\dfrac{ca}{b}\geq a+b+c$.
+\end{enumerate}
+\subsection*{2008.10.20.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $a,b,c>0$, akkor $\dfrac{1}{ab}+\dfrac{1}{bc}+\dfrac{1}{ca}\leq \dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}$.
+\item Igazoljuk, hogy ha $a,b,c>0$, akkor $a\sqrt{bc}+b\sqrt{ac}+c\sqrt{ab}\leq ab+ac+bc$.
+\item ($*$) Tudjuk, hogy $x,y,z>0$, és $\dfrac{1}{2x}+\dfrac{1}{3y}+\dfrac{1}{6z}=\dfrac{1}{\dfrac{x}{2}+\dfrac{y}{3}+\dfrac{z}{6}}$. Igazoljuk, hogy $x=y=z$.
+\item Igazoljuk, hogy ha $a\geq b\geq c>0$, akkor $a+b+c\leq \dfrac{a^2+b^2}{2c}+\dfrac{b^2+c^2}{2a}+\dfrac{c^2+a^2}{2b}$.
+\item Mennyi az $f(x)=\dfrac{x^2}{x^4+16}$, $x>0$ függvény legnagyobb értéke?
+\end{enumerate}
+\subsection*{2008.10.21.}
+\begin{enumerate}
+\item Tegyük fel, hogy $a,b,c,d\geq 0$ számok és igazoljuk, hogy $\dfrac{a+b+c+d}{4}\geq \root4\of{abcd}$, ahol az "$=$" csak akkor igaz, ha $a=b=c=d$.
+\item Az előző feladat felhasználásával igazoljuk, hogy ha $a,b,c\geq 0$, akkor $\dfrac{a+b+c}{3}\geq \root3\of{abc}$, és "$=$" csak akkor igaz, ha $a=b=c$.
+\item Egy $12$ egység oldalú négyzet alakú papírlapból fedél nélküli dobozt akarunk készíteni (négyzetes oszlop alakút). Milyen méretek esetén lesz a doboz térfogata maximális?
+\item Igazoljuk, hogy ha $a,b,c>0$, akkor $\dfrac{a}{b}+\dfrac{b}{c}+\dfrac{c}{a}\geq 3$.
+\item Bizonyítsuk be, hogy ha a tetszőleges valós szám, akkor $a^2+2\geq 2\sqrt{a^2+1}$.
+\item Mutassuk meg, hogy ha $a,b,c>0$, akkor $\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\geq\dfrac{9}{a+b+c}$.
+\end{enumerate}
+\subsection*{2008.10.21. - Versenyfeladatok}
+\begin{enumerate}
+\item Kati $2009$-ben éppen annyi éves lesz, mint születése évszámának számjegyei összege. Melyik évben született Kati?
+\item Egy tömör kockát az egyik lapjával párhuzamos síkokkal rétegekre szeletelünk. Hány síkkal kell szétvágni a kockát ahhoz, hogy a keletkezett testek együttes felszíne $4$-szerese legyen a kocka felszínének?
+\item A pozitív egész számokat $1$-től $100$-ig összeszorozzuk. Hány $0$-ra végződik a kapott szorzat?
+\item Melyek azok az egymást követő pozitív egész számok, amelyeknek összege 45? 
+\item Melyek azok az ötjegyű számok, amelyekre igaz, hogy mindegyik számjegye nagyobb, mint a tőle jobbra álló számjegyek összege?
+\item Egy évben legfeljebb hány olyan hónap lehet, amelyben öt vasárnap van?
+\item Egy kocka csúcsait pirosra és kékre festhetjük. Hány különböző kifestés lehetséges, ha két kifestést akkor tekintünk azonosnak, ha egymásba forgathatók?
+\end{enumerate}
+\subsection*{2008.10.22.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $a,b>0$, akkor $\left(\dfrac{a+b}{2}\right)^3\leq \dfrac{a^3+b^3}{2}$.  
+\item Bizonyítsuk be, hogy ha $a+b=1$, akkor $a,b\geq 0$ esetén $a^4+b^4\geq \dfrac{1}{8}$.
+\item Mutassuk meg, hogy ha $a\geq b\geq c>0$, akkor $a^4+b^4+c^4\geq abc\cdot(a+b+c)$.
+\item Igazoljuk, hogy ha $a\geq b\geq c>0$, akkor $\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\geq \dfrac{1}{\sqrt{bc}}+\dfrac{1}{\sqrt{ca}}+\dfrac{1}{\sqrt{ab}}$.
+\item Azok közül a téglatestek közül, amelyeknek a felszíne $54$ területegység, melyiknek a térfogata a lehető legnagyobb?
+\end{enumerate}
+\subsection*{2008.11.03.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $a,b>0$, akkor $a^4+b^4\geq ab\cdot(a^2+b^2)$. 
+\item Igazoljuk, hogy ha $x>0$, akkor $\dfrac{4}{x^2}+x\geq 3$. Mikor igaz az $=$ jel?
+\item Azok közül a téglatestek közül, amelyeknek a térfogata $8$ egység, melyiknek a felszíne a legkisebb?
+\item Igazoljuk, hogy bármely $a$ számra igaz, hogy $2a^2\leq 1+a^4$.
+\item Bizonyítsuk be, hogy bármely $a,b,c$ pozitív számra igaz, hogy $a^3+b^3+c^3\geq 3abc$.
+\item Bizonyítsuk be, hogy ha $a\neq 0$, akkor $\left|a+\dfrac{1}{a}\right|\geq 2$.
+\end{enumerate}
+\subsection*{2008.11.04.}
+\begin{enumerate}
+\item Igazoljuk, hogy $a^2+3c^2+b^2+1\geq 2ac+2bc+2c$ bármely $a,b,c$ számra.
+\item Igazoljuk, hogy ha $a\geq b\geq c>0$, akkor $\dfrac{ab}{c}+\dfrac{bc}{a}+\dfrac{ca}{b}\geq a+b+c$.
+\item Igazoljuk, hogy bármely $a,b,c>0$ számra igaz, hogy $\dfrac{a^2+b^2+c^2+3}{2}\geq a+b+c$.
+\item Bizonyítsuk be, hogy ha $x,y\neq 0$ valós számok, és $\dfrac{1}{x^2}+\dfrac{1}{y^2}=2$, akkor $x^2+y^2\geq 2$.
+\item Bizonyítsuk be, hogy ha $a,b,c\geq 0$ és $\sqrt{a}+\sqrt{b}+\sqrt{c}=1$, akkor $a+b+c\geq \dfrac{1}{3}$.
+\item Igazoljuk, hogy ha $a\geq 0$, akkor: 
+\begin{abc3}
+\item $(a^3+a^2+a+1)^2\geq 16a^3$;
+\item $a^4+a^3+4a+4\geq 8a^2$;
+\item $2a^3+11\geq 9a$.
+\end{abc3}
+\end{enumerate}
+\subsection*{2008.11.04. - Versenyfeladatok}
+\begin{enumerate}
+\item Írjuk fel a legnagyobb olyan tízes számrendszerbeli egész számot, melyben a harmadik jegytől kezdve (balról jobbra) minden számjegy az előző két számjegy összege.  
+\item Egy szabályos ötszögnek meghúztuk mindegyik átlóját. Hány egyenlőszárú háromszög látható így az ábrán?
+\item Egy négyzet oldalait $3-3$ egyenlő részre osztottuk, majd az osztópontokat az ábrán látható módon összekötöttük. Hányad része a bevonalazott négyszög területe a négyzet területének?
+
+\centerline{
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(3.86,0.8599999999999969) rectangle (7.2,4.179999999999998);
+\fill[fill=black,fill opacity=0.35] (5.5,3.5) -- (4.5,2.5) -- (5.5,1.5) -- (6.5,2.5) -- cycle;
+\draw (4.0,4.0)-- (4.0,1.0);
+\draw (4.0,1.0)-- (7.0,1.0);
+\draw (7.0,1.0)-- (7.0,4.0);
+\draw (7.0,4.0)-- (4.0,4.0);
+\draw (4.0,2.0)-- (6.0,4.0);
+\draw (5.0,4.0)-- (7.0,2.0);
+\draw (7.0,3.0)-- (5.0,1.0);
+\draw (6.0,1.0)-- (4.0,3.0);
+\draw (5.5,3.5)-- (4.5,2.5);
+\draw (4.5,2.5)-- (5.5,1.5);
+\draw (5.5,1.5)-- (6.5,2.5);
+\draw (6.5,2.5)-- (5.5,3.5);
+\begin{scriptsize}
+\draw [fill=uuuuuu] (5.5,3.5) circle (1.5pt);
+\draw [fill=uuuuuu] (4.5,2.5) circle (1.5pt);
+\draw [fill=uuuuuu] (5.5,1.5) circle (1.5pt);
+\draw [fill=uuuuuu] (6.5,2.5) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+}
+\item Hány olyan háromjegyű szám van, amelyben legalább két számjegy egyforma?
+\item Számítsuk ki azoknak a négyjegyű számoknak az összegét, amelyekben a $2,3,4,5$ és $6$ számjegyek szerepelnek csak.
+\item Melyik nagyobb $2^{2008}+2^{2009}$, vagy $2^{2007}+2^{2010}$?
+\item Igazoljuk, hogy a következő szám összetett szám: $10^{18}-2\cdot 10^4+1$.
+\end{enumerate}
+\end{document}   
+  

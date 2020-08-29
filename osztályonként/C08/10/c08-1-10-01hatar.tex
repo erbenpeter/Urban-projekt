@@ -1,0 +1,212 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/10/1.}
+\rhead{Sorozatok határértéke}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\noits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\noits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Sorozatok határértéke}
+
+\subsection*{2011. 09. 01.-- Ismétlő feladatok}
+\begin{enumerate}
+\item Számítsuk ki a következő összegeket:
+	\begin{abc}
+	\item $1+\dfrac{1}{2}+\dfrac{1}{2^2}+\ldots+\dfrac{1}{2^{n-2}}$;
+	\item $\dfrac{1}{1\cdot2}+\dfrac{1}{2\cdot3}+\dfrac{1}{3\cdot4}+\ldots+\dfrac{1}{(n-1)\cdot n}$;
+    \item $\dfrac{1}{2}+2\cdot{\dfrac{1}{2^2}}+3\cdot{\dfrac{1}{2^3}}+\ldots+n{\cdot\dfrac{1}{(n-1)^n}}$;
+     \item $\dfrac{7}{2\cdot9}+2\cdot\dfrac{7}{9\cdot16}+\ldots+\dfrac{7}{(7_n-5)(7_n+2)}$.
+    \end{abc}
+\item Számítsuk ki a következő sorozatok első $n$ tagjának összegét:
+	\begin{abc}
+    \item $1, 11, 111, \ldots, \underbrace{11\ldots 1}_{\text{$n$ db $1$}},\ldots$;
+    \item $2\cdot1^2, 3\cdot2^2, \ldots, (n+1)\cdot{n^2}, \ldots$;
+    \item $1\cdot2, 2\cdot3, \ldots, n\cdot(n+1), \ldots$;
+    \item (*) $2\cdot1^3, 3\cdot2^3, \ldots, (n+1)\cdot{n^3}, \ldots$;
+    \item $1^2, 3^2, 5^2, \ldots, (2n-1)^2, \ldots$.
+    \end{abc}
+    
+\end{enumerate}
+
+\subsection*{2011. 09. 05.}
+\begin{enumerate}
+\item Szemléltessük az
+	$\dfrac{1}{4}+\dfrac{1}{4^2}+\ldots+\dfrac{1}{4^n}+\ldots$
+	végtelen összeget. Mennyi lehet ennek az értéke?
+
+\item Melyik az a szám, amit az
+   $\dfrac{1}{2}+\dfrac{1}{2^2}+\dfrac{1}{2^3}+\ldots+\dfrac{1}{2^n}$
+   sorozat tetszőleges pontossággal megközelít, ha $n$ elég nagy?
+
+\item (*) Mutassuk meg, hogy az
+	$1+\dfrac{1}{2}+\dfrac{1}{3}+\ldots+\dfrac{1}{n}$
+	összeg akármilyen nagy lehet, ha $n$ elég nagy.
+
+\item Melyik számot közelíti meg az
+	$\dfrac{1}{1\cdot2}+\dfrac{1}{2\cdot3}+\ldots+\dfrac{1}{(n-1)n}$
+   összeg tetszőleges pontossággal, ha $n$ elég nagy?
+
+\item Vizsgáljuk meg a következő sorozatokat, melyik számot közelítik meg tetszőleges pontossággal elég nagy $n$-re:
+	\begin{abc}
+    \item $1-\dfrac{1}{2}+\dfrac{1}{4}-\dfrac{1}{8}+\ldots+(-1)^n\dfrac{1}{2^n}$;
+    \item $1$; $1,1$; $1,11$; $1,111$;\ldots $1,\underbrace{1\ldots1}_{\text{=$n$ db $1$}}$;
+    \item $1, 1+\dfrac{1}{1}, 1+\dfrac{1}{1+\dfrac{1}{1}}, 1+\dfrac{1}{1+\dfrac{1}{1+\dfrac{1}{1}}}\ldots$.
+	\end{abc}
+\end{enumerate}
+
+\subsection*{2011. 09. 07.}
+\begin{enumerate}
+\item \underline{Definíció:} Azt mondjuk, hogy az $a_n$ sorozat \underline{konvergens} és \underline{határértéke} $A$, ha $A$ bármely környezetét adjuk meg, van olyan $n_0$, hogy ha $n>n_0$, akkor $a_n$ már $A$-nak ebben a környezetében van.
+\\
+\underline{jelölés:} $\displaystyle\lim_{n \to \infty} a_n=A$, vagy röviden $a_n \to A$ ha $n \to \infty$.
+
+\item Határozzuk meg a következő sorozatok határértékét:
+	\begin{abc}
+	\item $\left(\dfrac{1}{n}\right)$;
+    \item $\left(\dfrac{n-1}{n}\right)$;
+    \item $\left(\dfrac{1}{2^n}\right)$;
+    \item (*) $a_1=\underbrace{\sqrt{2+\sqrt{2+\ldots+\sqrt{2}}}}_{\text{$n$ db gyökjel}}$;
+    \item (*) $\left(\dfrac{2^n+3^n}{5^n+7^n}\right)$;
+    \item (*) $(q^n)$, $|q|<1$.
+	\end{abc}
+
+Szemléltessük az
+	$\dfrac{1}{4}+\dfrac{1}{4^2}+\ldots+\dfrac{1}{4^n}+\ldots$
+	végtelen összeget. Mennyi lehet ennek az értéke?
+
+\item Melyik az a szám, amit az
+   $\dfrac{1}{2}+\dfrac{1}{2^2}+\dfrac{1}{2^3}+\ldots+\dfrac{1}{2^n}$
+   sorozat tetszőleges pontossággal megközelít, ha $n$ elég nagy?
+
+\end{enumerate}
+
+\subsection*{2011. 09. 12.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha egy sorozat monoton növő és felülről korlátos, akkor van határértéke.
+\item (*) Igazoljuk, hogy $n$ darab nemnegatív számra is igaz a számtani és mértani közép közötti egyenlőtlenség.
+\item Igazoljuk, hogy
+	\begin{abc}
+	\item az $a_n= \left(1+\dfrac{1}{n}\right)^n$ sorozat monoton nő;
+    \item a $b_n= \left(1+\dfrac{1}{n}\right)^{n+1}1$ sorozat monoton fogy;
+    \item (*) $\displaystyle\lim_{n \to \infty} a_n= \displaystyle\lim_{n \to \infty} b_n$.
+	\end{abc}
+
+\item Számítsuk ki a következő sorozatok határértékét:
+	\begin{abc}
+	\item $a_n\left(1-\dfrac{1}{n^2}\right)^n$;
+    \item $a_n\left(1-\dfrac{1}{n}\right)^n$;
+    \item $a_n\left(1-\dfrac{2}{n}\right)^n$.
+	\end{abc}
+\end{enumerate}
+
+\subsection*{2011. 09. 14.}
+\begin{enumerate}
+	\item Számítsuk ki a következő sorozatok határértékét:
+	\begin{abc}
+	\item $a_n=\dfrac{3n^2+5n+4}{2+n^2}$;
+    \item $a_n=\dfrac{1^2+2^2+\ldots+n^2}{5n^3+n+1}$;
+	\item $a_n=\sqrt[n]{5}$;
+    \item (*) $a_n=\sqrt[n]{n}$;
+    \item $a_n=\sqrt[n]{6n+3}$;
+    \item $a_n=\sqrt{2n+3}-\sqrt{n-1}$;
+    \item $a_n=\sqrt{n^2+n+1}-\sqrt{n^2-n+1}$;
+    \item $a_n=\dfrac{\sqrt{n}}{\sqrt{n+1}+\sqrt{n}}$;
+    \item $a>1, a_1>0, a_{n+1}=\dfrac{a_n}{a+a_n}$;
+    \item (*) $a_n=\dfrac{10^n}{n!}$.
+\end{abc}
+\end{enumerate}
+
+\subsection*{2011. 09. 15.}
+\begin{enumerate}
+\item Határozzuk meg a következő sorozatok határértékét:
+	\begin{abc}
+	\item $a_n=\dfrac{\sqrt[n]{e}-1}{\dfrac{1}{n}}$;
+    \item $a_n=\dfrac{1\cdot3\cdot5\cdot\ldots\cdot(2n-1)}{2\cdot4\cdot6\cdot\ldots\cdot2n}$;
+    \item $a_n=\sqrt[n]{5}$;
+    \item $a_n=\sqrt[n]{\dfrac{1}{5}}$;
+    \item $a_n=\sqrt[n]{n}$;
+    \item $a_n=\sqrt[n]{n^2+1}$.
+	\end{abc}
+\item Igazoljuk, hogy az $a_n=1-\dfrac{1}{2}+\dfrac{1}{3}-\dfrac{1}{4}+\ldots+\dfrac{1}{2n-1}-\dfrac{1}{2n}$ sorozat konvergens.
+\end{enumerate}
+
+
+\subsection*{2011. 09. 19.}
+\begin{enumerate}
+\item Számítsuk ki a következő sorozatok határértékét:
+	\item $a_n=\dfrac{1^2+2^2+\ldots+n^2}{n^2}-\dfrac{n}{4}$;     
+    \item $a_n=\sqrt[n]{1+x^n}$, $x\ge0$;
+    \item $a_n=\sqrt[n]{1+x^n+\left(\dfrac{x^2}{2}\right)^n}$, $x\ge0$;
+    \item $a_n=\dfrac{a^n-a^{-n}}{a^n+a^{-n}}$, $x\not=0$;
+    \item (*) $a_n=x\mathrm{sgn}(\sin^(n!)\pi x)$;   
+    \item $a_1=1,$ $a_n=\dfrac{1}{1+a_n}$;
+    \item $a_n=3,$ $a_{n+1}=\dfrac{1}{2}\left(a_n+\dfrac{5}{a_n}\right)$.
+\end{enumerate}
+
+
+\subsection*{2011. 09. 22.}
+\begin{enumerate}
+\item Számítsuk ki a következő sorozatok határértékét:
+	\item $a_n=\dfrac{1^2+3^2+\ldots+(2n-1)^2}{2^2+4^2+\ldots+(2n)^2}$;
+    \item $a_n=\dfrac{n^k}{a^m}$, $a>1$, $k>0$, egész;
+    \item (*) $a_n=1+\dfrac{1}{1!}+\dfrac{1}{2!}+\dfrac{1}{3!}+\ldots+\dfrac{1}{n!}$;
+    \item $a_n=\left(1+\dfrac{1}{2}\right)\left(1+\dfrac{1}{4}\right)\cdot\ldots\cdot\left(1+\dfrac{1}{2^{2^2}}\right)$;
+    \item $a_1=a$, $a_2=b$, $(a<b)$,\\ $a_{n+2}=\dfrac{a_n+a_{n+1}}{2}$;
+    \item $a_n=\dfrac{x^{n+2}}{\sqrt{2^{2n}+x^{2n}}}$, $x\ge 0$.
+\end{enumerate}
+
+\subsection*{2011. 09. 26. -- Témazáró dolgozat}
+\begin{enumerate}
+	\item $\displaystyle\lim_{n \to \infty}$ $\dfrac{100n}{n^2+1}$;
+	\item $\displaystyle\lim_{n \to \infty}$ $\dfrac{(-2)^n+3}{(-2)^{n+1}+3^{n+1}}$;
+    \item $\displaystyle\lim_{n \to \infty}$ $n\cdot q^n$, $0<q<1$;
+	\item $\displaystyle\lim_{n \to \infty}$ $\sin^{2n}x$;
+    \item $a_1=0$, $a_2=1$, \\ $a_{n+2}=\dfrac{a_n+a_{n+1}}{2}$, \\ $\displaystyle\lim_{n \to \infty} a_n=?$
+    \item $a_1=\sqrt{a}$, $a>0$\\ $a_{n+1}=\sqrt{a+a_n}$, \\ $\displaystyle\lim_{n \to \infty} a_n=?$
+
+
+
+
+
+\end{enumerate}
+
+
+\end{document}
