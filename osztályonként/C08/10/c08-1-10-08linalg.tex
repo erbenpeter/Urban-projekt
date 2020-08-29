@@ -1,0 +1,555 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/10/1.}
+\rhead{Lineáris algebra}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+%függőleges vonalhoz
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\newcommand{\deta}[4]{\ensuremath{\begin{vmatrix} #1 & #2 \\ #3 & #4\end{vmatrix}}}
+\newcommand{\detb}[9]{\ensuremath{\begin{vmatrix} #1 & #2 & #3\\ #4 & #5 & #6\\ #7 & #8 & #9\end{vmatrix}}}
+\newcommand{\mata}[4]{\ensuremath{\begin{pmatrix} #1 & #2 \\ #3 & #4\end{pmatrix}}}
+\newcommand{\matb}[9]{\ensuremath{\begin{pmatrix} #1 & #2 & #3\\ #4 & #5 & #6\\ #7 & #8 & #9\end{pmatrix}}}
+
+
+\parskip 8pt
+\begin{document}
+
+\section*{Lineáris algebra}
+
+\subsection*{2012.04.23.}
+\begin{enumerate}
+\item Oldjuk meg a következő lineáris egyenletrendszert:
+\begin{align*}
+a_{11}x_1+a_{12}x_2&=b_1,\cr
+a_{21}x_1+a_{22}x_2&=b_2,
+\end{align*}
+ahol $a_{11},a_{12},a_{21},a_{22}$ adott számok és
+$a_{11}a_{22}-a_{21}a_{12}\ne 0$.
+
+\medskip
+\noindent
+\underline{Definíció:} Az $\deta{a_{11}}{a_{12}}{a_{21}}{a_{22}}$ szimbólumot $2\times 2$-es determinánsnak nevezzük és értéke $a_{11}a_{22}-a_{21}a_{12}$.\\ Az
+$\detb{a_{11}}{a_{12}}{a_{13}}{a_{21}}{a_{22}}{a_{23}}{a_{31}}{a_{32}}{a_{33}}$ egy $3\times 3$-as determináns, értéke:
+$$
+a_{11}a_{22}+a_{33}+
+a_{12}a_{23}+a_{31}+
+a_{13}a_{21}+a_{32}-
+a_{13}a_{22}+a_{31}-
+a_{12}a_{21}+a_{33}-
+a_{11}a_{23}+a_{32}.
+$$
+\item Számítsuk ki a következő determinánsok értékét:
+\begin{abc4}
+\item $\detb{1}{-3}{2}{4}{3}{-5}{2}{1}{0}$;
+\item $\deta{\cos x}{-\sin x}{\sin x}{\cos x}$;
+\item $\detb{0}{1}{0}{0}{0}{1}{1}{0}{0}$;
+\item $\detb{\sin 2x}{-\cos 2x}{1}{\sin x}{-\cos x}{\cos x}{\cos x}{\sin x}{\sin x}$.
+\end{abc4}
+
+\item Oldjuk meg:
+\begin{abc2}
+\item $\detb{2}{-1}{3}{1}{x}{-1}{-5}{2}{7}=0$;
+\item $\detb{x^2}{4}{8}{x}{2}{3}{1}{1}{1}=0$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2012.04.25.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha egy determináns egy sorában vagy egy oszlopában minden elem 0, akkor a determináns értéke 0.
+\item Ha egy determináns egy sorának vagy egy oszlopának minden elemét egy $\lambda$ számmal szorozzuk, akkor a determináns értéke is $\lambda$-val szorzódik.
+\item Ha egy determináns egy sorának vagy egy oszlopának minden eleme egy kéttagú összeg, akkor a determináns két determináns összege, egyikben az illető sort az összegek egyik tagjai adják, a másikban a megfelelő sort a másik tagok adják.
+\item Ha a determináns főátlója felett mindenütt 0 áll, akkor a determináns értéke a főátlóban álló elemek szorzata.
+\item Ha egy determináns két sorát felcseréljük, akkor értéke $-1$-gyel szorzódik.
+\item Számoljuk ki a következő determinánsokat:
+\begin{abc3}
+\item $\detb{1}{2}{2}{2}{2}{2}{2}{2}{3}$
+\item $\detb{x}{y}{x+y}{y}{x+y}{x}{x+y}{x}{y}$
+\item $\begin{vmatrix}
+1&a&a&a\\
+0&2&a&a\\
+0&0&3&a\\
+0&0&0&4
+\end{vmatrix}
+$;
+\item $
+\begin{vmatrix}
+1&0&0&0\\
+2&3&4&5\\
+3&4&5&2\\
+4&5&2&3
+\end{vmatrix}
+$;
+\item $
+\begin{vmatrix}
+0&1&0&0\\
+2&3&4&5\\
+3&4&5&2\\
+4&5&2&3
+\end{vmatrix}
+$.
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2012.04.26.}
+\begin{enumerate}
+\item Ha egy determináns két sora azonos, akkor a determináns értéke 0.
+\item Ha egy determináns egyik sorához hozzáadjuk egy másik sor $\lambda$-szorosát, akkor a determináns értéke nem változik.
+\item A determináns értéke nem változik, ha sorait és oszlopait felcseréljük.
+\item Ha egy determinánsban az első sor első eleme nem 0, akkor értéke az első sor első eleme szorozva azzal a determinánssal, amit úgy kapunk, hogy az első sort és az első oszlopot elhagyjuk. A tétel általánosítható.
+\item Számítsuk ki a következő determinánsokat:
+\begin{abc4}
+\item $\detb{1}{0}{0}{2}{2}{1}{3}{3}{2}$;
+\item $\begin{vmatrix}
+1&0&0&2 \\
+3&0&0&4 \\
+0&5&6&0 \\
+0&7&8&0
+\end{vmatrix}$;
+\item  $\begin{vmatrix}
+1&2&3&4 \\
+2&1&2&3 \\
+3&2&1&2 \\
+4&3&2&1
+\end{vmatrix}$;
+\item  $\begin{vmatrix}
+3&1&5&8 \\
+4&-2&-1&7 \\
+6&3&2&1 \\
+7&4&4&5
+\end{vmatrix}$.
+\end{abc4}
+\item Oldjuk meg a következő egyenleteket:
+\begin{abc2}
+\item $\begin{vmatrix}
+1&1&4&4 \\
+-1&3-x^2&3&3 \\
+7&7&5&5 \\
+-7&-7&6&x^2-3
+\end{vmatrix}=0$;
+\item $\begin{vmatrix}
+1&2&3&4 \\
+-2&2-x&1&7 \\
+3&6&4+x&12 \\
+-4&x-14&2&3
+\end{vmatrix}=0$;
+\end{abc2}
+\end{enumerate}
+
+
+\subsection*{2012.05.02.}
+\begin{enumerate}
+\item \underline{Definíció:} az $e$-edrendű determináns $a_{ik}$ eleméhez tartozó előjelezett aldetermináns az az ($n-1$)-edrendű determináns a $(-1)^{i+k}$ előjellel ellátva, amely az eredetiből úgy következik, hogy az $i$-edik sort és a $k$-adik oszlopot elhagyjuk. Jele: $A_{ik}$. Igazoljuk, hogy a determináns értékét megkapjuk, ha egy sorának elemeit megszorozzuk a hozzájuk tartozó előjelezett aldeterminánsokkal és a szorzatokat összeadjuk (kifejtési tétel):$$D=a_{i1}A_{i1}+a_{i2}A_{i2}+\ldots+a_{in}A_{in}.$$
+\item Számítsuk ki a következő determinánsok értékét:
+\begin{abc3}
+\item $\begin{vmatrix}
+1&2&3&4\\
+2&3&4&1\\
+3&4&1&2\\
+4&1&2&3
+\end{vmatrix}$;
+\item $\begin{vmatrix}
+5&6&0&0&0\\
+1&5&6&0&0\\
+0&1&5&6&0\\
+0&0&1&5&6\\
+0&0&0&1&5
+\end{vmatrix}$;
+\item $\begin{vmatrix}
+1&2&2&\ldots&2\\
+2&2&2&\ldots&2\\
+2&2&3&\ldots&2\\
+\vdots&&&&\vdots\\
+2&2&2&\ldots&n
+\end{vmatrix}$;
+\item $\begin{vmatrix}
+1&1&0&0\\[0.4em]
+1&\binom21&\binom22&0\\[0.4em]
+1&\binom31&\binom32&\binom33\\[0.4em]
+1&\binom41&\binom42&\binom43
+\end{vmatrix}$;
+\item $\begin{vmatrix}
+1&1&0&0&\ldots&0\\[0.4em]
+1&\binom21&\binom22&0&\ldots&0\\[0.4em]
+1&\binom31&\binom32&\binom33&\ldots&0\\[0.4em]
+\vdots&&&\ddots&&\vdots\\[0.4em]
+1&\binom n1&\binom n2&\binom n3&\ldots&\binom{n}{n-1}
+\end{vmatrix}$;
+\item $\begin{vmatrix}
+1&a&a&\ldots&a&a\\
+a&2&a&\ldots&a&a\\
+a&a&3&\ldots&a&a\\
+\vdots&&&&&\vdots\\
+a&a&a&\ldots&n&a\\
+a&a&a&\ldots&a&a
+\end{vmatrix}$.
+\end{abc3}
+\end{enumerate}
+
+
+\subsection*{2012.05.03.}
+\begin{enumerate}
+\item Igazoljuk az u.n. Cramer-szabályt: ha az
+\begin{align*}
+a_{11}x_1+a_{12}x_2+\ldots+a_{1n}x_n&=b_1\\
+a_{21}x_1+a_{22}x_2+\ldots+a_{2n}x_n&=b_2\\
+\ldots\\
+a_{n1}x_1+a_{n2}x_2+\ldots+a_{nn}x_n&=b_n
+\end{align*}
+egyenletrendszer determinánsa $\ne 0$, azaz
+$$D=\begin{vmatrix}
+a_{11}&a_{12}&\ldots&a_{1n}\\
+a_{21}&a_{22}&\ldots&a_{2n}\\
+&\ldots&&\\
+a_{n1}&a_{n2}&\ldots&a_{nn}\\
+\end{vmatrix}\ne 0,$$
+akkor
+$$
+x_1=\frac{D_1}{D},\quad
+x_2=\frac{D_2}{D},\quad
+\ldots,\quad
+x_n=\frac{D_n}{D},
+$$
+ahol $D_i$ úgy keletkezik $D$-ből, hogy az $i$-dik oszlopát az egyenletrendszer jobb oldalán álló számokra cseréljük ki.
+\item Oldjuk meg a következő egyenletrendszereket:
+\begin{abc3}
+\item \begin{align*}
+x_1-3x_2-4x_3&=4,\\
+2x_1+x_2-3x_3&=-1,\\
+3x_1-2x_2+x_3&=11.
+\end{align*}
+\item
+\begin{align*}
+x+y+z&=1,\\
+ax+by+cz&=d,\\
+a^2x+b^2y+c^2z&=d^2.
+\end{align*}
+\item
+\begin{align*}
+x_1+2x_2-x_3+3x_4&=0,\\
+3x_1-x_2+x_3-5x_4&=-12,\\
+2x_1+2x_2+x_3-4x_4&=-13,\\
+x_1-3x_2-6x_3+x_4&=1.
+\end{align*}
+
+\end{abc3}
+\end{enumerate}
+
+
+\subsection*{2012.05.10.}
+\begin{enumerate}
+\item Oldjuk meg a Cramer-szabály felhasználásával:
+\begin{abc2}
+\item \begin{align*}
+\lambda x+y+z&=1,\\
+x+\lambda y + z &= \lambda,\\
+x+y+\lambda z&= \lambda^2;\\
+(\lambda\ne 1, \lambda&\ne -2.)
+\end{align*}
+\item \begin{align*}
+a^2x+ay+z&=a^3,\\
+b^2x+by+z&=b^3,\\
+c^2x+cy+z&=c^3.\\
+(a\ne b, a\ne c&, b\ne c)
+\end{align*}
+\item \begin{align*}
+(1+i)x-2iy&=-2,\\
+(1-i)x+(2-i)y&=3-3i.
+\end{align*}
+\item \begin{align*}
+2x-(9a^2-2)y&=3a,\\
+x+y&=1.\\
+(a&\ne 0)
+\end{align*}
+\end{abc2}
+\end{enumerate}
+
+
+\subsection*{2012.05.14.}
+\underline{Definíció:} Egy $n$ sorból és $k$ oszlopból álló téglalap alakú számtáblázatot \underline{mátrixnak} nevezünk. \underline{Négyzetes mátrixot} kapunk, ha $n=k$.
+\begin{enumerate}
+\item Oldjuk meg a következő egyenletrendszert a mátrix jelölés felhasználásával:
+\begin{align*}
+x_1+3x_2+3x_3&=0,\\
+2x_1-x_2+3x_3&=0,\\
+3x_1-5x_2+4x_3&=0,\\
+x_1+17x_2+4x_3&=0.
+\end{align*}
+\item A következő egyenletrendszert is oldjuk meg:
+\begin{align*}
+x_1+x_2+5x_3&=-7,\\
+2x_1+x_2+x_3&=2,\\
+x_1+3x_2+x_3&=5,\\
+2x_1+3x_2-3x_3&=14.
+\end{align*}
+
+\item Oldjuk meg:
+ $$\begin{pmatrix}[cccc|c]
+ 1&2&3&4&11\\
+ 2&3&4&1&12\\
+ 3&4&1&2&13\\
+ 4&1&2&3&14
+ \end{pmatrix}$$
+\end{enumerate}
+
+
+\subsection*{2012.05.16.}
+\underline{Definíciók:} Azonos típusú mátrixokat össze lehet adni, az összeadást komponensenként végezzük. Egy $n\times k$-as és egy $k\times l$-es mátrixot sor-oszlop szorzással lehet összeszorozni, az eredmény egy $n\times l$-es mátrix lesz. Például:
+$$
+\begin{pmatrix}
+1&2&3\\
+2&1&1
+\end{pmatrix}\cdot
+\begin{pmatrix}
+2&0\\
+1&2\\
+1&1
+\end{pmatrix}=
+\begin{pmatrix}
+1\cdot 2+2\cdot 1+3\cdot 1& 1\cdot 0+2\cdot 2+3\cdot 1\\
+2\cdot 2+1\cdot 1+1\cdot 1& 2\cdot 0+1\cdot 2+1\cdot 1
+\end{pmatrix}=
+\begin{pmatrix}
+7&7\\
+6&3
+\end{pmatrix}
+$$
+\begin{enumerate}
+\item Végezzük el a következő szorzásokat:
+\begin{abc2}
+\item $\matb{2}{1}{1}{5}{2}{3}{6}{5}{2}
+\matb{1}{3}{2}{-3}{-4}{-5}{2}{1}{3}$;
+\item $
+\matb{3}{4}{9}{2}{-1}{6}{5}{3}{5}
+\matb{5}{6}{4}{8}{9}{7}{-4}{-5}{-3}
+$;
+\item $
+\begin{pmatrix}
+1&-3&3&-1\\
+1&3&-5&1
+\end{pmatrix}
+\begin{pmatrix}
+1&1\\
+1&2\\
+1&1\\
+1&-2
+\end{pmatrix}
+$;
+\item $
+\mata{5}{-4}{6}{-5}^n
+$, $n>0$ egész;
+\item $
+\matb{2}{1}{0}{0}{1}{0}{0}{0}{2}^n
+$, $n>0$ egész;
+\item $
+\mata{\cos \varphi}{-\sin \varphi}{\sin \varphi}{\cos \varphi}^n
+$, $n>0$ egész.
+\end{abc2}
+\end{enumerate}
+
+
+\subsection*{2012.05.17.}
+\begin{enumerate}
+\item Végezzük el a következő műveleteket:
+\begin{abc2}
+\item $
+\begin{pmatrix}
+1&1&1\\
+4&1&0
+\end{pmatrix}\cdot
+\begin{pmatrix}
+-1&2\\
+4&5\\
+6&-1
+\end{pmatrix}
+$;
+\item $
+\matb{2}{-1}{3}{1}{3}{-1}{4}{5}{1}\cdot
+\begin{pmatrix}
+-8\\
+5\\
+7
+\end{pmatrix}
+$.
+\end{abc2}
+
+\item Számítsuk ki a következő mátrixok inverzét:
+\begin{abc2}
+\item $\matb{2}{-3}{-4}{-1}{7}{2}{3}{1}{-6}$;
+\item $\matb{1}{2}{3}{1}{3}{4}{1}{4}{3}$.
+\end{abc2}
+\item Legyen $A=\mata{3}{2}{4}{3}$ és $B=\mata{-1}{7}{3}{5}$. Oldjuk meg a következő egyenleteket: $A\cdot X = B, \qquad Y\cdot A=B$.
+
+\item Igazoljuk, hogy az $\matb{1}{2}{-2}{1}{0}{3}{1}{3}{0}$ mátrix gyöke az 
+$f(x)=x^3-x^2-9x+9$ polinomnak.
+\end{enumerate}
+
+
+\subsection*{2012.05.21.}
+\begin{enumerate}
+\item Igazoljuk, hogy a következő mátrixok csoportot alkotnak a szorzás műveletére:
+\begin{abc2}
+\item $\left\{\mata{a}{-b}{b}{a}~|~a,b\in\mathbb{R},\quad a^2+b^2>0\right\}$;
+\item $\left\{\mata{a}{3b}{b}{a}~|~a,b\in\mathbb{R},\quad a^2+b^2>0\right\}$.
+\end{abc2}
+\item \underline{Definíció:} egy mátrix rangja $r$, ha a mátrix elemeiből készíthető minden $r+1$-edrendű aldetermináns 0, de van olyan $r$-edrendű aldetermináns, ami nem 0. Számítsuk ki a következő mátrix rangját:
+$$\begin{pmatrix}
+6&9&7&9\\
+4&6&-2&5\\
+4&6&18&8
+\end{pmatrix}$$
+\item Igazoljuk, hogy a mátrix rangja nem változik, ha
+
+(1) csupa 0-ból álló sorát vagy oszlopát elhagyjuk;
+
+(2) valamelyik sorát vagy oszlopát egy $\lambda\ne 0$ számmal szorozzuk;
+
+(3) egyik sorának (vagy oszlopának) többszörösét egy másik sorához (ill. oszlopához) adjuk.
+\item Számítsuk ki a következő mátrix rangját:
+$$
+\begin{pmatrix}
+4&9&0&7&2\\
+-1&1&6&0&3\\
+0&-1&2&1&-2\\
+4&-3&-1&9&6
+\end{pmatrix}
+$$
+\end{enumerate}
+
+
+\subsection*{2012.05.23.}
+\begin{enumerate}
+\item Igazolható, hogy egy lineáris egyenletrendszernek akkor és csak akkor van megoldása, ha az egyenletrendszer mátrixának és a kibővített mátrixának rangja megegyezik.
+\item Döntsük el, hogy a következő egyenletrendszereknek van-e megoldása:
+\begin{abc2}
+\item \begin{align*}
+x_1-3x_2+4x_3+2x_4&=1,\\
+2x_1+4x_2-3x_3+3x_4&=-1,\\
+3x_1+x_2+2x_3-x_4&=0,\\
+12x_1+4x_2+7x_3+2x_4&=0.
+\end{align*}
+\item \begin{align*}
+x_1+x_2+x_3-3x_4&=1,\\
+x_1+x_2-3x_3+x_4&=-1,\\
+x_1-3x_2+x_3+x_4&=0,\\
+-3x_1+x_2+x_3+x_4&=0.
+\end{align*}
+\end{abc2}
+\item Számítsuk ki a következő mátrix rangját:
+$$
+\begin{pmatrix}
+-1&-3&-2&1&-1\\
+4&1&2&4&1\\
+-6&9&-10&-2&6\\
+4&6&1&12&-3
+\end{pmatrix}
+$$
+\item Határozzuk meg a következő mátrix inverzét:
+$$
+\begin{pmatrix}
+1&1&1&1\\
+1&1&-1&-1\\
+1&-1&1&-1\\
+1&-1&-1&1
+\end{pmatrix}
+$$
+\end{enumerate}
+
+
+\subsection*{2012.05.31. -- Determinánsok, mátrixok}
+\begin{enumerate}
+\item Számítsuk ki a következő determinánsok értékét:
+\begin{abc2}
+\item $
+\begin{vmatrix}
+1&3&3&1\\
+1&1&3&3\\
+3&1&1&3\\
+3&3&1&1
+\end{vmatrix}
+$;
+\item $
+\begin{vmatrix}
+1&2&3&\ldots&n\\
+1&a&3&\ldots&n\\
+1&2&a&\ldots&n\\
+&&\vdots&\ddots&\\
+1&2&3&\ldots&a
+\end{vmatrix}
+$
+\end{abc2}
+
+\item Számítsuk ki a következő mátrix inverzét:
+
+$$
+\begin{pmatrix}
+1&1&0&0\\
+-1&0&1&1\\
+0&0&1&1\\
+1&1&1&0
+\end{pmatrix}
+$$
+
+\item Oldjuk meg a Cramer-szabály felhasználásával:
+
+\begin{align*}
+x_1-x_2+2x_3&=11,\\
+x_1+2x_2-x_3&=11,\\
+4x_1-3x_2-3x_3&=24.
+\end{align*}
+
+\item Oldjuk meg a következő egyenletrendszert:
+
+\begin{align*}
+-2x_1-x_2-3x_3+4x_4&=5,\\
+2x_1+x_2+2x_3-3x_4&=-3,\\
+4x_1+2x_2+x_3-3x_4&=0,\\
+2x_1+x_2-x_4&=1,\\
+2x_1+x_2-x_3&=3.
+\end{align*}
+\end{enumerate}
+
+\end{document}

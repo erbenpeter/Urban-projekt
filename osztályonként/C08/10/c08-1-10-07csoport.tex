@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/10/1.}
+\rhead{Csoportok}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Csoportok}
+
+\subsection*{2012. 04. 02.}
+\begin{enumerate}
+\item Készítsük el a (modulo 5) maradékosztályok összeadási és szorzási táblázatát.\\ Igazoljuk, hogy teljesülnek a következő tulajdonságok a szorzásra: kommutatív, asszociatív, az 1-gyel való szorzás nem változtat a tényezőn és minden 0-tól különböző számhoz van olyan, amivel szorozva 1-et kapunk.
+\item \textbf{Definíció.} Egy $G\ne\varnothing$ halmaz és egy rajta értelmezett művelet (az ún. szorzás) \emph{csoport}, ha teljesülnek a következő ún. csoportaxiómák:
+\begin{enumerate}[label=(\arabic*)]
+\item $G$ bármely két elemének szorzata is $G$ eleme;
+\item a szorzás asszociatív;
+\item van $G$-ban egységelem $e$, hogy tetszőleges $a\in G$-re $e\cdot a=a$
+\item bármely $a\in G$-hez van olyan $a^{-1}\in G$, hogy $a^{-1}\cdot a=e$ (van balinverz).
+\end{enumerate}
+Igazoljuk, hogy az 1. példában a mod 5 összeadás is csoport.
+\item Igazoljuk, hogy minden $a\in G$-nek az $a^{-1}$, azaz a balinverz, egyben jobbinverze is.
+\item Igazoljuk, hogy $e$ egyben jobbegység is.
+\end{enumerate}
+
+\subsection*{2012. 04. 04.}
+\begin{enumerate}
+\item Adott az $ABCD$ négyzet, jelölje $t$ az $AC$ tengelyre való tükrözést és $F$ az $O$ középpont körüli $90^\circ$-os pozitív irányú elforgatást. Írjuk fel az $ABCD$ négyzetet önmagába vivő egybevágósági transzformációkat $t$ és $f$ segítségével.
+\item Igazoljuk, hogy az $f(x)=x$, $g(x)=\frac{1}{x}$, $h(x)=-x$, $j(x)=-\frac{1}{x}$ függvények csoportot alkatnak az összetettfüggvény-képzés műveletére.
+\item Igazoljuk, hogy egy szabályos hatszöget önmagába vivő egybevágósági transzformációk csoportot alkotnak a kompozíció műveletére.
+\item Igazoljuk, hogy a komplex ötödik egységgyökök a szorzás műveletére nézve csoportot alkotnak.
+\item A szabályos háromszöget önmagába vivő egybevágósági transzformációk csoportja a $D_3$ csoport. Írjuk fel a művelettáblázatát.
+\end{enumerate}
+
+\subsection*{2012. 04. 11.}
+\begin{enumerate}
+\item Igazoljuk, hogy $n$ elem (pl. az 1, 2, \ldots, $n$ számok) összes permutációi a kompozíció (egymás után alkalmazás) műveletére csoportot alkotnak.\\ Ennek a csoportnak a neve: $n$-edrendű szimmetrikus csoport: $S_n$.
+\item Adott a következő permutáció: $f=\left(\begin{matrix}
+1&2&3&4&5&6\\
+2&3&4&5&6&1\\
+\end{matrix}\right)$.\\
+Számítsuk ki az $f^3$, $f^5$, $f^6$ permutációkat.
+\item Legyen $f=\left(\begin{matrix}
+1&2&3&4&5&6&7&8\\
+2&3&4&8&1&5&7&6\\
+\end{matrix}\right)$ és $g=\left(\begin{matrix}
+1&2&3&4&5&6&7&8\\
+8&1&2&7&3&4&5&6\\
+\end{matrix}\right)$.\\ Számítsuk ki a következő permutációkat: $f^2$, $g^2$, $fg$, $gf$, $f^{100}$, $g^{100}$.
+\item Adottak az $f=\left(\begin{matrix}
+1&2&3&4&5&6\\
+2&5&1&6&4&3\\
+\end{matrix}\right)$ és a $g=\left(\begin{matrix}
+1&2&3&4&5&6\\
+3&5&1&6&4&2\\
+\end{matrix}\right)$ permutációk.\\ Oldjuk meg az $f\cdot u=g$ az $u\cdot f=g$ egyenleteket.
+\item Igazoljuk, hogy a komplex $n$-edik egységgyökök a szorzás műveletére csoportot alkotnak ($n>0$ egész).
+\end{enumerate}
+
+\subsection*{2012. 04. 12.}
+\begin{enumerate}
+\item Oldjuk meg a következő egyenletet: $f\cdot u\cdot g=h$, ha 
+\[f=\left(\begin{matrix}
+1&2&3&4&5\\
+5&3&1&2&4\\
+\end{matrix}\right),~
+g=\left(\begin{matrix}
+1&2&3&4&5\\
+4&2&5&1&3\\
+\end{matrix}\right),~
+h=\left(\begin{matrix}
+1&2&3&4&5\\
+5&4&3&2&1\\
+\end{matrix}\right).\]
+\item Egy $G$ csoportról azt mondjuk, hogy ciklikus, ha van olyan $a\in G$, hogy $a$ hatványai kiadják $G$ összes elemét. Igazoljuk, hogy
+\begin{abc}
+\item a komplex $n$-edik egységgyökök ($n>0$ egész) a szorzásra nézve ciklikus csoportot alkotnak;
+\item egy szabályos $n$-szög középpont körüli forgatásai ciklikus csoportot alkotnak.
+\end{abc}
+\item Egy véges csoport rendje a csoport elemeinek száma. Egy csoportelem rendje az a legkisebb pozitív egész kitevő, amelyre emelve az elemet egységet kapunk. Igazoljuk, hogy egy elem rendje mindig osztója a csoport rendjének, ha a csoport véges.
+\item Igazoljuk, hogy ha egy csoportban minden $e$-től különböző elem rendje 2, akkor a csoport kommutatív.
+\item Határozzuk meg az $S_3$ csoport elemeinek rendjét.
+\end{enumerate}
+
+\subsection*{2012. 04. 18.}
+\begin{enumerate}
+\item A $\mathbb{C}^{*}=\mathbb{C}\setminus\{0\}$ (a komplex számok a 0 nélkül) elemei a szorzásra nézve csoportot alkotnak. Melyek ebben a csoportban azok az elemek, amelyeknek rendje 6?
+\item Lehet-e egy csoportban pontosan 2 másodrendű elem?
+\item Igazoljuk, hogy egy véges csoportban ha minden elem rendje 2, akkor $2^n$ számú elemből áll.
+\item Legyen $G$ egy csoport, $a\in G$, $n>0$ egész. Igazoljuk, hogy a következő állítások ekvivalensek:
+\begin{abc}
+\item $a$ rendje $n$;
+\item $\{a\}$ (az $a$ elem által generált részcsoport) $n$-edrendű.
+\end{abc}
+\item Igazoljuk, hogy a következő permutációk a kompozíció műveletére csoportot alkotnak:
+\[e=\left(\begin{matrix}
+1&2&3&4&5&6\\
+1&2&3&4&5&6\\
+\end{matrix}\right),~
+f=\left(\begin{matrix}
+1&2&3&4&5&6\\
+6&4&2&5&3&1\\
+\end{matrix}\right),\]
+\[g=\left(\begin{matrix}
+1&2&3&4&5&6\\
+1&5&4&3&2&6\\
+\end{matrix}\right),~
+h=\left(\begin{matrix}
+1&2&3&4&5&6\\
+6&3&5&2&4&1\\
+\end{matrix}\right).\]
+\item Adjunk példát 3 elemű csoportra.
+\end{enumerate}
+
+\subsection*{2012. 04. 19.}
+\begin{enumerate}
+\item \textbf{Definíció.} A $G_1$ és $G_2$ csoport \emph{izomorf}, ha van olyan $f$ függvény, hogy minden $a\in G_1$-re $f(a)\in G_2$, $f$ kölcsönösen egyértelmű és ha $a,b\in G_1$, akkor $f(a\cdot b)=f(a)\cdot f(b)$.\\
+Igazoljuk, hogy csak két nem izomorf 4 elemű csoport van.
+\item Igazoljuk, hogy minden végtelen ciklikus csoport izomorf az egész számoknak az összeadás műveletére alkotott csoportjával.
+\item Igazoljuk, hogy egy $n$-edrendű ciklikus csoport izomorf az $n$-edik egységgyököknek a szorzás műveletére alkotott csoportjával.
+\item Határozzuk meg az $S_3$ csoport összes részcsoportját.
+\item Adott az $ABCD$ rombusz (nem négyzet). Adjuk meg a rombuszt önmagába vivő egybevágósági transzformációkat és igazoljuk, hogy ezek a kompozícióra (egymás után végzésre) csoportot alkotnak. Írjuk fel a művelettáblázatot.
+\end{enumerate}
+
+
+\end{document}

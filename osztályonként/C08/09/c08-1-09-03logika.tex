@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/09/1.}
+\rhead{Logika}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Logika}
+
+\subsection*{2011. 01. 05.}
+\begin{enumerate}
+\item Az $\{i;h\}$ (igaz; hamis) logikai értékek között értelmezzük az ,,és'', ,,vagy'', ,,nem'', ,,ha \ldots, akkor \ldots'', ,,akkor és csak akkor'' kapcsolatoknak megfelelő logikai műveleteket. Így kapjuk a ,,konjunkció'', diszjunkció'', ,,negáció'', ,,implikáció'', ,,ekvivalencia'' műveletét.
+\item Állapítsuk meg az 1.~feladatban értelmezett logikai műveletek alapazonosságait.
+\item Az $f(A,B,C)$ háromváltozós logikai művelet értéke akkor és csak akkor legyen igaz, ha az $A$, $B$, $C$ közül páratlan sok változó értéke igaz. Írjunk fel olyan formulát, ami megadja $f$ értékét.
+\item Igazoljuk, hogy az $\land$, $\lor$, $\neg$ műveletek segítségével bármely logikai művelet értéke kifejezhető.
+\end{enumerate}
+
+\subsection*{2011. 01. 06.}
+\begin{enumerate}
+\item Írjuk fel egy igazságtáblázatba az összes lehetséges kétváltozós logikai műveletet.
+\item Igazoljuk, hogy a Sheffer ($|$) és a ,,sem-sem'' ($\downarrow$) művelet segítségével az összes kétváltozós művelet kifejezhető.
+\item Igazoljuk a következő azonosságokat:
+\begin{abc2}
+\item $A\downarrow B=\neg(\neg A | \neg B)$;
+\item $A | B=\neg(\neg A \downarrow \neg B)$;
+\item $(A|B)|(A|C)=\neg A\downarrow (B\downarrow C)$;
+\item $(A\downarrow B)\downarrow(A\downarrow C)=\neg A |(B|C)$.
+\end{abc2}
+\item Fejezzük ki a konjunkció, diszjunkció, negáció segítségével a következő függvényt: $f(A,B,C)=i$ akkor és csak akkor, ha $A$, $B$ és $C$ közül pontosan két változó értéke igaz.
+\end{enumerate}
+
+\subsection*{2011. 01. 11.}
+\begin{enumerate}
+\item Igazoljuk a következő azonosságokat:
+\begin{abc2}
+\item $A\land B=\neg(\neg A\lor\neg B)$;
+\item $A\lor B=\neg(\neg A\land\neg B)$.
+\end{abc2}
+\item Határozzuk meg az összes olyan kétváltozós műveletet, amelynek felhasználásával a többi kétváltozós művelet kifejezhető.
+\item A következő formulákat írjuk fel \emph{teljes diszjunktív normálformában} (t. d. n. f.-ben):
+\begin{abc}
+\item $(A\land B)\to A$;
+\item $A\to (A\lor B)$;
+\item $A\to(B\to C)$.
+\item Igazoljuk: $(A\land B\land C)\to D=A\to(B\to(C\to D))$.
+\end{abc}
+\item A 3.~feladatban megadott formulákat írjuk fel \emph{teljes konjunktív normálformában} (t. k. n. f.-ben).
+\item Igazoljuk:
+\begin{abc2}
+\item $A\land(B\oplus C)=(A\land B)\oplus(A\land C)$;
+\item $A\lor B=A\oplus B\oplus(A\land B)$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2011. 01. 12.}
+\begin{enumerate}
+\item Adjuk meg a 2-, 3-, 4, 5-változós igazságfüggvények számát.
+\item Azt mondjuk, hogy az $n$ változós $f$ igazságfüggvény az $x_i$ változótól \emph{lényegesen függ}, ha
+\[f(x_1,\ldots,i,\ldots,x_n)\ne f(x_1,\ldots,h,\ldots,x_n),\]
+ahol $i$ ill. $h$ az $i$-edik változó helyén áll.\\
+Határozzuk meg azoknak a két- és háromváltozós függvényeknek a számát, amelyek mindegyik változójuktól lényegesen függnek.
+\item A következő jelöléseket használjuk: $f_1\equiv h$, $f_2\equiv i$, $f_3(x)\equiv x$, $f_4(x)\equiv \neg x$, $f_5\equiv \lor$, $f_6=\land$, $f_7=\leftrightarrow$, $f_8=\to$, $f_9=\downarrow$, $f_{10}=|$, $f_{11}=\oplus$. Azt mondjuk, hogy az $f$ függvény \emph{megőrzi a $h$ logikai értéket,} ha $f$ a csupa $h$ helyen a $h$ értéket veszi fel; $f$ \emph{megőrzi az $i$ logikai értéket,} ha $f$ a csupa $i$ helyen az $i$ értéket veszi fel. Az előbbi függvények osztálya $K_h$, az utóbbiaké $K_i$.\\
+Adjuk meg, hogy az $f_1$, $f_2$, \ldots, $f_{11}$ függvények közül melyek elemei a $K_h$ és melyek elemei a $K_i$ osztálynak.
+\item Az $n$-változós igazságfüggvények közül hány van a $K_h$ osztályban és hány a $K_i$ osztályban?
+\end{enumerate}
+
+\subsection*{2011. 01. 18.}
+\begin{enumerate}
+\item Egy $n$-változós igazságfüggvényről akkor mondjuk, hogy \emph{önduális}, ha minden $\left(x_1, x_2, \ldots, x_n\right)$-re
+\[f\left(x_1, x_2, \ldots, x_n\right)=\neg \left(\neg x_1, \neg x_2, \ldots, \neg x_n\right)\]
+teljesül. Jelölje $U$ az önduális függvények osztályát. Határozzuk meg az $n$-változós önduális függvények számát.
+\item Az $n$-változós $f$ igazságfüggvényt \emph{lineáris függvénynek} nevezzük, ha előállítható
+\[f\left(x_1, x_2, \ldots, x_n\right)=c_0\oplus c_1x_1\oplus\ldots\oplus c_n x_n\]
+alakban, ahol $c_i x_i$ a $c_i\land x_i$ formula rövidítése és $c_0$, $c_1$, \ldots, $c_n$ az $i$ és $h$ értékek valamelyikét jelöli. Jelölje $L$ a lineáris függvények osztályát. Határozzuk meg, hogy az $f_1$, $f_2$, \ldots, $f_{11}$ függvények közül melyik lineáris!
+\item Határozzuk meg az $n$-változós lineáris függvények számát.
+\item Azt mondjuk, hogy az $f$ $n$-változós igazságfüggvény \emph{szimmetrikus,} ha $f$ értéke az $\left(x_1, x_2, \ldots, x_n\right)$ és $\left(x_1', x_2', \ldots, x_n'\right)$ helyen azonos, ha a két $n$-es azonos számú $i$ (tehát azonos számú $h$) értéket tartalmaz. Határozzuk meg az $n$-változós szimmetrikus függvények számát.
+\end{enumerate}
+
+\subsection*{2011. 01. 19.}
+\begin{enumerate}
+\item Az $i$-t 1-nek, a $h$-t 0-nak feleltetjük meg, ezért megállapodunk abban, hogy $h<i$. Az $i$, $h$ értékekből álló rendezett párokat így \emph{rendezzük}:
+\[(h,h)\le(i,h),~(h,h)\le(h,i),~(h,i)\le(i,i),~(i,h)\le(i,i).\]
+Természetesen a rendezés tranzitív. Az $(i,h)$ és a $(h,i$ párok nem hasonlíthatók össze. Hasonlóan rendezzük az $i$, $h$ értékekből előálló $n$-eseket.\\
+Azt mondjuk, hogy az $f$ $n$-változós igazságfüggvény \emph{monoton}, ha bármely két $\left(x_1, x_2, \ldots, x_n\right)$ és $\left(x_1', x_2', \ldots, x_n'\right)$ $n$-esre ha $\left(x_1, x_2, \ldots, x_n\right)\le\left(x_1', x_2', \ldots, x_n'\right)$, akkor $f\left(x_1, x_2, \ldots, x_n\right)\le f\left(x_1', x_2', \ldots, x_n'\right)$.\\
+Jelölje $M$ a monoton függvények osztályát. Határozzuk meg, hogy az $f_1$, $f_2$, \ldots, $f_{11}$ függvények közül melyik eleme $M$-nek.
+\item Igazoljuk, hogy a konstans hamis függvény kivételével minden $n$-változós igazságfüggvény előállítható $\alpha_1\oplus\alpha_2\oplus\ldots\oplus\alpha_k$ alakban, ahol $\alpha_i$ ($1\le i\le k$) olyan $n$-tagú konjunkció, amelynek minden tagja vagy egy változó, vagy a negáltja és minden $\alpha_i$-ben minden változó vagy a negáltja szerepel.
+\end{enumerate}
+
+\subsection*{2011. 01. 20. -- dolgozat}
+\begin{enumerate}
+\item Igazoljuk a következő azonosságokat:
+\begin{abc2}
+\item $A\leftrightarrow B=(\neg A\lor \neg B)\land(A\lor\neg B)$;
+\item $A\oplus B=(A\land\neg B)\lor(\neg A\land B)$.
+\end{abc2}
+\item Írjuk fel azt az $f(A, B, C, D)$ függvényt teljes diszjunktív normálformában, amely akkor és csak akkor igaz, ha pontosan két változójának az értéke igaz.
+\item Igazoljuk, hogy a konstans igaz kivételével minden $n$-változós igazságfüggvény előállítható a következő alakban: $\beta_1\leftrightarrow\beta_2\leftrightarrow\ldots\leftrightarrow\beta_k$, ahol $\beta_i$ ($1\le i\le k$) olyan $n$-tagú diszjunkció, amelynek minden tagja vagy egy változó, vagy egy változó negáltja és minden tagban minden változó vagy a negáltja szerepel.
+\item Hány olyan $f$ $n$-változós függvény van, amelyre egyszerre teljesül a következő három feltétel: $f\notin K_i$, $f\notin K_h$, $f\notin U$?
+
+\end{enumerate}
+\end{document}

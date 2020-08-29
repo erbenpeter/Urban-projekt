@@ -1,0 +1,143 @@
+\documentclass[twoside]{book}
+%\usepackage[euler-digits,euler-hat-accent]{eulervm}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{lmodern}
+\usepackage[magyar]{babel}
+\usepackage[babel=true]{microtype}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pgfplots}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{\rightmark}
+\rhead{}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{patterns}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}\nolimits}
+\newcommand{\ch}{\mathop{\mathrm{ch}}\nolimits}
+\newcommand{\sh}{\mathop{\mathrm{sh}}\nolimits}
+%\newcommand{\ch}{\mathop{\mathrm{ch}}\nolimits}
+%\newcommand{\th}{\mathop{\mathrm{th}}\nolimits}
+\newcommand{\cth}{\mathop{\mathrm{cth}}\nolimits}
+
+%függőleges vonalhoz
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\newcommand{\deta}[4]{\ensuremath{\begin{vmatrix} #1 & #2 \\ #3 & #4\end{vmatrix}}}
+\newcommand{\detb}[9]{\ensuremath{\begin{vmatrix} #1 & #2 & #3\\ #4 & #5 & #6\\ #7 & #8 & #9\end{vmatrix}}}
+\newcommand{\mata}[4]{\ensuremath{\begin{pmatrix} #1 & #2 \\ #3 & #4\end{pmatrix}}}
+\newcommand{\matb}[9]{\ensuremath{\begin{pmatrix} #1 & #2 & #3\\ #4 & #5 & #6\\ #7 & #8 & #9\end{pmatrix}}}
+
+\parskip 8pt
+
+\title{Urbán János feladatsorai}
+
+\begin{document}
+\frontmatter
+\begin{titlepage}
+
+\hfill {\fontsize{42}{50}\selectfont Urbán János feladatsorai}
+
+\vskip 2cm
+
+\centerline{
+\includegraphics[scale=0.2]{uj70.jpg}
+}
+
+\vfill
+
+\hfill{\small Utolsó módosítás: \today }
+\end{titlepage}
+
+\newpage
+~
+\newpage
+
+\section*{Célkitűzés}
+
+\textit{Szeretnénk Urbán János tanár úr kézzel írott feladatsorait digitalizálni. Első körben egy feladatgyűjtemény elkészítése a cél, hosszú távon ebből egy könyv is születhetne, ha a feladatok megoldásait is leírjuk. A jelenleg aktív berzsenyis diákok önkéntes munka keretében is dolgozhatnak a projektben, emellett lelkes aggok és tanárok is részt vesznek a munkában.}
+
+\subsection*{A digitalizálásban eddig részt vettek:}  
+Asztalos Márton~(C11),
+Bácskai Zsombor~(C12)
+Csajbók Bence~(C99)
+ Erben Péter~(C87),
+ Formanek Kata~(C11),
+ Forrás Bence~(C08),
+ Frankl Nóra~(C05),
+ Kovács Levente~(C11),
+ Nanys Patrick~(C12),
+ Palincza Richárd~(C05),
+ Sólyom Bonifác~(C11),
+ Szalona Réka~(C11),
+ Sztanka-Tóth Tamás~(C07),
+ Trinh Phuong Nga~(C11),
+ Umann Andor~(C11)
+
+
+\subsection*{A fénymásolt papírokat válogatták:}  
+
+Gál Györgyné, Erben Péter, Mahler Attila, Sztranyák Attila
+
+
+
+\tableofcontents
+
+
+\mainmatter
+\part*{C05, 2005-2012}
+\addcontentsline{toc}{part}{C05, 2005-2012}
+\input{c05}
+
+\part*{C07, 2007-2012}
+\addcontentsline{toc}{part}{C07, 2007-2012}
+\input{c07}
+
+\part*{C08, 2008-2012}
+\addcontentsline{toc}{part}{C08, 2008-2012}
+\input{c08}
+
+\end{document}
+

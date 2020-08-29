@@ -1,0 +1,232 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{ dsfont }
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C05/11/1.}
+\rhead{Deriválás}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+\newcommand{\sh}{\mathop{\mathrm{sh}}\nolimits}
+\newcommand{\ch}{\mathop{\mathrm{ch}}\nolimits}
+%\newcommand{\th}{\mathop{\mathrm{th}}\nolimits}
+\newcommand{\cth}{\mathop{\mathrm{cth}}\nolimits}
+
+
+\parskip 8pt
+\begin{document}
+
+\section*{Deriválási szabályok}
+
+\subsection*{2009.10.20. -- Deriválási szabályok}
+\underline{Definíció}: Ha az $f$ függvény értelmezve van az \underline{$a$} hely egy 								környezetén, és létezik a \underline{véges} 
+						\[ \lim_{x \to 0} \frac{f(x)-f(a)}{x-a} = A \]
+						határérték, akkor $f$ differenciálható az \underline{$a$} helyen 							és $f$ differenciálhányadosa, vagy deriváltja $A$. Jelölés: 								$f'(a)=A$.
+
+\begin{enumerate}
+\item Igazoljuk:
+	\begin{abc}
+	\item $(x^n)'=nx^{n-1} $;
+	\item $(\sin x)'=\cos x $;
+	\item $(\cos x)'=-\sin x $;
+	\item $(e^x)'=e^x $;
+	\item $(\ln x)'=\frac{1}{x}$, ha $x>0 $;
+	\item $(a^x)'=a^x \ln a$, ha $a>0$;
+	\item $(\tg x)'=\frac{1}{\cos^2 x}$, ha $x \neq \frac{\pi}{2}+k\pi, k\in \mathbb{Z} $;
+	\end{abc}
+
+\end{enumerate}
+
+\subsection*{2009.10.21.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $f$ és $g$ differenciálható az \underline{$a$} helyen, akkor $f+g		$ is differenciálható az \underline{$a$} helyen, és $(f+g)'(a)=f'(a)+g'(a)$.
+\item Határozzuk meg a sorozat differenciálási szabályát.
+\item Igazoljuk, hogy ha $g$ differenciálható az \underline{$a$} helyen, és $g(a)\neq 0$, 		akkor $\frac{1}{g}$ is differenciálható az \underline{$a$} helyen, és 
+	\[ \bigg(\frac{1}{g}\bigg)'(a)=-\frac{g'(a)}{g^2(a)} \].
+\item Határozzuk meg a hányados differenciálási szabályát.
+\item Adjuk meg a következő függvények differenciálási szabályát:
+	\begin{abc}
+	\item $\sqrt[n]{x},~~~ x>0;$
+	\item $\ctg x;~~~x\neq k\pi, k\in \mathbb{Z};$
+	\item $\sh~x,~~~ \ch~x;$
+	\item $\th~x,~~~ \cth~x;$
+	\item $e^x$.
+	\end{abc}
+\end{enumerate}
+
+\subsection*{2009.11.02.}
+\begin{enumerate}
+\item Igazoljuk, hogy $f$ akkor és csak akkor differenciálható az \underline{$a$} helyen. 		ha $f(x)$ az \underline{$a$} hely egy környezetében így írható:
+	\[f(x)=f(a)+A(x-a)+\varepsilon (x)(x-a), \]
+	ahol $A$ konstans és $\lim_{x \to a} \varepsilon (x)=0$.
+\item Igazoljuk a közvetett függvény differenciálási szabályát, az u.n. "lánc-szabályt": 		Ha $f$ differenciálható a $g(a)$ helyen és $g$ differenciálható az $a$ helyen, akkor 		$f\circ g$ is differenciálható az $a$ helyen és \[(f \circ g)'(a)=f'(g(a))\cdot g'(a).		\] 
+\item Számítsuk ki a következő függvények deriváltját, ahol létezik:
+	\begin{abc}
+	\item $f(x)=\sqrt{x^2+3x+2}$;
+	\item $g(x)=\sin(x^2+2x)$;
+	\item $h(x)=\ln(e^x+2)$;
+	\item $k(x)=x^x,~~~x>0$;
+	\item $l(x)=x^\alpha,~~~x>0,~~\alpha \in \mathbb{R}$;
+	\item $t(x)=\sqrt{x+\sqrt{x+\sqrt{x}}},~~~x>0$
+	\end{abc}
+\end{enumerate}
+
+\subsection*{2009.11.03.}
+\begin{enumerate}
+\item Számítsuk ki a következő függvények deriváltját, ahol létezik:
+	\begin{abc}
+	\item $f(x)=\arctg x$;
+	\item $g(x)=\arcsin x$;
+	\item $h(x)=\ln(\ln(\ln x))$;
+	\item $k(x)=\ln \big(x+\sqrt{x^2+1}\big)$;
+	\item $l(x)=x^2\cdot \sin x \cdot \ln x$;
+	\item $n(x)=x^{x^x}$.
+	\end{abc}
+\item Igazoljuk, hogy az $f(x)=x\cdot \sin x$ függvény kielégíti a következő egyenletet:
+	\[ \frac{f'}{\cos x}-x=\tg x. \]
+\item Igazoljuk, hogy az 
+	\[  f(x) = 
+	  \begin{cases} 
+	   x^2 \sin \frac{1}{x},~~~x\neq 0, \\
+	   0~~\text{ha}~~x =0
+	  \end{cases} \]
+	  függvény minden $x$-re differenciálható.
+\item A következő függvények minden valós $x$-re értelmezve vannak. Hol nem 					differenciálhatók:
+	\begin{abc}
+	\item $f(x)=\sqrt{1-\cos^2 x}$;
+	\item $g(x)=\arcsin \frac{2x}{1-x^2}$;
+	\item $h(x)=\sqrt{16-8x^2+x^4}$;
+	\item $k(x)=\arcsin (\sin x)$.
+	\end{abc}
+\end{enumerate}
+
+\subsection*{2009.11.04.}
+\begin{enumerate}
+\item Deriváljuk a következő függvényeket:
+	\begin{abc}
+	\item $f(x)=\sin x^{\cos x}~~~(\sin x>0)$;
+	\item $g(x)=\lg(\cos x) ~~~ (\cos x>0)$;
+	\item $h(x)=\ctg x,~~~x\neq k\pi,~~k\in \mathbb{Z}$;
+	\item $k(x)=\sin(\cos x)+ \cos (\sin x)$.
+	\end{abc}
+\item Számítsuk ki a deriválási szabályok alkalmazásával a következő értékeket:
+	\begin{abc}
+	\item $1\cdot 2+ 2\cdot 3x+\ldots +n(n+1)x^{n-1}$;
+	\item $1+ 3x^2+ 5x^4+\ldots +(2n-1)x^{2n-2}$;
+	\item $1^2+ 3^2x^2+ 5^2x^4+\ldots +(2n-1)^2x^{2n-2}$
+	\end{abc}
+\item Igazoljuk, hogy az $f(x)=\sqrt{2x-x^2}$ függvény kielégíti a következő egyenletet: 
+	\[f^3 \cdot f'' +1=0 .\]
+\item
+	\begin{abc}
+	\item $f(x)=\frac{x^2}{1-x}$, $f^{(8)}=?$
+	\item $g(x)=\frac{1+x}{\sqrt{1-x}}$, $g^{(100)}=?$
+	\end{abc}
+\end{enumerate}
+
+\subsection*{2009.11.10.}
+\begin{enumerate}
+\item Deriváljuk a következő függvényeket:
+	\begin{abc}
+	\item $f(x)=\arctg \frac{1+x^3}{1+x^2}$;
+	\item $g(x)=\sqrt[3]{x^2}$;
+	\item $h(x)=\arcsin \frac{1-x^2}{1+x^2}$;
+	\item $k(x)=\arccos \sqrt{1-x^2}$;
+	\item $l(x)=x \ln \big(x+\sqrt{1+x^2}\big)-\sqrt{1+x^2}$.
+	\end{abc}
+\item Paraméteresen megadott görbe érintőjének irányvektora: Igazoljuk, hogy ha $x=x(t)$, 		$y=y(t)$, $\alpha \leq t \leq \beta$ és $\alpha <t_0 < \beta$, akkor az adott görbe 		érintőjének irányvektora a $t_0$ pontban $\Big(x'(t_0),y'(t_0)\Big)$.
+\item Számítsuk ki a következő paraméteresen adott görbék érintőjének irányvektorát, ahol 		létezik: 
+	\begin{equation}
+ 	\left.\begin{aligned}
+	        a) ~x&= a \cos t,~~y=a \sin t; \\
+	        b)~x&=a \cos^3 t,~~y=a \sin^3 t;\\
+	        c)~x&=a(t-\sin t),~~y= a(1-\cos t).
+	       \end{aligned}
+	 \right\}
+	 \qquad a>0~~ \text{állandó}
+\end{equation}
+\item Adjunk meg egyszerű eljárást az $y=x^2$, $y=x^3$ egyenletű görbék érintőjének szerkesztésére.
+\end{enumerate}
+
+\subsection*{2009.11.10 -- Deriválási szabályok}
+\begin{enumerate}
+\item $c'=0$;
+\item $(cu)'=c\cdot u'$;
+\item $(u+v)'=u'+v'$;
+\item $(u\cdot v)= u'\cdot v + u\cdot v'$;
+\item $\big(\frac{u}{v}\big)'=\frac{u'v-uv'}{v^2}$
+\item $u^\alpha = \alpha u^{\alpha-1}\cdot u' ~~~(\alpha~\text{állandó,}~u>0) $;
+\item $f(g(x))'=f'(g(x))\cdot g'(x)$.
+\end{enumerate}
+Az elemi függvények deriváltja:\\
+$(x^n)'=nx^{n-1}$;\\
+$(\sin x)'=\cos x $;\\
+$(\cos x)'=-\sin x $;\\
+$(\tg x)'=\frac{1}{\cos^2 x} $;\\
+$(\ctg x)'=-\frac{1}{\sin^2 x} $;\\
+$(e^x)'=e^x $;\\
+$(a^x)'=a^x \ln a~~~(a>0) $;\\
+$(\log_a x)'=\frac{1}{x \ln a},~~~a>0 $;\\
+$(\arcsin x)'=\frac{1}{\sqrt{1-x^2}} $;\\
+$(\arccos x)'=-\frac{1}{\sqrt{1-x^2}}$;\\
+$(\arctg x)'=\frac{1}{1+x^2} $;\\
+$(\arcctg x)'=-\frac{1}{1+x^2} $;\\
+$(\sh x)'=\ch x $;\\
+$(\ch x)'=\sh x $;\\
+
+
+
+\subsection*{2009.11.11 -- Deriválás}
+\begin{enumerate}
+\item Hol differenciálhatók a következő függvények: 
+	\begin{abc}
+	\item $f(x)=x |x|$;
+	\item $g(x)=\arcsin (\sin x)$.
+	\end{abc}
+	Ahol differenciálhatók, ott határozzuk meg a deriváltat.
+\item Írjuk fel az $x=2t-t^2$, $y=3t-t^3$ paraméteres megadású görbe érintőjének egyenletét a $t=0$ és $t=1$ paraméterű pontokon.
+\item Számítsuk ki az $f(x)=x \ln x~~~x>0$  függvény 5-ödik deriváltját.
+\item $g(x)=\frac{1}{x(1-x)}$, $0<x<1$, $n>0$ egész. $g^{(n)}(x)=?$
+\item Számítsuk ki a következő függvények deriváltját, ahol létezik: 
+	\begin{abc}
+	\item $f(x)=x \ln (x+ \sqrt{1+x^2})-\sqrt{1+x^2}$;
+	\item $g(x)=\frac{1}{2}\ctg^2 x+\ln \sin x$;
+	\item $h(x)=x^{a^a}+a^{x^a}+a^{a^x},~~~x>0,~~a>0~\text{rögzített.}$
+	\end{abc}
+\end{enumerate}
+
+\end{document}

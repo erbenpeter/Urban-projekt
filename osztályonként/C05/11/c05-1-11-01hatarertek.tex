@@ -1,0 +1,253 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C05/11/1. csoport}
+\rhead{Határérték}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{pgf,tikz}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+\newcommand{\ch}{\mathop{\mathrm{ch}}\nolimits}
+\parskip 8pt
+
+\begin{document}
+\section{Függvény határértéke}
+\subsection*{2009.09.07}
+\begin{enumerate}
+\item Ábrázoljuk a következő függvényeket!
+\begin{abc}
+\item $f(x)=\frac{x^2-1}{x-1}$, ha $0<x<2,\quad x\not=1$;
+\item $g(x)=\frac{x^3-8}{x-2}$, ha
+$0<x<3,\quad x\not=2$;
+\item$(*)\quad h(x)=x[\frac{1}{x}]$, ha $-1<x<1,\quad x\not=0$.
+\end{abc}
+\item\underline{Definíció}: az $f$ függvénynek az $a$ helyen a határértéke $A$, ha bármely $\varepsilon>0$-hoz van olyan $\delta>0$, hogy ha $0<|x-a|<\delta$ és $x\in D_f$, akkor $|f(x)-A|<\varepsilon$.
+
+Jelölés: $$\lim_{x\to a}f(x)=A.$$
+Igazoljuk, hogy az 1.feladatban megadott függvényekre: 
+$$\lim_{x\to 1}f(x)=2,\quad \lim_{x\to 2}g(x)=12.$$
+\item Határozzuk meg az 1.feladat alapján:
+$$\lim_{x\to 0}h(x)$$értékét.
+\item(*) Igazoljuk, hogy
+$$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
+\item Számítsuk ki:
+\begin{abc}
+\item $$\lim_{x\to 0}\frac{(1+2x)^3-(1+3x)^2}{x^2}\quad;$$
+\item $$\lim_{x\to 1}\frac{x^2-1}{2x^2-x-1}\quad.$$
+\end{abc}
+\end{enumerate}
+\subsection*{2009.09.08}
+\begin{enumerate}
+\item Igazoljuk, hogy
+$$\lim_{x\to a}f(x)=A$$akkor és csak akkor igaz, ha tetszőleges $x_n\to a$,$\quad $ $x_n\not =a$ sorozatra $f(x_n)\to A$.
+\item Igazoljuk, hogy ha $$\lim_{x\to a}f(x)=A$$ és $$\lim_{x\to a}g(x)=B,$$ akkor $$\lim_{x\to a}\left(f(x)\cdot g(x)\right)=A\cdot B.$$ 
+\item Igazoljuk, hogy ha $$\lim_{x\to a}f(x)=A$$és$$\lim_{x\to a}g(x)=B\not =0,$$ akkor $$\lim_{x\to a}\frac{f(x)}{g(x)}=\frac{A}{B}\quad.$$
+\item \underline{Definíció}: Az $f$ függvény határértéke $+\infty$-ben $A$, ha tetszőleges $x_n\to +\infty$ esetén $f(x_n)\to A$.
+\newpage
+\item Számítsuk ki:
+\begin{abc2}
+\item $$\lim_{x\to\infty}\frac{1}{x}\quad;$$
+\item $$\lim_{x\to\infty}\frac{1}{x^n}\quad,\quad n\geq 1,\quad n\in{Z}\quad;$$
+\item $$\lim_{x\to 1}\frac{x^2-1}{x^3-1}\quad;$$
+\item $$\lim_{x\to\infty}(\sqrt{x+\sqrt{x}}-\sqrt{x})\quad;$$
+\item $$\lim_{x\to 0}\frac{\sin 5x}{x}\quad;$$
+\item $$\lim_{x\to 0}\frac{1-\cos x}{x^2}\quad.$$
+\end{abc2}
+\end{enumerate}
+\subsection*{2009.09.14}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $f$ folytonos a $g(x)$ helyen és $g$ folytonos az $a$ helyen, akkor a $h(x)=f\left(g(x\right))$ összetett(vagy közvetett) függvény folytonos az $a$ helyen.
+\item Számítsuk ki a következő határértékeket:
+\begin{abc}
+\item $$\lim_{x\to a}\frac{x^n-a^n}{x-a}\quad;$$
+\item $$\lim_{x\to 0}\frac{\sin 5x}{\sin 3x}\quad;$$
+\item $$\lim_{x\to 1}\frac{x^n-x^k}{x-1}\quad,\qquad n,k>0\quad n,k\in{Z}\quad
+;$$
+\item $$\lim_{x\to 0}\frac{\tg 5x}{\sin 7x}\quad;$$
+\item $$\lim_{x\to 0}\frac{\sqrt{x+1}-1}{x}\quad.$$ 
+\end{abc}
+\item Definiáljuk, hogy mit jelent $$\lim_{x\to -\infty}f(x)=A.$$
+\end{enumerate}
+\subsection*{2009.09.15}
+\begin{enumerate}
+\item Számítsuk ki a következő határértékeket:
+\begin{abc}
+\item $$\lim_{x\to 1}\frac{x^3-1}{x^3-2x+1}\quad;$$
+\item $$\lim_{x\to 2}\frac{x^2-5x+6}{x^3-2x^2-x+2}\quad;$$
+\item $$\lim_{x\to 0}\frac{\tg x-\sin x}{\sin ^3 x}\quad;$$
+\item $$\lim_{x\to 0}\frac{\sqrt[n]{1+x}-1}{x}\quad;$$
+\item $$\lim_{x\to\pi}\frac{\sqrt{1-\tg x}-\sqrt{1+\tg x}}{\sin 2x}\quad;$$
+\item $$\lim_{x\to 0}\frac{1-\sqrt{\cos x^3}}{1-\cos x}\quad;$$
+\item $$\lim_{x\to\frac{\pi}{6}}\frac{2\sin ^2x+\sin x-1}{2\sin ^2x-3\sin x+1}\quad;$$
+\item $$\lim_{x\to 1}\frac{\sqrt{5-x}-2}{\sqrt{2-x}-1}\quad;$$
+\item $$\lim_{x\to\frac{\pi}{4}}\tg 2x\cdot\tg\left(\frac{\pi}{4}-x\right)\quad.$$
+\end{abc}
+\item Számítsuk ki a következő határértékeket:
+\begin{abc}
+\item $$\lim_{x\to +\infty}(\sqrt{x^2+x}-x)\quad;$$
+\item $$\lim_{x\to -\infty}(\sqrt{x^2+x}-x)\quad;$$
+\item $$\lim_{x\to 0}\frac{\sqrt[n]{x}-1}{\sqrt[k]{x}-1}\quad n,k>1\quad n,k\in{Z}\quad;$$
+\item $$\lim_{x\to 0}\frac{\sqrt{1-2x-x^2}-(1+x)}{x}\quad;$$
+\item $$\lim_{x\to 1}\left(\frac{3}{1-\sqrt{x}}-\frac{2}{1-\sqrt[3]{x}}\right)\quad;$$
+\item $$\lim{x\to -2}\frac{\sqrt[3]{x-6}+2}{x^3+8}\quad;$$
+\item $$\lim_{x\to +\infty}(\sqrt{(x+a)(x+b)}-x)\quad;$$
+\item $$\lim_{x\to a}\frac{\sin x-\sin a}{x-a}\quad;$$
+\item $$\lim_{x\to 0}\frac{\cos x-\cos 3x}{x^2}\quad;$$
+\item $$\lim_{x\to\frac{\pi}{3}}\frac{\sin\left(x-\frac{\pi}{3}\right)}{1-2\cos x}\quad.$$
+\end{abc}
+\end{enumerate}
+\subsection*{2009.09.21}
+Számítsuk ki a következő határértékeket:
+\begin{enumerate}
+\item $$\lim_{x\to 1}\left(\frac{3}{1-x}-\frac{1}{1-\sqrt[3]{x}}\right)\quad;$$
+\item $$\lim_{x\to 1}\left(\frac{n}{1-x}-\frac{1}{1-\sqrt[n]{x}}\right)\quad,\quad n,k>1\quad n,k\in{Z}\quad;$$
+\item $$\lim_{x\to 1}\left(\frac{k}{1-\sqrt{x}}-\frac{n}{1-\sqrt[k]{x}}\right)\quad,\quad n,k>1\quad n,k\in{Z}\quad;$$
+\item $$\lim_{x\to 0}\frac{\left(1+kx\right)^n-\left(1+nx\right)^k}{x^2}\quad,\quad n,k\geq 1\quad, \quad n,k\in{Z}\quad;$$
+\item $$\lim_{x\to 1}\frac{x+x^2+...+x^n-n}{x-1}\quad,\quad n\geq1\quad,\quad n\in{Z}\quad;$$
+\item $$\lim_{x\to 2}\frac{\left(x^2-x-2\right)^{20}}{\left(x^3-12x+16\right)^{10}}\quad;$$
+\item $$\lim_{x\to 1}\frac{x^{100}-2x+1}{x^{50}-2x+1}\quad;$$
+\item $$\lim_{x\to +\infty}\left(\sqrt{x+\sqrt{x+\sqrt{x}}}-\sqrt{x}\right)\quad.$$
+\end{enumerate}
+\subsection*{2009.09.23 -- Dolgozat}
+Számítsuk ki a következő határérétket:
+\begin{enumerate}
+\item $$\lim_{x\to 1}\frac{x^2-1}{2x^2-x-1}\quad;$$
+\item $$\lim_{x\to 3}\frac{\sqrt{x+13}-2\sqrt{x+1}}{x^2-9}\quad;$$
+\item $$\lim_{x\to 0}x\ctg 3x\quad;$$
+\item $$\lim_{x\to +\infty}\left(\sqrt{x^2-3x}-\sqrt{x^2-2x}\right)\quad;$$
+\item $$\lim_{x\to 2}\frac{\left(x^2-x-2\right)^{20}}{\left(x^3-12x+16\right)^{10}}\quad;$$
+\item $$\lim_{x\to a}\frac{\sqrt{x}-\sqrt{a}+\sqrt{x-a}}{\sqrt{x^2-a^2}}\quad,\quad a>0\quad konstans.$$
+\end{enumerate}
+\subsection*{2009.09.28}
+Alaphatárérték:
+$$\lim_{x\to 0}\frac{e^x-1}{x}=1\quad,\quad\lim_{x\to 0}\frac{\ln(1+x)}{x}=1$$
+Számítsuk ki a következő határértéket:
+\begin{enumerate}
+\item $$\lim_{x\to +\infty}\left(1+\frac{1}{x}\right)^x\quad;$$
+\item $$\lim_{x\to +\infty}\left(\frac{x+1}{x+2}\right)^{\frac{1-\sqrt{x}}{1-x}}\quad;$$
+\item $$\lim_{x\to 0}\frac{a^x-1}{x}\quad a>0\quad konstans\quad;$$
+\item $$\lim_{x\to\frac{\pi}{4}}\left(\tg x\right)^{\tg 2x}\quad;$$
+\item $$\lim_{x\to +\infty}\left(\frac{x^2+1}{x^2-2}\right)^{x^2}\quad;$$
+\item $$\lim_{x\to +\infty}x\left(\ln(x+1)-\ln x\right)\quad;$$
+\item $$\lim_{x\to b}{\frac{a^x-a^b}{x-b}}\quad,\quad a>0\quad konstans,\quad b\in{R}\quad;$$
+\item $$\lim_{x\to a}{\frac{\ln x-\ln a}{x-a}}\quad,\quad a>0\quad konstans.$$
+\end{enumerate}
+\subsection*{2009.10.05}
+\begin{enumerate}
+\item Számítsuk ki a következő határértékeket:
+\begin{abc}
+\item $$\lim_{x\to 0}\frac{e^{\sin 3x}-1}{x}\quad;$$
+\item $$\lim_{x\to 0}\frac{\ln(1+\sin 4x)}{e^{\sin 5x}-1}\quad;$$
+\item $$\lim_{x\to 0}\left(1+x^2\right)^{\ctg ^2 x}\quad;$$
+\item $$\lim_{x\to 0}{\frac{\ln \cos 5x}{\ln \cos 8x}}\quad;$$
+\item $$\lim_{x\to a}{\frac{a^x-x{a}}{x-a}}\quad;$$
+\item $$\lim_{x\to a}\frac{x^x-a^{a}}{x-a}\quad;$$
+\item (*)$$\lim_{x\to 0}\left(\frac{a^x+b^x}{2}\right)^{\frac{1}{x}}\quad,\quad a,b>0\quad;$$
+\item $$\lim_{x\to \frac{\pi}{2}}
+(\sin x)^{\tg x}.$$
+\end{abc}
+\end{enumerate}
+\subsection*{2009.10.07}
+Számítsuk ki a következő határértékeket:
+\begin{enumerate}
+\item $$\lim_{x\to \frac{\pi}{2}-0}\tg x\quad;$$
+\item $$\lim_{x\to \frac{\pi}{2}+0}\tg x\quad;$$
+\item $$\lim_{x\to +\infty}{\arctg x}\quad;$$
+\item $$\lim_{x\to -\infty}{\arctg x}\quad;$$
+\item $$\lim_{x\to -\infty}\left(1+\frac{1}{x}\right)^x\quad;$$
+\item $$\lim_{x\to 0}\left(\frac{1+x}{1+2x}\right)^{\frac{1}{x}}.$$
+\end{enumerate}
+
+\noindent\underline{Definíció}: Ha $f$ értelmezve van az $\underline{a}$ hely egy környezetében és létezik a 
+$$\lim_{x\to 0}\frac{f(x)-f(a)}{x-a}=A$$
+\underline{véges} határérték, akkor azt mondjuk, hogy $f$ differenciálható az $\underline{a}$ helyen és itt differencia hányadosa $A$. A geometriai jelentése: az $(a;f(a))$ pontban az $y=f(x)$ egyenletű görbe érintőjének \underline{iránytangense}.
+\subsection*{2009.10.12 -- Ismétlő feladatok}
+\begin{enumerate}
+\item $$\lim_{x\to a}\frac{\tg x-\tg a}{x-a}\quad;$$
+\item $$\lim_{x\to \frac{\pi}{6}}\frac{2\sin ^2 x+\sin x-1}{2\sin ^2 x-3\sin x+1}\quad;$$
+\item $$\lim_{x\to 0}\frac{\sqrt{1+\tg x}-\sqrt{1+\sin x}}{x^3}\quad;$$
+\item $$\lim_{x\to \frac{\pi}{2}}(\sin x)^{\tg x}\quad;$$
+\item $$\lim_{x\to 0}\left(x+e^x\right)^{\frac{1}{x}}\quad;$$
+\item $$\lim_{x\to 0}\left(\frac{a^x+b^x+c^x}{3}\right)^{\frac{1}{x}}\quad,\quad a,b,c>0\quad;$$
+\item $$\lim_{x\to 0}\frac{\ch x}{x}\quad;$$
+\item $$\lim_{x\to 0}\frac{\ch x-1}{x^2}\quad;$$
+\item $$\lim_{x\to 0}\frac{\ln \ch x}{\cos x}\quad;$$
+\item $$\lim_{x\to 1-0}\arcctg\frac{1}{1-x}\quad;\qquad\lim_{x\to 1+0}\arcctg\frac{1}{1-x}\quad;$$
+\item Az $y=f(x)$ egyenletű görbe asszimptotája az $y=ax+b$ egyenletű egyenes, ha
+$$\lim_{x\to +\infty}\left(f(x)-(ax+b)\right)=0.$$
+Határozzuk meg a következő egyenletekkel megadott görbék asszimptotáit:
+\begin{abc3}
+\item $y=\frac{x^3}{x^2+x-e}\quad;$
+\item $y=\sqrt{x^2+x}\quad;$
+\item $y=\ln(1+ex)\quad;$
+\end{abc3}
+\end{enumerate}
+\subsection*{2009.10.13}
+\begin{enumerate}
+\item $$\lim_{n\to \infty}\left(\frac{\sqrt[n]{a}+\sqrt[n]{b}}{2}\right)^n\quad,\quad a,b>0\quad;$$
+\item $$\lim_{n\to\infty}\left(1+\frac{x}{n}\right)^n\quad;$$
+\item $$\lim_{x\to 0}\left(\frac{\cos x}{\cos ^2 x}\right)^{\frac{1}{x^2}}\quad;$$
+\item $$\lim_{x\to a}\frac{a^x-x^{a}}{x-a}\quad a>0\quad;$$
+\item $$\lim_{x\to +\infty}\left(\sqrt{9x^2+1}-3x\right)\quad;$$
+\item $$\lim_{x\to -\infty}\left(\sqrt{2x^2+5}+5x\right)\quad;$$
+\item $$\lim_{x\to +\infty}\left(\frac{x^3}{3x^2-4}-\frac{x^2}{3x+2}\right)\quad;$$
+\item $$\lim_{x\to+0}\frac{\sqrt{1-\cos ^2x}}{x}\quad.$$
+\end{enumerate}
+\subsection*{2009.10.14 -- Ismétlő feladatok}
+\begin{enumerate}
+\item $$\lim_{x\to -1}\frac{x+1}{\sqrt[4]{x+17}-2}\quad;$$
+\item $$\lim_{x\to e}\frac{\ln x-1}{x-e}\quad;$$
+\item $$\lim_{x\to 1}(1+\sin\pi x)^{\ctg\pi x}\quad;$$
+\item $$\lim_{x\to +\infty}\left(\sqrt{x^2+x+1}-\sqrt{x^2-x+1}\right)\quad;$$
+\item $$\lim_{x\to 0}\frac{\sin 5x}{\ln(1+4x)}\quad;$$
+\item $$\lim_{x\to 0}\frac{\sqrt{1-\cos^2 x}}{x}\quad;$$
+\item $$\lim_{x\to 1-0}\frac{x^2-1}{|x-1|}\quad;$$
+\item $$\lim_{x\to +\infty}\left(\frac{x^2}{x+1}-(ax+b)\right)=0\quad,\quad a=?\quad,\quad b=?\quad;$$
+\end{enumerate}
+\subsection*{2009.10.19}
+\begin{enumerate}
+\item $$\lim_{x\to 4}\frac{\sqrt{1+2x}-3}{\sqrt{x}-2}\quad;$$
+\item $$\lim_{x\to\frac{\pi}{4}}\tg 2x\cdot\tg\left(\frac{\pi}{4}-x\right)\quad;$$
+\item $$\lim_{x\to 0}\left(x+e^x)^{\frac{1}{x}}\right)\quad;$$
+\item $$\lim_{x\to b}\frac{a^x-a^b}{x-b}\quad a>0;$$
+\item $$\lim_{x\to -\infty}\left(\sqrt{x^2+x+1}-\sqrt{x^2-x+1}\right)\quad;$$
+\item Határozzuk meg az $f(x)=\sqrt{x^2+3x+1}$ függvény asszimptotáját a $+\infty$-hez.
+\item $$\lim_{x\to 1-0}\frac{x^3-1}{|x-1|}\quad.$$
+\end{enumerate}
+\end{document}

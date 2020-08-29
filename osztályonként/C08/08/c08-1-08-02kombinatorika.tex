@@ -1,0 +1,177 @@
+\documentclass{article}
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/08/1.}
+\rhead{Kombinatorika}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\title{c08-1-08-02kombinatorika}
+\begin{document}
+
+\section*{Kombinatorika}
+
+\subsection*{2009.10.20.}
+\begin{enumerate}
+\item Hányféleképpen oszthatunk 30 embert 3, egyenként 10 emberből álló csoportba?
+\item Hányféleképpen bonthatjuk fel a 10-et 3 pozitív egész szám összegére, ha a sorrendben különböző felbontásokat is különbözőnek tekintjük?
+\item Hányféleképpen választhatunk ki az első 3 ($n>0$, egész) egymást követő pozitív szám közül hármat úgy, hogy az összegük osztható legyen 3-mal?
+\item $*$ Egy sorban 10 ember áll. Hányféleképpen választhatunk ki közülük hármat úgy, hogy ne legyenek köztük szomszédosak?
+\end{enumerate}
+
+\subsection*{2009.10.21.}
+\begin{enumerate}
+\item Egy sorban $n$ ember áll. Hányféleképpen választunk ki közülük hármat úgy, hogy ne legyen a kiválasztottak között két szomszédos?
+\item Hány megoldása van a pozitív egészek körében az $x+y+z=n$ egyenletnek ($n\geq 3$, egész)?
+\item $*$ Feldobunk $n$ ($\geq 1$) dobókockát. Hányféle eredményt kaphatunk?
+\item Adott $n$ különböző könyv. Hányféleképpen választhatunk ki ezek közül páratlan számú könyvet?
+\item Hány olyan négyjegyű szám van, amelynek a számjegyei pontosan kétfélék?
+\item $*$ Hány olyan hatjegyű szám van, amelynek a számjegyei pontosan háromfélék?
+\end{enumerate}
+
+\subsection*{2009.10.21.}
+\begin{enumerate}
+\item Hányféleképpen lehet sorbarakni 10 golyót, amelyek közül 4 piros, 4 kék és 2 sárga, de a golyók mérete azonos?
+\item Az 1 és $10^4-1$ közti egész számok tízes számrendszerbeli húzásához melyik számjegyből hány darabra van szükség?
+\item Hány megoldása van e nemnegatív egész számok körében az $x+y+z=n$ egyenletnek ($n\geq 0$, egész)?
+\item Legfeljebb hány részre bontja fel a síkot $n$ egyenes?
+\item Legfeljebb hány részre bontja fel a teret $n$ sík?
+\item Hány részre bontja fel a síkot $n$ egy ponton áthaladó egyenes?
+\end{enumerate}
+
+\subsection*{2009.11.04.}
+\begin{enumerate}
+\item Hány olyan háromszög van, amelyben valamennyi oldal hossza a $4,5,6,7$ értékek közül kerül ki?
+\item Adott a síkon 4, egymást páronként metsző egyenes úgy, hogy nincs közöttük három egy ponton áthaladó. Hány háromszöget határoznak meg ezek az egyenesek?
+\item Adott a síkon két párhuzamos egyenes, az egyiken $p$, a másikon $q$ pont. Hány olyan háromszög van, amleynek csúcsai az adott pontok közül kerülnek ki?
+\item Adott a síkon $n$ pont, ezek közül $p$ egy egyenesen van, a többi $n-p$ pont között. Nincs 3 egy egyenesre illeszkedő. Hány olyan háromszög van, amelynek csúcsai az adott pontok közül kerülnek ki?
+\item Hány olyan háromszög van, amelynek oldalhosszai $n$ -nél nagyobb, de $2n$ -nél nem nagyobb egész számok? Hány egyenlő szárú, illetve hány egyenlő oldalú van ezek között?
+\item Hány olyan háromszög van, amelynek minden oldala egész hosszúságú, kerülete pedig 40?
+\end{enumerate}
+
+\subsection*{2009.11.10.}
+\begin{enumerate}
+\item Egy kör kerületén felveszünk $n$ pontot és az összes lehetséges húrt megrajzoljuk, ami ezeket a pontokat köti össze. Feltesszük, hogy nincs olyan pont a kör belsejében, amin három húr megy át. Hány részre osztják ezek a húrok a körlapot?
+\item Van $n$ darab egyforma könyvünk. Hányféleképpen lehet ezeket három nem üres csoportra bontani?
+\item Hányféleképpen választhatunk ki két 1 és 40 közötti egész számot úgy, hogy az összegük páros legyen?
+\item Hányféleképpen lehet kiválasztani 20 érmét, ha 5,  10 és 20 forintosok közül választhatunk (mindegyikből korlátlan mennyiség van)?
+\item Hányféleképpen választhatunk ki 3, 1 és 30 közötti egész számot úgy, hogy az összegük páros legyen?
+\end{enumerate}
+
+\subsection*{2009.11.11.}
+\begin{enumerate}
+\item Legfeljebb hány részre osztja a síkot $n$ darab körvonal?
+\item Hányféleképpen válthatunk fel egy 200 forintost 10, 20 és 50 forintosokra?
+\item Hány olyan tízjegyű szám van, amelynek minden jegye az 1, 2, 3 számjegyek közül kerül ki és pontosan kétszer fordul elő benne a 3-mas számjegy. Ezek közül hány szám osztható 9-cel?
+\item Egy 3x3-as négyzet oldalú táblázat 9 kisebb négyzetből áll. Hányféleképpen színezhetjük ki a kis négyzeteket piros, kék, sárga színre úgy, hogy minden sorban és minden oszlopban mind a 3 szín előforduljon.
+\item Helyezzünk el a síkon 6; 8 szakaszt úgy, hogy mindegyik szakasznak 3 másik szakasszal legyen metszéspontja.
+\end{enumerate}
+
+\subsection*{2009.11.18.}
+\begin{enumerate}
+\item Számítsuk ki: $$(a+b)^2=$$ $$(a+b)^3=$$ $$(a+b)^4=$$
+\item Írjuk fel a binomiális tételt: $$(a+b)^n=\cdots$$
+\item Hány egész megoldása van: 
+\begin{abc}
+\item $|x|+|y|\leq 10;$
+\item $|x|+|y|\leq 100$.
+\end{abc}
+\item A Fibonacci sorozat definíciója: $$f_1=f_2=1$$ $$f_n+2=f_n+F_n+1$$ ha $n\geq 1$, egész.
+
+Igazoljuk:
+\begin{abc}
+\item $f_1+f_3+\cdots +f_{2n-1}=f_{2n};$
+\item $f_2+f_4+\cdots +f_{2n}=f_{2n+1}-1;$
+\item $f_1^2+f_2^2+f_3^2+\cdots +f_n^2=f_n\cdot f_{n+1};$
+\item $f_1\cdot f_2+f_2\cdot f_3+\cdots +f_{2n-1}\cdot f_{2n}=f_{2n}^2;$
+\item $*$ $f_{n+1}^2-f_n\cdot f_{n+2}=(-1)^n$.
+\end{abc}
+\end{enumerate}
+
+\subsection*{Kombinatorika}
+\begin{enumerate}
+\item Korlátlan mennyiségben állnak rendelkezésre 10, 20 és 50 forintos érmék. Hányféleképpen választhatunk ki ezek közül 20 érmét?
+\item Hányféleképpen oszthatunk el $3n$ különböző könyvet 3 ember között, ha azt akarjuk, hogy mindenki $n$ könyvet kapjon?
+\item Hányféleképpen oszthatunk szét 3 különböző dobozba 4 piros, 4 fehér és 4 kék golyót? (Egyes dobozok üresek is lehetnek.)
+\item Egy konvex 8-szög átlóinak legfeljebb hány metszéspontja lehet a sokszögön belül és hány metszéspontja lehet a sokszögön kívül?
+\item Van $3n+1$ tárgyunk, ezek közül $n$ egyforma, a többi ezektől és egymástól is különböző. Igazoljuk, hogy ezek közül $n$ tárgyat $2^{2n}$ féleképpen választhatunk ki.
+\item Az $(1+x)^3+(1+x)^4+(1+x)^5+\cdots +(1+x)^{10}$ kifejezésben a műveletek után mi lesz $x^5$ együtthatója?
+\end{enumerate}
+
+\subsection*{2009.11.24.}
+\begin{enumerate}
+\item Feldobunk 6 játékkockát. Hányféle eredményt kaphatunk, ha a kockák sorrnedjét nem vesszük figyelembe és a kockák egyformák?
+\item Feldobunk két játékkockát, mindegyiknek a lapjain a 0, 1, 3, 7, 15, 31, számok vannak. Hányféle  lehet a két kocka által mutatott számok összege?
+\item Hányféleképpen tehetünk két zsebbe 9, páronként különböző pénzdarabot?
+\item Adott $2n$ könyv. Hányféleképpen készíthetünk ezekből $n$ darab 2 könyvből álló csomagot, ha a csomagon belül a sorrend közömbös?
+\item Hat golyónk van, 3 fekete, 1-1 páros, fehér, kék. Hányféleképpen lehet ezekből összeállítani, 4 golyóból álló sorozatokat?
+\item $*$ Egy $n(>0)$ természetes szám 6-tal osztható. Hányféle módon bonthatjuk ezt fel 3 különböző pozitív egész összegére (a felbontás sorrendjével nem törődünk)?
+\end{enumerate}
+
+\subsection*{2009.11.25.}
+\begin{enumerate}
+\item Számítsuk ki az 1, 2, 3, 4 számjegyekből készíthető háromjegyű számok összegét.
+\item Hány páros szám készíthető a 3, 6, 9, 4 számjegyekből, ha mindegyik számjegyet csak legfeljebb egyszer használhatjuk fel? És hány páratlan szám készíthatő ugyan ezekkel a feltételekkel?
+\item Hány olyan tízes számrendszerbeli 6-jegyű szám van, amelyben a számjegyek összege páros?
+\item Hány olyan tízjegyű szám van, amelyben a számjegyek összege 3?
+\item Hányféleképpen oszthatunk el 6 különböző dobozban 5 piros és 5 kék golyót?
+\item $*$ Két ember között 3 féle tárgyat osztanak el. Mindegyik fajtából $2n$ tárgy áll rendelkezésre és mindegyik ember összesen $3n$ tárgyat kap. Hányféleképpen történhet az elosztás?
+\end{enumerate}
+\subsection*{2009.12.01.}
+\begin{enumerate}
+\item Hányféleképpen képezhetünk $n$, $k$ különböző elemből $n$ számú, egyenként $k$ elemet tartalmazó csoportot?
+\item Egy sorban van $n$ könyv. Hányféleképpen választhatunk ki közülük 3 könyvet úgy, hogy ezek között ne legyenek szomszédosak?
+\item Adott $n$ tárgy. Hányféleképpen választhatunk ki ezek közül páratlan számút?
+\item Adott $n$ egyforma és további $n$ az előzőktől és egymástól is különböző tárgy. Hányféleképpen választhatunk ki ezek közül $n$ tárgyat?
+\item $*$ Hány olyan háromszög van, amelynek csúcsai egy konvex $n$-szög csúcsai közül kerülnek ki, de a két idomnak nincs közös oldala?
+\item $*$ Hány részre bontják fel a konvex $n$ szöget az átlói, ha nincs köztük három egy ponton átmenő(és semelyik kettő nem párhuzamos)?
+\end{enumerate}
+
+\subsection*{2009.12.02.}
+\begin{enumerate}
+\item Hány olyan hatjegyű tízes számrendszerbeli szám van, amleynek a számjegyei pontosan kétfélék?
+\item Hányféleképpen oszthatunk szét 4 különböző pénztárcába 3 kétszázforintost és 10 százforintost?
+\item Hány olyan egymilliónál kisebb pozitív egész szám van, amelynek tízes számrendszerben felírt alakjában szerepelnek az 1, 2, 3, 4 számjegyek?
+\item Hány olyan háromszög van, amelyben minden oldal hossza egész szám és kerülete 43 egység?
+\item Adott $n$ különböző betű, közöttük $a$, $b$ és $c$ is szerepel. Hány olyan sorrendje van az $n$ szomszédnak? Hány olyan sorrend van, amelyben $a$, $b$ és $c$ közül semelyik kettő nem szomszédos?
+\item Jelölje $f_n$ a Fibonacci-sorozat $n$-edik elemét $(f_1=f_2=1,~f_{n+2}=f_n+f_{n+1})$. Igazoljuk, hogy $$f_1+f_2+f_3+f_4+f_5+f_6+\cdots +f_{2n+1}+f_{2n}=f_{2n+2}-1.$$
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,766 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C05/07/1.}
+\rhead{Számelmélet}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Számelmélet}
+
+\subsection*{2005.10.11.}
+\begin{enumerate}
+\item Adjunk meg 9 egymást követő összetett számot!
+
+\item Meg lehet-e adni 20 egymást követő összetett számot?
+
+\item Meg lehet-e adni 100 egymást követő összetett számot?
+
+\item Bizonyítsuk be a 9-cel való oszthatóság szabályát!
+
+\item Bizonyítsuk be a 3-mal való oszthatóság szabályát!
+
+\item Igazoljuk, hogy bármely pozitív egész $n$ számra igaz, hogy $n^3-n$ osztható 6-tal!
+
+\item Bizonyítsuk be, hogy ha egy $p$ törzsszám nagyobb mint 3, akkor 6-tal osztva 5 vagy 1 maradékot ad!
+
+\item Mi a 11-gyel való oszthatósági szabály?
+
+\end{enumerate}
+
+\subsection*{2005.10.13.}
+\begin{enumerate}
+\item Lehet-e egy tízes számrendszerben felírt pozitív egész szám számjegyeinek szorzata 111?
+
+\item Melyik az a legnagyobb természetes szám, amelynek számjegyei 7-nél kisebb és 0-nál nagyobb számjegyek, minden számjegy csak egyszer szerepel benne és osztható 12-vel?
+
+\item AZ 1, 2, 3, 4, 5, 6 számjegyekkel felírt hatjegyű számok között lehet-e négyzetszám? (Minden számjegy csak egyszer szerepelhet!)
+
+\item Öt egymást követő pozitív egész szám szorzata milyen számjegyre végződik?
+
+\item Öt egymást követő pozitív \underline {páratlan} szám szorzata milyen számjegyre végződik?
+
+\item Négy egymást követő egész szám szorzata 3024. Mik ezek a számok?
+
+\item Lehet-e 10 egymást követő pozitív egész szám összege osztható 10-zel?
+
+\item Adjuk meg a 45-nek egy olyan többszörösét, amiben csak a 0 és a 8 számjegy szerepel!
+\end{enumerate}
+
+\subsection*{2005.10.18.}
+\begin{enumerate}
+\item Íjuk át a következő, tízes számrendszerben megadott számokat 7 alapú és 9 alapú számrendszerbe: $$14,\qquad 27,\qquad 135,\qquad 2005.$$
+
+\item Írjuk át a következő 7 alapú számrendszerben megadott számot 9 alapú számrendszerbe: $30514_7$.
+
+\item Milyen alapú számrendszerben igaz a következő egyenlőség: 
+
+\begin{abc2}
+
+	\item $190_{10}=231_{x}$;
+	\item $884_{10}=1182_x$?
+ 
+\end{abc2}
+
+\item A tízes számrendszerben $2\cdot 9=18$ és $9^2=81$, ugyanazokból a számjegyekből áll, csak fordított sorrendben. Igazoljuk, hogy bármely $n$ alapú számrendszerben az $n-1$ kétszerese és négyzete is ugyan azokból a számjegyekből áll, csak fordított sorrendben!
+
+\item Milyen alapú számrendszerben érvényes a következő szorzás?
+
+\begin{tabular}{ccccccc}
+  &1&2&1&$\cdot$&2&2\\
+  \cline{1-4}
+  & 2 & 4 & 2 & & & \\
+2 & 4 & 2 &   & & & \\
+  \cline{1-4}
+3 & 2 & 1 & 2 & & & 
+\end{tabular}
+
+\end{enumerate}
+
+\subsection*{2005.10.19.}
+\begin{enumerate}
+ 
+\item Milyen számjegyre végződnek:
+
+\begin{abc4}
+	
+	\item $2^{100}$;
+	\item $5^{99}$;
+	\item $7^{101}$;
+	\item $9^{99}$?
+	
+\end{abc4}
+
+\item Mi az utolsó \underline{két} számjegye a következő számoknak:
+
+\begin{abc3}
+	
+	\item $2^{50}$;
+	\item $7^{100}$;
+	\item $9^{1000}$?
+	
+\end{abc3}
+
+\item Igazoljuk, hogy $11^{10}-1$ osztható 5-tel!
+
+\item Lehet-e két egymást követő szám szorzata $35428678$?
+
+\item Igazoljuk, hogy $7^{100}-1$ osztható 100-zal!
+
+\item Osztható-e 4-gyel $7^{49}-7^7$?
+
+\item Milyen számjegyeket írhatunk $x$ és $y$ helyére, hogy a $853xy6$ hatjegyű szám osztható legyen $468$-cal?
+
+\item Milyen számjegyeket írhatunk $a$ és $b$ helyére, hogy a $47a3b4$ hétjegyű szám osztható 504-gyel?
+
+\end{enumerate}
+
+\subsection*{2005.10.20.}
+\begin{enumerate}
+\item Hány 0-ra végződik az első 30 pozitív egész szám szorzata?
+
+\item Hány 0-ra végződik az első 150 pozitív egész szám szorzata?
+
+\item Hány olyan $\overline{ababab}$ alakú tízes számrendszerbeli szám van ($a$ és $b$ számjegyek), amely öt prímszám szorzata?
+
+\item Egy $\overline{ababab}$ alakú szám 120-szorosa öt egymást követő pozitív egész szám szorzata ($a$ és $b$ számjegyek). Mi lehet $a$ és $b$ értéke?
+
+\item Négy egymást követő páratlan szám szorzata 9-re végződik. Milyen számjegy áll a 9 előtt?
+
+\item ($*$) Az első 100 pozitív egész számot összeszorozzuk. Mi lesz a szorzat jobbról számított 25. számjegye?
+
+\item ($*$) Mi lehet az a háromjegyű szám, amely a számjegyei összegének 17-szerese?
+\end{enumerate}
+
+\subsection*{2005.10.26.}
+\begin{enumerate}
+\item Az első 100 prímszám összege páros, vagy páratlan?
+
+\item ($*$) Igaz-e, hogy ha $27 \mid \overline{abc}$, akkor $27 \mid \overline{bca}$ ?
+
+\item Igazoljuk, hogy ha $p>3$, akkor $24 \mid p^2-1$. 
+
+\item Van-e két egymást követő prímszám, amelyek összege is prímszám?
+
+\item Mutassuk meg, hogy minden $\overline{abcabc}$ alakú tízes számrendszerbeli szám osztható 13-mal!
+
+\item Lehet-e 2005 két prímszám összege?
+
+\item Hány olyan 1000-nél nem nagyobb pozitív egész szám van, amely nem osztható sem 2-vel, sem 3-mal?
+
+\item Hány olyan 1000-nél nem nagyobb pozitív egész szám van, amely nem osztható sem 2-vel, sem 3-mal, sem 5-tel?
+
+\end{enumerate}
+
+\subsection*{2005.11.15.}
+\begin{enumerate}
+\item Milyen számjegyre végződik $3^{2005}$?
+
+\item Igazoljuk, hogy
+
+\begin{abc3}
+
+	\item $9 \mid 10^{33}+8$;
+	\item $6 \mid 10^{10}+14$;
+	\item $72 \mid 10^{20}+8$.
+ 
+\end{abc3}
+
+\item Igazoljuk, hogy 100 osztója a következő számnak: $$7+7^2+7^3+7^4+...+7^{19}+7^{20}.$$
+
+\item Mi lesz egyszerűsítés után a következő tört nevezője: $$\frac{1 \cdot 2 \cdot 3 \cdot 4 \cdot ... \cdot 98 \cdot 99 \cdot 100}{2^{100} \cdot 3^{50}}?$$
+
+\item Melyik az a két szám, amelyek legnagyobb közös osztója 15, szorzata pedig 7875?
+
+\item Az $a$ és $b$ számjegyek. Igazoljuk, hogy $100a+b$ akkor és csak akkor osztható 7-tel, ha $a+4b$ is osztható 7-tel!
+
+\item Igazoljuk, hogy öt egymást követő egész szám szorzata osztható 120-szal! 
+\end{enumerate}
+
+\subsection*{2005.11.16.}
+\begin{enumerate}
+ 
+\item Előállítható-e $2^{20}$ néhány (legalább 2) egymást követő pozitív egész szám összegeként?
+
+\item Osztható-e 10-zel a $73^{73}+37^{37}$ szám?
+
+\item Igazoljuk, hogy 376 bármely pozitív egész kitevőjű hatványa 376-ra végződik!
+
+\item Mutasd meg, hogy 5 egymást követő négyzetszám összege osztható 5-tel! 
+
+\item Mi lesz a következő szám utolsó számjegye: $$2+2^2+2^3+2^4+...+2^{2005}?$$
+
+\item Az 1000-nél kisebb pozitív egészek közül kihagyjuk azokat, amelyeknek valamelyik számjegye prímszám. Hány szám marad?
+
+\item Mely $p$ prímszámra lesz $4p-1$ és $4p+1$ is prímszám?
+
+\item Mely $n$ prímszámra igaz, hogy $n+10$ és $n+14$ is prímszám?
+
+\item Melyik négyjegyű négyzetszámra igaz, hogy az első két jegye is egyenlő és az utolsó két jegye is egyenlő?
+\end{enumerate}
+
+\subsection*{2005.11.17.}
+\begin{enumerate}
+\item Melyik 3-nak az a legnagyobb kitevőjű hatványa, amellyel az 1-től 2000-ig terjedő egész számok szorzata osztható?
+\item Egy háromjegyű számot kétszer egymás után írunk. Bizonyítsuk be, hogy az így kapott szám osztható 7-tel és 13-mal!
+\item Határozzuk meg az $a$ és $b$ számjegyeket úgy, hogy az $\overline{1234ab}$ hatjegyű szám osztható legyen 72-vel!
+\item Igazoljuk, hogy ha $p$ és $p^2+8$ prímszámok,
+akkor $p^2+p+1$ is prímszám!
+\item Mi az utolsó számjegye a $32^{23}+23^{32}$ számnak?
+\end{enumerate}
+
+\subsection*{2005.11.23. -- Oszthatósági feladatok}
+Igazoljuk a következő oszthatóságokat:
+
+\begin{enumerate}
+ 
+\item $15 \mid 2^{16}-1$;
+
+\item $24 \mid 5^{20}-1$;
+
+\item $3 \mid 2 \cdot 7^{50}+1$;
+
+\item $6 \mid 17^{100}-11^{100}$;
+
+\item $15 \mid 2^{4n}-1$, $n \in \mathbb{N}$;
+
+\item $5 \mid 4 \cdot 6^n+5^n-4$, $n \ge 0$, $n \in \mathbb{N}$;
+
+\item $8 \mid 3^{2n}+7$, $n \in \mathbb{N}$;
+
+\item $7 \mid 3^{2n+1}+2^{n+2}$, $n \in \mathbb{N}$;
+
+\item $3 \mid 2 \cdot 7^n+1$, $n \in \mathbb{N}$;
+
+\item $99 \mid 3^{n+3} \cdot 2^{2n+2}-108$, $n \in \mathbb{N}$;
+
+\item $5 \mid 1+2^{2005}+3^{2005}+4^{2005}$;
+
+\item $7 \mid 1+2^{35}+3^{35}+4^{35}+5^{35}+6^{35}+7^{35}+8^{35}+9^{35}+10^{35}$;
+
+\item $13 \mid 2^{60}+7^{30}$;
+
+\item $181 \mid 3^{105}+4^{105}$;
+
+\item $21 \mid 5^{2n+1}+4^{n+2}$, $n \in \mathbb{N}$;
+
+\item $13 \mid 4^{2n+1}+3^{n+2}$, $n \in \mathbb{N}$;
+
+\item $19 \mid 5^{2n-1} \cdot 2{n+1}+3^{n+1} \cdot 2^{2n-1}$, $n \in \mathbb{N}$;
+
+\item $2006 \mid 2005^{2005}+2007$;
+
+\item $9 \mid 11^n+7^n$, ha $n$ páratlan egész;
+
+\item $6 \mid 1+2^n+3^n$, ha $n$ páratlan egész.  
+\end{enumerate}
+
+\subsection*{2005.11.30. -- Feladatok kongruenciákra}
+Igazoljuk a következő oszthatóságokat:
+
+\begin{enumerate} 
+
+\item $5\mid 2^{4n+1}+3$, ha $n\in \mathbb{N}$;
+\item $7\mid  3^{2n+1}+2^{n+2}$, ha $n\in \mathbb{N}$;
+\item $11\mid  3^{2n+2}+2^{6n+1}$, ha $n\in \mathbb{N}$;
+\item ($*$) $20460\mid  27195^8-10887^8+10152^8$;
+\item ($*$) $7 \mid  2222^{5555}+5555^{2222}$;
+\item ($*$) $5040 \mid  n^7-14n^5+49n^3-36n$, ha $n>3$, egész;
+\item Ha $n\in \mathbb{N}$ és $n$ nem osztója 17-nek, akkor $17\mid  n^8-1$, vagy $17 \mid  n^8+1$;
+\item Ha $n\in \mathbb{N}$ és $n$ nem osztója 7-nek, akkor $7\mid  n^3-1$, vagy $7 \mid n^3+1$.
+
+\end{enumerate}
+
+\subsection*{2005.12.06.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $13\nmid n$, akkor
+$n^2\equiv 1 (13)$.
+\item $35\mid 3^{6n}-2^{6n}$, ha $n\in \mathbb{N}$
+\item $1998\mid 1997^{1999}+1999^{1997}$
+\item Mi az utolsó két jegye a $2^{999}$ számnak?
+\item ($*$) Mennyi maradékot ad $12371^{56}+34$ ha 111-gyel osztjuk?
+\item ($**$) Készítsünk oszthatósági szabályt egységesen a 7-tel, 11-gyel, 13-mal való oszthatóságra!
+\end{enumerate}
+
+\subsection*{2005.12.13.}
+\begin{enumerate}
+ 
+\item Igazoljuk a következő oszthatóságokat:
+
+\begin{abc3}
+
+	\item $3 \mid 10^{99}+17$;
+	\item $10 \mid 3^{203}-17$;
+	\item $21\cdot 30 \mid 26^{15}+1$.
+ 
+\end{abc3}
+
+\item Bizonyítsuk be, hogy minden $n\in \mathbb{N}$-re
+
+\begin{abc}
+
+	\item $11 \mid 5^{2n+1}+6^{2n+1}$;
+	\item $13 \mid 3^{3n+2}+(-4)^{3n+2}+1$;
+	\item $19 \mid 24^{2n+1} \cdot 21^{n+2}-3^{n+2} \cdot 17^{2n+1}$.
+ 
+\end{abc}
+
+\item Mennyi maradékot ad 23-mal osztva $208^{208}$?
+
+\item Mi az utolsó két számjegye a következő számnak: 
+$289^{289}$?
+
+\item Mennyi maradékot ad 101-gyel osztva $3^{200}+7^{200}$?
+
+\end{enumerate}
+
+\subsection*{2005.12.15. -- Kongruenciák}
+\begin{enumerate}
+\item Igazoljuk kongruenciával a következő oszthatóságokat:
+\begin{abc3}
+\item $13\mid 12^{1231}+14^{4324}$;
+\item $11935\mid 26^{30}-1$;
+\item $13\mid 2^{60}+7^{30}$.
+\end{abc3}
+\item Bizonyítsuk be, hogy tetszőleges $n\in\mathbb{N}$-re
+\begin{abc2}
+\item $10\mid 3^{4n+3}-17$;
+\item $13\mid 1+16^{3n+1}+48^{3n+1}$.
+\end{abc2}
+\item Mennyi maradékot ad 31-gyel osztva a következő szám:
+$$29^{2929}-34^{3434}+29\cdot 41^{231}?$$
+\item Mi az utolsó két számjegye a következő számnak: $203^{203}$?
+\end{enumerate}
+
+\subsection*{2006.01.03.}
+\begin{enumerate}
+ 
+\item Igazoljuk, hogy páratlan $n$-re $2^n+1$ osztható 3-mal, páros $n$-re $2^n+1$ nem osztható 3-mal. 
+
+\item Mennyi maradékot ad $23^n$, ha 7-tel osztjuk?
+
+\item Mennyi maradékot ad $65^{6k}$, ha 9-cel osztjuk?
+
+\item Igazoljuk, hogy ha $n>0$ egész, akkor $3^{4n+3}-17$ osztható 10-zel.
+
+\item Igazoljuk, hogy ha $a \equiv 5b \pmod{19}$, akkor $10a+7b \equiv 0 \pmod{19}$.
+
+\item Mennyi maradékot kapunk, ha 
+
+\begin{abc}
+
+	\item $12^{1231}+14^{4324}$-t 13-mal osztjuk;
+	\item $10^{2732}$-t 22-vel osztjuk;
+	\item $15^{231}$-t 16-tal osztjuk;
+	\item $13^{1054}-23 \cdot 16^{285}+22^{17}$-t 15-tel osztjuk?
+ 
+\end{abc}
+
+\end{enumerate}
+
+\subsection*{2006.01.04. -- Ismétlő feladatok}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $(n;7)=1$, akkor $n^6-1$ osztható 7-tel!
+
+\item Mi az utolsó számjegye a $3^{400}$ számnak?
+
+\item ($*$) Igazoljuk, hogy ha $a\equiv b \pmod m$ és $a \equiv b \pmod k$ és $(m;k)=1$, akkor 
+$a\equiv b \pmod {m \cdot k}$.
+
+\item Mi az utolsó két számjegye a $3^{400}$ számnak a tízes számrendszerben?
+
+\item Igazoljuk, hogy ha $(n;13)=1$, akkor $n^{12} \equiv 1 \pmod {13}$.
+
+\item Igazoljuk, hogy ha $a^2 \equiv b^2 \pmod p$, akkor $p \mid a+b$, vagy $p \mid a-b$. 
+\end{enumerate}
+
+\subsection*{2006.01.05. -- Pótdolgozat}
+\begin{enumerate}
+\item Igazoljuk, hogy $2^{2004}-1$ osztható 7-tel!
+\item Igazoljuk, hogy $26^{15}+1$ osztható 651-gyel!
+\item Igazoljuk, hogy ha $a\equiv 5b \pmod{17}$,
+akkor $2a+7b\equiv 0 \pmod{17}$.
+\item Mennyi maradékot ad $3^{79821}$, ha 17-tel elosztjuk?
+\item Igazoljuk, hogy ha $n$ hárommal osztva 1 maradékot ad, akkor $23^n-2$ osztható 7-tel!
+\item Igazoljuk, hogy tetszőleges pozitív egész $n$-re $24^{2n+1}\cdot 21^{n+2}-3^{n+2}\cdot 17^{2n+1}$ 
+osztható 19-cel!
+\end{enumerate}
+
+\subsection*{2006.01.11.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $d=(a;b)$, akkor $d=(a-b;b)$.
+\item Számítsuk ki: $(2005;2006)$.
+\item Számítsuk ki euklideszi algoritmussal:
+\begin{abc2}
+\item $(1597;987)$;
+\item $(4096;768)$.
+\end{abc2}
+\item Oldjuk meg a pozitív egész számok halmazán:
+\begin{abc2}
+\item $x+y= 180$ és $(x;y)=30$;
+\item $xy= 720$ és $(x;y)=4$.
+\end{abc2}
+\item Igazoljuk, hogy ha $n>0$, egész, akkor az
+$\frac{n+1}{2n+1}$ tört nem egyszerűsíthető! 
+\item Számítsuk ki: $\left(2^6-1;2^{15}-1\right)$.
+\end{enumerate}
+
+\subsection*{2006.01.12.}
+\begin{enumerate}
+\item Számítsuk ki:
+\begin{abc2}
+	\item $(420;630;1155)$;
+	\item $(1023;1518;14883)$.
+\end{abc2}
+
+\item Oldjuk meg a következő egyenletrendszereket:
+\begin{abc2}
+	\item $x+y=168$ és $(x;y)=24$;
+	\item $(x;y)=45$ és $7x=11y$.
+\end{abc2}
+
+\item Igazoljuk: ha $(a;b)=1$ és $a \mid c$, $b \mid c$, akkor $a \cdot b \mid c$.
+
+\item Mutassuk meg, hogy ha $n>0$ egész szám, akkor $\frac{21n+4}{14n+3}$ nem egyszerűsíthető.
+
+\item Számítsuk ki:
+\begin{abc2}
+	\item $[14;45]$;
+	\item $[356;1068;1424]$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2006.01.17.}
+\begin{enumerate}
+\item Mennyi $a$ és $b$, ha tudjuk, hogy 
+\begin{abc}
+	\item $(a;b)=15$ és $[a;b]=420$;
+	\item $(a;b)=5$ és $[a;b]=260$;
+	\item $a+b=667$ és $\frac{[a;b]}{(a;b)}=120$.
+\end{abc}
+
+\item Számítsuk ki:
+\begin{abc}
+	\item 74; 492; 21708 legnagyobb közös osztóját és legkisebb közös többszörösét;
+	\item 756; 1348; 1760 legnagyobb közös osztóját és legkisebb közös többszörösét.
+\end{abc}
+
+\item Állítsuk elő $\frac{2}{5}$-öt $\frac{1}{a}+\frac{1}{b}$ alakban, ahol $a$ és $b$ különböző pozitív egészek.
+
+\item Mely $p$ prímre igaz, hogy $p+4$ és $p+14$ is prím?
+
+\item Lehet-e $n>1$ egész esetén $2^n-1$ és $2^n+1$ egyszerre prímszám?
+
+\item Hány pozitív osztója van a következő számnak:
+\begin{abcn}{5}
+	\item 24;
+	\item 72;
+	\item 144;
+	\item 210;
+	\item $2^{15} \cdot 3^{20}$?
+\end{abcn}
+\end{enumerate}
+
+\subsection*{2006.01.19.}
+\begin{enumerate}
+\item Számítsuk ki a megadott számok legnagyobb közös osztóját és legkisebb közös többszörösét:
+\begin{abc}
+	\item $a=2^{10} \cdot 3^{40} \cdot 7$; $b=2^5 \cdot 3^7 \cdot 5 \cdot 11$;
+	\item $a=2^{15} \cdot 5^{20} \cdot 7^{10}$; $b=2^{10} \cdot 3^5 \cdot 5^{30} \cdot 11^{20}$;
+	\item $a=2^n \cdot 3^k \cdot 5$; $b=2\cdot 3^{k+1} \cdot 5^n$; 
+\end{abc}
+ahol $k,n>0$ egészek.
+
+\item Igazoljuk, hogy $(a;b) \cdot [a;b]=a \cdot b$, ha $a,b>0$ egészek.
+\item Milyen $x$ számokra igazak:
+\begin{abc4}
+	\item $[123;126]=x$;
+	\item $(899;1147)=x$;
+	\item $[x;16]=48$;
+	\item $(x;60)=15$.
+\end{abc4}
+\item Melyek lehetnek azok a pozitív egészek, amelyekre $(a;b;c)=4$ és $[a;b;c]=240$ teljesül?
+\item ($*$) Melyek azok a téglalapok, amelyeknek oldalai cm-ekben mérve egészek, kerületük ugyanannyi cm, ahány cm$^2$ a területük?
+\item Oldjuk meg a következő diofantoszi egyenleteket,
+\begin{abc2}
+	\item $6x-9y=15$;
+	\item $7x+5y=12$.
+\end{abc2}
+\end{enumerate}
+
+\subsection*{2006.01.24.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $n$ összetett szám, akkor 
+$2^n-1$ nem lehet prímszám!
+\item Igazoljuk, hogy ha $n$-nek van páratlan prímosztója, akkor $2^n+1$ nem lehet prímszám!
+\item Számítsuk ki a következő összeget:
+$$S=1+2+2^2+2^3+2^4+\ldots+2^{99}.$$
+\item Számítsuk ki a következő szorzat értékét:
+$$\left(2^3+2^7+1\right)\cdot\left(
+2^{23}-2^{21}+2^{19}-2^{17}+2^{14}-2^{9}-2^7+1
+\right).$$ 
+\item Igazoljuk, hogy ha $a$ és $b$ páratlan számok, akkor $a^2+b^2$ nem lehet négyzetszám!
+\item Tudjuk, hogy $(a;3)=1$ és $(b;3)=1$. Lehet-e négyzetszám $a^2+b^2$?
+\item Igazoljuk, hogy ha $b\mid a^2-1$ akkor
+$b\mid a^4-1$.
+\end{enumerate}
+
+\subsection*{2006.01.26.}
+\begin{enumerate}
+\item Számítsuk ki: 
+
+\begin{abc3}
+
+	\item $(30;75;630)$
+	\item $(17;34;263)$
+	\item $(187;323;391)$
+ 
+\end{abc3}
+
+\item Igazoljuk, hogy ha $(a;4)=2$ és $(b;4)=2$, akkor $(a+b;4)=4$.
+
+\item Milyen $a$ és $b$ pozitív egész számokra igaz, hogy
+
+\begin{abc2}
+
+	\item $(a;b)=26$ és $[a;b]=4784$;
+	\item $a+b=98$ és $[a;b]=720$.
+ 
+\end{abc2}
+
+\item Egy autóbuszmegállóban 8 órakor egyszerre áll meg egy 17-es és egy 71-es busz. A 17-es 12 percenként, a 71-es 20 percenként közlekedik. Hány órakor lesz ismét a megállóban egyszerre egy 17-es és egy 71-es busz?
+
+\item Határozzuk meg 1111 és 1111111111 legnagyobb közös osztóját!
+
+\item Hány egész megoldása van a következő egyenletnek:
+
+\begin{abc3}
+
+	\item $x^2-y^2=15$;
+	\item $x^2-y^2=21$;
+	\item $x^2-y^2=12$?
+
+\end{abc3}
+\end{enumerate}
+
+\subsection*{2006.01.31.}
+\begin{enumerate}
+\item Melyek azok a négyjegyű tízes számrendszerbeli számok, amelyek 131-gyel osztva maradékul 112-t, 132-vel osztva maradékül 98-at kapunk?
+
+\item AZ 1979 érdekes évszám volt, mert 19, 97 és 79 is prímszám. Keressük meg a 2006 után következő első ilyen tulajdonságú számot!
+
+\item Huszonöt kókuszdió annyi dollárba kerül, ahány kókuszdiót lehet kapni 1 dollárért. Hány dollárba kerül a kókuszdió?
+
+\item Hány olyan 4-jegyű pozitív egész szám van, amelyben a számjegyek növekvő sorrendben állnak? És hány olyan van, amelyben a számjegyek sorrendje csökkenő?
+
+\item ($*$) Igazoljuk, hogy a 23-nak van olyan többszöröse, amelynek a tízes számrendszerbeli alakja csupa 1 számjegyet tartalmaz.
+
+\item Egy idős ember, aki már elmúlt 65 éves, de még nem volt 90, egyik születésnapján ezt mondta: Minden gyermekemnek annyi gyermeke van, ahány testvére. Éveim száma pontosan annyi, mint ahány gyermekem és unokám van összesen. Hány éves volt ekkor?
+
+ 
+\end{enumerate}
+
+\subsection*{2006.02.01.}
+\begin{enumerate}
+\item Oldjuk meg a következő egyenleteket a pozitív egész számok körében:
+
+\begin{abc2}
+
+	\item $x^2-y^2=133$;
+	\item $x^2-y^2=2006$.
+ 
+\end{abc2}
+
+\item Hány megoldása van a pozitív egész számok halmazán a következő egyenletnek:
+
+\begin{abc2}
+
+	\item $\frac{1}{x}+\frac{1}{y}=\frac{2}{31}$;
+	\item $\frac{1}{x}+\frac{1}{y}=\frac{1}{2006}$.
+ 
+\end{abc2}
+
+\item Melyik az a kétjegyű pozitív egész szám, amely számjegyei kétszeres szorzatával egyenlő?
+
+\item Egy négyjegyű szám 132-vel osztva 105-öt, 133-mal osztva 91-et ad maradékul. Melyik ez a szám?
+
+\item A 100-at bontsuk fel két részre (két pozitív egész szám összegére) úgy, hogy az egyik 5-tel osztva 2-t, a másik 7-tel osztva 4-et adjon maradékul.
+
+\item A 283-at bontsuk fel két pozitív egész szám összegére úgy, hogy az egyik osztható legyen 13-mal, a másik pedig 17-tel.
+
+
+\end{enumerate}
+
+\subsection*{2006.02.07.}
+\begin{enumerate}
+\item A két unoka életkora a nagymama életkorának két számjegyével egyenlő. Hárman együtt 72 évesek. Hány éves a nagymama?
+\item Az apa és a két fia együtt 51 évesek. Az apa hatszor annyi éves, mint a két fiú életkora számjegyeinek az összege. Hány éves az apa?
+\item Egy négyjegyű szám osztható 7-tel és 29-cel.
+Ha a számot 19-cel szorozzuk, akkor az eredményt 37-tel osztva a maradék 3 lesz. Melyik ez a szám?
+\item ($*$) Két különböző kétjegyű prímszámot egymás után írunk. A kapott négyjegyű szám osztható ezeknek a prímszámoknak a számtani közepével. Határozzuk meg az összes ilyen prímszám párokat!
+\item ($*$) Melyik lehet az a háromjegyű szám, amelynek minden pozitív egész kitevőjű hatványa ugyanarra a három számjegyre végződik?
+\item Határozzuk meg az összes olyan prímszámokból álló párt, amelyre igaz, hogy az összegük és a különbségük is prímszám!
+\end{enumerate}
+
+\subsection*{2006.02.09.}
+\begin{enumerate}
+\item Milyen $x$ és $y$ pozitív egész számokra lesz az $\frac{x}{2}+xy+\frac{y}{2}=1980$?
+
+\item Mik lehetnek az $a$, $b$, $c$ pozitív egész számok, ha $abc+ab+ac+bc+a+b+c=2005$?
+
+\item ($*$) Meg lehet-e számozni a kocka csúcsait az 1, 2, 3, 4, 5, 6, 7, 8 számokkal úgy, hogy bármely él két végpontjára írt számok összege különböző legyen?
+
+\item Igazoljuk, hogy ha egy kétjegyű szám négyzetéből kivonjuk annak a számnak a négyzetét, amelyet az eredeti szám megfordításával kapunk, akkor mindig 99-cel osztható számot kapunk!
+
+\item Egy tízes számrendszerben felírt többjegyű egész számból kivonjuk a számjegyei összegét. A kapott számból újra kivonjuk ennek a számjegyei összegét. Ezt addig ismételjük, amíg egyjegyű számhoz jutunk. Mi lehet ez az egyjegyű szám?
+
+ 
+\end{enumerate}
+
+\subsection*{2006.02.14.}
+\begin{enumerate}
+\item Melyek azok az $a$ és $b$ pozitív egész számok, amelyekre teljesül:
+
+\begin{abc2}
+	\item $(a;b)=5$ és 	$[a;b]=260$;
+	\item $a+b=667$ és 	$\frac{[a;b]}{(a;b)}=120$.
+\end{abc2}
+
+\item ($*$) Melyek azok az $n>0$ egész számok, amelyekre az $\frac{5n+6}{8n+7}$ tört egyszerűsíthető? Mennyivel?
+
+\item Oldjuk meg az egész számok halmazán a következő egyenleteket:
+
+\begin{abc2}
+
+	\item $3x+11=2y$;
+	\item $8x+5y=49$.
+	
+\end{abc2}
+
+\item Egy raktárban 130 kg-os és 160 kg-os konténerek vannak. Egy 3 tonnás teherautót kell telerakni ezekkel. Melyik típusú konténerből hányat kell felrakni?
+
+\item Egy szabályos 8-szög csúcsaihoz írjatok olyan pozitív egész számokat, hogy bármely két szomszédos csúcshoz írt szám legnagyobb közös osztója 1-nél nagyobb legyen, de bármely két nem szomszédos csúcshoz írt szám relatív prím legyen!
+
+
+\end{enumerate}
+
+\subsection*{2006.02.15. -- Ismétlő feladatok}
+\begin{enumerate}
+ 
+\item Milyen $x$-re igaz:
+
+\begin{abc3}
+	\item $(x;8)=80$;
+	\item $[x;16]=48$;
+	\item $(x;60)=15$?
+\end{abc3}
+
+\item Melyek azok az $a,b,c>0$ egész számok, amelyekre $(a;b;c)=4$ és $[a;b;c]=240$?
+
+
+\item ($*$) Vannak-e olyan $x$ és $y$ pozitív egész számok, melyekre teljesül, hogy $x^2+y^2=2007$?
+
+\item Oldjuk meg a pozitív egészek halmazán:
+
+\begin{abc3}
+
+	\item $3x+7y=13$;
+	\item $6x+7y=22$;
+	\item $15x-5y=19$.
+ 
+\end{abc3}
+
+\item Melyik az a kétjegyű szám, amelyet az egyesek helyén álló számmal osztva hányadosul 9-et, maradékul 6-ot kapunk?
+\end{enumerate}
+
+\subsection*{2006.02.16. -- Számelmélet dolgozat}
+\begin{enumerate}
+\item Bontsuk fel a 283-at két pozitív egséz szám összegére úgy, hogy az egyik tag 13-mal, a másik tag 17-tel legyen osztható!
+
+\item Oldjuk meg  pozitív egész számok körében a következő egyenletet: $29x-23y=123$.
+
+\item Mely $n>0$ egész számokra egyszerűsíthető a $\frac{3n+1}{4n+1}$ tört és mennyivel?
+
+\item Az $a$ és $b$ számok pozitív egészek, $a+b=1323$, $(a;b)=147$. Mi lehet $a$ és $b$ értéke? Hány megoldás van?
+
+\item Ha $n$ pozitív egész szám, határozzuk meg $3^n+1$ és $3^n-1$ legnagyobb közös osztóját!
+
+\item Van-e egész $x$ és $y$ megoldása a $3x^2-4y^2=1$ egyenletnek?
+
+\end{enumerate}
+
+\subsection*{2006.02.22. -- Ismétlő feladatok}
+\begin{enumerate}
+\item az $a$ és $b$ pozitív egészek, $a+b=1694$ és 
+$(a;b)=242$. Mi lehet $a$ és $b$ értéke? Hány megoldás van?
+\item Mely $n>0$ egész számokra egyszerűsíthető a 
+$\frac{4n+3}{5n+2}$ tört és mennyivel?
+\item Oldjuk meg az egész számok körében a következő egyenleteket:
+\begin{abc3}
+\item $3x-4y=1$;
+\item $6x+7y=22$;
+\item $28x-10y=38$.
+\end{abc3}
+\item ($*$) Melyik az a háromjegyű szám, amely 1-gyel kisebb, mint a szélső számjegyei felcserélésével kapott szám kétszerese?
+\item Ha két egész szám szorzatához hozzáadjuk az összegüket, 34-et kapunk. Melyik ez a két szám?
+\end{enumerate}
+
+\subsection*{2006.02.23. -- Pótdolgozat}
+\begin{enumerate}
+\item A 24 és a 36 legnagyobb közös osztóját fejezzük ki $24x+36y$ alakban, ahol $x$ és $y$ egész számok.
+\item Hány megoldása van a pozitív egész számok körében az $x^2-y^2=21$ egyenletnek?
+\item Az $n>0$ egész számok közül melyek azok, amelyekre a $\frac{2n-3}{3n-7}$ tört egyszerűsíthető és mennyivel?
+\item A pozitív egész számok körében hány megoldása van az $\frac{1}{x}+\frac{1}{y}=\frac{1}{14}$
+egyenletnek?
+\item Az $a,b>0$ egész számokra teljesül, hogy $a+b=98$ és $[a;b]=720$. Mik lehetnek az $a$ és $b$ számok?
+\end{enumerate}
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,154 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/09/1.}
+\rhead{Függvények}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Függvények}
+
+\subsection*{2011. 01. 27. -- Függvények, ismétlés}
+\begin{enumerate}
+\item Ábrázoljuk és jellemezzük a következő függvényeket:
+\begin{abc2}
+\item $f(x) = \dfrac{1}{x-1}, \quad x \neq 1$
+\item $g(x) = \dfrac{1}{(x-1)}, \quad x \neq 1$
+\item $h(x) = \sqrt{x^2}$
+\item $k(x) = \dfrac{1}{x^2}, \quad x \neq 0$
+\end{abc2}
+\item Határozzuk meg a megadott függvények legnagyobb és legkisebb értékét:
+\begin{abc2}
+\item $f(x) = x^2-2|x|, \quad -3 \leq x \leq 3$
+\item $g(x) = ||x|-2|, \quad |x| \leq 4$
+\item $h(x) = \dfrac{1}{|x+2|}, \quad -1 \leq x \leq 3$
+
+Rajzoljuk fel: \item $k(x) = \dfrac{1}{x^2-2x}, \quad 3 \leq x \leq 5$
+\end{abc2}
+\end{enumerate}
+\subsection*{2011. 02. 01.}
+\begin{enumerate}
+\item Ábrázoljuk és jellemezzük a következő függvényeket: 
+\begin{abc2}
+\item $f(x) = ||x-1|-1|$
+\item $g(x) = |x^2-|x|-2|$
+\item $h(x) = \dfrac{2|x|}{x^2+1}$
+\item $k(x) = |x^2+x|-x^2-x$
+\end{abc2}
+\item A következő függvényeknek határozzuk meg a legnagyobb és legkisebb értékét:
+\begin{abc2}
+\item $f(x) = x^2-x^3, \quad |x| \leq 2$
+\item $g(x) = \dfrac{2x}{4x^2+1}, \quad x \in \mathbb{R}$
+\item * $h(x) = \dfrac{729}{16}x^4(1-x)^2, \quad 0 \leq x \leq 1$
+\item $k(x) = \dfrac{(x-1)^3}{|x-1|}+\dfrac{|x^3|}{x}, \quad 0 < x < 1$
+\end{abc2}
+\end{enumerate}
+\subsection*{2011. 02. 02.}
+\begin{enumerate}
+\item Határozzuk meg a következő függvények értékkészletét:
+\begin{abc2}
+\item $f(x) = \dfrac{x^2-1}{x^2+1}, \quad x \in \mathbb{R}$
+\item $g(x) = x^2+(1-x)^2, \quad x \in \mathbb{R}$
+\item * $h(x) = \dfrac{x^2+x+1}{x^2-x+1}, \quad x \in \mathbb{R}$
+\end{abc2}
+\item Határozzuk meg a következő függvények legnagyobb és legkisebb értékét:
+\begin{abc2}
+\item $f(x) = x-1+\dfrac{1}{x-3}, \quad x > 3$
+\item $g(x) = \dfrac{2x^2-4x+9}{x^2-2x+4}, \quad x \in \mathbb{R}$
+\item $h(x) = 3x + 4\sqrt{1-x^2}, \quad |x| \leq 1$
+\item $k(x) = \dfrac{x(x-1)}{x(x-1)+2}, \quad x \in \mathbb{R}$
+\end{abc2}
+\end{enumerate}
+\subsection*{2011. 02. 03.}
+\begin{enumerate}
+\item Vázoljuk a következő függvények grafikonját: 
+\begin{abc2}
+\item $f(x) = \dfrac{|x|+1}{x^2+1}$
+\item $g(x) = \dfrac{x^2-3x+2}{x+1}, \quad x \ne -1$
+\item $h(x) = \dfrac{2}{x^2-x+1}$
+\item $k(x) = x^2-x^4$
+\end{abc2}
+\newpage
+\item Ábrázoljuk:
+\begin{abc2}
+\item $f(x) = \dfrac{x^5-x^3}{|x|}, \quad x \ne 0$
+\item $g(x) = 27 \cdot \dfrac{x+1}{x^3}, \quad x \ne 0$ 
+\end{abc2}
+\end{enumerate}
+\subsection*{2011. 02. 09.}
+\begin{enumerate}
+\item Oldjuk meg függvények segítségével:
+\begin{abc2}
+\item $|x+3|-|x+1| < 2$
+\item $||x|-2| \leq 1$
+\item $|x^2-2x-3| < 3x-3$
+\item * $x^4-x^3-x^2-x-2 \leq 0$
+\item $\dfrac{x-2\sqrt{x}-3}{x+\sqrt{x}-2} < 0$
+\end{abc2}
+\item * Az $a$ valós paraméter, oldjuk meg a következő egyenlőtlenségeket:
+\begin{abc2}
+\item $x^2+ax+1 > 0$
+\item $ax^2-2ax-1 < 0$
+\end{abc2}
+\item Határozzuk meg, hogy a \it k \rm mely valós értékeire teljesül a következő egyenlőtlenség minden valós x-re:
+
+$-3 < \dfrac{x^2+kx-2}{x^2-x+1} < 2$
+\end{enumerate}
+\subsection*{2011. 02. 10.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán, függvények felhasználásával:
+\begin{abc4}
+\item $\sqrt{x^2-1} > x$
+\item $x-3<\sqrt{x-2}$
+\item $x-1 < \sqrt{7-x}$
+\item $x < \sqrt{1-|x|}$
+\end{abc4}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc2}
+\item $4-x > \sqrt{2x-x^2}$
+\item $\sqrt{8+2x-x^2} > 4-x$
+\item $\sqrt{x^2-4x} > x-3$
+\item $x-1 < \sqrt{x^2+4x-5}$
+\item $\sqrt{x-6} \geq 2+\sqrt{10-x}$
+\item $\dfrac{x-1}{x+3} > 2$
+\end{abc2}
+\end{enumerate}
+\end{document}

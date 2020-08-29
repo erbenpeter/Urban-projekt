@@ -1,0 +1,335 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/9-10. évfolyam}
+\rhead{Szakkör}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Szakkör}
+
+\subsection*{2010.09.14. -- Pitagoraszi számhármasok}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $m>n>0$ egészek, akkor
+$x=m^2-n^2$, $y=2mn$, $z=m^2+n^2$ pitagoraszi számhármas ($x^2+y^2=z^2$).
+\item Tegyük fel, hogy $m$ és $n$ szomszédos egészek. Mit mondhatunk $y$ és $z$
+kapcsolatáról? Adjunk meg 6 egyszerű példát!
+\item Válasszuk most $m$ és $n$ helyére az előző példabeli $y$-t és $x$-et. Mit tapasztalunk?
+\item Válasszuk $m$ és $n$ értékének két egymást követő háromszögszámot. Mi lesz $x$ értéke?
+\item Igazoljuk, hogy az 1. feladatban szereplő $x,y,z$ közül az egyik osztható 3-mal és egyik osztható 5-tel.
+\item ($*$) Határozzuk meg az összes olyan $x,y,z$ pitagoraszi számhármast, amelyben $y=48$.
+\end{enumerate}
+
+\subsection*{2010.09.21. -- Számelméleti feladatok}
+\begin{enumerate}
+\item Soroljuk fel nagyság szerint növekvő sorrendben az összes 0-nál nagyobb,
+1-nél kisebb,
+\begin{abc2}
+\item legfeljebb 5 nevezőjű;
+\item legfeljebb 7 nevezőjű törtet.
+\end{abc2}
+\noindent (Farey-sorozatok)
+\item Keressünk kapcsolatot az előző sorozatokban az egymást követő 3 tört között!
+\item Hány tört van a 10-nél kisebb vagy egyenlő nevezőjű törtek Farey-sorozatában?
+\item Ábrázoljuk az 1.a) feladatban szereplő Farey-törteket a következő pontokkal:
+a $\dfrac{p}{q}$ törtnek a képe legyen a $(p;q)$ koordinátájú pont. Kössük össze a 
+szomszédos törteknek megfelelő pontokat. A Farey-sorozatot kiegészíthetjük így: elé írjuk a $\dfrac{0}{1}$ törtet és a végére írjuk az $\dfrac{1}{1}$ törtet. Mit tapasztalunk?
+\end{enumerate}
+
+
+
+\underline{Érdekesség}: az $n$-edik Farey-sorozat elemeinek száma jó közelítéssel $\dfrac{3n^2}{\pi^2}$. Bizonyítás nehéz.
+
+\subsection*{2010.09.28. -- Figurális számok és tulajdonságaik}
+\begin{enumerate}
+\item Adjunk képletet az $n$-edik háromszögszámra, ötszögszámra, hatszögszámra.
+\item Adjunk meg képletet az első $n$ háromszögszám, négyzetszám, ötszögszám, hatszögszám összegére.
+\item Igazoljuk, hogy két szomszédos háromszögszám összege négyzetszám.
+\item Igazoljuk, hogy egy háromszögszám 8-szorosához 1-et adva négyzetszámot kapunk.
+\item ($*$) Igazoljuk, hogy ha egy négyzetszám 8-szorosához 1-et adva négyzetszámot kapunk, akkor a kiindulásként vett négyzetszám háromszögszám is.
+\item Értelmezzük a térbeli figurális számokat, az u.n. \underline{piramidális} számokat. Keressünk képletet!
+\item Három egymást követő pozitív egész közül a középső teljes köb. Igazoljuk, hogy szorzatuk osztható 504-gyel. 
+\end{enumerate}
+
+\subsection*{2010.10.05. -- A kis-Fermat tétel és megfordítása}
+\begin{enumerate}
+\item ($*$) Igazoljuk teljes indukcióval ($a$-ra), hogy ha $p>0$, prím és $a>0$ egész, akkor $p\mid a^p-a$.\\ (,,kis-Fermat tétel'')
+\item Mutassuk meg, hogy a megfordítás nem igaz. Érdekes, hogy ha $n>1$ és $n\mid 2^n-2$, akkor $1<n\le 300$-ig $n$ csak prím lehet. Igazoljuk, hogy bár $341\mid 2^{341}-2$, de 341 nem prímszám!
+\item \underline{Definíció}: $n$ \underline{pszeudoprím}, ha $n>1$, $n\mid 2^n-2$
+és $n$ összetett szám. Igazoljuk, hogy 2047 pszeudoprím.
+\item Igazoljuk, hogy $161038=2\cdot 73\cdot 1103$ páros pszeudoprím. 
+($161037=3^2\cdot 29\cdot 617$)
+\item ($*$) Igazoljuk, hogy ha $n$ egy páratlan pszeudoprím, akkor $2^n-1$ is
+(páratlan) pszeudoprím. Tehát végtelen sok páratlan pszeudoprím van.
+\end{enumerate}
+
+\subsection*{2010.10.12. -- Kombinatorika feladatok}
+\begin{enumerate}
+\item A $8\times 8$-as sakktáblán egy átló két végén álló mezőt kivágjuk. Lefedhető-e a megmaradt 62 mező hézagmentesen és egyrétűen 31 dominóval?
+\item A $8\times 8$-as sakktábláról kivágunk egy fehér és egy fekete mezőt. Igazoljuk, hogy a megmaradt 62 mező mindig lefedhető egyrétűen és hézagtalanul 31 dominóval.
+\item A A $8\times 8$-as sakktábla összes mezőjét futókkal akarjuk ,,lefogni''.
+Legkevesebb hány futóra van ehhez szükség?
+\item Egy $6\times 6$-os ,,sakktáblát'' ($2\times 1$-es) dominóval lefedtünk hézagmentesen és egyrétűen. Mutassuk meg, hogy akkor lehet olyan egyenes ,,utat''
+találni a sakktáblán, amely mentén egyetlen dominót sem ,,vágunk ketté''.
+\item ($*$) Igazoljuk, hogy minden poliédernek (síklapokkal határolt testnek) van legalább 2 azonos oldalszámú lapja.
+\item Egy konvex $n$-szög belsejében felvettünk $k$ pontot és ezeket egymással és a sokszög csúcsaival összekötöttük úgy, hogy a sokszöget háromszögekre bontottuk és a szakaszok csak a csúcsokban és a felvett pontokban metszhetik egymást. Hány háromszöget kaptunk?
+\end{enumerate}
+
+\subsection*{2010.10.26. -- Algebra feladatok}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $x,y,z\in\mathbb{R}$, akkor
+$x^2+y^2+z^2\ge xy+xz+yz$.
+\item Bizonyítsuk be, hogy ha $x+y+z=a$, akkor $x^2+y^2+z^2\ge \dfrac{a^2}{3}$,
+ahol $x,y,z,a\in\mathbb{R}$.
+\item Mutassuk meg, hogy ha $a,b>0$ és $a+b=1$, akkor
+$$\left(a+\dfrac{1}{a}\right)^2+\left(b+\dfrac{1}{b}\right)^2\ge \dfrac{25}{2}.$$
+\item Igazoljuk, hogy ha $a,b,c$ egy háromszög három oldalának mérőszáma, akkor 
+$$abc\ge (a+b-c)(a+c-b)(b+c-a).$$
+\item Igazoljuk, hogy ha $a,b,c>0$ valós számok, akkor $\dfrac{a^3+b^3}{2}\ge 
+\left(\dfrac{a+b}{2}\right)^3$.
+\item ($*$) Igazoljuk, hogy ha $a,b,c,d\in\mathbb{R}$ és 
+$a^2+b^2=1$, $c^2+d^2=1$, akkor $ac+bd\le 1$.
+\end{enumerate}
+
+\subsection*{2010.11.09. -- Kombinatorika feladatok}
+\begin{enumerate}
+\item Adott $n$ darab pozitív egész szám. Igazoljuk, hogy kiválasztható közülük néhány úgy, hogy ezek összege osztható $n$-nel.
+\item Igaz-e, hogy minden $k>0$ egész számnak van olyan többszöröse, amelynek a 
+tízes számrendszerbeli alakja csak 0 és 1 számjegyet tartalmaz.
+\item Adott a síkon öt rácspont (mindkét koordinátája egész). Igazoljuk, hogy ezek között van kettő, amelyek felezőpontja is rácspont.
+\item Egy egységnyi oldalhosszúságú négyzetben kijelölünk 5 pontot. Igazoljuk, hogy ezek között van kettő, amelyek távolsága nem nagyobb $\dfrac{\sqrt 2}{2}$-nél.
+\item 5 párhuzamost egyenest az előzőkre merőleges, szintén egymással párhuzamos 11 egyenes metsz. Hány téglalapot határoznak meg ezek az egyenesek?
+\item ($*$) Igazoljuk, hogy az olyan páratlan szám, amely $n$ darab különböző prímszám szorzata, $2^{n-1}$-féleképpen írható fel két négyzetszám különbségeként.
+\end{enumerate}
+
+\subsection*{2010.11.16. -- Versenyfeladatok geometriából}
+\begin{enumerate}
+\item Az $ABCD$ trapéz $AD$ alapján fekvő szögek összege $90^\circ$. Igazoljuk, hogy a két alap felezőpontját összekötő szakasz hossza az alapok különbségének fele.
+\item Igazoljuk, hogy ha az $ABCD$ trapéz két párhuzamos oldala $AD$ és $BC$, akkor $$AC^2+BD^2=AB^2+CD^2+2\cdot AD\cdot BC.$$
+\item Három egyenlő sugarú kör egy pontban metszi egymást. Két kör másik metszéspontja és a harmadik kör középpontja meghatároz egy egyeneset. Igazoljuk, hogy az így kapott három egyenes egy ponton halad át.
+\item Igazoljuk, hogy egy derékszögű háromszögben a befogók összege egyenlő a háromszögbe írt és a háromszög köré írt körök átmérőinek összegével.
+\item Igazoljuk, hogy egy derékszögű háromszögben a derékszög felezője felezi a derékszög csúcsából induló magasságvonal és súlyvonal szögét is.
+\end{enumerate}
+
+\subsection*{2010.11.30. -- Versenyfeladatok}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $p>3$ és $p$ prímszám, akkor $p$ vagy $6k-1$, vagy $6k+1$
+alakú.
+\item Mutassuk meg, hogy ha két pozitív egész szám különbsége 2, akkor a köbeik különbsége előállítható három négyzetszám összegeként.
+\item Igazoljuk, hogy ha $x$ egész szám, akkor $5x^2+6x+15$ nem teljes négyzet.
+\item ($*$) Oldjuk meg az egész számok halmazán a következő egyenletet: $x^3-13xy+y^3=13$.
+\item Oldjuk meg az egész számok halmazán a következő egyenletet: $2xy-3x-3y-5=0$.
+\end{enumerate}
+
+\subsection*{2010.12.07. -- Versenyfeladatok}
+\begin{enumerate}
+\item Két kör belülről érinti egymást az $A$ pontban. A nagyobb kör átmérője $AB$,
+a nagyobb kör $BK$ húrja a $C$ pontban érinti a kisebb kört. Igazoljuk, hogy $AC$ az $ABK$ háromszög szögfelezője.
+\item Az $ABC$ egyenlőszárú háromszög $AB$ alapján van a $D$ pont. Tudjuk, hogy
+$AD=a$ és $DB=b$ ($a<b$). Az $ACD$ háromszögbe írt kör a $P$, a $BCD$ háromszögbe írt kör a $Q$ pontban érinti a $CD$ szakaszt. Határozzuk meg a $PQ$ távolságot.
+\item Egy derékszögű trapézban az átlók merőlegesek egymásra. A trapéz két párhuzamos oldalának aránya $k$. Határozzuk meg a trapéz átlóinak arányát.
+\item Az $ABCD$ trapéz $AB$ alapja $a$, $CD$ alapja $b$, ($a<b$). Az $A,B$ és $C$ csúcsokra illeszkedő kör érinti az $AD$ oldalt. Határozzuk meg az $AC$ átlót.
+\item Egy $R$ és egy $r$ sugarú kör belülről érinti egymást. Határozzuk meg annak a körnek a sugarát, amely érinti mindkét kört és a közös átmérőjüket.
+\end{enumerate}
+
+\subsection*{2010.12.14. -- Vegyes feladatok}
+\begin{enumerate}
+\item Egy derékszögű háromszög átfogójának két végpontja egy derékszög két szárán mozog. Mit ír le eközben a háromszög derékszögű csúcsa?
+\item Igazoljuk, hogy minden $\overline{abcabc}$ alakú szám ($a,b,c$ számjegyek)
+osztható 143-mal.
+\item Oldjuk meg az egész számok halmazán a következő egyenletrendszert:
+\begin{align*}
+x^2&=y^2+z^2+1;\cr
+x&=y+z-3.
+\end{align*}
+\item ($*$) Igazoljuk, hogy a $\left(\sqrt{2}-1\right)^{2010}=\sqrt{k}-\sqrt{k-1}$
+egyenlet megoldható a pozitív egészek halmazán.
+\item Melyik az a legkisebb pozitív egész szám, amelyre igaz, hogy ha az utolsó 
+számjegyét, a 4-et első helyre visszük (a többi számjegy nem változik), akkor a szám 4-szeresét kapjuk?
+\end{enumerate}
+
+\subsection*{2011.01.04. -- Versenyfeladatok}
+\begin{enumerate}
+\item Jelölje $P(n)$ az $n$ tízes számrendszerben felírt alakjában a számjegyek szorzatát. Számítsuk ki a következő összeget:
+$$P(1000)+P(1001)+P(1002)+\ldots+P(2000).$$
+\item Van-e olyan $n>0$ egész szám, hogy az
+$$n+1, 2n+1, 3n+1, 4n+1, \ldots$$
+sorozatban nincs egyetlen köbszám sem?
+\item ($*$) Az $a,b,c,d$ pozitív számokra teljesül: $\dfrac{a+b}{c+d}<2$.
+Igazoljuk, hogy $\dfrac{a^2+b^2}{c^2+d^2}<8$.
+\item El lehet-e helyezni az első 8 pozitív egész számot egy kör kerületén úgy, hogy bármely szám osztható legyen két szomszédja különbségének abszolút értékével?
+\item ($*$) Melyik az a pozitív egész szám, amely 100-szorosa az osztói számának?
+\end{enumerate}
+
+\subsection*{2011.01.11. -- Versenyfeladatok}
+\begin{enumerate}
+\item Van-e olyan $n>0$ egész szám, amelyre $n^2+n+1$ osztható 9-cel?
+\item Leírtunk egymást követő 500 pozitív egész számot és így összesen 1999 számjegyet írtunk le. Melyik volt ez az 500 szám?
+\item Az $1!\cdot 2!\cdot 3!\cdot \ldots \cdot 99!\cdot 100!$ szorzatból egyetlen 
+$k!$ alakú tényezőt kell kihagyni, hogy a megmaradók szorzata négyzetszám legyen.
+Melyik ez a tényező?
+\item ($*$) Adjuk meg az összes olyan pozitív egész $n$ számot, amely előállítható
+$n-1$ három különböző pozitív osztójának összegeként.
+\item Oldjuk  meg a valós számok halmazán a következő egyenletrendszert:
+$$x=\dfrac{\sqrt{yz}}{y+z},\qquad
+y=\dfrac{\sqrt{zx}}{z+x},\qquad
+z=\dfrac{\sqrt{xy}}{x+y}.
+$$
+\end{enumerate}
+
+\subsection*{2011.01.18. -- Versenyfeladatok}
+\begin{enumerate}
+\item Számítsuk ki az első $n$ háromszögszám reciprokának összegét.
+\item Igazoljuk, hogy minden háromszögszám felírható két kisebb háromszögszám és egy négyzetszám összegeként.
+\item Milyen számjegyre végződhetnek a háromszögszámok?
+\item Egy hatjegyű, tízes számrendszerben felírt $\overline{abbabb}$ alakú
+szám hat egymást követő prímszám szorzata. Melyik ez a hatjegyű szám?
+\item Az $a$ és $b$ számjegyek, $a\ne 0$. Igazoljuk, hogy az $\overline{ababab}$
+alakú hatjegyű számok oszthatók 777-tel.
+\item Melyik az a háromjegyű tízes számrendszerbeli szám, amely számjegyei összegének 17-szerese?
+\end{enumerate}
+
+\subsection*{2011.02.01.}
+\begin{enumerate}
+\item Adott térfogatú téglatestek közül melyiknek legkisebb a felszíne?
+\item Igazoljuk, hogy ha $b,d>0$ és $\dfrac{a}{b}\le \dfrac{c}{d}$, akkor
+$$\dfrac{a}{b}\le\dfrac{a+c}{b+d}\le\dfrac{c}{d}.$$
+\item Igazoljuk, hogy ha $a>0$ és $\dfrac{1}{x^2}+\dfrac{1}{y^2}=a$, akkor
+$x^2+y^2\ge\dfrac{4}{a}$.
+\item Igazoljuk, hogy ha $x,y,z\in\mathbb{R}$ és $x+y+z=5$, $xy+yz+xz=8$, akkor
+$1\le x\le \dfrac{7}{3}$.
+\item Igazoljuk, hogy ha $a,b,c>0$, akkor $\dfrac{ab}{c}+\dfrac{bc}{a}+\dfrac{ac}{b}\ge a+b+c$.
+\item ($*$) Igazoljuk, hogy ha $a,b,c>0$ és $a^2+b^2=c^2$, akkor $a^3+b^3<c^3$.
+\end{enumerate}
+
+\subsection*{2011.02.22.}
+\begin{enumerate}
+\item Melyik az a legkisebb 36-tal osztható tízes számrendszerbeli szám, amelynek számjegyei közt csak 0 és 1 szerepel?
+\item Oldjuk meg a valós számok halmazán: $3x^2-6x+16=(x^2-2x+2)^2$.
+\item Az $ABC$ hegyesszögű háromszögben az $A$ csúcsnál $30^\circ$-os szög van. $B_1$ az $AC$, $C_1$ az $AB$ oldal felezőpontja, $B_2$ a $B$-ből, $C_2$ a $C$-ből húzott magasság talppontja. Igazoljuk, hogy a $B_1C_2$ egyenes merőleges a $B_2C_1$ egyenesre.
+\item A $p$ valós paraméter mely értékeire igaz minden valós $x$-re a következő egyenlőtlenség: $\dfrac{2x^2+2x+3}{x^2+x+1}\le p$?
+\item Határozzuk meg az összes olyan $p$ és $q$ prímszámot, amelyekre $7p+q$ és 
+$pq+11$ is prím!
+\item Egy derékszögű háromszög oldalainak hosszai egész számok. Igazoljuk, hogy a háromszög három egyenlő területű háromszögre darabolható úgy, hogy a részek területe is egész szám!
+\end{enumerate}
+
+\subsection*{2011.03.01.}
+\begin{enumerate}
+\item Melyek azok a pozitív egész $n$ számok, amelyekre $\dfrac{n+11}{n-9}$ is pozitív egész?
+\item Valaki 1981-ben annyi éves, mint születési évszáma számjegyeinek összege. Mikor született?
+\item Oldjuk meg a valós számok halmazán: 
+$\left| 1+\left|\dfrac{x-4}{5}\right|-x\right|>3$.
+\item Igazoljuk, hogy ha $p$ és $p^2+8$ is prím, akkor $p^2+p+1$ is prím.
+\item Egy háromszög kerülete 19 egység, oldalainak hossza egész számokkal fejezhető ki és egyik oldalának hossza a másik kettő szorzatával egyenlő. Mekkorák az oldalak?
+\item Három pozitív egész szám összege ugyanannyi, mint a szorzatuk. Melyek lehetnek ezek a számok?
+\end{enumerate}
+
+\subsection*{2011.03.08.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán: $(x+1)^4+(x+3)^4=16$.
+\item Számítsuk ki a következő összeget:
+$$1+2-3+4+5-6+7+8-9+\ldots+3n-2+3n-1-3n.$$
+\item Határozzuk meg a következő függvény legnagyobb értékét:$f(x)=\dfrac{3x^2+6x+7}{x^2+2x+2},\quad x\in\mathbb{R}$.
+\item Adott egy derékszögű háromszög, befogóinak hossza 1 és 2 egység. Tükrözzük a háromszög mindegyik csúcsára a másik két csúcsát. Számítsuk ki a kapott hat tükörkép által meghatározott hatszög területét.
+\item Egy mértani sorozat három szomszédos elemének összege 62, a középső elem 10. 
+Melyik ez a három szám?
+\item Igazoljuk, hogy h $x,y,z>0$ valós számok, akkor teljesül a következő egyenlőtlenség:
+$$\dfrac{xy}{x+y}+\dfrac{yz}{y+z}+\dfrac{zx}{z+x}\le\dfrac{x+y+z}{2}.$$
+\end{enumerate}
+
+\subsection*{2011.03.22.}
+\begin{enumerate}
+\item Hány 0-ra végződik $200!$\, ?
+\item Osztható-e 7-tel $\binom{2000}{1000}$\, ?
+\item Számítsuk ki a következő összeget:
+$$\dfrac{1}{1+2}+\dfrac{1}{1+2+3}+\dfrac{1}{1+2+3+4}+\ldots+\dfrac{1}{1+2+3+\ldots+n}.$$
+\item Igazoljuk, hogy ha két pozitív egész szám különbsége 2, akkor köbeik különbsége előállítható három négyzetszám összegeként.
+\item ($*$) Igazoljuk, hogy $\ctg 70^\circ+4\cos 70^\circ=\sqrt{3}$.
+\item ($*$) Határozzuk meg az összes olyan pozitív egész $m,n$ számot, amelyre teljesül, hogy $n\mid 2m-1$ és $m\mid 2n-1$.
+\end{enumerate}
+
+\subsection*{2011.05.17.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc}
+\item $\sqrt[3]{x-1}+\sqrt[3]{x+1}=x\sqrt[3]{2}$;
+\item $\sqrt{x-4a+16}=2\sqrt{x-2a+4}-\sqrt{x}$;
+\item $\dfrac{(x^2-4)(x^3-1)}{x^2-2x+3}>0$.
+\end{abc}
+\item Igazoljuk, hogy ha $n>1$ egész, akkor
+$$\dfrac{1}{2^2}+\dfrac{1}{3^2}+\ldots+\dfrac{1}{n^2}<\dfrac{n-1}{n}.$$
+\item Oldjuk meg a valós számok halmazán: $\dfrac{1-\sqrt{1-4x^2}}{x}<3$.
+\item Oldjuk meg a valós számok halmazán:
+\begin{abc}
+\item ($*$) $\cos 3x\cos^3 x+\sin 3x\sin^3 x=0$;
+\item $\tg\frac{x}{2}>\dfrac{\tg x-2}{\tg x+2}$.
+\end{abc}
+\end{enumerate}
+
+\subsection*{2011.05.24.}
+\begin{enumerate}
+\item Igazoljuk, hogy ha $\alpha, \beta, \gamma$ egy hegyesszögű háromszög szögei, akkor $2<\sin^2 \alpha+\sin^2\beta+\sin^2\gamma\le\dfrac{9}{4}$.
+\item ($*$) Oldjuk meg a valós számok halmazán: $\sqrt[3]{25x(2x^2+8)}=4x+\dfrac{3}{x}$.
+\item Egy háromszög oldalainak hossza 13, 12, 5 egység. Hány olyan pont van a háromszög belsejében, amelynek az oldalaktól mért távolságai pozitív egész számú egységek? Mekkorák ezek a távolságok?
+\item Oldjuk meg az egész számok halmazán:
+\begin{align*}
+x^2+xy-y^2&= 1,\cr
+y^2-xy+x&=1.
+\end{align*}
+\end{enumerate}
+
+\subsection*{2011.05.31.}
+\begin{enumerate}
+\item Oldjuk meg a valós számok halmazán a következő egyenletet:
+$$2\sqrt{x+y}+3\sqrt{10-x}+2\sqrt{7-y}=17.$$
+\item Határozzuk meg az $n^5-5n^3+4n+1,\quad n>0$ egész szám utolsó számjegyét.
+\item Hány megoldása van a $[0;2\pi]$ intervallumban a $\sin 2010x=\sin 2011x$
+egyenletnek?
+\item Igazoljuk, hogy ha $n>0$ egész, akkor
+$$\sqrt{1+\frac{1}{2}}+
+\sqrt{1+\frac{1}{2^2}}+\ldots+
+\sqrt{1+\frac{1}{2^n}}<n+\frac{1}{2}.
+$$
+\item ($*$) Számítsuk ki $\dfrac{\tg 20^\circ+4\sin 20^\circ}{\ctg 10^\circ-4\cos 10^\circ}$ pontos értékét.
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,170 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{t1enc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+\usepackage{amsmath}
+\usepackage{amssymb}
+\frenchspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Urbán János tanár úr feladatsorai}
+\chead{C08/09/1.}
+\rhead{Binomiális együtthatók}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{calc}
+\newenvironment{abc}{\begin{enumerate}[label=\textit{\alph*})]}{\end{enumerate}}
+\newenvironment{abc2}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{2}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc3}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{3}}{\end{multicols}\end{enumerate}}
+\newenvironment{abc4}{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{4}}{\end{multicols}\end{enumerate}}
+\newenvironment{abcn}[1]{\begin{enumerate}[label=\textit{\alph*})]\begin{multicols}{#1}}{\end{multicols}\end{enumerate}}
+\setlist[enumerate,1]{listparindent=\labelwidth+\labelsep}
+
+\newcommand{\degre}{\ensuremath{^\circ}}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\newcommand{\arc}{\mathop{\mathrm{arc}}\nolimits}
+\renewcommand{\arcsin}{\arc\sin}
+\renewcommand{\arccos}{\arc\cos}
+\newcommand{\arctg}{\arc\tg}
+\newcommand{\arcctg}{\arc\ctg}
+
+\parskip 8pt
+\begin{document}
+
+\section*{Binomiális együtthatók}
+
+\subsection*{2010. 10. 19.-- Ismétlő feladatok (A Pascal háromszög tulajdonságai):}
+\begin{enumerate}
+\item Igazoljuk, hogy a Pascal háromszög $n$-edik sorban található számok összege $2^{n}$;
+\\ $\binom{n}{0}+\binom{n}{1}+\binom{n}{2}+...+\binom{n}{n}=2^{n}$;
+\item Számítsuk ki a következő összegeket:
+	\begin{abc}
+    	\item(*) $\binom{2n}{0}-\binom{2n}{2}+\binom{2n}{4}-\binom{2n}{6}+...+(-1)^{n}\binom{2n}{2n}$;
+        \item $\binom{n}{0}-\binom{n}{1}+\binom{n}{2}-\binom{n}{3}+...+(-1)^{n}\binom{n}{n}$.
+    \end{abc}
+\item Igazoljuk teljes indukcióval: $(a+b)^{n}a^{n}=\binom{n}{1}a^{n-1}b+\binom{n}{2}a^{n-2}b^{2}+...+\binom{n}{n}b^{n}$.
+\item Igazoljuk, hogy  $\binom{n}{0}^{2}+\binom{n}{1}^{2}+\binom{n}{2}^{2}+...+\binom{n}{n}^{2}=\binom{2n}{n}$.
+\item Igazoljuk, hogy ha $0<k<n$, egészek, akkor $\binom{1}{k}+\binom{n-1}{k}+\binom{n-2}{k}+...+\binom{k}{k}=\binom{n+1}{k+1}$.
+\item (*) Milyen $n$ és $k$ mellett lesz $\binom{n}{k-1}, \binom{n}{k}, \binom{n}{k+1}$ $(0<k<n)$ egy számtani sorozat három szomszédos tagja?
+\end{enumerate}
+
+
+\subsection*{2010. 10. 20.}
+\begin{enumerate}
+\item Tegyük fel, hogy egy konvex $n$-szög összes átlóját meghúztuk, és a sokszög belsejében egyetlen ponton sem halad át kettőnél több átló. Hány metszéspontot kapunk a sokszög belsejében?
+\item Az előző feladatban szereplő átlók hány részre vágták szét a sokszöget?
+\item Az első feladatbeli átlók hány olyan háromszöget határoznak meg, amelynek minden csúcsa a sokszög belsejében van?
+\item Igazoljuk, hogy egy konvex poliédernek  mindig van két azonos oldalszámú lapja.
+\end{enumerate}
+
+
+\subsection*{2010. 10. 21.}
+\begin{enumerate}
+\item A binomiális tételt így is írhatjuk:
+$(1+x)^{n}=\binom{n}{0}+\binom{n}{1}x+\binom{n}{2}x^{2}+...+\binom{n}{n}x^{n}$; \\ felhasználva, hogy $(1+x)^{n}\cdot(1+x)=(1+x)^{n+1}$, vezessük le az $\binom{n+1}{k+1}=\binom{n}{k}+\binom{n}{k+1}$ azonosságot.
+\item Az előző feladathoz hasonlóan vezessük le az $\binom{n}{0}^{2}+\binom{n}{1}^{2}+...+\binom{n}{n}^{2}=\binom{2n}{n}$ azonosságot.
+\item Számítsuk ki:
+	\begin{abc}
+    	\item $\binom{n}{1}+2\binom{n}{2}+3\binom{n}{3}+...+n\binom{n}{n}=$
+        \item $\binom{n}{0}+2\binom{n}{1}+3\binom{n}{2}+...+(n+1)\binom{n}{n}=$
+        \item $\binom{n}{2}+2\binom{n}{3}+3\binom{n}{4}+...+(n+1)\binom{n}{n}=$
+        \item (*) $\binom{n}{0}^{2}-\binom{n}{1}^{2}+\binom{n}{2}^{2}-...+(-1)^{n}\binom{n}{n}^{2}=$
+    \end{abc}
+\end{enumerate}
+
+
+\subsection*{2010. 10. 26.}
+\begin{enumerate}
+\item Határozzuk meg $(\sqrt{26}-5)^{100}$ tizedestört alakjában a tizedesvessző utáni első $100$ jegyet.
+\item Az előző feladatot oldjuk meg $(\sqrt{26}+5)^{100}$ esetre is.
+\item Igazoljuk, hogy ha $p$ prímszám és $p-1\ge{k}\ge{1}$, akkor $p$ osztója $\binom{p}{k}$-nak.
+\item Igazoljuk, hogy ha $n>0$ egész szám, akkor $k^{n}\ge{\binom{2n}{n}}$.
+\item Igazoljuk, hogy $\binom{2n}{n}\ge{\binom{2n}{k}}$ ha $2n\ge{k}\ge{0}$.
+\item A $\binom{2n+1}{0}, \binom{2n+1}{1}, \binom{2n+1}{2},... ,\binom{2n+1}{n+1}$ számok közül melyik a legnagyobb?
+\end{enumerate}
+
+
+\subsection*{2010. 10. 28.}
+\begin{enumerate}
+\item Hány $0$-ra végződik $((3!)!)!$?
+\item Hányféleképpen ülhet le egy kör alakú asztalhoz hét ember? (Két ülésrend nem különböző, ha mindenkinek ugyanaz a szomszédja.)
+\item Hányféleképpen lehet $n$ embert körbeállítani, ha két körbeállás azonos, amennyiben mindenkinek ugyanaz a bal (illetve jobb) szomszédja?
+\item Hányféleképpen lehet $n$ embert körökbe állítani? (Egy ember is lehet kör!)
+\item \underline{Definíció:} Ha adott egy $S$ halmaz és egy $f: S\rightarrow{s}$ egy egyértelmű leképzés, más szóval permutáció, akkor $s{\in}S$ esetén az $s, f(s), f(f(s)),\dots$ sorozat periodikus. Ezt a sorozatot az $s$ \underline{ciklusának} nevezzük. Az $S$ halmaz két ciklusa az f szerint  vagy azonos, vagy nincsen közös elemük. Az {{1, 2, \dots, 6}} halmaznak hány olyan permutációja van, amelynek két ciklusa van?
+\end{enumerate}
+
+
+\subsection*{2010. 11. 09.}
+\begin{enumerate}
+\item Számítsuk ki az $(x+y+z)^{3}$ kifejezést, azaz írjuk fel összeg alakjában.
+\item (*) Keressünk általános képletet az $(x+y+z)^{n}$, n>0, egész kifejezés összeg alakjában történő felírásához.
+\item Írjuk fel az $(x+y+z)^{5}$-t összeg alakjában.
+\item Igazoljuk, hogy $\binom{n-1}{k-1}=\frac{k}{n}\binom{n}{k} $, ahol $n\ge{k}\ge{0}$ egész számok.
+\item Igazoljuk a következő azonosságot: $n(1+x)^{n-1} = \binom{n}{1}+2\binom{n}{2}x+\dots+k\binom{n}{k}x^{k-1}+\dots+n\binom{n}{n}x^{n-1}$.
+\item Igazoljuk, hogy ${\binom{n}{1}}^{2}+2{\binom{n}{2}}^{2}+3{\binom{n}{3}}^{2}+\dots+n{\binom{n}{n}}^{2}=\dfrac{(2n-1)!}{((n-1)!)^{2}}$.
+\item Mennyi a következő összeg értéke: $\binom{n}{0}+3\binom{n}{1}+5\binom{n}{2}+\dots+(2n+1)\binom{n}{n}$?
+\end{enumerate}
+
+
+\subsection*{2010. 11. 10.}
+\begin{enumerate}
+\item Az $(1+x^{2}-x^{3})^{9}$ összeg alakjában határozzuk meg $x^{8}$ együtthatóját.
+\item Számítsuk ki:
+	\begin{abc}
+		\item $\binom{n}{1}+6\binom{n}{2}+6\binom{n}{3}$;
+        \item $\binom{n}{0}+7\binom{n}{1}+12\binom{n}{2}+6\binom{n}{3}$.
+	\end{abc}
+\item Számísuk ki a következő összegeket:
+	\begin{abc}
+    	\item $\binom{n}{1}+2\binom{n}{2}+3\binom{n}{3}+\dots+n\binom{n}{n}$;
+        \item $\binom{n}{1}-2\binom{n}{2}+3\binom{n}{3}-\dots+(-1)^{n-1}n\binom{n}{n}$;
+        \item $\frac{\binom{n}{0}}{1}+\frac{\binom{n}{1}}{2}+\frac{\binom{n}{2}}{3}+\dots+\frac{\binom{n}{n}}{n+1}$   
+    \end{abc}
+\item Határozzuk meg $(a+b+c)^{10}$ összeg alakjában a legnagyobb együtthatót.
+\item Hány különböző tagja lesz az $(x_{1}+x_{2}+\dots+x_{n})^{3}$ kifejezés összeg alakjának?
+\end{enumerate}
+
+
+\subsection*{2010. 11. 11. -- Ismétlő feladatok}
+\begin{enumerate}
+\item Számítsuk ki az $x^{17}$ illetve $x^{18}$ együtthatóját az $(1+x^{5}+x^{7})^{20}$ összeg alakjában.
+\item Mennyi lesz $x^{17}$ együtthatója az $(1-x^{2}+x^{3})^{1000}$ összeg alakjában?
+\item Számítsuk ki:
+	\begin{abc}
+    	\item  $\binom{n}{0}-2\binom{n}{1}+3\binom{n}{2}-\dots+(-1)^{n}(n+1)\binom{n}{n}^{2}$;
+        \item  $\binom{n}{0}^{2}-\binom{n}{1}^{2}+\binom{n}{2}^{2}-\dots+(-1)^{n}\binom{n}{n}^{2}$
+        \item  $3\binom{n}{1}+7\binom{n}{2}+11\binom{n}{3}+\dots+(4n-1)\binom{n}{n}$
+    \end{abc}
+\item A dominójátékban $(0;0)$-tól $(8;8)$-ig minden dominó egyszer szerepel. Hány dominó van egy szettben?
+\item Hány olyan tízjegyű szám van, amelynek minden jegye különböző?
+\end{enumerate}
+
+
+\subsection*{2010. 11. 10.-- Kombinatorika}
+\begin{enumerate}
+\item Az $1000$-et hányféleképpen bonthatjuk fel három pozitív egész tényező szorzatára? (A sorrend is számít.)
+\item Hányféleképpen oszthatunk el $3n$ különböző könyvet 3 ember között úgy, hogy mindegyiknek pontosan $n$ könyv jusson?
+\item Számítsuk ki:
+	\begin{abc}
+		\item $\binom{n}{0}-2\binom{n}{1}+3\binom{n}{2}-\dots+(-1)^{n}(n+1)\binom{n}{n}=$
+   		\item $\frac{\binom{n}{0}}{2}+\frac{\binom{n}{1}}{3}+\frac{\binom{n}{2}}{4}+\dots+\frac{\binom{n}{n}}{n+2}=$
+    	\item $\binom{n}{1}+14\binom{n}{2}+36\binom{n}{3}+24\binom{n}{4}=$
+	\end{abc}
+\item Határozzuk meg az $(1+x+x^{2}+x^{3})^{10}$ összeg alakjában az $x^{10}$ együtthatóját.
+\end{enumerate}
+
+
+\end{document}
